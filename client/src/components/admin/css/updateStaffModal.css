@@ -1,0 +1,81 @@
+.update-staff .main-topic {
+    color: #2e2b70;
+    font-weight: bold;
+}
+
+.update-staff .user-img {
+    width: 140px;
+    height: 140px;
+}
+
+.update-staff .edit-img {
+    width: 25px;
+    height: 25px;
+    margin-top: 100px;
+}
+
+.update-staff .edit-img:hover {
+    transform: scale(1.2);
+}
+
+.buttns .delete-btn {
+    background-color: #e15141;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.buttns .delete-btn:hover {
+    background-color: #ff0000;
+}
+
+.buttns .update-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+    margin-left: -40px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.buttns .update-btn:hover {
+    background-color: #db7f38;
+}
+
+@media screen and (max-width: 480px) {
+    .update-staff .user-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .update-staff .edit-img {
+        width: 20px;
+        height: 20px;
+        margin-top: 80px;
+    }
+
+    .buttns .update-btn {
+        font-size: 16px;
+        width: 90px;
+        height: 35px;
+    }
+
+    .buttns .delete-btn {
+        font-size: 16px;
+        width: 90px;
+        height: 35px;
+    }
+}

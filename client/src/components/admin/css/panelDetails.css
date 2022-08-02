@@ -1,0 +1,56 @@
+.panel-details .close-btn {
+    float: right;
+    font-size: 20px !important;
+}
+
+.panel-details .modal-open-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+}
+
+.panel-details .modal-open-btn:hover {
+    background-color: #db7f38;
+}
+
+.modal .proposal-title {
+    color: #2e2b70;
+    margin-left: -1px !important;
+}
+
+.modal .table th {
+    color: #2e2b70;
+    border-color: black !important;
+}
+
+.modal .totalMarks {
+    float: left;
+}
+
+.modal .marks {
+    float: right;
+}
+
+.modal .marks-area {
+    color: #db7f38;
+}
+
+.modal .text-blue {
+    color: #2e2b70;
+}
+
+.modal .text-gold {
+    color: #db7f38;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.modal .allocate-groups-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal .allocate-groups-btn:hover {
+    background-color: #db7f38;
+}

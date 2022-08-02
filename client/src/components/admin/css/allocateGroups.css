@@ -1,0 +1,55 @@
+.allocate-groups .close-btn {
+    float: right;
+    font-size: 20px !important;
+}
+
+.allocate-groups .modal-open-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+}
+
+.allocate-groups .modal-open-btn:hover {
+    background-color: #db7f38;
+}
+
+
+.modal .proposal-title {
+    text-align: center !important;
+    color: #2e2b70;
+    margin-left: 70px;
+}
+
+
+.modal .text-blue {
+    color: #2e2b70;
+    font-weight: bold;
+}
+
+.modal .text-gold {
+    color: #db7f38;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.modal .finish-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+    font-weight: bold;
+    float: right;
+}
+
+.modal .finish-btn:hover {
+    background-color: #db7f38;
+}
+
+.modal .input-radio {
+    border: 2px solid #2e2b70;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.modal .sub-container {
+    overflow: auto;
+    max-height: 400px;
+}

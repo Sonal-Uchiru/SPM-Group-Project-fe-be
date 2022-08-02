@@ -1,0 +1,130 @@
+.update-submission-div .box {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 20px;
+}
+
+.update-submission-div .profile-header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.update-submission-div .profile-header {
+    float: left;
+    width: calc(100% - 150px - 10px);
+}
+
+.update-submission-div .profile-name {
+    vertical-align: middle;
+    margin-top: 40px;
+    color: #2e2b70;
+    font-weight: bold;
+}
+
+.update-submission-div .form-div {
+    margin-top: 10px;
+}
+
+.update-submission-div .submission-img {
+    width: 25px;
+    height: 25px;
+}
+
+.update-submission-div .label-text {
+    color: #DB7F38;
+    font-size: 14px;
+}
+
+.update-submission-div .label-text:hover {
+    text-decoration: underline;
+}
+
+.update-submission-div .browse-box {
+    width: 100px;
+}
+
+.update-submission-div .center-block {
+    display: table; /* Instead of display:block */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.update-submission-div .browse-file {
+    border: 1px solid #2e2b70;
+    border-right: none;
+    font-size: 10px;
+}
+
+.update-submission-div .browse-btn {
+    background-color: #C4C4C4;
+    border: 1px solid #2e2b70;
+    border-left: none;
+    font-size: 12px;
+}
+
+.update-submission-div .browse-btn:hover {
+    background-color: #DB7F38;
+    color: #ffffff;
+
+}
+
+.update-submission-div .delete-btn {
+    background-color: #E15141;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+    margin-left: 20px;
+
+}
+
+.update-submission-div .delete-btn:hover {
+    background-color: #ff0000;
+}
+
+
+.update-submission-div .icon:hover {
+    transform: scale(1.2);
+}
+
+
+.update-submission-div .update-btn {
+    background-color: #2E2B70;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+
+}
+
+.update-submission-div .update-btn:hover {
+    background-color: #DB7F38;
+}
+
+
+@media screen and (max-width: 410px) {
+    .update-submission-div .box {
+        width: 55px;
+        height: 55px;
+
+    }
+
+    .update-submission-div .profile-header {
+        float: left;
+        width: calc(100% - 150px - 100px);
+    }
+
+    .update-submission-div .profile-name {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}

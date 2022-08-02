@@ -1,0 +1,154 @@
+.create-marking-scheme {
+    overflow: hidden;
+}
+
+.create-marking-scheme .top-div {
+    border-style: solid;
+    border-color: #db7f38;
+    height: 170px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.create-marking-scheme .box {
+    width: 130px;
+    height: 130px;
+    float: left;
+    margin: 20px;
+}
+
+.create-marking-scheme .profile-header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.document-submission-div .box {
+    width: 110px;
+    height: 110px;
+}
+
+.create-marking-scheme .profile-header {
+    float: left;
+    width: calc(100% - 350px - 10px);
+}
+
+.create-marking-scheme .profile-name {
+    vertical-align: middle;
+    margin-top: 40px;
+    color: #2e2b70;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.create-marking-scheme .inputFields {
+    border: 1px solid #2e2b70;
+}
+
+.create-marking-scheme .custom-select {
+    border: 1px solid #2e2b70;
+}
+
+.create-marking-scheme .sub-header {
+    color: #db7f38;
+}
+
+.create-marking-scheme .vl {
+    border-left: 1px solid #c4c4c4;
+    height: 500px;
+}
+
+.create-marking-scheme .removeIcon {
+    width: 45px;
+}
+
+.create-marking-scheme .removeBtn {
+    border: 0;
+    background-color: white;
+}
+
+.create-marking-scheme .removeBtn:hover {
+    transform: scale(1.2);
+}
+
+.create-marking-scheme .form-custom-btn {
+    color: white;
+    background-color: #2e2b70;
+}
+
+.create-marking-scheme .form-custom-btn:hover {
+    background-color: #db7f38;
+}
+
+.create-marking-scheme .save-custom-btn {
+    float: right;
+}
+
+.create-marking-scheme .table-container {
+    border: 2px solid #db7f38;
+    border-radius: 10px;
+}
+
+.create-marking-scheme .table .custom-table-header {
+    color: #2e2b70 !important;
+}
+
+.create-marking-scheme .total-marks-txt {
+    margin-top: -28px;
+    margin-right: -5px;
+}
+
+@media screen and (max-width: 662px) {
+    .create-marking-scheme .top-div {
+        height: 100px;
+    }
+
+    .create-marking-scheme .box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .create-marking-scheme .profile-header {
+        float: left;
+        width: calc(100% - 250px - 10px);
+    }
+
+    .create-marking-scheme .profile-name {
+        vertical-align: middle;
+        margin-top: 40px;
+        color: #2e2b70;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .create-marking-scheme .top-div {
+        height: 90px;
+    }
+
+    .create-marking-scheme .box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .create-marking-scheme .profile-header {
+        float: left;
+        width: calc(100% - 110px - 10px);
+    }
+
+    .create-marking-scheme .profile-name {
+        vertical-align: middle;
+        margin-top: 30px;
+        color: #2e2b70;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .create-marking-scheme .vl {
+        border-left: 0;
+    }
+
+}

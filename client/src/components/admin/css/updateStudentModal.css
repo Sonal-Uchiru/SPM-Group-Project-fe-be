@@ -1,0 +1,79 @@
+.update-student-div .main-topic {
+    color: #2E2B70;
+    font-weight: bold;
+}
+
+.update-student-div .user-img {
+    width: 140px;
+    height: 140px;
+}
+
+.update-student-div .edit-img {
+    width: 25px;
+    height: 25px;
+    margin-top: 100px;
+}
+
+.update-student-div .edit-img:hover {
+    transform: scale(1.2);
+}
+
+
+.update-student-div .delete-btn {
+    background-color: #E15141;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.update-student-div .delete-btn:hover {
+    background-color: #ff0000;
+}
+
+.update-student-div .update-btn {
+    background-color: #2E2B70;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+}
+
+.update-student-div .update-btn:hover {
+    background-color: #DB7F38;
+}
+
+
+@media screen and (max-width: 480px) {
+    .update-student-div .user-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .update-student-div .edit-img {
+        width: 15px;
+        height: 15px;
+        margin-top: 80px;
+    }
+
+    .update-student-div .update-btn {
+        font-size: 16px;
+        width: 90px;
+        height: 35px;
+    }
+
+    .update-student-div .delete-btn {
+        font-size: 16px;
+        width: 90px;
+        height: 35px;
+    }
+}

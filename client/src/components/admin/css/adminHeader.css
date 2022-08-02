@@ -1,0 +1,135 @@
+.AdminHeader {
+    overflow-x: hidden;
+}
+
+.AdminHeader .navl {
+    height: 150px;
+    width: 300px;
+    margin-left: 20px;
+    object-fit: contain;
+}
+
+.AdminHeader .navbar {
+    background-color: #e5e5e5;
+    width: 95%;
+    margin: -1px auto 50px;
+}
+
+.AdminHeader .containerr {
+    display: flex;
+    float: right;
+}
+
+.AdminHeader .text1 {
+    padding-right: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.AdminHeader .navbar-brand {
+    font-weight: bold;
+    color: #db7f38;
+    cursor: pointer;
+}
+
+.AdminHeader .nav-link {
+    color: #2e2b70 !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+.AdminHeader .nav-link:hover {
+    color: #db7f38 !important;
+    font-weight: bold !important;
+    text-decoration: underline;
+}
+
+.AdminHeader .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,227,56)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.AdminHeader .navbar-toggler {
+    border-color: #db7f38;
+}
+
+.AdminHeader .user {
+    height: 100px;
+    width: 100px;
+    object-fit: fill;
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+.AdminHeader .uname {
+    font-weight: bold;
+    color: #064663;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.AdminHeader .uname:hover {
+    cursor: pointer;
+    color: #db7f38;
+}
+
+@media screen and (max-width: 992px) {
+    .AdminHeader .navl {
+        width: 200px;
+        height: 150px;
+        margin-left: 15px;
+    }
+
+    .AdminHeader .userr {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .AdminHeader .comment {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .AdminHeader .text1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .AdminHeader .user {
+        height: 80px;
+        width: 80px;
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .AdminHeader .user {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .AdminHeader .navl {
+        width: 180px;
+        height: 100px;
+        margin-left: 15px;
+    }
+
+    .AdminHeader .user {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 293px) {
+    .AdminHeader .navl {
+        width: 150px;
+        height: 100px;
+        margin-left: 15px;
+    }
+}

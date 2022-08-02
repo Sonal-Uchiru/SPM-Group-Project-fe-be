@@ -1,0 +1,81 @@
+.marking-scheme-div {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.marking-scheme-div .top-div {
+    align-content: center;
+    align-items: center;
+}
+
+.marking-scheme-div .marking-scheme-table-div {
+    border-style: solid;
+    border-color: #db7f38;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow-x: auto;
+
+    box-shadow: 1px 3px #888888;
+}
+
+.marking-scheme-div .marking-scheme-table {
+    border: 1px solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.marking-scheme-div .marking-scheme-table th {
+    color: #2e2b70;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+.marking-scheme-div .marking-scheme-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.marking-scheme-div .marking-scheme-table td .tableImg {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.marking-scheme-div .marking-scheme-table td .tableEdit {
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+}
+
+.marking-scheme-div .marking-scheme-table td .tableEdit:hover {
+    transform: scale(1.2);
+}
+
+.marking-scheme-div .createbtn {
+    background-color: #db7f38;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 220px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    height: 55px;
+    align-content: center;
+}
+
+.marking-scheme-div .createbtn:hover {
+    background-color: #2e2b70;
+}

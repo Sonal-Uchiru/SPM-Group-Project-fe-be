@@ -1,0 +1,56 @@
+.not-found .not-found-img {
+    object-fit: contain;
+    width: 500px;
+    height: 500px;
+}
+
+.not-found .oops {
+
+    font-weight: bold;
+    color: #2E2B70;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .not-found .not-found-img {
+        margin-top: 100px;
+    }
+
+
+    .not-found .oops {
+
+        margin-left: 90px;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .not-found .not-found-img {
+        margin-top: 130px;
+    }
+
+
+    .not-found .oops {
+
+        margin-left: 140px;
+    }
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .not-found .not-found-img {
+        margin-top: 180px;
+    }
+
+    .not-found .oops {
+        margin-right: -80px;
+    }
+
+
+}

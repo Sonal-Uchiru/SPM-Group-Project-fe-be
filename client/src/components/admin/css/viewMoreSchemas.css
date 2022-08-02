@@ -1,0 +1,36 @@
+.view-more-marking-schemas .close-btn {
+    float: right;
+    font-size: 20px !important;
+}
+
+.view-more-marking-schemas .modal-open-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+}
+
+.view-more-marking-schemas .modal-open-btn:hover {
+    background-color: #db7f38;
+}
+
+.modal .proposal-title {
+    color: #2e2b70;
+    float: left;
+    margin-left: 10px;
+}
+
+.modal .table th {
+    color: #2e2b70;
+    border-color: black !important;
+}
+
+.modal .totalMarks {
+    float: left;
+}
+
+.modal .marks {
+    float: right;
+}
+
+.modal .marks-area {
+    color: #db7f38;
+}

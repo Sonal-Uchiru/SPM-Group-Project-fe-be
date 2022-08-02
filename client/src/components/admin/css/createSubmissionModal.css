@@ -1,0 +1,98 @@
+.create-submission-div .box {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 20px;
+}
+
+.create-submission-div .profile-header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.create-submission-div .profile-header {
+    float: left;
+    width: calc(100% - 150px - 100px);
+}
+
+.create-submission-div .profile-name {
+    vertical-align: middle;
+    margin-top: 40px;
+    color: #2e2b70;
+    font-weight: bold;
+}
+
+.create-submission-div .form-div {
+    margin-top: 10px;
+}
+
+.update-submission-div .browse-box {
+    width: 100px;
+}
+
+.create-submission-div .center-block {
+    display: table; /* Instead of display:block */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.create-submission-div .browse-file {
+    border: 1px solid #2e2b70;
+    font-size: 10px;
+}
+
+.create-submission-div .browse-btn {
+    background-color: #C4C4C4;
+    border: 1px solid #2e2b70;
+    border-left: none;
+    font-size: 12px;
+}
+
+.create-submission-div .browse-btn:hover {
+    background-color: #DB7F38;
+    color: #ffffff;
+
+}
+
+.create-submission-div .icon:hover {
+    transform: scale(1.2);
+}
+
+
+.create-submission-div .create-btn {
+    background-color: #2E2B70;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 110px;
+    border: none;
+    height: 40px;
+    margin-left: 20px;
+
+}
+
+.create-submission-div .create-btn:hover {
+    background-color: #DB7F38;
+}
+
+
+@media screen and (max-width: 410px) {
+    .create-submission-div .box {
+        width: 55px;
+        height: 55px;
+
+    }
+
+    .create-submission-div .profile-header {
+        float: left;
+        width: calc(100% - 150px - 100px);
+    }
+
+    .create-submission-div .profile-name {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}

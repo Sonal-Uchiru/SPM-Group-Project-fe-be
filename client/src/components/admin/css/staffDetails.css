@@ -1,0 +1,68 @@
+.staff-details .close-btn {
+    float: right;
+    font-size: 20px !important;
+}
+
+.staff-details .modal-open-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+}
+
+.staff-details .modal-open-btn:hover {
+    background-color: #db7f38;
+}
+
+.modal .proposal-title {
+    text-align: center !important;
+    color: #2e2b70;
+    margin-left: 70px;
+}
+
+.modal .text-blue {
+    color: #2e2b70;
+    font-weight: bold;
+}
+
+.modal .text-gold {
+    color: #db7f38;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.modal .finish-btn {
+    background-color: #2e2b70;
+    color: #ffffff;
+    font-weight: bold;
+    float: right;
+}
+
+.modal .finish-btn:hover {
+    background-color: #db7f38;
+}
+
+.modal .input-radio {
+    border: 2px solid #2e2b70;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.modal .sub-container {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.modal .staff-image {
+    width: 150px;
+    height: 150px;
+}
+
+.modal .icon-image {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 396px) {
+    .modal .group-row {
+        border-bottom: 1px solid #c4c4c4;
+    }
+}
