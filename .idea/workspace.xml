@@ -2,7 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/invitation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/marking_distribution.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/marking_scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/panel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/password_recovery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/staff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/student.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/studentSubmission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/student_group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/submissionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/topic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/tokenDecode.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/tokenDecode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/invitation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/marking_distribution.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/marking_scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/panel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/staff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/student.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/studentSubmission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/student_Group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/submissionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/topic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/invitation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/marking_distribution.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/marking_scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/panel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/password_recovery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/staff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/student.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/studentSubmission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/student_group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/submissionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/topic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/dateAndTime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/userAlreadyExist.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +84,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659418370616</updated>
-      <workItem from="1659418372551" duration="1341000" />
+      <workItem from="1659418372551" duration="3891000" />
     </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1659419767316</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659419767316</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -53,5 +109,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

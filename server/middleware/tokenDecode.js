@@ -15,7 +15,7 @@ function getToken(req) {
 
 export async function decode(req) {
     const token = await getToken(req)
-    let decodeds = "";
+    let decodedToken = "";
     if (!token) {
         throw new Error('Authorization token is required')
     }
@@ -23,7 +23,7 @@ export async function decode(req) {
         if (err) {
             throw new Error('Error : ' + err)
         }
-        decodeds = decoded
+        decodedToken = decoded
     })
-    return decodeds
+    return decodedToken
 }
