@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/constant/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/job.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/jobApplication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/shared/getById.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/shared/getByToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/shared/modelSelector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/shared/deleteById.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/shared/deleteByToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +45,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659418370616</updated>
-      <workItem from="1659418372551" duration="16319000" />
+      <workItem from="1659418372551" duration="17887000" />
+      <workItem from="1659787639889" duration="2102000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -82,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659459980276</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="backend environment configuration">
+      <created>1659513308895</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659513308895</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +97,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="schema extend implemented" />
+    <MESSAGE value="backend environment configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend environment configuration" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

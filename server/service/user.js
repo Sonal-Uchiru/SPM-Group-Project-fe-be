@@ -3,6 +3,7 @@ import {validatePost} from "../validations/user.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
 
+
 export const saveUser = async (req, res) => {
     try {
         const {error} = validatePost(req.body)
@@ -29,6 +30,3 @@ export const getUserById = async (req, res) => {
     await getByToken(req, res, "user")
 }
 
-// export const getUserById = async (req, res) => {
-//     await getById(req,res,"user")
-// }
