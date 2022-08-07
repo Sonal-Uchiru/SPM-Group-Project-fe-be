@@ -16,7 +16,7 @@ export const getById = async (req, res, modelName) => {
             return res.status(200).send(content)
         }
 
-        res.status(404).send({message: `${modelName} not found`})
+        res.status(404).send({message: `${modelName.toUpperCase()} model ${req.params.id} not found`})
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }

@@ -15,7 +15,7 @@ export const getByToken = async (req, res, modelName) => {
         if (content) {
             return res.status(200).json(content)
         }
-        return res.status(404).send({message: `${modelName} model ${id} not found`});
+        return res.status(404).send({message: `${modelName.toUpperCase()} model ${id} not found`});
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }

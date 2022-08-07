@@ -11,6 +11,10 @@ const baseEntitySchema = new Schema({
         type: Date,
         required: true,
         default: new Date()
+    },
+    modifiedUser: {
+        type: String,
+        required: false
     }
 })
 

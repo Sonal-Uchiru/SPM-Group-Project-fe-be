@@ -1,7 +1,9 @@
 import {User} from '../models/user.js'
-import {validatePost} from "../validations/user.js";
+import {validatePost, validationUpdate} from "../validations/user.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
+import {updateById} from "../shared/updateById.js";
+import {updateByToken} from "../shared/updateByToken.js";
 
 
 export const saveUser = async (req, res) => {
@@ -26,7 +28,8 @@ export const saveUser = async (req, res) => {
     }
 }
 
-export const getUserById = async (req, res) => {
+export const getUser = async (req, res) => {
     await getByToken(req, res, "user")
 }
+
 
