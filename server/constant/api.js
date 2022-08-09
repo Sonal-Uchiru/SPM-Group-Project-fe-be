@@ -4,5 +4,6 @@ export const url = {
 }
 
 export const protectedUrl = {
-    USER_MANAGEMENT: '/api/protected/user'
+    USER_MANAGEMENT: '/api/protected/user',
+    JOB_MANAGEMENT: '/api/protected/job',
 }
