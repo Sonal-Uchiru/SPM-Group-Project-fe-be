@@ -6,6 +6,7 @@ import {
     deleteJob,
     getAllJob,
     getAllJobByCompany,
+    changeJobStatus,
 } from '../service/job.js'
 
 const jobRouter = express.Router()
@@ -16,6 +17,7 @@ jobRouter.get('/:id', getJob)
 jobRouter.put('/:id', updateJob)
 jobRouter.put('/:id', updateJob)
 jobRouter.delete('/:id', deleteJob)
+jobRouter.patch('/:id', changeJobStatus)
 jobRouter.get('/getbycompany/:id', getAllJobByCompany)
 
 export { jobRouter }

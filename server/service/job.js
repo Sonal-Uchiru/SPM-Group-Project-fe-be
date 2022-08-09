@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { getById } from '../shared/getById.js'
 import { updateById } from '../shared/updateById.js'
 import { getByToken } from '../shared/getByToken.js'
+import { decode } from '../middleware/tokenDecode.js'
 
 //URL: http://localhost:8080/api/protected/job/
 export const saveJob = async (req, res) => {
@@ -53,7 +54,6 @@ export const deleteJob = async (req, res) => {
             message: `Job model ${req.params.id} not found`,
         })
     } catch (e) {
-        console.log(e)
         res.status(500).send({ message: 'Internal Server Error' })
     }
 }
@@ -69,12 +69,55 @@ export const getAllJobByCompany = async (req, res) => {
         const content = await Job.find({ companyId: companyId })
         if (content) {
             return res.status(200).send({
-                ...content,
+                content,
             })
         }
 
         res.status(404).send({
             message: `Job model ${req.params.id} not found`,
+        })
+    } catch (e) {
+        res.status(500).send({ message: 'Internal Server Error' })
+    }
+}
+
+// URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
+export const changeJobStatus = async (req, res) => {
+    try {
+        var flag = 0
+        const userId = await decode(req)
+        if (!req.params.id) {
+            return res.status(404).send({ message: 'id not found' })
+        }
+
+        const content = await Job.findById(req.params.id)
+        if (!content) {
+            return res.status(404).send({
+                message: `Job model ${req.params.id} not found`,
+            })
+        }
+
+        console.log(content.status)
+        if (content.status == 0) {
+            await Job.findByIdAndUpdate(req.params.id, {
+                $set: {
+                    status: 1,
+                    updatedDate: new Date(),
+                    modifiedUser: userId._id,
+                },
+            })
+        } else {
+            await Job.findByIdAndUpdate(req.params.id, {
+                $set: {
+                    status: 0,
+                    updatedDate: new Date(),
+                    modifiedUser: userId._id,
+                },
+            })
+        }
+
+        return res.status(200).send({
+            message: `${req.params.id} status changed successfully`,
         })
     } catch (e) {
         console.log(e)
