@@ -84,7 +84,6 @@ export const getAllJobByCompany = async (req, res) => {
 // URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
 export const changeJobStatus = async (req, res) => {
     try {
-        var flag = 0
         const userId = await decode(req)
         if (!req.params.id) {
             return res.status(404).send({ message: 'id not found' })
@@ -97,7 +96,6 @@ export const changeJobStatus = async (req, res) => {
             })
         }
 
-        console.log(content.status)
         if (content.status == 0) {
             await Job.findByIdAndUpdate(req.params.id, {
                 $set: {
@@ -106,15 +104,18 @@ export const changeJobStatus = async (req, res) => {
                     modifiedUser: userId._id,
                 },
             })
-        } else {
-            await Job.findByIdAndUpdate(req.params.id, {
-                $set: {
-                    status: 0,
-                    updatedDate: new Date(),
-                    modifiedUser: userId._id,
-                },
+            return res.status(200).send({
+                message: `${req.params.id} status changed successfully`,
             })
         }
+
+        await Job.findByIdAndUpdate(req.params.id, {
+            $set: {
+                status: 0,
+                updatedDate: new Date(),
+                modifiedUser: userId._id,
+            },
+        })
 
         return res.status(200).send({
             message: `${req.params.id} status changed successfully`,
