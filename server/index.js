@@ -7,6 +7,7 @@ import {userRouter} from "./controller/user.js"
 import {userRouter as unprotectedUserRouter} from "./routes/user.js"
 import authRouter from "./routes/auth.js"
 import {protectedUrl, url} from "./constant/api.js"
+import {jobApplicationRouter} from "./controller/jobApplication.js";
 
 const app = express()
 
@@ -29,6 +30,11 @@ app.use(
     protectedUrl.USER_MANAGEMENT,
     jwt({secret: process.env.JWTPRIVATEKEY, algorithms: ['HS256']}),
     userRouter
+)
+app.use(
+    protectedUrl.JOB_APPLICATION_MANAGEMENT,
+    jwt({secret: process.env.JWTPRIVATEKEY, algorithms: ['HS256']}),
+    jobApplicationRouter
 )
 
 const port = process.env.PORT || 8080
