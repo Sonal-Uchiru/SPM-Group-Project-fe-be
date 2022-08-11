@@ -2,9 +2,9 @@ import { Job } from '../models/job.js'
 import { validatePost } from '../validations/job.js'
 import { getById } from '../shared/getById.js'
 import { updateById } from '../shared/updateById.js'
-import { getByToken } from '../shared/getByToken.js'
 import {decode} from '../middleware/tokenDecode.js'
 import {getAllContentByToken} from "../shared/getAllContentByToken.js";
+import {deleteJobApplicationsByJobID} from "./jobApplication.js";
 
 //URL: http://localhost:8080/api/protected/job/
 export const saveJob = async (req, res) => {
@@ -23,8 +23,12 @@ export const saveJob = async (req, res) => {
 
 //URL: http://localhost:8080/api/protected/job/
 export const getAllJob = async (req, res) => {
-    const companyId =
-        await getAllContentByToken(req, res, 'job',)
+    try {
+        const companyId = await decode(req)
+        await getAllContentByToken(req, res, 'job', {companyId: companyId._id})
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
 }
 
 //URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
@@ -46,6 +50,7 @@ export const deleteJob = async (req, res) => {
 
         const content = await Job.findByIdAndDelete(req.params.id)
         if (content) {
+            await deleteJobApplicationsByJobID(req.params.id)
             return res.status(200).send({
                 message: `${req.params.id} content deleted successfully`,
             })
