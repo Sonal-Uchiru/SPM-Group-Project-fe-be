@@ -4,6 +4,7 @@ import {validate} from "../validations/jobApplication.js";
 import {updateById} from "../shared/updateById.js";
 import {deleteById} from "../shared/deleteById.js";
 import {getById} from "../shared/getById.js";
+import {getAllContentByToken} from "../shared/getAllContentByToken.js";
 
 export const saveJobApplication = async (req, res) => {
     try {
@@ -37,3 +38,6 @@ export const getJobApplicationById = async (req, res) => {
     await getById(req, res, 'jobApplication')
 }
 
+export const getJobApplicationsByToken = async (req, res) => {
+    await getAllContentByToken(req, res, 'jobApplication', 'applicant')
+}
