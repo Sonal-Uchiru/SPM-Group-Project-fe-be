@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/confirmation/passwordConfirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/confirmation/passwordConfirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/shared/deleteByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/deleteByToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
