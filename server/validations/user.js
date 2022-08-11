@@ -3,26 +3,26 @@ import Joi from "joi";
 
 export const validatePost = (data) => {
     const schema = Joi.object({
-        firstName: Joi.string().required().label('First Name'),
-        lastName: Joi.string().required().label('Last Name'),
-        email: Joi.string().email().required().label('Email'),
+        firstName: Joi.string().max(50).required().label('First Name'),
+        lastName: Joi.string().max(50).required().label('Last Name'),
+        email: Joi.string().email().max(100).required().label('Email'),
         password: passwordComplexity().required().label('Password'),
         role: Joi.string().required().label('Role'),
-        mobile: Joi.number().required().label('Phone Number'),
+        mobile: Joi.number().max(10).required().label('Phone Number'),
     })
     return schema.validate(data)
 }
 
 export const validationUpdate = (data) => {
     const schema = Joi.object({
-        firstName: Joi.string().required().label('First Name'),
-        lastName: Joi.string().required().label('Last Name'),
-        email: Joi.string().email().required().label('Email'),
+        firstName: Joi.string().max(50).required().label('First Name'),
+        lastName: Joi.string().max(50).required().label('Last Name'),
+        email: Joi.string().email().max(100).required().label('Email'),
         password: passwordComplexity().required().label('Password'),
         role: Joi.string().required().label('Role'),
-        mobile: Joi.number().required().label('Phone Number'),
-        aboutMe: Joi.string().label('About Me'),
-        address: Joi.string().label('Address'),
+        mobile: Joi.number().max(10).required().label('Phone Number'),
+        aboutMe: Joi.string().max(200).label('About Me'),
+        address: Joi.string().max(200).label('Address'),
         gender: Joi.string().label('Gender'),
         dob: Joi.string().label('Date of Birth'),
         profilePicture: Joi.string().label('Profile Picture'),
