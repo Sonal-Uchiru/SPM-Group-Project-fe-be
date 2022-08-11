@@ -4,10 +4,9 @@ import baseEntity from './base.js'
 import jwt from 'jsonwebtoken'
 
 const jobSchema = extendSchema(baseEntity, {
-    jobId: { type: String, required: true },
     position: { type: String, required: true },
     developmentArea: { type: String, required: true },
-    jobType: { type: String, required: true },
+    jobType: { type: String, required: true, enum: ['Full time', 'Part time'] },
     roleOverview: { type: String, required: true },
     responsibilities: { type: String, required: true },
     requirements: { type: String, required: true },

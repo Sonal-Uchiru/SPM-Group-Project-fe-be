@@ -1,5 +1,5 @@
 import { Job } from '../models/job.js'
-import { validatePost, updatePost } from '../validations/job.js'
+import { validatePost } from '../validations/job.js'
 import { v4 as uuidv4 } from 'uuid'
 import { getById } from '../shared/getById.js'
 import { updateById } from '../shared/updateById.js'
@@ -9,8 +9,8 @@ import { decode } from '../middleware/tokenDecode.js'
 //URL: http://localhost:8080/api/protected/job/
 export const saveJob = async (req, res) => {
     try {
-        req.body.jobId = uuidv4()
         const { error } = validatePost(req.body)
+
         if (error)
             return res.status(400).send({ message: error.details[0].message })
 
@@ -33,7 +33,7 @@ export const getJob = async (req, res) => {
 
 // URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
 export const updateJob = async (req, res) => {
-    await updateById(req, res, 'job', updatePost)
+    await updateById(req, res, 'job', validatePost)
 }
 
 //URL: http://localhost:8080/api/protected/job/62f293e5419ba56b21304307
