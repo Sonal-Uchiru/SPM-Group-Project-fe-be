@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="get all by token">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="update status, delete job application by job ids">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/getAllContentByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/getAllContentByToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/shared/deleteByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/deleteByToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1659981283194" duration="975000" />
       <workItem from="1660135539804" duration="5635000" />
-      <workItem from="1660191004840" duration="5812000" />
+      <workItem from="1660191004840" duration="6929000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660196279343</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update status, delete job application by job ids">
+      <created>1660198538318</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660198538318</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +161,8 @@
     <MESSAGE value="save job application in progress" />
     <MESSAGE value="save, update, delete, get by id implemented" />
     <MESSAGE value="get all by token" />
-    <option name="LAST_COMMIT_MESSAGE" value="get all by token" />
+    <MESSAGE value="update status, delete job application by job ids" />
+    <option name="LAST_COMMIT_MESSAGE" value="update status, delete job application by job ids" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

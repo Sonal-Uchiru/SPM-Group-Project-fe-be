@@ -15,6 +15,7 @@ export const deleteByToken = async (req, res, modelName) => {
         if (content) {
             return res.status(200).json({message: `${id._id} content deleted successfully`})
         }
+
         return res.status(404).send({message: `${modelName.toUpperCase()} model ${id._id} not found`});
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
