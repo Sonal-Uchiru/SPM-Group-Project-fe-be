@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="update status, delete job application by job ids">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/getAllContentByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/getAllContentByToken.js" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application implementation completed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +50,7 @@
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1659981283194" duration="975000" />
       <workItem from="1660135539804" duration="5635000" />
-      <workItem from="1660191004840" duration="8729000" />
+      <workItem from="1660191004840" duration="9058000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -140,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660199656142</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="job application implementation completed">
+      <created>1660201692368</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660201692368</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +173,8 @@
     <MESSAGE value="save, update, delete, get by id implemented" />
     <MESSAGE value="get all by token" />
     <MESSAGE value="update status, delete job application by job ids" />
-    <option name="LAST_COMMIT_MESSAGE" value="update status, delete job application by job ids" />
+    <MESSAGE value="job application implementation completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="job application implementation completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
