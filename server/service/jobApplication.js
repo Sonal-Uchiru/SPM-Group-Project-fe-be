@@ -1,10 +1,13 @@
 import {decode} from "../middleware/tokenDecode.js";
 import {JobApplication} from "../models/jobApplication.js";
-import {validatePost} from "../validations/jobApplication.js";
+import {validate} from "../validations/jobApplication.js";
+import {updateById} from "../shared/updateById.js";
+import {deleteById} from "../shared/deleteById.js";
+import {getById} from "../shared/getById.js";
 
 export const saveJobApplication = async (req, res) => {
     try {
-        const {error} = validatePost(req.body)
+        const {error} = validate(req.body)
 
         if (error) return res.status(400).send({message: error.details[0].message})
         const userId = await decode(req)
@@ -21,3 +24,16 @@ export const saveJobApplication = async (req, res) => {
         res.status(500).send({message: 'Internal Server Error'})
     }
 }
+
+export const updateJobApplicationById = async (req, res) => {
+    await updateById(req, res, 'jobApplication', validate)
+}
+
+export const deleteJobApplicationById = async (req, res) => {
+    await deleteById(req, res, 'jobApplication')
+}
+
+export const getJobApplicationById = async (req, res) => {
+    await getById(req, res, 'jobApplication')
+}
+

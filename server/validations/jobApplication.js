@@ -1,18 +1,19 @@
 import Joi from "joi";
 
-export const validatePost = (data) => {
+export const validate = (data) => {
     const schema = Joi.object({
         jobId: Joi.string().required().label('job id'),
+        applicantOtherDetails: Joi.any().optional().label('applicant other details'),
         resume: Joi.string().required().label('resume'),
-        coverLetter: Joi.string().label('cover letter'),
-        title: Joi.string().required().label('title').validate(['Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.']),
-        preferredName: Joi.string().label('preferred name').trim(true),
+        coverLetter: Joi.string().optional().label('cover letter').truncate(true),
+        title: Joi.string().valid('Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.').required().label('title'),
+        preferredName: Joi.string().min(3).max(10).optional().label('preferred name').truncate(true),
         // true -> yes | false -> no
         companyWorked: Joi.boolean().required().label('company worked'),
         // true -> yes | false -> no
         employedWithCurrentCompany: Joi.boolean().required().label('employed with current company'),
-        portfolioLink: Joi.string().label('portfolio link'),
-        licensesAndCertificates: Joi.array().label('licenses and certificates'),
+        portfolioLink: Joi.string().optional().label('portfolio link').truncate(true),
+        licensesAndCertificates: Joi.array().optional().label('licenses and certificates'),
     })
     return schema.validate(data)
 }

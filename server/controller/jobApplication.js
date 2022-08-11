@@ -1,8 +1,16 @@
 import express from 'express'
-import {saveJobApplication} from "../service/jobApplication.js";
+import {
+    deleteJobApplicationById,
+    getJobApplicationById,
+    saveJobApplication,
+    updateJobApplicationById
+} from "../service/jobApplication.js";
 
 const jobApplicationRouter = express.Router()
 
 jobApplicationRouter.post('/', saveJobApplication)
+jobApplicationRouter.put('/:id', updateJobApplicationById)
+jobApplicationRouter.delete('/:id', deleteJobApplicationById)
+jobApplicationRouter.get('/;id', getJobApplicationById)
 
 export {jobApplicationRouter}

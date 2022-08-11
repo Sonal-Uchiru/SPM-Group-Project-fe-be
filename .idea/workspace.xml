@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="qa created">
-      <change afterPath="$PROJECT_DIR$/server/controller/jobApplication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="save job application in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/constant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/constant/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/jobApplication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/models/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +55,8 @@
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1659981283194" duration="975000" />
-      <workItem from="1660135539804" duration="4184000" />
+      <workItem from="1660135539804" duration="5635000" />
+      <workItem from="1660191004840" duration="3238000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -111,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659981397177</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="save job application in progress">
+      <created>1660145597703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660145597703</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +140,8 @@
     <MESSAGE value="server shared functions implementations part 2 completed" />
     <MESSAGE value="dev created" />
     <MESSAGE value="qa created" />
-    <option name="LAST_COMMIT_MESSAGE" value="qa created" />
+    <MESSAGE value="save job application in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="save job application in progress" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

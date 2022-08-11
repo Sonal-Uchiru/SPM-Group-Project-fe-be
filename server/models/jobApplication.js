@@ -13,7 +13,7 @@ const jobApplicationSchema = extendSchema(baseEntity, {
     },
     resume: {type: String, required: true},
     coverLetter: {type: String, required: false},
-    title: {type: String, required: true, in: ['Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.']},
+    title: {type: String, required: true, enum: ['Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.']},
     preferredName: {type: String, required: false},
     // true -> yes | false -> no
     companyWorked: {type: Boolean, required: true},
