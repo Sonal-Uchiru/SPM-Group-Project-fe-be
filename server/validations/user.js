@@ -22,8 +22,7 @@ export const validationUpdate = (data) => {
     const schema = Joi.object({
         firstName: Joi.string().required().label('First Name'),
         lastName: Joi.string().required().label('Last Name'),
-        dob: Joi.string().label('dob')
+        dob: Joi.string().label('dob'),
     })
     return schema.validate(data)
 }
-
