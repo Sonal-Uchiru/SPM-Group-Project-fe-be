@@ -1,29 +1,36 @@
-.usermain .card {
+.user-summary .card {
   border: 1px solid #1363df;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  max-width: 750px;
+  max-width: 450px;
   margin: 50px auto auto;
 }
 
-.usermain .user-img {
-  border-radius: 50%;
-  border: 2px solid white;
+.user-summary .summary-topic {
+  color: #1363df;
+}
+.user-summary .sub-text {
+  color: #06283d;
+}
+
+.user-summary .summary-div {
+  border-radius: 100%;
+  border: 4px solid green;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (max-width: 768px) {
-  .usermain .user-img {
+  .user-summary .summary-div {
     width: 300px;
   }
 }
 @media (max-width: 548px) {
-  .usermain .user-img {
+  .user-summary .summary-div {
     width: 240px;
   }
 }
 @media (max-width: 470px) {
-  .usermain .user-img {
+  .user-summary .summary-div {
     width: 200px;
   }
 }

@@ -1,0 +1,93 @@
+.confirm-modal .card {
+  max-width: 750px;
+  margin: 50px auto auto;
+}
+
+.confirm-modal label {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #06283d;
+}
+
+.confirm-modal .input {
+  padding-right: 90px;
+  padding-left: 90px;
+}
+
+.confirm-modal input {
+  border: 1px solid #1363df;
+  height: 42px;
+}
+
+.confirm-modal .p-viewer {
+  float: right;
+  margin-top: -32px;
+  position: relative;
+  margin-right: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.confirm-modal #eyeIcon {
+  color: #1363df;
+}
+
+.confirm-modal .confirmButton {
+  background-color: #28a745 !important;
+  font-weight: bold;
+  width: 200px;
+  height: 45px;
+  margin-top: 30px;
+}
+.confirm-modal .cancelButton {
+  background-color: #e15141 !important;
+  font-weight: bold;
+  width: 200px;
+  height: 45px;
+  margin-top: 30px;
+}
+
+/* .confirm-modal .confirmButton:hover {
+  background-color: #06283d !important;
+} */
+
+@media (max-width: 768px) {
+  .confirm-modal .card {
+    margin: 120px auto auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .confirm-modal .input {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .confirm-modal .input {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .confirm-modal .confirmButton {
+    width: 160px;
+  }
+  .confirm-modal .cancelButton {
+    width: 160px;
+  }
+}
+
+@media (max-width: 300px) {
+  .confirm-modal .input {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .confirm-modal .confirmButton {
+    width: 140px;
+  }
+  .confirm-modal .cancelButton {
+    width: 140px;
+  }
+}

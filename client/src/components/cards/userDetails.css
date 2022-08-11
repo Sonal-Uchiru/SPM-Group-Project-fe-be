@@ -1,0 +1,26 @@
+.user-details .card {
+  border: 1px solid #1363df;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 750px;
+  margin: 50px auto auto;
+}
+
+.user-details .summary-topic {
+  color: #1363df;
+}
+.user-details .sub-text {
+  color: #06283d;
+}
+.user-details .profile-data {
+  font-weight: bold;
+}
+
+.user-details .btn-edit {
+  border-radius: 5px;
+  width: 150px;
+}
+.user-details .btn-delete {
+  width: 150px;
+  border-radius: 5px;
+}
