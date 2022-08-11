@@ -31,8 +31,7 @@ export const updateJobApplicationById = async (req, res) => {
 }
 
 export const deleteJobApplicationById = async (req, res) => {
-    //await deleteById(req, res, 'jobApplication')
-    await deleteJobApplicationsByJobID(res, "test job 999")
+    await deleteById(req, res, 'jobApplication')
 }
 
 export const getJobApplicationById = async (req, res) => {
