@@ -48,11 +48,7 @@ export const getJobApplicationsByToken = async (req, res) => {
 }
 
 export const deleteJobApplicationsByJobID = async (res, id) => {
-    try {
         await JobApplication.deleteMany({jobId: id})
-    } catch (e) {
-        res.status(500).send({message: 'Internal Server Error'})
-    }
 }
 
 export const updateJobApplicationStatus = async (req, res) => {
