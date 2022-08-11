@@ -20,6 +20,7 @@
     "i": "^0.3.7",
     "joi": "^17.5.0",
     "joi-password-complexity": "^5.1.0",
+    "joigoose": "^8.0.2",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.4",
