@@ -1,16 +1,16 @@
 import {decode} from "../middleware/tokenDecode.js";
 import {getModel} from "./modelSelector.js";
 
-export const getAllContentByToken = async (req, res, modelName, key) => {
+export const getAllContentByToken = async (req, res, modelName, object) => {
     try {
-        const id = await decode(req)
+
         const Model = getModel(modelName)
 
         if (!Model) {
             return res.status(404).send({message: "model not found"});
         }
-        //const jsonKey = JSON.parse(key);
-        const content = await Model.find()
+
+        const content = await Model.find(object)
 
         if (content) {
             return res.status(200).json(content)

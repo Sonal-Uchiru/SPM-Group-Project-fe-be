@@ -31,7 +31,8 @@ export const updateJobApplicationById = async (req, res) => {
 }
 
 export const deleteJobApplicationById = async (req, res) => {
-    await deleteById(req, res, 'jobApplication')
+    //await deleteById(req, res, 'jobApplication')
+    await deleteJobApplicationsByJobID(res, "test job 999")
 }
 
 export const getJobApplicationById = async (req, res) => {
@@ -39,12 +40,17 @@ export const getJobApplicationById = async (req, res) => {
 }
 
 export const getJobApplicationsByToken = async (req, res) => {
-    await getAllContentByToken(req, res, 'jobApplication', {applicant: 0})
+    try {
+        const userId = await decode(req);
+        await getAllContentByToken(req, res, 'jobApplication', {applicant: userId._id})
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
 }
 
 export const deleteJobApplicationsByJobID = async (res, id) => {
     try {
-        await JobApplication.remove({jobId: id})
+        await JobApplication.deleteMany({jobId: id})
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }
