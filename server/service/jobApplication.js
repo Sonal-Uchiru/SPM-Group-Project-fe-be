@@ -1,6 +1,6 @@
 import {decode} from "../middleware/tokenDecode.js";
 import {JobApplication} from "../models/jobApplication.js";
-import {validate} from "../validations/jobApplication.js";
+import {validate, validationStatusChange} from "../validations/jobApplication.js";
 import {updateById} from "../shared/updateById.js";
 import {deleteById} from "../shared/deleteById.js";
 import {getById} from "../shared/getById.js";
@@ -39,5 +39,42 @@ export const getJobApplicationById = async (req, res) => {
 }
 
 export const getJobApplicationsByToken = async (req, res) => {
-    await getAllContentByToken(req, res, 'jobApplication', 'applicant')
+    await getAllContentByToken(req, res, 'jobApplication', {applicant: 0})
+}
+
+export const deleteJobApplicationsByJobID = async (res, id) => {
+    try {
+        await JobApplication.remove({jobId: id})
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
+}
+
+export const updateJobApplicationStatus = async (req, res) => {
+    try {
+        const {error} = validationStatusChange(req.body)
+
+        if (error)
+            return res.status(400).send({message: error.details[0].message})
+
+        const userId = await decode(req);
+
+        if (!req.params.id) {
+            return res.status(404).send({message: "id not found"});
+        }
+
+        const content = await JobApplication.findByIdAndUpdate(req.params.id, {
+            $set: {
+                status: req.body.status,
+                updatedDate: new Date(),
+                modifiedUser: userId._id,
+            },
+        })
+        
+        if (content) {
+            return res.status(200).send({message: `${req.params.id} content updated successfully`})
+        }
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
 }

@@ -3,7 +3,7 @@ import {
     deleteJobApplicationById,
     getJobApplicationById, getJobApplicationsByToken,
     saveJobApplication,
-    updateJobApplicationById
+    updateJobApplicationById, updateJobApplicationStatus
 } from "../service/jobApplication.js";
 
 const jobApplicationRouter = express.Router()
@@ -13,5 +13,6 @@ jobApplicationRouter.put('/:id', updateJobApplicationById)
 jobApplicationRouter.delete('/:id', deleteJobApplicationById)
 jobApplicationRouter.get('/;id', getJobApplicationById)
 jobApplicationRouter.get('/', getJobApplicationsByToken)
+jobApplicationRouter.patch('/:id', updateJobApplicationStatus)
 
 export {jobApplicationRouter}

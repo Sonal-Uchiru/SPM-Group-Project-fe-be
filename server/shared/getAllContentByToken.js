@@ -9,8 +9,8 @@ export const getAllContentByToken = async (req, res, modelName, key) => {
         if (!Model) {
             return res.status(404).send({message: "model not found"});
         }
-
-        const content = await Model.find({key: id._id})
+        //const jsonKey = JSON.parse(key);
+        const content = await Model.find()
 
         if (content) {
             return res.status(200).json(content)

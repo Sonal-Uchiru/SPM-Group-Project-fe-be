@@ -17,3 +17,10 @@ export const validate = (data) => {
     })
     return schema.validate(data)
 }
+
+export const validationStatusChange = (data) => {
+    const schema = Joi.object({
+        status: Joi.number().valid(0, 1, 2).required().label('status'),
+    })
+    return schema.validate(data)
+}
