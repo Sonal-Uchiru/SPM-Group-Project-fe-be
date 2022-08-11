@@ -1,10 +1,10 @@
 import { Job } from '../models/job.js'
 import { validatePost } from '../validations/job.js'
-import { v4 as uuidv4 } from 'uuid'
 import { getById } from '../shared/getById.js'
 import { updateById } from '../shared/updateById.js'
 import { getByToken } from '../shared/getByToken.js'
-import { decode } from '../middleware/tokenDecode.js'
+import {decode} from '../middleware/tokenDecode.js'
+import {getAllContentByToken} from "../shared/getAllContentByToken.js";
 
 //URL: http://localhost:8080/api/protected/job/
 export const saveJob = async (req, res) => {
@@ -23,7 +23,8 @@ export const saveJob = async (req, res) => {
 
 //URL: http://localhost:8080/api/protected/job/
 export const getAllJob = async (req, res) => {
-    await getByToken(req, res, 'job')
+    const companyId =
+        await getAllContentByToken(req, res, 'job',)
 }
 
 //URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
@@ -96,7 +97,7 @@ export const changeJobStatus = async (req, res) => {
             })
         }
 
-        if (content.status == 0) {
+        if (content.status === 0) {
             await Job.findByIdAndUpdate(req.params.id, {
                 $set: {
                     status: 1,
@@ -121,7 +122,6 @@ export const changeJobStatus = async (req, res) => {
             message: `${req.params.id} status changed successfully`,
         })
     } catch (e) {
-        console.log(e)
         res.status(500).send({ message: 'Internal Server Error' })
     }
 }
