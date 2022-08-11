@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="merged fixed">
-      <change beforePath="$PROJECT_DIR$/server/service/job.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/job.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="get all users implemented, delete user bug fixed">
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="qa" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -96,6 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659854423635</updated>
     </task>
+    <task id="LOCAL-00007" summary="initial commit">
+      <created>1660200926408</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660200926408</updated>
+    </task>
+    <task id="LOCAL-00008" summary="get all users implemented, delete user bug fixed">
+      <created>1660205433413</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660205433413</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <task id="LOCAL-00007" summary="dev created">
       <created>1659981397177</created>
       <option name="number" value="00007" />
@@ -160,6 +176,7 @@
       <updated>1660204069978</updated>
     </task>
     <option name="localTasksCounter" value="16" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,15 +200,9 @@
     <MESSAGE value="backend environment configuration" />
     <MESSAGE value="server shared functions implementations" />
     <MESSAGE value="server shared functions implementations part 2 completed" />
-    <MESSAGE value="dev created" />
-    <MESSAGE value="qa created" />
-    <MESSAGE value="save job application in progress" />
-    <MESSAGE value="save, update, delete, get by id implemented" />
-    <MESSAGE value="get all by token" />
-    <MESSAGE value="update status, delete job application by job ids" />
-    <MESSAGE value="job application implementation completed" />
-    <MESSAGE value="merged fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged fixed" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="get all users implemented, delete user bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="get all users implemented, delete user bug fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
