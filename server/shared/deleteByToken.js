@@ -1,5 +1,6 @@
 import {decode} from "../middleware/tokenDecode.js";
 import {getModel} from "./modelSelector.js";
+import {passwordConfirmation} from "../confirmation/passwordConfirmation.js";
 
 export const deleteByToken = async (req, res, modelName) => {
     try {
@@ -10,6 +11,7 @@ export const deleteByToken = async (req, res, modelName) => {
             return res.status(404).send({message: "model not found"});
         }
 
+        if (!await passwordConfirmation(req, res, id, Model)) return res.status(401).json({message: `Invalid Credentials`})
         const content = await Model.findByIdAndDelete(id)
 
         if (content) {

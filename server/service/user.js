@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
 import {updateById} from "../shared/updateById.js";
 import {updateByToken} from "../shared/updateByToken.js";
+import {deleteByToken} from "../shared/deleteByToken.js";
 
 
 export const saveUser = async (req, res) => {
@@ -32,4 +33,11 @@ export const getUser = async (req, res) => {
     await getByToken(req, res, "user")
 }
 
+export const updateUser = async (req, res) => {
+    await updateByToken(req, res, "user", validationUpdate)
+}
+
+export const deleteUser = async (req, res) => {
+    await deleteByToken(req, res, "user")
+}
 
