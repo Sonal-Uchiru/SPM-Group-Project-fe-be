@@ -26,3 +26,4 @@ export const validationUpdate = (data) => {
     })
     return schema.validate(data)
 }
+
