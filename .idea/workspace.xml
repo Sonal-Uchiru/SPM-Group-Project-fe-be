@@ -51,6 +51,9 @@
       <workItem from="1659787639889" duration="2266000" />
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
+      <workItem from="1659981283194" duration="975000" />
+      <workItem from="1660135539804" duration="5635000" />
+      <workItem from="1660191004840" duration="10410000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -109,6 +112,71 @@
       <updated>1660205433413</updated>
     </task>
     <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00007" summary="dev created">
+      <created>1659981397177</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659981397177</updated>
+    </task>
+    <task id="LOCAL-00008" summary="save job application in progress">
+      <created>1660145597703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660145597703</updated>
+    </task>
+    <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
+      <created>1660195906540</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660195906540</updated>
+    </task>
+    <task id="LOCAL-00010" summary="get all by token">
+      <created>1660196279343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660196279343</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update status, delete job application by job ids">
+      <created>1660198538318</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660198538318</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update status, delete job application by job ids">
+      <created>1660199656142</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660199656142</updated>
+    </task>
+    <task id="LOCAL-00013" summary="job application implementation completed">
+      <created>1660201692368</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660201692368</updated>
+    </task>
+    <task id="LOCAL-00014" summary="job application implementation completed">
+      <created>1660201801249</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660201801249</updated>
+    </task>
+    <task id="LOCAL-00015" summary="merged fixed">
+      <created>1660204069978</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660204069978</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
