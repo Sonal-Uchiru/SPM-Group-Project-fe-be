@@ -1,0 +1,143 @@
+.login .card {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 750px;
+    margin: 50px auto auto;
+}
+
+.login label {
+    font-weight: bold;
+    margin-left: 10px;
+    color: #06283D;
+}
+
+.login .input {
+    padding-right: 90px;
+    padding-left: 90px;
+}
+
+.login input {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.login .p-viewer {
+    float: right;
+    margin-top: -32px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.login #eyeIcon {
+    color: #1363DF;
+}
+
+.login .loginButton {
+    background-color: #1363DF !important;
+    font-weight: bold;
+    width: 200px;
+    height: 45px;
+    margin-top: 30px;
+}
+
+.login .loginButton:hover {
+    background-color: #06283D !important;
+}
+
+.login #links {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login #clickme {
+    color: #1363DF;
+    text-decoration: underline;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    cursor: pointer;
+}
+
+.login #clickme:hover {
+    color: #06283D;
+}
+
+.login #clikmeBr {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .login .logoImage {
+        width: 300px;
+    }
+
+    .login .card {
+        margin: 120px auto auto;
+    }
+
+    .login .input {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 520px) {
+    .login .input {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 470px) {
+    .login .logoImage {
+        width: 200px;
+    }
+
+    .login #clickme {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login .input {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .login .loginButton {
+        width: 160px;
+    }
+
+    .login #clickme {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .login .logoImage {
+        width: 150px;
+    }
+
+    .login .input {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .login .loginButton {
+        width: 140px;
+    }
+
+    .login #clikmeBr {
+        display: block;
+    }
+}
