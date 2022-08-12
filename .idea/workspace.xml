@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs (Company) UI Design Completed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs (Company) UI Design Add New Styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/viewAllJobsCompany.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/viewAllJobsCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/pages/viewAllJobsCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1660239148569" duration="4848000" />
       <workItem from="1660278774167" duration="26447000" />
-      <workItem from="1660325584311" duration="3860000" />
+      <workItem from="1660325584311" duration="6070000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660329904015</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="View All Jobs (Company) UI Design Add New Styles">
+      <created>1660330530015</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1660330530015</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +258,8 @@
     <MESSAGE value="Footer UI Design Completed" />
     <MESSAGE value="User SignUp UI Design Still Implementing" />
     <MESSAGE value="View All Jobs (Company) UI Design Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs (Company) UI Design Completed" />
+    <MESSAGE value="View All Jobs (Company) UI Design Add New Styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs (Company) UI Design Add New Styles" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
