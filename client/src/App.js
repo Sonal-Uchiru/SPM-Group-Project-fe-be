@@ -8,13 +8,14 @@ import AdminHeader from "./components/admin/navigation/adminHeader";
 import AppliedJobCard from "./components/user/cards/appliedJobCard";
 import ViewAppliedJobs from "./components/user/pages/viewAppliedJobs";
 import AllJobsCard from "./components/user/cards/allJobsCard";
+import ViewAllJobs from "./components/user/pages/viewAllJobs";
 
 function App() {
     return (
         <Router>
             {/*<AdminHeader/>*/}
             <Routes>
-                <Route path="/" element={<AllJobsCard/>}/>
+                <Route path="/" element={<ViewAllJobs/>}/>
             </Routes>
             {/*<Footer/>*/}
         </Router>

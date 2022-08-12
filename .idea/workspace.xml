@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs(User) Card Show More Ui Design Partially Completed" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs(User) Card Ui Design Completed">
+      <change afterPath="$PROJECT_DIR$/client/src/components/user/css/viewAllJobs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/user/pages/viewAllJobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +69,7 @@
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1660239148569" duration="4848000" />
-      <workItem from="1660278774167" duration="15490000" />
+      <workItem from="1660278774167" duration="15804000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -158,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660298189428</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="View All Jobs(User) Card Ui Design Completed">
+      <created>1660298335357</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660298335357</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +200,8 @@
     <MESSAGE value="View All Jobs(User) Page Card Ui Design Completed" />
     <MESSAGE value="View APPlied Jobs(User) Page Ui Design Completed" />
     <MESSAGE value="View All Jobs(User) Card Show More Ui Design Partially Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs(User) Card Show More Ui Design Partially Completed" />
+    <MESSAGE value="View All Jobs(User) Card Ui Design Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs(User) Card Ui Design Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
