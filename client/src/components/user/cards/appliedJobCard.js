@@ -36,6 +36,7 @@ export default function AppliedJobCard() {
                     </div>
                 </div>
             </div>
+            <br/>
         </div>
     )
 }

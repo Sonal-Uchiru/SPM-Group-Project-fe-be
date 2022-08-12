@@ -6,13 +6,14 @@ import UserHeader from "./components/user/navigation/userHeader";
 import CompanyHeader from "./components/company/navigation/companyHeader";
 import AdminHeader from "./components/admin/navigation/adminHeader";
 import AppliedJobCard from "./components/user/cards/appliedJobCard";
+import ViewAppliedJobs from "./components/user/pages/viewAppliedJobs";
 
 function App() {
     return (
         <Router>
             {/*<AdminHeader/>*/}
             <Routes>
-                <Route path="/" element={<AppliedJobCard/>}/>
+                <Route path="/" element={<ViewAppliedJobs/>}/>
             </Routes>
             {/*<Footer/>*/}
         </Router>
