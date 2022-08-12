@@ -8,7 +8,7 @@ export const validatePost = (data) => {
         email: Joi.string().email().max(100).required().label('Email'),
         password: passwordComplexity().required().label('Password'),
         role: Joi.string().required().label('Role'),
-        mobile: Joi.number().max(10).required().label('Phone Number'),
+        mobile: Joi.number().integer().required().label('Phone Number'),
     })
     return schema.validate(data)
 }
@@ -20,7 +20,7 @@ export const validationUpdate = (data) => {
         email: Joi.string().email().max(100).required().label('Email'),
         password: passwordComplexity().required().label('Password'),
         role: Joi.string().required().label('Role'),
-        mobile: Joi.number().max(10).required().label('Phone Number'),
+        mobile: Joi.number().integer().required().label('Phone Number'),
         aboutMe: Joi.string().max(200).label('About Me'),
         address: Joi.string().max(200).label('Address'),
         gender: Joi.string().label('Gender'),

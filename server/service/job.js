@@ -5,6 +5,7 @@ import { updateById } from '../shared/updateById.js'
 import {decode} from '../middleware/tokenDecode.js'
 import {getAllContentByToken} from "../shared/getAllContentByToken.js";
 import {deleteJobApplicationsByJobID} from "./jobApplication.js";
+import {JobApplication} from "../models/jobApplication.js";
 
 //URL: http://localhost:8080/api/protected/job/
 export const saveJob = async (req, res) => {
@@ -41,11 +42,15 @@ export const updateJob = async (req, res) => {
     await updateById(req, res, 'job', validatePost)
 }
 
+export const deleteJobsByCompanyId = async (companyId) => {
+    await JobApplication.deleteMany({companyId})
+}
+
 //URL: http://localhost:8080/api/protected/job/62f293e5419ba56b21304307
 export const deleteJob = async (req, res) => {
     try {
         if (!req.params.id) {
-            return res.status(404).send({ message: 'id not found' })
+            return res.status(404).send({message: 'id not found'})
         }
 
         const content = await Job.findByIdAndDelete(req.params.id)

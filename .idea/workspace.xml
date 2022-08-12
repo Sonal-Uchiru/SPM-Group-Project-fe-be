@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="unwanted code removed">
-      <change beforePath="$PROJECT_DIR$/server/confirmation/passwordConfirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/confirmation/passwordConfirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/job.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/job.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +197,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="get all users implemented, delete user bug fixed" />
     <MESSAGE value="unwanted code removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="unwanted code removed" />
+    <MESSAGE value="implementing folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing folder structure" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

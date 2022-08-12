@@ -47,8 +47,8 @@ export const getJobApplicationsByToken = async (req, res) => {
     }
 }
 
-export const deleteJobApplicationsByJobID = async (res, id) => {
-        await JobApplication.deleteMany({jobId: id})
+export const deleteJobApplicationsByJobID = async (jobId) => {
+    await JobApplication.deleteMany({jobId})
 }
 
 export const updateJobApplicationStatus = async (req, res) => {
