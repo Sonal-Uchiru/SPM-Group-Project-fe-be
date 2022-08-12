@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="User Header Ui Design Completed">
-      <change afterPath="$PROJECT_DIR$/client/public/images/rootCode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Company Header Ui Design Completed">
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1660239148569" duration="4848000" />
-      <workItem from="1660278774167" duration="3843000" />
+      <workItem from="1660278774167" duration="4206000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -126,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660281777988</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Company Header Ui Design Completed">
+      <created>1660282720422</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660282720422</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +156,8 @@
     <MESSAGE value="server shared functions implementations part 2 completed" />
     <MESSAGE value="Login Page Ui Design Completed" />
     <MESSAGE value="User Header Ui Design Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Header Ui Design Completed" />
+    <MESSAGE value="Company Header Ui Design Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Company Header Ui Design Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

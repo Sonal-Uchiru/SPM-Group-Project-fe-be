@@ -4,11 +4,12 @@ import Login from "./components/authentication/loginPage";
 import Footer from "./components/Footer/footer";
 import UserHeader from "./components/user/navigation/userHeader";
 import CompanyHeader from "./components/company/navigation/companyHeader";
+import AdminHeader from "./components/admin/navigation/adminHeader";
 
 function App() {
     return (
         <Router>
-            <CompanyHeader/>
+            <AdminHeader/>
             <Routes>
                 <Route path="/" element={<Login/>}/>
             </Routes>
