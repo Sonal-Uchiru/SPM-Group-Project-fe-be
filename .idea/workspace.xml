@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View APPlied Jobs(User) Page Ui Design Completed">
-      <change afterPath="$PROJECT_DIR$/client/public/images/accuracy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/arrow-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/cards/allJobsCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/css/allJobsCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs(User) Card Show More Ui Design Partially Completed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +65,7 @@
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1660239148569" duration="4848000" />
-      <workItem from="1660278774167" duration="15128000" />
+      <workItem from="1660278774167" duration="15490000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -159,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660288989460</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="View All Jobs(User) Card Show More Ui Design Partially Completed">
+      <created>1660298189428</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660298189428</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +188,8 @@
     <MESSAGE value="Admin Header Ui Design Completed" />
     <MESSAGE value="View All Jobs(User) Page Card Ui Design Completed" />
     <MESSAGE value="View APPlied Jobs(User) Page Ui Design Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="View APPlied Jobs(User) Page Ui Design Completed" />
+    <MESSAGE value="View All Jobs(User) Card Show More Ui Design Partially Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs(User) Card Show More Ui Design Partially Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
