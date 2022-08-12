@@ -12,13 +12,14 @@ import ViewAllJobs from "./components/user/pages/viewAllJobs";
 import AllJobsCardCompany from "./components/company/cards/allJobsCardCompany";
 import ViewAllJobsCompany from "./components/company/pages/viewAllJobsCompany";
 import UserSignUP from "./components/user/pages/signup";
+import CompanyRegistration from "./components/company/pages/companyRegistration";
 
 function App() {
     return (
         <Router>
             <UserHeader/>
             <Routes>
-                <Route path="/" element={<UserSignUP/>}/>
+                <Route path="/" element={<CompanyRegistration/>}/>
             </Routes>
             <Footer/>
         </Router>
