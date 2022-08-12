@@ -1,28 +1,28 @@
-.userHeader .navbar {
+.companyHeader .navbar {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.userHeader .nav-link {
+.companyHeader .nav-link {
     font-weight: bold;
     font-size: 18px;
     color: #1363DF;
 }
 
-.userHeader .nav-link:hover {
+.companyHeader .nav-link:hover {
     color: #47B5FF;
 }
 
-.userHeader .navbar-toggler {
+.companyHeader .navbar-toggler {
     border-color: #1363DF;
 }
 
-.userHeader .navbar-toggler-icon {
+.companyHeader .navbar-toggler-icon {
     background-image: url(
     "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(19,99,223)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.userHeader .fullName {
+.companyHeader .companyName {
     font-weight: bold;
     text-decoration: underline;
     color: #06283D;
@@ -31,11 +31,11 @@
     cursor: pointer;
 }
 
-.userHeader .fullName:hover {
+.companyHeader .companyName:hover {
     transform: scale(1.01);
 }
 
-.userHeader .profileImage {
+.companyHeader .companyLogo {
     border-radius: 50%;
     border: 1px solid white;
     width: 70px;
@@ -46,11 +46,11 @@
     cursor: pointer;
 }
 
-.userHeader .profileImage:hover {
+.companyHeader .companyLogo:hover {
     transform: scale(1.02);
 }
 
-.userHeader .logout {
+.companyHeader .logout {
     width: 40px;
     height: 40px;
     margin-top: 15px;
@@ -58,12 +58,12 @@
     margin-right: 5px;
 }
 
-.userHeader .logout:hover {
+.companyHeader .logout:hover {
     transform: scale(1.04);
 }
 
 @media (max-width: 325px) {
-    .userHeader .fullName {
+    .companyHeader .companyName {
         font-size: 12px;
     }
 }

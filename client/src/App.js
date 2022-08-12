@@ -3,11 +3,12 @@ import React, {Component} from 'react';
 import Login from "./components/authentication/loginPage";
 import Footer from "./components/Footer/footer";
 import UserHeader from "./components/user/navigation/userHeader";
+import CompanyHeader from "./components/company/navigation/companyHeader";
 
 function App() {
     return (
         <Router>
-            <UserHeader/>
+            <CompanyHeader/>
             <Routes>
                 <Route path="/" element={<Login/>}/>
             </Routes>
