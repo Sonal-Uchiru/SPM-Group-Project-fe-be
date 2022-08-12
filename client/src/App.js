@@ -15,11 +15,11 @@ import ViewAllJobsCompany from "./components/company/pages/viewAllJobsCompany";
 function App() {
     return (
         <Router>
-            {/*<AdminHeader/>*/}
+            <AdminHeader/>
             <Routes>
-                <Route path="/" element={<ViewAllJobsCompany/>}/>
+                <Route path="/" element={<Login/>}/>
             </Routes>
-            {/*<Footer/>*/}
+            <Footer/>
         </Router>
     );
 }
