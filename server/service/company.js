@@ -1,5 +1,5 @@
 import {Company} from '../models/company.js'
-import {validatePost} from "../validations/company.js";
+import {validatePost, validateUpdate} from "../validations/company.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
 import {updateById} from "../shared/updateById.js";
@@ -39,4 +39,12 @@ export const getAllCompanies = async (req, res) => {
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }
+}
+
+export const updateCompany = async (req, res) => {
+    await updateByToken(req, res, "company", validateUpdate)
+}
+
+export const getCompany = async (req, res) => {
+    await getByToken(req, res, "company")
 }

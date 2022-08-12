@@ -5,4 +5,4 @@ const companyRouter = express.Router()
 
 companyRouter.get('/', getAllCompanies)
 
-export {userRouter}
+export {companyRouter}

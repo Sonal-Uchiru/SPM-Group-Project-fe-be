@@ -9,8 +9,8 @@ export const validatePost = (data) => {
         address:Joi.string().max(200).required().label('Company Address'),
         field:Joi.string().required().label('Field'),
         password: passwordComplexity().required().label('Password'),
-        mobile: Joi.number().required().label('Phone Number'),
-        siteUrl:Joi.string().uri().label('Site Url')
+        mobile: Joi.number().min(0).max(10).required().label('Phone Number'),
+        siteUrl:Joi.string().uri().optional().label('Site Url')
     })
     return schema.validate(data)
 }
