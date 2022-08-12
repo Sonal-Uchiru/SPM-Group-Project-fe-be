@@ -10,9 +10,10 @@ import { protectedUrl, url } from './constant/api.js'
 import authRouter from './routes/auth.js'
 import { userRouter } from './controller/user.js'
 import { jobRouter } from './controller/job.js'
-import {jobApplicationRouter} from "./controller/jobApplication.js";
+import { companyRouter } from './routes/company.js'
+import { jobApplicationRouter } from './controller/jobApplication.js'
 import { userRouter as unprotectedUserRouter } from './routes/user.js'
-
+import { companyRouter as unprotectedCompanyRouter } from './routes/company.js'
 
 const app = express()
 
@@ -29,6 +30,7 @@ app.use(cors())
 // Routes
 app.use(url.AUTHENTICATION, authRouter)
 app.use(url.USER_MANAGEMENT, unprotectedUserRouter)
+app.use(url.COMPANY_MANAGEMENT, unprotectedCompanyRouter)
 
 // Protected Routes
 app.use(
@@ -38,7 +40,7 @@ app.use(
 )
 app.use(
     protectedUrl.JOB_APPLICATION_MANAGEMENT,
-    jwt({secret: process.env.JWTPRIVATEKEY, algorithms: ['HS256']}),
+    jwt({ secret: process.env.JWTPRIVATEKEY, algorithms: ['HS256'] }),
     jobApplicationRouter
 )
 
@@ -48,6 +50,11 @@ app.use(
     jobRouter
 )
 
+app.use(
+    protectedUrl.COMPANY_MANAGEMENT,
+    jwt({ secret: process.env.JWTPRIVATEKEY, algorithms: ['HS256'] }),
+    companyRouter
+)
 const port = process.env.PORT || 8080
 
 app.listen(port)
