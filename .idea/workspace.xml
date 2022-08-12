@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs(User) Page Card Ui Design Completed">
-      <change afterPath="$PROJECT_DIR$/client/public/images/search (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/search (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/css/viewAppliedJobs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/pages/viewAppliedJobs.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View APPlied Jobs(User) Page Ui Design Completed">
+      <change afterPath="$PROJECT_DIR$/client/public/images/accuracy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/arrow-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/user/cards/allJobsCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/user/css/allJobsCard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/appliedJobCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/appliedJobCard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
@@ -38,11 +39,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -50,8 +52,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public" />
       <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
@@ -71,7 +73,7 @@
       <workItem from="1659851535178" duration="2891000" />
       <workItem from="1659892741056" duration="2003000" />
       <workItem from="1660239148569" duration="4848000" />
-      <workItem from="1660278774167" duration="9751000" />
+      <workItem from="1660278774167" duration="15128000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -150,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660286636431</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="View APPlied Jobs(User) Page Ui Design Completed">
+      <created>1660288989460</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660288989460</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +188,8 @@
     <MESSAGE value="Company Header Ui Design Completed" />
     <MESSAGE value="Admin Header Ui Design Completed" />
     <MESSAGE value="View All Jobs(User) Page Card Ui Design Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs(User) Page Card Ui Design Completed" />
+    <MESSAGE value="View APPlied Jobs(User) Page Ui Design Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="View APPlied Jobs(User) Page Ui Design Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

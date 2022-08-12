@@ -7,13 +7,14 @@ import CompanyHeader from "./components/company/navigation/companyHeader";
 import AdminHeader from "./components/admin/navigation/adminHeader";
 import AppliedJobCard from "./components/user/cards/appliedJobCard";
 import ViewAppliedJobs from "./components/user/pages/viewAppliedJobs";
+import AllJobsCard from "./components/user/cards/allJobsCard";
 
 function App() {
     return (
         <Router>
             {/*<AdminHeader/>*/}
             <Routes>
-                <Route path="/" element={<ViewAppliedJobs/>}/>
+                <Route path="/" element={<AllJobsCard/>}/>
             </Routes>
             {/*<Footer/>*/}
         </Router>
