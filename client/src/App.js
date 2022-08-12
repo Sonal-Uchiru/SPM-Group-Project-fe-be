@@ -9,13 +9,14 @@ import AppliedJobCard from "./components/user/cards/appliedJobCard";
 import ViewAppliedJobs from "./components/user/pages/viewAppliedJobs";
 import AllJobsCard from "./components/user/cards/allJobsCard";
 import ViewAllJobs from "./components/user/pages/viewAllJobs";
+import AllJobsCardCompany from "./components/company/cards/allJobsCardCompany";
 
 function App() {
     return (
         <Router>
             {/*<AdminHeader/>*/}
             <Routes>
-                <Route path="/" element={<ViewAllJobs/>}/>
+                <Route path="/" element={<AllJobsCardCompany/>}/>
             </Routes>
             {/*<Footer/>*/}
         </Router>
