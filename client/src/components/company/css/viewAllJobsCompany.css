@@ -65,3 +65,16 @@
 .viewAllJobsCompany .pageBody {
     margin-top: 50px;
 }
+
+
+@media (min-width: 1199px) {
+    .viewAllJobsCompany .createJobButton {
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .viewAllJobsCompany .createJobButton {
+        margin-right: 140px;
+    }
+}
