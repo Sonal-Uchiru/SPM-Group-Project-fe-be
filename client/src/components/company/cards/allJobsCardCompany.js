@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "../css/allJobsCardCompany.css"
+import Icon from "../pages/test";
 
 export default function AllJobsCardCompany() {
 

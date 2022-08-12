@@ -14,6 +14,20 @@ export default function ViewAllJobsCompany() {
                   </span>
                 </form>
             </div>
+            <br/>
+            <div className="container">
+                <div className="btn-group me-2 btns">
+                    <button type="button" className="btn btn-primary createJobButton"><i className="fa fa-plus-circle"/>Create
+                        Job
+                    </button>
+                </div>
+                <div className="btn-group me-2 btns">
+                    <button type="button" className="btn btn-primary downloadReportButton"><i
+                        className="fa fa-download"/>Download Report
+                    </button>
+                </div>
+                <br/><br/>
+            </div>
 
             <div className="pageBody">
                 <AllJobsCardCompany/>

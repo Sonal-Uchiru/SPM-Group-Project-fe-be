@@ -18,7 +18,7 @@ function App() {
         <Router>
             <UserHeader/>
             <Routes>
-                <Route path="/" element={<UserSignUP/>}/>
+                <Route path="/" element={<ViewAllJobsCompany/>}/>
             </Routes>
             <Footer/>
         </Router>

@@ -21,6 +21,38 @@
     color: #ABB5BE;
 }
 
+.viewAllJobsCompany .downloadReportButton {
+    background-color: #28A745;
+    border: none;
+    height: 40px;
+}
+
+.viewAllJobsCompany .createJobButton {
+    background-color: #28A745;
+    border: none;
+    width: 168px;
+    height: 40px;
+}
+
+.viewAllJobsCompany .fa {
+    margin-right: 5px;
+}
+
+.viewAllJobsCompany .btns {
+    float: right !important;
+    margin-bottom: 5px;
+}
+
+.viewAllJobsCompany .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.viewAllJobsCompany .createJobButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
 .viewAllJobsCompany .p-viewer {
     float: right;
     margin-top: -32px;
