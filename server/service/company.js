@@ -1,4 +1,5 @@
 import {Company} from '../models/company.js'
+import { User } from '../models/user.js';
 import {validatePost, validateUpdate} from "../validations/company.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
@@ -13,12 +14,14 @@ export const saveCompany = async (req, res) => {
         if (error)
             return res.status(400).send({message: error.details[0].message})
 
-        //  Validation ?????   
-        // const user = await Company.findOne({email: req.body.email})
-        // if (user)
-        //     return res
-        //         .status(409)
-        //         .send({message: 'Company with given email already Exist!'})
+        const company = await Company.findOne({email: req.body.email})
+        const user = await User.findOne({email: req.body.email})
+        if (user || company)
+            return res
+                .status(409)
+                .send({message: 'Email already excists in the system!'})
+
+
 
         const salt = await bcrypt.genSalt(Number(process.env.SALT))
         const hashPassword = await bcrypt.hash(req.body.password, salt)
