@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import PasswordStrengthIndicator from '../../external_components/passwordStrengthIndecator'
+import {BsArrowLeft} from "react-icons/all";
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
@@ -12,12 +13,25 @@ export default function CompanyRegistration() {
 
     const [passwordShown, setPasswordShown] = useState(false);
     const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
-    const [step1, setStep1] = useState(false)
-    const [step2, setStep2] = useState(true)
-
+    const [step1, setStep1] = useState(true)
+    const [step2, setStep2] = useState(false)
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
     let [moviePlaceHolder, setMoviePlaceHolder] = useState(false)
+
+    const [companyName, setCompanyName] = useState('');
+
+
+    const nextStep = () => {
+        setStep1(false)
+        setStep2(true)
+    }
+
+    const navigateBack = () => {
+        setStep2(false)
+        setStep1(true)
+    }
+
     // Password toggle handler
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -83,7 +97,7 @@ export default function CompanyRegistration() {
                             <br/>
                             <form>
 
-                                <div className='step1' hidden={step1}>
+                                {step1 && <div>
                                     <br/>
                                     <span>
                     <center>
@@ -136,6 +150,9 @@ export default function CompanyRegistration() {
                                         <input
                                             type='text'
                                             id='companyName'
+                                            value={companyName}
+                                            onChange={(e) => setCompanyName(e.target.value)
+                                            }
                                             className='form-control form-control-lg'
                                             placeholder='Company Name'
                                         />
@@ -196,17 +213,14 @@ export default function CompanyRegistration() {
                                     <button
                                         type='button'
                                         className='btn rounded next'
-                                        onClick={() => {
-                                            setStep1(true)
-                                            setStep2(false)
-                                        }}
+                                        onClick={() => nextStep()}
                                     >
                                         Next
                                         <i className='fa fa-arrow-right arrow' aria-hidden='true'/>
                                     </button>
-                                </div>
+                                </div>}
 
-                                <div className='step2' hidden={step2}>
+                                {step2 && <div>
                                     <h3 className="almostThere">Almost There...</h3>
                                     <br/>
 
@@ -313,16 +327,13 @@ export default function CompanyRegistration() {
                                     </button>
                                     <p className='back'>
                                         <a
-                                            onClick={() => {
-                                                setStep1(false)
-                                                setStep2(true)
-                                            }}
+                                            onClick={navigateBack}
                                         >
                                             {' '}
                                             Back
                                         </a>
                                     </p>
-                                </div>
+                                </div>}
                             </form>
                         </div>
                     </div>

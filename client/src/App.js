@@ -13,15 +13,16 @@ import AllJobsCardCompany from "./components/company/cards/allJobsCardCompany";
 import ViewAllJobsCompany from "./components/company/pages/viewAllJobsCompany";
 import UserSignUP from "./components/user/pages/signup";
 import JobApplicationForm from "./components/jobApplications/jobApplicationForm";
+import CompanyRegistration from "./components/company/pages/companyRegistration";
 
 function App() {
     return (
         <Router>
-            {/*<UserHeader/>*/}
+            <UserHeader/>
             <Routes>
-                <Route path="/" element={<JobApplicationForm/>}/>
+                <Route path="/" element={<CompanyRegistration/>}/>
             </Routes>
-            {/*<Footer/>*/}
+            <Footer/>
         </Router>
     );
 }
