@@ -1,0 +1,43 @@
+.job-application-form .container .company-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.job-application-form .blue-text-color {
+    color: #1363DF;
+}
+
+.job-application-form .grey-text-color {
+    color: #808080;
+}
+
+.job-application-form .light-blue-btn {
+    background-color: #47B5FF;
+    color: #ffffff;
+    width: 80%;
+}
+
+
+.modal-title-edit {
+    margin-top: -28px;
+}
+
+.modal-title {
+    color: #06283D;
+}
+
+.job-application-form .custom-input-fields {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.job-application-form .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
+.btn-success {
+    background-color: #28A745 !important;
+    border-color: #28A745;
+}
+
