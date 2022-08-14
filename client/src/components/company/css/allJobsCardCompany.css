@@ -45,7 +45,7 @@
 .allJobsCardCompany .showMore {
     width: 40px;
     height: 40px;
-    margin-top: 10px;
+    margin-top: -40px;
     cursor: pointer;
 }
 
@@ -56,6 +56,7 @@
 .allJobsCardCompany .showLess {
     width: 45px;
     height: 45px;
+    margin-top: -15px;
     cursor: pointer;
 }
 
@@ -117,6 +118,11 @@
         margin-top: 5px;
         padding-bottom: 10px;
     }
+
+    .allJobsCardCompany .showMore {
+        margin-top: -10px;
+    }
+
 }
 
 

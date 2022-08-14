@@ -2,9 +2,14 @@ import React from "react";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
-import "../css/allUserTable.css";
+import "../css/listAllJobApplications.css"
 
 export default function AllJobApplications() {
+
+
+    $(document).ready(function () {
+        $('#studentTable').DataTable({});
+    });
 
     return (
         <div className="all-user-table">
@@ -12,7 +17,7 @@ export default function AllJobApplications() {
                 <div className="scrollbar">
                     <table
                         id="studentTable"
-                        className="table table-bordered table-sm nowrap table-hover student-table"
+                        className="table table-bordered table-striped table-sm nowrap table-hover student-table"
                     >
                         <thead>
                         <tr>

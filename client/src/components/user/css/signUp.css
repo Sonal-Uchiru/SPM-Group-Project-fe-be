@@ -107,6 +107,12 @@
     }
 }
 
+@media (max-width: 996px) {
+    .userSignUp .rightSide {
+        margin-top: -80PX;
+    }
+}
+
 @media (max-width: 600px) {
     .userSignUp .rightSide {
         padding: 30px 40px 20px;

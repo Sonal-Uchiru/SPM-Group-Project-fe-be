@@ -31,6 +31,7 @@ function App() {
                 <Route path="/e" element={<ViewAppliedJobs/>}/>
                 <Route path="/f" element={<AddNewJob/>}/>
                 <Route path="/g" element={<EditJob/>}/>
+                <Route path="/h" element={<AllJobApplications/>}/>
             </Routes>
             <Footer/>
         </Router>

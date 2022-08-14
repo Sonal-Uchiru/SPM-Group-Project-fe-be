@@ -105,7 +105,7 @@ export default function CompanyRegistration() {
                         <img
                             className='z-depth-2 Img1'
                             alt='pro_image'
-                            src='./../images/user (7).png'
+                            src='./images/logo-placeholder-image-modified.png'
                             data-holder-rendered='true'
                             hidden={moviePlaceHolder}
                         />
@@ -122,7 +122,7 @@ export default function CompanyRegistration() {
                         <div className='image-upload'>
                           <label htmlFor='file-input'>
                             <img
-                                src='./../images/camera.png'
+                                src='./images/gallery.png'
                                 className='Img2'
                                 id='image-upload-btn'
                                 alt='camera image'
