@@ -15,13 +15,14 @@ import UserSignUP from "./components/user/pages/signup";
 import JobApplicationForm from "./components/jobApplications/jobApplicationForm";
 import CompanyRegistration from "./components/company/pages/companyRegistration";
 import AddNewJob from "./components/jobs/addNewJob";
+import EditJob from "./components/jobs/editJob";
 
 function App() {
     return (
         <Router>
             <UserHeader/>
             <Routes>
-                <Route path="/" element={<AddNewJob/>}/>
+                <Route path="/" element={<EditJob/>}/>
             </Routes>
             <Footer/>
         </Router>
