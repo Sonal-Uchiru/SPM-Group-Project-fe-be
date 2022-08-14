@@ -11,12 +11,13 @@ import BaseModal from "./components/modals/baseModal";
 import ConfirmModal from "./components/modals/confirmModal";
 import ChangePasswordModal from "./components/modals/changePasswordModal";
 import UserProfile from "./components/user/pages/userProfile";
+import TestPdf from "./components/user/pages/testPdf";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CompanySummary />} />
+        <Route path="/" element={<TestPdf />} />
       </Routes>
     </Router>
   );
