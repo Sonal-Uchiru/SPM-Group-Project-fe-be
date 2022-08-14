@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Test Routes">
-      <change afterPath="$PROJECT_DIR$/client/public/images/SPMLogoNew.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/SPMNEW.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/gallery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/logo-placeholder-image-modified.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/search (4).png" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="UI Issues Corrected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/listAllJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/css/listAllJobApplications.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/data_tables/listAllAppliedJobsApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/data_tables/listAllAppliedJobsApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/cards/allJobsCardCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/cards/allJobsCardCompany.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/allJobsCardCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/allJobsCardCompany.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyRegistration.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/companyRegistration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/cards/allJobsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/cards/allJobsCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/allJobsCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/allJobsCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/navigation/userHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/navigation/userHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +83,7 @@
       <workItem from="1660278774167" duration="26447000" />
       <workItem from="1660325584311" duration="6070000" />
       <workItem from="1660448178001" duration="2331000" />
-      <workItem from="1660450872042" duration="15678000" />
+      <workItem from="1660450872042" duration="16498000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -284,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660459610512</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="UI Issues Corrected">
+      <created>1660475660629</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1660475660629</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +285,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial" />
     <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
@@ -327,7 +309,8 @@
     <MESSAGE value="Add New Job (Company) (Modal) UI Implemented" />
     <MESSAGE value="Edit Job (Company) (Modal) UI Implemented" />
     <MESSAGE value="Add Test Routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test Routes" />
+    <MESSAGE value="UI Issues Corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Issues Corrected" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
