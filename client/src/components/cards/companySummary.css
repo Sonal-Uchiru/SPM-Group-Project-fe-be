@@ -1,4 +1,4 @@
-.user-summary .card {
+.company-summary .card {
   border: 1px solid #1363df;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -7,35 +7,46 @@
   margin: 50px auto auto;
 }
 
-.user-summary .summary-topic {
+.company-summary .summary-topic {
   color: #1363df;
 }
-.user-summary .sub-text {
+.company-summary .sub-text {
   color: #06283d;
 }
 
-.user-summary .summary-div {
+.company-summary .summary-div1 {
   border-radius: 100%;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border: 8px solid green;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.company-summary .summary-div2 {
+  border-radius: 100%;
+  width: 160px;
+  height: 160px;
+  border: 8px solid rgb(94, 94, 5);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
-.user-summary .summary-text {
+.company-summary .summary-text {
   font-size: 30px;
-  padding-top: 10px;
+  padding-top: 7px;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  .user-summary .summary-div {
+  .company-summary .summary-div1 {
     width: 150px;
     height: 150px;
     border: 8px solid green;
   }
-  .user-summary .summary-text {
+  .company-summary .summary-text {
     padding-top: 6px;
     font-size: 20px;
+  }
+  .company-summary .card {
+  
+    height: 530px;
   }
 }

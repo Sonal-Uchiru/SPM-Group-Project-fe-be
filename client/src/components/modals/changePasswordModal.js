@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./confirmModal.css";
+import "./changePasswordModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +23,7 @@ export default function ChangePasswordModal() {
     setPasswordShown3(!passwordShown3);
   };
   return (
-    <div className="container confirm-modal">
+    <div className="container change-modal">
       <h3>Change Password</h3>
       <form>
         <div className="mt-3 mb-3 input">
@@ -93,7 +93,7 @@ export default function ChangePasswordModal() {
           </span>
         </div>
         <div className="text-center">
-          <button type="button" className="btn btn-success me-5 confirmButton">
+          <button type="button" className="btn btn-success confirmButton">
             Save Changes
           </button>
           <button type="button" className="btn btn-danger cancelButton">

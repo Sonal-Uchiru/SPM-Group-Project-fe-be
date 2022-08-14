@@ -3,6 +3,8 @@
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   max-width: 750px;
+  min-height: 350px;
+  max-height: 550px;
   margin: 50px auto auto;
 }
 
@@ -19,8 +21,23 @@
 .user-details .btn-edit {
   border-radius: 5px;
   width: 150px;
+  margin-top: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .user-details .btn-delete {
-  width: 150px;
   border-radius: 5px;
+  width: 150px;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+@media (max-width: 453px) {
+  .user-details .btn-edit {
+    margin-top: 8px;
+    margin-left: 30px;
+  }
+  .user-details .btn-delete {
+    margin-top: 8px;
+  }
 }

@@ -14,8 +14,9 @@ export default function ConfirmModal() {
     setPasswordShown(!passwordShown);
   };
   return (
-    <div className="container confirm-modal">
-   
+    <div>
+      
+        <div className="container confirm-modal">
           <h3>Confirm Password</h3>
           <form>
             <div className="mb-3 input">
@@ -43,7 +44,7 @@ export default function ConfirmModal() {
             <div className="text-center">
               <button
                 type="button"
-                className="btn btn-success me-5 confirmButton"
+                className="btn btn-success confirmButton"
               >
                 Confirm
               </button>
@@ -52,8 +53,10 @@ export default function ConfirmModal() {
               </button>
             </div>
           </form>
-      <br />
-      <br />
+          <br />
+          <br />
+        </div>
+    
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./userDetails.css";
+import "./companyDetails.css";
 
-export default function UserDetails() {
+export default function CompanyDetails() {
   return (
-    <div className="container user-details">
+    <div className="container company-details">
       <div className="card">
         <div className="row m-4">
           <div className="row">
-            <h3 className="summary-topic">Personal Details</h3>
+            <h3 className="summary-topic">Company Details</h3>
           </div>
           <div className="row mt-3">
             <div className="col-md-6 mt-2">
@@ -17,8 +17,8 @@ export default function UserDetails() {
               </p>
             </div>
             <div className="col-md-6 mt-2">
-              <p className="profile-data">Date of Birth : 2001/01/28</p>
-              <p className="profile-data">Gender : Female</p>
+              <p className="profile-data">Field : Information Technology</p>
+              <p className="profile-data">Site URL :  www.calcey.com</p>
             </div>
           </div>
           <div className="row d-flex justify-content-center">

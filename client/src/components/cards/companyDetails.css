@@ -1,0 +1,44 @@
+.company-details .card {
+    border: 1px solid #1363df;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 750px;
+    min-height: 350px;
+    max-height: 550px;
+    margin: 50px auto auto;
+  }
+  
+  .company-details .summary-topic {
+    color: #1363df;
+  }
+  .company-details .sub-text {
+    color: #06283d;
+  }
+  .company-details .profile-data {
+    font-weight: bold;
+  }
+  
+  .company-details .btn-edit {
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .company-details .btn-delete {
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 15px;
+  }
+  
+  @media (max-width: 453px) {
+    .company-details .btn-edit {
+      margin-top: 8px;
+      margin-left: 30px;
+    }
+    .company-details .btn-delete {
+      margin-top: 8px;
+    }
+  }
+  

@@ -10,12 +10,12 @@ export default function UserSummary() {
           <div>
             <h2 className="summary-topic">Summary</h2>
           </div>
-          <div>
+          <div className="d-flex justify-content-center">
             <div className="text-center summary-div p-5">
-              <h2 className="p-3">20</h2>
+              <p className="summary-text">20</p>
             </div>
-            <h2 className="text-center sub-text">Number of Applied Jobs</h2>
           </div>
+          <h2 className="text-center sub-text mt-3">Number of Applied Jobs</h2>
         </div>
       </div>
       <br />
