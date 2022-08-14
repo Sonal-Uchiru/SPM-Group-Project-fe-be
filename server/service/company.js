@@ -1,19 +1,20 @@
-import {User} from '../models/user.js'
-import {validatePost, validationUpdate} from "../validations/user.js";
+import {Company} from '../models/company.js'
+import {User} from '../models/user.js';
+import {validatePost, validateUpdate} from "../validations/company.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
-import {updateById} from "../shared/updateById.js";
 import {updateByToken} from "../shared/updateByToken.js";
+import {deleteJobsByCompanyId} from "./job.js";
 import {deleteByToken} from "../shared/deleteByToken.js";
-import {Company} from "../models/company.js";
-import {deleteJobApplicationsByApplicantID} from "./jobApplication.js";
 import {decode} from "../middleware/tokenDecode.js";
+import express from "express";
 import {changePassword} from "../shared/changePassword.js";
 
 
-export const saveUser = async (req, res) => {
+export const saveCompany = async (req, res) => {
     try {
         const {error} = validatePost(req.body)
+
         if (error)
             return res.status(400).send({message: error.details[0].message})
 
@@ -27,7 +28,7 @@ export const saveUser = async (req, res) => {
         const salt = await bcrypt.genSalt(Number(process.env.SALT))
         const hashPassword = await bcrypt.hash(req.body.password, salt)
 
-        const content = await new User({...req.body, password: hashPassword}).save()
+        const content = await new Company({...req.body, password: hashPassword}).save()
 
         if (content) res.status(201).send(content)
     } catch (error) {
@@ -35,27 +36,28 @@ export const saveUser = async (req, res) => {
     }
 }
 
-export const getUser = async (req, res) => {
-    await getByToken(req, res, "user")
-}
 
-export const updateUser = async (req, res) => {
-    await updateByToken(req, res, "user", validationUpdate)
-}
-
-export const deleteUser = async (req, res) => {
-    await deleteByToken(req, res, "user", deleteJobApplicationsByApplicantID)
-}
-
-export const getAllUsers = async (req, res) => {
+export const getAllCompanies = async (req, res) => {
     try {
-        const content = await User.find()
+        const content = await Company.find()
         res.status(200).send(content)
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }
 }
 
+export const updateCompany = async (req, res) => {
+    await updateByToken(req, res, "company", validateUpdate)
+}
+
+export const getCompany = async (req, res) => {
+    await getByToken(req, res, "company")
+}
+
+export const deleteCompany = async (req, res) => {
+    await deleteByToken(req, res, "company", deleteJobsByCompanyId)
+}
+
 export const updatePassword = async (req, res) => {
-    await changePassword(req, res, "user")
+    await changePassword(req, res, "company")
 }
