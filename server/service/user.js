@@ -8,6 +8,7 @@ import {deleteByToken} from "../shared/deleteByToken.js";
 import {Company} from "../models/company.js";
 import {deleteJobApplicationsByApplicantID} from "./jobApplication.js";
 import {decode} from "../middleware/tokenDecode.js";
+import {changePassword} from "../shared/changePassword.js";
 
 
 export const saveUser = async (req, res) => {
@@ -54,3 +55,6 @@ export const getAllUsers = async (req, res) => {
     }
 }
 
+export const updatePassword = async (req, res) => {
+    await changePassword(req, res, "user")
+}

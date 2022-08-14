@@ -1,5 +1,5 @@
 import {Company} from '../models/company.js'
-import { User } from '../models/user.js';
+import {User} from '../models/user.js';
 import {validatePost, validateUpdate} from "../validations/company.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
@@ -7,6 +7,8 @@ import {updateByToken} from "../shared/updateByToken.js";
 import {deleteJobsByCompanyId} from "./job.js";
 import {deleteByToken} from "../shared/deleteByToken.js";
 import {decode} from "../middleware/tokenDecode.js";
+import express from "express";
+import {changePassword} from "../shared/changePassword.js";
 
 
 export const saveCompany = async (req, res) => {
@@ -54,4 +56,8 @@ export const getCompany = async (req, res) => {
 
 export const deleteCompany = async (req, res) => {
     await deleteByToken(req, res, "company", deleteJobsByCompanyId)
+}
+
+export const updatePassword = async (req, res) => {
+    await changePassword(req, res, "company")
 }
