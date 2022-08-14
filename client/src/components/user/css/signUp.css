@@ -1,0 +1,139 @@
+.userSignUp .divider:after,
+.userSignUp .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.userSignUp .row1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.userSignUp .quote {
+    color: #1363DF;
+}
+
+.userSignUp .SiteLogo {
+    height: 200px;
+}
+
+.userSignUp input {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.userSignUp input,
+.userSignUp input::placeholder {
+    font-size: 14px;
+}
+
+.userSignUp label {
+    color: #06283D;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.userSignUp .rightSide {
+    border: 1px solid #06283D;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 40px 50px 30px;
+}
+
+.userSignUp .signup {
+    font-weight: bold;
+    color: #06283D;
+    text-align: center;
+    font-size: 40px;
+}
+
+.userSignUp .signupBtn {
+    background-color: #1363DF;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 36%;
+    margin-top: 40px;
+    height: 40px;
+}
+
+.userSignUp .signupBtn:hover {
+    background-color: #06283D;
+}
+
+.userSignUp #eyeIcon {
+    color: #1363DF;
+}
+
+.userSignUp .p-viewer {
+    float: right;
+    margin-top: -33px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 996px) {
+    .userSignUp .SiteLogo {
+        display: none;
+    }
+
+    .userSignUp {
+        margin: 20px;
+        overflow-y: hidden;
+    }
+
+    .userSignUp .col-md-8 {
+        width: 100%;
+    }
+
+    .userSignUp .quote {
+        display: none;
+    }
+}
+
+@media (min-width: 996px) {
+    .userSignUp .rightSide {
+        padding: 40px 50px 30px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .userSignUp .rightSide {
+        padding: 30px 40px 20px;
+    }
+
+    .userSignUp {
+        overflow-y: auto;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .userSignUp .signupBtn {
+        width: 46%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .userSignUp .rightSide {
+        padding: 10px 20px 10px;
+    }
+
+}
+
+@media (max-width: 290px) {
+    .userSignUp .signupBtn {
+        width: 56%;
+    }
+}

@@ -1,41 +1,56 @@
-.adminHeader .navbar {
+.userHeader .navbar {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.adminHeader .nav-link {
+.userHeader .nav-link {
     font-weight: bold;
     font-size: 18px;
     color: #1363DF;
 }
 
-.adminHeader .nav-link:hover {
+.userHeader .nav-link:hover {
     color: #47B5FF;
 }
 
-.adminHeader .navbar-toggler {
+.userHeader .navbar-toggler {
     border-color: #1363DF;
 }
 
-.adminHeader .navbar-toggler-icon {
+.userHeader .navbar-toggler-icon {
     background-image: url(
     "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(19,99,223)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.adminHeader .adminImage {
+.userHeader .fullName {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #06283D;
+    margin-top: 20px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.userHeader .fullName:hover {
+    transform: scale(1.01);
+}
+
+.userHeader .profileImage {
+    border-radius: 50%;
     border: 1px solid white;
     width: 70px;
     height: 70px;
     object-fit: fill;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-right: 25px;
     cursor: pointer;
 }
 
-.adminHeader .adminImage:hover {
+.userHeader .profileImage:hover {
     transform: scale(1.02);
 }
 
-.adminHeader .logout {
+.userHeader .logout {
     width: 40px;
     height: 40px;
     margin-top: 15px;
@@ -43,6 +58,12 @@
     margin-right: 5px;
 }
 
-.adminHeader .logout:hover {
+.userHeader .logout:hover {
     transform: scale(1.04);
+}
+
+@media (max-width: 325px) {
+    .userHeader .fullName {
+        font-size: 12px;
+    }
 }

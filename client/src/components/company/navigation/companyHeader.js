@@ -1,10 +1,9 @@
-import React from 'react'
-import "../css/adminHeader.css";
+import React from "react";
+import "../css/companyHeader.css"
 
-export default function AdminHeader() {
-
+export default function CompanyHeader() {
     return (
-        <div className="adminHeader">
+        <div className="companyHeader">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
@@ -18,20 +17,17 @@ export default function AdminHeader() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Users</a>
-                            </li>
-
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Companies</a>
+                                <a className="nav-link active" aria-current="page" href="#">Jobs</a>
                             </li>
                         </ul>
                         <div className="d-flex">
-                            <img src="./images/admin.png" className="adminImage" alt="admin_image"/>
+                            <p className="companyName">Rootcode Labs</p>
+                            <img src="./images/rootCode.png" className="companyLogo" alt="company_logo"/>
                             <img src="./images/logout.png" className="logout" alt="logout"/>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-    );
+    )
 }
