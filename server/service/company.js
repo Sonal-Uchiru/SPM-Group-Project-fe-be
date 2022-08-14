@@ -3,14 +3,16 @@ import { User } from '../models/user.js';
 import {validatePost, validateUpdate} from "../validations/company.js";
 import bcrypt from "bcrypt";
 import {getByToken} from "../shared/getByToken.js";
-import {updateById} from "../shared/updateById.js";
 import {updateByToken} from "../shared/updateByToken.js";
+import {deleteJobsByCompanyId} from "./job.js";
 import {deleteByToken} from "../shared/deleteByToken.js";
+import {decode} from "../middleware/tokenDecode.js";
 
 
 export const saveCompany = async (req, res) => {
     try {
         const {error} = validatePost(req.body)
+
         if (error)
             return res.status(400).send({message: error.details[0].message})
 
@@ -19,9 +21,7 @@ export const saveCompany = async (req, res) => {
         if (user || company)
             return res
                 .status(409)
-                .send({message: 'Email already excists in the system!'})
-
-
+                .send({message: 'User with given email already Exist!'})
 
         const salt = await bcrypt.genSalt(Number(process.env.SALT))
         const hashPassword = await bcrypt.hash(req.body.password, salt)
@@ -50,4 +50,8 @@ export const updateCompany = async (req, res) => {
 
 export const getCompany = async (req, res) => {
     await getByToken(req, res, "company")
+}
+
+export const deleteCompany = async (req, res) => {
+    await deleteByToken(req, res, "company", deleteJobsByCompanyId)
 }

@@ -51,6 +51,10 @@ export const deleteJobApplicationsByJobID = async (jobId) => {
     await JobApplication.deleteMany({jobId})
 }
 
+export const deleteJobApplicationsByApplicantID = async (applicant) => {
+    await JobApplication.deleteMany({applicant})
+}
+
 export const updateJobApplicationStatus = async (req, res) => {
     try {
         const {error} = validationStatusChange(req.body)

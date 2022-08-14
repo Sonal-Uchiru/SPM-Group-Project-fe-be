@@ -3,7 +3,7 @@ import {getModel} from "./modelSelector.js";
 import {passwordConfirmation} from "../confirmation/passwordConfirmation.js";
 import {validationDelete} from "../validations/user.js";
 
-export const deleteByToken = async (req, res, modelName) => {
+export const deleteByToken = async (req, res, modelName, deleteChild) => {
     try {
         const id = await decode(req)
         const Model = getModel(modelName)
@@ -19,11 +19,16 @@ export const deleteByToken = async (req, res, modelName) => {
 
         const isPasswordValid = await passwordConfirmation(req, res, id, Model);
 
-        if (!isPasswordValid) return res.status(401).json({message: `Invalid Credentials`})
+        if (!isPasswordValid) {
+            return res.status(401).json({message: `Invalid Credentials`})
+
+        }
+
 
         const content = await Model.findByIdAndDelete(id)
 
         if (content) {
+            await deleteChild(id)
             return res.status(200).json({message: `${id._id} content deleted successfully`})
         }
 
@@ -32,3 +37,4 @@ export const deleteByToken = async (req, res, modelName) => {
         res.status(500).send({message: 'Internal Server Error'})
     }
 }
+

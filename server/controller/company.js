@@ -1,5 +1,6 @@
 import express from 'express'
 import {
+    deleteCompany,
     getAllCompanies,
     getCompany,
     updateCompany,
@@ -10,5 +11,6 @@ const companyRouter = express.Router()
 companyRouter.get('/list', getAllCompanies)
 companyRouter.get('/', getCompany)
 companyRouter.put('/', updateCompany)
+companyRouter.delete('/', deleteCompany)
 
 export { companyRouter }

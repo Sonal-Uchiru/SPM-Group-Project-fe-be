@@ -12,7 +12,7 @@ export const validate = (data) => {
         companyWorked: Joi.boolean().required().label('company worked'),
         // true -> yes | false -> no
         employedWithCurrentCompany: Joi.boolean().required().label('employed with current company'),
-        portfolioLink: Joi.string().optional().label('portfolio link').truncate(true),
+        portfolioLink: Joi.string().uri().optional().label('portfolio link').truncate(true),
         licensesAndCertificates: Joi.array().optional().label('licenses and certificates'),
     })
     return schema.validate(data)

@@ -1,5 +1,4 @@
 import Joi from 'joi'
-import passwordComplexity from 'joi-password-complexity'
 
 export const validatePost = (data) => {
     const schema = Joi.object({
@@ -18,8 +17,7 @@ export const validatePost = (data) => {
             .required()
             .label('Responsibilities'),
         requirements: Joi.string().max(200).required().label('Requirements'),
-        otherRequirements: Joi.string().max(200).label('Other Requirements'),
-        companyId: Joi.string().required().label('Company Id'),
+        otherRequirements: Joi.string().max(200).optional().label('Other Requirements'),
     })
     return schema.validate(data)
 }
