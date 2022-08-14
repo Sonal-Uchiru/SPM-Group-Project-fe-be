@@ -4,8 +4,7 @@
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Edit Job (Company) (Modal) UI Implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/passwordStrengthIndecator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

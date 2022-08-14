@@ -21,8 +21,8 @@ export default function UserSignUP() {
         setConfirmPasswordShown(!confirmPasswordShown);
     };
 
-    const isNumberRegx = /\d/
-    const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+    // const isNumberRegx = /\d/
+    // const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
 
 
     return (

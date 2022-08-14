@@ -3,7 +3,7 @@ import "../css/companyRegistration.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import PasswordStrengthIndicator from '../../external_components/passwordStrengthIndecator'
+import PasswordStrengthMeter from "../../external_components/passwordStrengthIndecator";
 import {BsArrowLeft} from "react-icons/all";
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
@@ -18,7 +18,7 @@ export default function CompanyRegistration() {
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
     let [moviePlaceHolder, setMoviePlaceHolder] = useState(false)
-
+    const [password, setPassword] = useState("");
     const [companyName, setCompanyName] = useState('');
 
 
@@ -270,13 +270,7 @@ export default function CompanyRegistration() {
                                             className='form-control form-control-lg'
                                             placeholder='Password'
                                             onChange={(e) => {
-                                                setPasswordValidity({
-                                                    minChar: e.target.value.length >= 8,
-                                                    number: isNumberRegx.test(e.target.value),
-                                                    specialChar: specialCharacterRegx.test(
-                                                        e.target.value,
-                                                    ),
-                                                })
+                                                setPassword(e.target.value)
                                             }}
                                         />
                                         <span className="p-viewer">
@@ -291,7 +285,7 @@ export default function CompanyRegistration() {
                                         </i>
                                       </span>
                                     </div>
-                                    <PasswordStrengthIndicator validity={passwordValidity}/>
+                                    <PasswordStrengthMeter password={password}/>
                                     <div className='form-outline mb-3'>
                                         <label
                                             className='form-label'
