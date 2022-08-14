@@ -16,13 +16,21 @@ import JobApplicationForm from "./components/jobApplications/jobApplicationForm"
 import CompanyRegistration from "./components/company/pages/companyRegistration";
 import AddNewJob from "./components/jobs/addNewJob";
 import EditJob from "./components/jobs/editJob";
+import AllJobApplications from "./components/admin/data_tables/listAllAppliedJobsApplications";
 
 function App() {
     return (
         <Router>
             <UserHeader/>
             <Routes>
-                <Route path="/" element={<EditJob/>}/>
+                <Route path="/" element={<Login/>}/>
+                <Route path="/a" element={<UserSignUP/>}/>
+                <Route path="/b" element={<CompanyRegistration/>}/>
+                <Route path="/c" element={<ViewAllJobsCompany/>}/>
+                <Route path="/d" element={<ViewAllJobs/>}/>
+                <Route path="/e" element={<ViewAppliedJobs/>}/>
+                <Route path="/f" element={<AddNewJob/>}/>
+                <Route path="/g" element={<EditJob/>}/>
             </Routes>
             <Footer/>
         </Router>

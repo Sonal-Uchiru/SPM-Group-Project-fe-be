@@ -141,6 +141,10 @@
     height: 40px;
 }
 
+.companyRegistration .signupBtn:hover {
+    background-color: #06283D;
+}
+
 .companyRegistration #eyeIcon {
     color: #1363DF;
 }
