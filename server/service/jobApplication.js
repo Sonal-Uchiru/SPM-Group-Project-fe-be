@@ -79,6 +79,7 @@ export const updateJobApplicationStatus = async (req, res) => {
         if (content) {
             return res.status(200).send({message: `${req.params.id} content updated successfully`})
         }
+
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }

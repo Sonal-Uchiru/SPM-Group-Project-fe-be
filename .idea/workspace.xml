@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="unwanted code removed">
-      <change afterPath="$PROJECT_DIR$/server/validations/changePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/changePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/changePassword.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="change password route implemented">
+      <change beforePath="$PROJECT_DIR$/server/routes/job.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660206095438</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change password route implemented">
+      <created>1660487855837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1660487855837</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +205,8 @@
     <MESSAGE value="get all users implemented, delete user bug fixed" />
     <MESSAGE value="unwanted code removed" />
     <MESSAGE value="implementing folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing folder structure" />
+    <MESSAGE value="change password route implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="change password route implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

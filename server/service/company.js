@@ -23,7 +23,7 @@ export const saveCompany = async (req, res) => {
         if (user || company)
             return res
                 .status(409)
-                .send({message: 'User with given email already Exist!'})
+                .send({message: 'Content with given email already Exist!'})
 
         const salt = await bcrypt.genSalt(Number(process.env.SALT))
         const hashPassword = await bcrypt.hash(req.body.password, salt)
