@@ -3,7 +3,7 @@ import "../css/signUp.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import PasswordStrengthIndicator from '../../external_components/passwordStrengthIndecator'
+import PasswordStrengthMeter from "../../external_components/passwordStrengthIndecator";
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
@@ -11,6 +11,7 @@ const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
 export default function UserSignUP() {
     const [passwordShown, setPasswordShown] = useState(false);
     const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
+    const [password, setPassword] = useState("");
     // Password toggle handler
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -20,23 +21,9 @@ export default function UserSignUP() {
         setConfirmPasswordShown(!confirmPasswordShown);
     };
 
-    const [passwordValidity, setPasswordValidity] = useState({
-        minChar: null,
-        number: null,
-        specialChar: null,
-    })
     const isNumberRegx = /\d/
     const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
 
-    function validatePassword() {
-        if (
-            passwordValidity.minChar &&
-            passwordValidity.number &&
-            passwordValidity.specialChar
-        ) {
-            return true
-        }
-    }
 
     return (
         <div className="userSignUp">
@@ -144,13 +131,7 @@ export default function UserSignUP() {
                                             className='form-control form-control-lg'
                                             placeholder='Password'
                                             onChange={(e) => {
-                                                setPasswordValidity({
-                                                    minChar: e.target.value.length >= 8,
-                                                    number: isNumberRegx.test(e.target.value),
-                                                    specialChar: specialCharacterRegx.test(
-                                                        e.target.value,
-                                                    ),
-                                                })
+                                                setPassword(e.target.value)
                                             }}
                                         />
                                         <span className="p-viewer">
@@ -165,7 +146,7 @@ export default function UserSignUP() {
                                         </i>
                                       </span>
                                     </div>
-                                    <PasswordStrengthIndicator validity={passwordValidity}/>
+                                    <PasswordStrengthMeter password={password}/>
                                     <div className='form-outline mb-3'>
                                         <label
                                             className='form-label'

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="UI Issues Corrected">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Edit Job (Company) (Modal) UI Implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/passwordStrengthIndecator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,7 @@
       <workItem from="1660278774167" duration="26447000" />
       <workItem from="1660325584311" duration="6070000" />
       <workItem from="1660448178001" duration="2331000" />
-      <workItem from="1660450872042" duration="16498000" />
+      <workItem from="1660450872042" duration="7623000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -253,21 +257,7 @@
       <option name="project" value="LOCAL" />
       <updated>1660457621723</updated>
     </task>
-    <task id="LOCAL-00025" summary="Add Test Routes">
-      <created>1660459610512</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1660459610512</updated>
-    </task>
-    <task id="LOCAL-00026" summary="UI Issues Corrected">
-      <created>1660475660629</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1660475660629</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +275,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
     <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
@@ -308,9 +299,7 @@
     <MESSAGE value="Company Registration Page UI Design Implemented" />
     <MESSAGE value="Add New Job (Company) (Modal) UI Implemented" />
     <MESSAGE value="Edit Job (Company) (Modal) UI Implemented" />
-    <MESSAGE value="Add Test Routes" />
-    <MESSAGE value="UI Issues Corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Issues Corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Job (Company) (Modal) UI Implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
