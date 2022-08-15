@@ -57,7 +57,7 @@ export default function EditUserProfile() {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="edit-user-profile">
-                            <form className="ms-4 me-4 addNewJobForm">
+                            <form className="ms-4 me-4">
                                 <div>
                                     <br/>
                                     <span>
@@ -65,7 +65,7 @@ export default function EditUserProfile() {
                       <div className='box'>
                         <img
                             className='z-depth-2 Img1'
-                            alt='pro_image'
+                            alt='profile_image'
                             src='./images/user (8).png'
                             data-holder-rendered='true'
                             hidden={placeHolder}
@@ -73,7 +73,7 @@ export default function EditUserProfile() {
 
                         <img
                             className='z-depth-2 Img1'
-                            alt='movie_image'
+                            alt='profile_image'
                             src={imgData}
                             id='movieImage'
                             data-holder-rendered='true'

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Password Strength Meter to Change Password Modal">
-      <change afterPath="$PROJECT_DIR$/client/public/images/user (8).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/company/css/editCompanyProfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/company/modals/editCompanyProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/css/editUserProfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/user/modals/editUserProfile.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Edit User Profile Modal UI Design Implemented">
+      <change afterPath="$PROJECT_DIR$/client/public/images/543191.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/cover.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/kgf.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyRegistration.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/companyRegistration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/editCompanyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/editCompanyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/modals/editCompanyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/modals/editCompanyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/modals/editUserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <workItem from="1660325584311" duration="6070000" />
       <workItem from="1660448178001" duration="2331000" />
       <workItem from="1660450872042" duration="7623000" />
-      <workItem from="1660532005248" duration="5339000" />
+      <workItem from="1660532005248" duration="10429000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -283,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660533357066</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Edit User Profile Modal UI Design Implemented">
+      <created>1660537480957</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1660537480957</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +307,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
     <MESSAGE value="server shared functions implementations" />
     <MESSAGE value="server shared functions implementations part 2 completed" />
@@ -326,7 +331,8 @@
     <MESSAGE value="ADD PasswordStrengthMeter TO Company Registration Page" />
     <MESSAGE value="Re-Design Admin Header, User Header &amp; Company Header" />
     <MESSAGE value="Add Password Strength Meter to Change Password Modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Password Strength Meter to Change Password Modal" />
+    <MESSAGE value="Edit User Profile Modal UI Design Implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit User Profile Modal UI Design Implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
