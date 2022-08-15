@@ -24,13 +24,14 @@ import EditCompanyProfile from "./components/company/modals/editCompanyProfile";
 import UserProfile from "./components/user/pages/userProfile";
 import CompanyProfile from "./components/company/pages/companyProfile";
 import CompanySummary from "./components/cards/companySummary";
+import Loading from "./components/external_components/loading";
 
 function App() {
     return (
         <Router>
             <CompanyHeader/>
             <Routes>
-                <Route path="/" element={<Login/>}/>
+                <Route path="/" element={<Loading/>}/>
                 {/*<Route path="/a" element={<UserSignUP/>}/>*/}
                 {/*<Route path="/b" element={<CompanyRegistration/>}/>*/}
                 {/*<Route path="/c" element={<ViewAllJobsCompany/>}/>*/}
@@ -44,7 +45,7 @@ function App() {
                 {/*<Route path="/k" element={<EditCompanyProfile/>}/>*/}
                 {/*<Route path="/l" element={<JobApplicationForm/>}/>*/}
             </Routes>
-            <Footer/>
+            {/*<Footer/>*/}
         </Router>
     );
 }

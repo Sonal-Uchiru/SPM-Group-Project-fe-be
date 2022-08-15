@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="View All Jobs (Company) UI Design Add New Styles">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add New CSS to Job Application Form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +77,9 @@
       <workItem from="1660239148569" duration="4848000" />
       <workItem from="1660278774167" duration="26447000" />
       <workItem from="1660325584311" duration="6070000" />
+      <workItem from="1660448178001" duration="2331000" />
+      <workItem from="1660450872042" duration="7623000" />
+      <workItem from="1660532005248" duration="16929000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -225,7 +228,77 @@
       <option name="project" value="LOCAL" />
       <updated>1660330530015</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Company Registration Page UI Design Implemented">
+      <created>1660415625312</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1660415625312</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add New Job (Company) (Modal) UI Implemented">
+      <created>1660455431827</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1660455431827</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Edit Job (Company) (Modal) UI Implemented">
+      <created>1660457621723</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1660457621723</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ADD PasswordStrengthMeter TO Company Registration Page">
+      <created>1660493396950</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1660493396950</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Re-Design Admin Header, User Header &amp; Company Header">
+      <created>1660532093095</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1660532093095</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add Password Strength Meter to Change Password Modal">
+      <created>1660533357066</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1660533357066</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Edit User Profile Modal UI Design Implemented">
+      <created>1660537480957</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1660537480957</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Edit Company Profile (Modal) UI Design Implemented">
+      <created>1660544657500</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1660544657500</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Company Profile UI Design Implemented">
+      <created>1660548696275</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1660548696275</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add New CSS to Job Application Form">
+      <created>1660565271589</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1660565271589</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,12 +316,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial" />
-    <MESSAGE value="boiler template" />
-    <MESSAGE value="schema extend implemented" />
-    <MESSAGE value="backend environment configuration" />
-    <MESSAGE value="server shared functions implementations" />
-    <MESSAGE value="server shared functions implementations part 2 completed" />
     <MESSAGE value="Login Page Ui Design Completed" />
     <MESSAGE value="User Header Ui Design Completed" />
     <MESSAGE value="Company Header Ui Design Completed" />
@@ -264,7 +331,17 @@
     <MESSAGE value="User SignUp UI Design Still Implementing" />
     <MESSAGE value="View All Jobs (Company) UI Design Completed" />
     <MESSAGE value="View All Jobs (Company) UI Design Add New Styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="View All Jobs (Company) UI Design Add New Styles" />
+    <MESSAGE value="Company Registration Page UI Design Implemented" />
+    <MESSAGE value="Add New Job (Company) (Modal) UI Implemented" />
+    <MESSAGE value="Edit Job (Company) (Modal) UI Implemented" />
+    <MESSAGE value="ADD PasswordStrengthMeter TO Company Registration Page" />
+    <MESSAGE value="Re-Design Admin Header, User Header &amp; Company Header" />
+    <MESSAGE value="Add Password Strength Meter to Change Password Modal" />
+    <MESSAGE value="Edit User Profile Modal UI Design Implemented" />
+    <MESSAGE value="Edit Company Profile (Modal) UI Design Implemented" />
+    <MESSAGE value="Company Profile UI Design Implemented" />
+    <MESSAGE value="Add New CSS to Job Application Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add New CSS to Job Application Form" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
