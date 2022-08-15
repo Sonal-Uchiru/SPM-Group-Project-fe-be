@@ -1,5 +1,5 @@
 export const url = {
-    AUTHENTICATION: '/api/auth',
+    AUTHENTICATION: '/api/validations',
     USER_MANAGEMENT: '/api/user',
 }
 

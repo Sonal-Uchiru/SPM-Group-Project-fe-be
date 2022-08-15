@@ -1,10 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add New CSS to footer">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Loading">
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/cards/groupSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/cards/groupSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/cards/panelSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/cards/panelSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/cards/userSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/cards/userSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/adminHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/allStudentGroups.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/allStudentGroups.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/allUserTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/allUserTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/allUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/allUsers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/allocateGroups.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/allocateGroups.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/createMarkingScheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/createMarkingScheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/createPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/createPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/createSubmissionModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/createSubmissionModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/editMarkingScheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/editMarkingScheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/groupSummaryCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/groupSummaryCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/listAllJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobApplications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/panelDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/panelDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/panelSummaryCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/panelSummaryCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/selectInCharge.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/selectInCharge.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/staffDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/staffDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/updateStaffModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateStaffModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/updateStudentModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateStudentModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/updateSubmissionModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateSubmissionModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/userSummaryCard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/viewMarkingScheme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/viewMoreSchemas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/viewMoreSubmissons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/viewPanels.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/viewPanels.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/viewSubmissions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/viewSubmissions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/data_tables/allStaff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/data_tables/allStudents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/data_tables/listAllAppliedJobsApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllAppliedJobsApplications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/allocateGroups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/createPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/createSubmission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/panelDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/selectInCharge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/staffDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/updateStaff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/updateStudent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/updateSubmission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/viewMoreMarkingSchemas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/modals/viewMoreSubmissions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/navigation/adminHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/allStudentGroups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/allUsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/createMarkingScheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/editMarkingScheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/viewMarkingScheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/viewPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/pages/viewSubmissions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companyDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companyDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/cards/companyDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companyProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfileMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companyProfileMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/cards/companyProfileMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companySummary.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companySummary.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/companySummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/cards/companySummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userProfileMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userProfileMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userSummary.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userSummary.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cards/userSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/cards/allJobsCardCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/cards/allJobsCardCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/allJobsCardCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/allJobsCardCompany.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyProfile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyRegistration.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyRegistration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/editCompanyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/editCompanyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/viewAllJobsCompany.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/modals/editCompanyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/modals/editCompanyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/navigation/companyHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/companyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyRegistration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/company/pages/viewAllJobsCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/viewAllJobsCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/spinners/loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/notFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/404/notFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/auth/passwordStrengthIndecator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/preventWhiteSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/auth/preventWhiteSpace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/sweetAlerts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/tokenHandling.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/auth/tokenHandling.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobApplications/jobApplicationFormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationFormStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobs/addNewJob.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/addNewJob.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobs/addNewJob.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/addNewJob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobs/editJob.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/editJob.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/jobs/editJob.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/editJob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/baseModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/baseModal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/css/changePasswordModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/changePasswordModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/confirmModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/css/confirmModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/confirmModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/confirmModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/cards/allJobsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/allJobsCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/cards/appliedJobCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/appliedJobCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/allJobsCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/allJobsCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/appliedJobCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/appliedJobCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/editUserProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/editUserProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/signUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/viewAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAllJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/navigation/userHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/navigation/userHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/companyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/companyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/testPdf.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/testPdf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/userProfile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/userProfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/viewAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/viewAllJobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/user/pages/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/viewAppliedJobs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +179,11 @@
       <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
-      <recent name="$PROJECT_DIR$/server/database" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\src\components\managements\admin" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\src\components\managements\user" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\src\components\managements\company" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\src\components\managements" />
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\src\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +204,7 @@
       <workItem from="1660448178001" duration="2331000" />
       <workItem from="1660450872042" duration="7623000" />
       <workItem from="1660532005248" duration="17226000" />
-      <workItem from="1660582808353" duration="1254000" />
+      <workItem from="1660582808353" duration="5516000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -313,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660566741893</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Loading">
+      <created>1660584276570</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1660584276570</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User Header Ui Design Completed" />
     <MESSAGE value="Company Header Ui Design Completed" />
     <MESSAGE value="Admin Header Ui Design Completed" />
     <MESSAGE value="View All Jobs(User) Page Card Ui Design Completed" />
@@ -356,7 +479,20 @@
     <MESSAGE value="Company Profile UI Design Implemented" />
     <MESSAGE value="Add New CSS to Job Application Form" />
     <MESSAGE value="Add New CSS to footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add New CSS to footer" />
+    <MESSAGE value="Loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loading" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/App.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

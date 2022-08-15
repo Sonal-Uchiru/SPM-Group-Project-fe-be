@@ -23,7 +23,7 @@ authRouter.post('/', async (req, res) => {
     }
 })
 
-// update the auth router to login admin and the company
+// update the validations router to login admin and the company
 
 const authenticateCredentials = async (req, res, user, role) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password)

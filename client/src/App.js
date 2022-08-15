@@ -1,37 +1,36 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React, { Component } from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import React, {Component} from "react";
 import Login from "./components/authentication/loginPage";
-import Footer from "./components/Footer/footer";
-import UserHeader from "./components/user/navigation/userHeader";
-import CompanyHeader from "./components/company/navigation/companyHeader";
-import AdminHeader from "./components/admin/navigation/adminHeader";
-import AppliedJobCard from "./components/user/cards/appliedJobCard";
-import ViewAppliedJobs from "./components/user/pages/viewAppliedJobs";
-import AllJobsCard from "./components/user/cards/allJobsCard";
-import ViewAllJobs from "./components/user/pages/viewAllJobs";
-import AllJobsCardCompany from "./components/company/cards/allJobsCardCompany";
-import ViewAllJobsCompany from "./components/company/pages/viewAllJobsCompany";
-import UserSignUP from "./components/user/pages/signup";
-import JobApplicationForm from "./components/jobApplications/jobApplicationForm";
-import CompanyRegistration from "./components/company/pages/companyRegistration";
-import AddNewJob from "./components/jobs/addNewJob";
-import EditJob from "./components/jobs/editJob";
-import AllJobApplications from "./components/admin/data_tables/listAllAppliedJobsApplications";
-import ChangePasswordModal from "./components/modals/changePasswordModal";
-import BaseModal from "./components/modals/baseModal";
-import EditUserProfile from "./components/user/modals/editUserProfile";
-import EditCompanyProfile from "./components/company/modals/editCompanyProfile";
-import UserProfile from "./components/user/pages/userProfile";
-import CompanyProfile from "./components/company/pages/companyProfile";
-import CompanySummary from "./components/cards/companySummary";
-import Loading from "./components/external_components/loading";
+import Footer from "./components/external_components/navigation/footer";
+import UserHeader from "./components/managements/user/navigation/userHeader";
+import CompanyHeader from "./components/managements/company/navigation/companyHeader";
+import AdminHeader from "./components/managements/admin/navigation/adminHeader";
+import AppliedJobCard from "./components/managements/user/cards/appliedJobCard";
+import ViewAppliedJobs from "./components/managements/user/pages/viewAppliedJobs";
+import AllJobsCard from "./components/managements/user/cards/allJobsCard";
+import ViewAllJobs from "./components/managements/user/pages/viewAllJobs";
+import AllJobsCardCompany from "./components/managements/company/cards/allJobsCardCompany";
+import ViewAllJobsCompany from "./components/managements/company/pages/viewAllJobsCompany";
+import UserSignUP from "./components/managements/user/pages/signup";
+import JobApplicationForm from "./components/managements/jobApplications/jobApplicationForm";
+import CompanyRegistration from "./components/managements/company/pages/companyRegistration";
+import AddNewJob from "./components/managements/jobs/addNewJob";
+import EditJob from "./components/managements/jobs/editJob";
+import AllJobApplications from "./components/managements/admin/data_tables/listAllAppliedJobsApplications";
+import ChangePasswordModal from "./components/external_components/modals/changePasswordModal";
+import EditUserProfile from "./components/managements/user/modals/editUserProfile";
+import EditCompanyProfile from "./components/managements/company/modals/editCompanyProfile";
+import UserProfile from "./components/managements/user/pages/userProfile";
+import CompanyProfile from "./components/managements/company/pages/companyProfile";
+import CompanySummary from "./components/managements/company/cards/companySummary";
+import Loading from "./components/external_components/spinners/loading";
 
 function App() {
     return (
         <Router>
             <CompanyHeader/>
             <Routes>
-                <Route path="/" element={<Loading/>}/>
+                <Route path="/" element={<UserProfile/>}/>
                 {/*<Route path="/a" element={<UserSignUP/>}/>*/}
                 {/*<Route path="/b" element={<CompanyRegistration/>}/>*/}
                 {/*<Route path="/c" element={<ViewAllJobsCompany/>}/>*/}
@@ -45,7 +44,7 @@ function App() {
                 {/*<Route path="/k" element={<EditCompanyProfile/>}/>*/}
                 {/*<Route path="/l" element={<JobApplicationForm/>}/>*/}
             </Routes>
-            {/*<Footer/>*/}
+            <Footer/>
         </Router>
     );
 }
