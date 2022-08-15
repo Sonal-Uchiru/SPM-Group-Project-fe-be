@@ -3,6 +3,7 @@ import Joi from "joi";
 export const validate = (data) => {
     const schema = Joi.object({
         jobId: Joi.string().required().label('job id'),
+        companyId: Joi.string().required().label('company id'),
         applicantOtherDetails: Joi.any().optional().label('applicant other details'),
         resume: Joi.string().required().label('resume'),
         coverLetter: Joi.string().optional().label('cover letter').truncate(true),
