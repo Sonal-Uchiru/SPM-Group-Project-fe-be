@@ -1,8 +1,11 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 
 
 function App() {
+    useEffect(() => {
+
+    })
     return (
         <Router>
             <Routes>
