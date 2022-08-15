@@ -33,7 +33,6 @@ export default function BaseModal() {
             </button>
           </Modal.Header>
           <ChangePasswordModal />
-
           <Modal.Body></Modal.Body>
         </Modal>
       </div>

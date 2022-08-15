@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="ADD PasswordStrengthMeter TO Company Registration Page">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Re-Design Admin Header, User Header &amp; Company Header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/css/adminHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/css/listAllJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/css/listAllJobApplications.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/data_tables/listAllAppliedJobsApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/data_tables/listAllAppliedJobsApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/navigation/adminHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/css/companyHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/company/navigation/companyHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/user/css/userHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/baseModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/modals/baseModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/modals/changePasswordModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +88,7 @@
       <workItem from="1660325584311" duration="6070000" />
       <workItem from="1660448178001" duration="2331000" />
       <workItem from="1660450872042" duration="7623000" />
+      <workItem from="1660532005248" duration="1008000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -270,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660493396950</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Re-Design Admin Header, User Header &amp; Company Header">
+      <created>1660532093095</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1660532093095</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +290,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial" />
     <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
@@ -313,7 +314,8 @@
     <MESSAGE value="Add New Job (Company) (Modal) UI Implemented" />
     <MESSAGE value="Edit Job (Company) (Modal) UI Implemented" />
     <MESSAGE value="ADD PasswordStrengthMeter TO Company Registration Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD PasswordStrengthMeter TO Company Registration Page" />
+    <MESSAGE value="Re-Design Admin Header, User Header &amp; Company Header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-Design Admin Header, User Header &amp; Company Header" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./changePasswordModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+import PasswordStrengthMeter from "../external_components/passwordStrengthIndecator";
 
 const eye = <FontAwesomeIcon icon={faEye} />;
 const sleye = <FontAwesomeIcon icon={faEyeSlash} />;
@@ -11,7 +12,7 @@ export default function ChangePasswordModal() {
   const [passwordShown1, setPasswordShown1] = useState(false);
   const [passwordShown2, setPasswordShown2] = useState(false);
   const [passwordShown3, setPasswordShown3] = useState(false);
-
+  const [password, setPassword] = useState("");
   // Password toggle handler
   const togglePasswordVisibility1 = () => {
     setPasswordShown1(!passwordShown1);
@@ -53,32 +54,38 @@ export default function ChangePasswordModal() {
             New Password
           </label>
           <input
-            type={passwordShown2 ? "text" : "password"}
-            className="form-control"
-            id="password"
-            placeholder="Password"
+              type={passwordShown2 ? "text" : "password"}
+              className="form-control"
+              id="password"
+              placeholder="Password"
+              onChange={(e) => {
+                setPassword(e.target.value)
+              }}
           />
           <span className="p-viewer">
             <i
-              id="eyeIcon"
-              className={`fa ${
-                passwordShown2 ? "fa-eye" : "fa-eye-slash"
-              } password-icon`}
-              onClick={togglePasswordVisibility2}
+                id="eyeIcon"
+                className={`fa ${
+                    passwordShown2 ? "fa-eye" : "fa-eye-slash"
+                } password-icon`}
+                onClick={togglePasswordVisibility2}
             >
               {" "}
             </i>
           </span>
+        </div>
+        <div className="meter container">
+          <PasswordStrengthMeter password={password}/>
         </div>
         <div className="mb-3 input">
           <label htmlFor="exampleInputPassword1" className="form-label">
             Confirm Password
           </label>
           <input
-            type={passwordShown3 ? "text" : "password"}
-            className="form-control"
-            id="password"
-            placeholder="Password"
+              type={passwordShown3 ? "text" : "password"}
+              className="form-control"
+              id="password"
+              placeholder="Password"
           />
           <span className="p-viewer">
             <i

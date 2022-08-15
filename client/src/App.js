@@ -17,6 +17,8 @@ import CompanyRegistration from "./components/company/pages/companyRegistration"
 import AddNewJob from "./components/jobs/addNewJob";
 import EditJob from "./components/jobs/editJob";
 import AllJobApplications from "./components/admin/data_tables/listAllAppliedJobsApplications";
+import ChangePasswordModal from "./components/modals/changePasswordModal";
+import BaseModal from "./components/modals/baseModal";
 
 function App() {
     return (
@@ -31,7 +33,7 @@ function App() {
                 <Route path="/e" element={<ViewAppliedJobs/>}/>
                 <Route path="/f" element={<AddNewJob/>}/>
                 <Route path="/g" element={<EditJob/>}/>
-                <Route path="/h" element={<AllJobApplications/>}/>
+                <Route path="/h" element={<BaseModal/>}/>
             </Routes>
             <Footer/>
         </Router>
