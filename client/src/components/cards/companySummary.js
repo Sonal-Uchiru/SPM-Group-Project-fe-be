@@ -12,7 +12,7 @@ export default function CompanySummary() {
           </div>
           <div class="col-md-6">
             <div className="d-flex justify-content-center">
-              <div className="text-center summary-div1 p-5">
+              <div className="text-center summary-div1">
                 <p className="summary-text">20</p>
               </div>
             </div>
@@ -22,7 +22,7 @@ export default function CompanySummary() {
           </div>
           <div class="col-md-6">
             <div className="d-flex justify-content-center">
-              <div className="text-center summary-div2 p-5">
+              <div className="text-center summary-div2">
                 <p className="summary-text">20</p>
               </div>
             </div>

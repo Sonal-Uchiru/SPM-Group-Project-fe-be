@@ -21,11 +21,14 @@ import ChangePasswordModal from "./components/modals/changePasswordModal";
 import BaseModal from "./components/modals/baseModal";
 import EditUserProfile from "./components/user/modals/editUserProfile";
 import EditCompanyProfile from "./components/company/modals/editCompanyProfile";
+import UserProfile from "./components/user/pages/userProfile";
+import CompanyProfile from "./components/company/pages/companyProfile";
+import CompanySummary from "./components/cards/companySummary";
 
 function App() {
     return (
         <Router>
-            <AdminHeader/>
+            <CompanyHeader/>
             <Routes>
                 <Route path="/" element={<Login/>}/>
                 <Route path="/a" element={<UserSignUP/>}/>
@@ -33,12 +36,13 @@ function App() {
                 <Route path="/c" element={<ViewAllJobsCompany/>}/>
                 <Route path="/d" element={<ViewAllJobs/>}/>
                 <Route path="/e" element={<ViewAppliedJobs/>}/>
-                <Route path="/f" element={<AddNewJob/>}/>
+                <Route path="/f" element={<CompanyProfile/>}/>
                 <Route path="/g" element={<EditJob/>}/>
                 <Route path="/h" element={<BaseModal/>}/>
                 <Route path="/i" element={<EditUserProfile/>}/>
                 <Route path="/j" element={<EditJob/>}/>
                 <Route path="/k" element={<EditCompanyProfile/>}/>
+                <Route path="/l" element={<CompanySummary/>}/>
             </Routes>
             <Footer/>
         </Router>
