@@ -73,19 +73,20 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .login .logoImage {
         width: 300px;
     }
 
     .login .card {
-        margin: 120px auto auto;
+        margin: 50px auto auto;
     }
 
     .login .input {
         padding-right: 60px;
         padding-left: 60px;
     }
+
 }
 
 @media (max-width: 520px) {

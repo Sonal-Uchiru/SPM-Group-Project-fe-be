@@ -1,6 +1,8 @@
 .userHeader .navbar {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 50px;
+    padding: 2px;
 }
 
 .userHeader .nav-link {
@@ -26,9 +28,10 @@
     font-weight: bold;
     text-decoration: underline;
     color: #06283D;
-    margin-top: 20px;
+    margin-top: 11px;
     padding-right: 15px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .userHeader .fullName:hover {
@@ -38,11 +41,12 @@
 .userHeader .profileImage {
     border-radius: 50%;
     border: 1px solid white;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
     object-fit: fill;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-right: 25px;
+    margin-top: 2px;
     cursor: pointer;
 }
 
@@ -51,8 +55,8 @@
 }
 
 .userHeader .logout {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     margin-top: 15px;
     cursor: pointer;
     margin-right: 5px;
@@ -64,6 +68,6 @@
 
 @media (max-width: 325px) {
     .userHeader .fullName {
-        font-size: 12px;
+        font-size: 10px;
     }
 }

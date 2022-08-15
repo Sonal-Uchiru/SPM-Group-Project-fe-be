@@ -6,16 +6,13 @@ export default function Footer() {
     return (
 
         <div className="footer">
-            <footer
-                className="text-center text-lg-start text-white" id="footer">
-                <div className="row container-fluid">
-                    <div className="">
+            <footer className="text-white" id="footer">
+                <div className="row">
+                    <div className="logo">
                         <img src="./../images/NewSPM.png"
                              className="img-fluid siteLogo" alt="site_logo"/>
                     </div>
-                </div>
-                <div className="text-end" id="copyright">
-                    Copyright 2022 © JOBSEARCH. All Rights Reserved.
+                    <p id="copyright"> Copyright 2022 © JOBSEARCH. All Rights Reserved.</p>
                 </div>
             </footer>
         </div>

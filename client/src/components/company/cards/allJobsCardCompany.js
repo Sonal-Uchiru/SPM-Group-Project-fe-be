@@ -21,14 +21,6 @@ export default function AllJobsCardCompany() {
                             <h4 className="card-title">Software Engineer (Full Stack Developer)</h4>
                             <p className="card-text1">Full Time Job</p>
                             <p className="card-text2">10 Applicants</p>
-
-                            <div className="text-center" hidden={step1}>
-                                <img src="./images/down-arrow.png" className="img-fluid showMore"
-                                     alt="show_more" onClick={() => {
-                                    setStep1(true)
-                                    setStep2(false)
-                                }}/>
-                            </div>
                         </div>
                     </div>
 
@@ -38,6 +30,14 @@ export default function AllJobsCardCompany() {
                                  alt="recruiting_status"/>
                             <p className="status">Actively Recruiting</p>
                         </div>
+                    </div>
+
+                    <div className="text-center" hidden={step1}>
+                        <img src="./images/down-arrow.png" className="img-fluid showMore"
+                             alt="show_more" onClick={() => {
+                            setStep1(true)
+                            setStep2(false)
+                        }}/>
                     </div>
                 </div>
                 <div className="row g-0" hidden={step2}>

@@ -1,0 +1,190 @@
+.edit-user-profile .box {
+    width: 160px;
+    height: 160px;
+}
+
+.edit-user-profile .Img1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.edit-user-profile .Img2 {
+    width: 25px;
+    height: 25px;
+}
+
+.edit-user-profile input {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.edit-user-profile input,
+.edit-user-profile input::placeholder {
+    font-size: 14px;
+}
+
+.edit-user-profile select {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.edit-user-profile label {
+    color: #06283D;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.edit-user-profile .blue-text-color {
+    color: #1363DF;
+}
+
+.addNewJob .modal-title-edit {
+    margin-top: -28px;
+}
+
+.addNewJob .modal-title {
+    color: #06283D;
+}
+
+.edit-user-profile textarea {
+    border: 1px solid #1363DF !important;
+}
+
+.edit-user-profile .custom-input-fields {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.edit-user-profile .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
+
+.edit-user-profile #image-upload-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 150px;
+    margin-top: -38px;
+    position: relative;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+}
+
+.edit-user-profile .image-upload > input {
+    display: none;
+}
+
+.edit-user-profile .changePswButton {
+    width: 180px;
+    background-color: #1363df;
+    border: none;
+    font-size: 18px;
+}
+
+.edit-user-profile .changePswButton:hover {
+    background-color: #47B5FF;
+}
+
+.edit-user-profile .saveButton {
+    width: 150px;
+    background-color: #28A745;
+    border: none;
+    font-size: 18px;
+    margin: 12px;
+}
+
+.edit-user-profile .saveButton:hover {
+    background-color: #008d26;
+}
+
+.edit-user-profile .cancelButton {
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    background-color: #E15141;
+    margin: 12px;
+}
+
+.edit-user-profile .cancelButton:hover {
+    background-color: #cd1f0d;
+}
+
+@media (max-width: 479px) {
+    .edit-user-profile .saveButton {
+        width: 140px;
+        margin: 10px;
+    }
+
+    .edit-user-profile .cancelButton {
+        width: 140px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 451px) {
+    .edit-user-profile .saveButton {
+        width: 180px;
+        margin-left: 18px;
+    }
+
+    .edit-user-profile .cancelButton {
+        width: 180px;
+        margin-left: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    .edit-user-profile .box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 330px) {
+    .edit-user-profile .saveButton {
+        width: 180px;
+        margin-left: 18px;
+    }
+
+    .edit-user-profile .cancelButton {
+        width: 180px;
+        margin-left: 18px;
+    }
+}
+
+@media (max-width: 300px) {
+    .edit-user-profile .saveButton {
+        width: 180px;
+        margin-left: 4px;
+    }
+
+    .edit-user-profile .cancelButton {
+        width: 180px;
+        margin-left: 4px;
+    }
+}
+
+
+@media (max-width: 290px) {
+    .edit-user-profile .box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .edit-user-profile .saveButton {
+        margin-left: 2px;
+    }
+
+    .edit-user-profile .cancelButton {
+        margin-left: 2px;
+    }
+
+    .edit-user-profile #image-upload-btn {
+        margin-left: 130px;
+    }
+}

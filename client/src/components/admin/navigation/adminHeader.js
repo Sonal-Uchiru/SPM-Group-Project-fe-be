@@ -8,7 +8,7 @@ export default function AdminHeader() {
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <img src="./images/SPMNEW.png" className="siteLogo" width="200" alt="site_logo"/>
+                        <img src="./images/SPMNEW.png" className="siteLogo" width="160" height="20" alt="site_logo"/>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

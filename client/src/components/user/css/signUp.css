@@ -63,6 +63,10 @@
     height: 40px;
 }
 
+.userSignUp .signupBtn:hover {
+    background-color: #06283D;
+}
+
 .userSignUp #eyeIcon {
     color: #1363DF;
 }
@@ -100,6 +104,12 @@
         padding: 40px 50px 30px;
         margin-bottom: 20px;
         margin-right: 10px;
+    }
+}
+
+@media (max-width: 996px) {
+    .userSignUp .rightSide {
+        margin-top: -80PX;
     }
 }
 
