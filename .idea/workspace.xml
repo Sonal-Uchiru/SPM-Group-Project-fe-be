@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add New CSS to Job Application Form">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="New Folder Structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/cards/groupSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/cards/panelSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/cards/userSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/allStudentGroups.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/allUserTable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/allUsers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/allocateGroups.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/createMarkingScheme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/createPanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/createSubmissionModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/editMarkingScheme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/groupSummaryCard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/panelDetails.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/panelSummaryCard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/selectInCharge.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/staffDetails.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateStaffModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateStudentModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/updateSubmissionModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/viewPanels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/viewSubmissions.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
