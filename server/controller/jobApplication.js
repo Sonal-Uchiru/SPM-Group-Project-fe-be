@@ -1,6 +1,6 @@
 import express from 'express'
 import {
-    deleteJobApplicationById, getAllJobApplications,
+    deleteJobApplicationById,
     getJobApplicationById, getJobApplicationsByJobId, getJobApplicationsByToken, getNoJobApplications,
     saveJobApplication,
     updateJobApplicationById, updateJobApplicationStatus
@@ -15,7 +15,6 @@ jobApplicationRouter.get('/:id', getJobApplicationById)
 jobApplicationRouter.get('/jobs/:id', getJobApplicationsByJobId)
 jobApplicationRouter.get('/', getJobApplicationsByToken)
 jobApplicationRouter.patch('/:id', updateJobApplicationStatus)
-jobApplicationRouter.get('/list', getAllJobApplications)
 jobApplicationRouter.get('/companies/summary/:id', getNoJobApplications)
 
 export {jobApplicationRouter}

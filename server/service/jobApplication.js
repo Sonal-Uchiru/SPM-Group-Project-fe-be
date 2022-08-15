@@ -152,16 +152,6 @@ export const getJobApplicationsByJobId = async (req, res) => {
     }
 }
 
-export const getAllJobApplications = async (req, res) => {
-    try {
-        const content = await JobApplication.find()
-        res.status(200).send({content})
-
-    } catch (e) {
-        res.status(500).send({message: 'Internal Server Error'})
-    }
-}
-
 export const getNoJobApplications = async (req, res) => {
     try {
 
