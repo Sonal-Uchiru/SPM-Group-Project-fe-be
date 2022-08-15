@@ -17,7 +17,7 @@ export default function CompanyRegistration() {
     const [step2, setStep2] = useState(false)
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
-    let [moviePlaceHolder, setMoviePlaceHolder] = useState(false)
+    let [placeHolder, setPlaceHolder] = useState(false)
     const [password, setPassword] = useState("");
     const [companyName, setCompanyName] = useState('');
 
@@ -61,7 +61,7 @@ export default function CompanyRegistration() {
 
     const onChangePicture = (e) => {
         if (e.target.files[0]) {
-            setMoviePlaceHolder(true)
+            setPlaceHolder(true)
             setPicture(e.target.files)
             const reader = new FileReader()
             reader.addEventListener('load', () => {
@@ -107,7 +107,7 @@ export default function CompanyRegistration() {
                             alt='pro_image'
                             src='./images/logo-placeholder-image-modified.png'
                             data-holder-rendered='true'
-                            hidden={moviePlaceHolder}
+                            hidden={placeHolder}
                         />
 
                         <img
@@ -116,7 +116,7 @@ export default function CompanyRegistration() {
                             src={imgData}
                             id='movieImage'
                             data-holder-rendered='true'
-                            hidden={!moviePlaceHolder}
+                            hidden={!placeHolder}
                         />
 
                         <div className='image-upload'>
