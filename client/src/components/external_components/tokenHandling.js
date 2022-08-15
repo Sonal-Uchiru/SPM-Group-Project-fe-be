@@ -1,13 +1,13 @@
 export async function setTokenToLocalStorage(token) {
-    await localStorage.setItem('SLIIT-Research-Management-Token', token)
+    await localStorage.setItem('Job-Search-Token', token)
 }
 
 export function getTokenFromLocalStorage() {
-    return localStorage.getItem('SLIIT-Research-Management-Token')
+    return localStorage.getItem('Job-Search-Token')
 }
 
 export async function removeTokenFromLocalStorage() {
-    await localStorage.removeItem('SLIIT-Research-Management-Token')
+    await localStorage.removeItem('Job-Search-Token')
 }
 
 
