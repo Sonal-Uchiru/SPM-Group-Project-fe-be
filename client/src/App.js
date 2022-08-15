@@ -31,18 +31,18 @@ function App() {
             <CompanyHeader/>
             <Routes>
                 <Route path="/" element={<Login/>}/>
-                <Route path="/a" element={<UserSignUP/>}/>
-                <Route path="/b" element={<CompanyRegistration/>}/>
-                <Route path="/c" element={<ViewAllJobsCompany/>}/>
-                <Route path="/d" element={<ViewAllJobs/>}/>
-                <Route path="/e" element={<ViewAppliedJobs/>}/>
-                <Route path="/f" element={<CompanyProfile/>}/>
-                <Route path="/g" element={<EditJob/>}/>
-                <Route path="/h" element={<BaseModal/>}/>
-                <Route path="/i" element={<EditUserProfile/>}/>
-                <Route path="/j" element={<EditJob/>}/>
-                <Route path="/k" element={<EditCompanyProfile/>}/>
-                <Route path="/l" element={<JobApplicationForm/>}/>
+                {/*<Route path="/a" element={<UserSignUP/>}/>*/}
+                {/*<Route path="/b" element={<CompanyRegistration/>}/>*/}
+                {/*<Route path="/c" element={<ViewAllJobsCompany/>}/>*/}
+                {/*<Route path="/d" element={<ViewAllJobs/>}/>*/}
+                {/*<Route path="/e" element={<ViewAppliedJobs/>}/>*/}
+                {/*<Route path="/f" element={<CompanyProfile/>}/>*/}
+                {/*<Route path="/g" element={<EditJob/>}/>*/}
+                {/*<Route path="/h" element={<BaseModal/>}/>*/}
+                {/*<Route path="/i" element={<EditUserProfile/>}/>*/}
+                {/*<Route path="/j" element={<EditJob/>}/>*/}
+                {/*<Route path="/k" element={<EditCompanyProfile/>}/>*/}
+                {/*<Route path="/l" element={<JobApplicationForm/>}/>*/}
             </Routes>
             <Footer/>
         </Router>
