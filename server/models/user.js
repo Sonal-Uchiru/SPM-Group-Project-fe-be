@@ -13,7 +13,7 @@ const userSchema = extendSchema(baseEntity, {
     aboutMe: {type: String, required: false},
     address: {type: String, required: false},
     gender: {type: String, required: false},
-    dob: {type: Date, required: false},
+    dob: {type: String, required: false},
     profilePicture: {type: String, required: false},
 });
 
