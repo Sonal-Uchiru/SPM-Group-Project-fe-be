@@ -3,49 +3,67 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+    height: 50px;
 }
 
 .footer #copyright {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.footer .siteLogo {
-    width: 250px;
-    height: 25px;
+    float: right !important;
+    display: flex;
     margin-top: 20px;
 }
 
-@media (max-width: 992px) {
-    .footer .siteLogo {
-        width: 250px;
-        height: 30px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .footer #copyright {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center !important;
-    }
+.footer .siteLogo {
+    width: 180px;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
+@media (max-width: 992px) {
+    .footer #footer {
+        height: 70px;
+    }
 
-@media (max-width: 340px) {
     .footer .siteLogo {
-        width: 180px;
-        height: 25px;
-        margin-top: 20px;
-        margin-bottom: 10px;
+        width: 160px;
+        height: 18px;
     }
 
     .footer #copyright {
         font-size: 12px;
         font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 524px) {
+    .footer #copyright {
+        margin-top: -2px;
+        justify-content: center !important;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .footer #footer {
+        height: 70px;
+    }
+
+    .footer .siteLogo {
+        width: 180px;
+        height: 15px;
+    }
+
+    .footer #copyright {
+        font-size: 9px;
+        font-weight: bold;
         margin-left: 15px;
+        margin-top: -2px;
+        margin-right: 0px;
         text-align: center !important;
     }
 }

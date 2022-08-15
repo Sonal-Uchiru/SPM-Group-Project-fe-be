@@ -1,6 +1,8 @@
 .companyHeader .navbar {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 50px;
+    padding: 2px;
 }
 
 .companyHeader .nav-link {
@@ -27,9 +29,10 @@
     font-weight: bold;
     text-decoration: underline;
     color: #06283D;
-    margin-top: 15px;
+    margin-top: 11px;
     padding-right: 15px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .companyHeader .companyName:hover {
@@ -39,11 +42,12 @@
 .companyHeader .companyLogo {
     border-radius: 50%;
     border: 1px solid white;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     object-fit: fill;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-right: 25px;
+    margin-top: 2px;
     cursor: pointer;
 }
 
@@ -52,8 +56,8 @@
 }
 
 .companyHeader .logout {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-top: 15px;
     cursor: pointer;
     margin-right: 5px;
@@ -65,6 +69,6 @@
 
 @media (max-width: 325px) {
     .companyHeader .companyName {
-        font-size: 12px;
+        font-size: 10px;
     }
 }

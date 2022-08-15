@@ -21,7 +21,7 @@ import AllJobApplications from "./components/admin/data_tables/listAllAppliedJob
 function App() {
     return (
         <Router>
-            <UserHeader/>
+            <AdminHeader/>
             <Routes>
                 <Route path="/" element={<Login/>}/>
                 <Route path="/a" element={<UserSignUP/>}/>

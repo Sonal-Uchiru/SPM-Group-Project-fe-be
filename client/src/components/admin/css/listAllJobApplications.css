@@ -1,37 +1,29 @@
-.all-user-table {
+.allJobApplications {
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.all-user-table .student-table-div {
-
-
+.allJobApplications .job-applications-table-div {
     margin-top: 20px;
     overflow-x: auto;
-
 }
 
-.all-user-table .student-table {
-
+.allJobApplications .job-applications-table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
 }
 
-/*.all-user-table .student-table th {*/
-/*    color: #2e2b70;*/
-/*    font-size: 15px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*    align-content: center;*/
-/*}*/
+.allJobApplications .dataTables_filter {
+    margin-bottom: 15px;
+}
 
-.all-user-table .student-table td {
+.allJobApplications .job-applications-table td {
     text-align: center;
     vertical-align: middle;
 }
 
-.all-user-table .student-table td .tableImg {
+.allJobApplications .job-applications-table td .tableImg {
     vertical-align: middle;
     width: 55px;
     height: 55px;
@@ -40,16 +32,43 @@
     text-align: center;
 }
 
-.all-user-table .student-table td .tableEdit {
+.allJobApplications .job-applications-table td .tableEdit {
     width: 30px;
     height: 30px;
     align-content: center;
     text-align: center;
 }
 
-.all-user-table .student-table td .tableEdit:hover {
+.allJobApplications .job-applications-table td .tableEdit:hover {
     transform: scale(1.1);
     align-content: center;
     text-align: center;
 }
 
+.allJobApplications .pageTitle {
+    color: #1363DF;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.allJobApplications .downloadReportButton {
+    background-color: #28A745;
+    border: none;
+    height: 40px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.allJobApplications .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.allJobApplications .fa {
+    margin-right: 5px;
+}
+
+.allJobApplications .fa-arrow-left {
+    margin-right: 10px;
+}

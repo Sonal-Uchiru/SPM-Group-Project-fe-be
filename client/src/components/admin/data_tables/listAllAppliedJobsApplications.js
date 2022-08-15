@@ -6,18 +6,24 @@ import "../css/listAllJobApplications.css"
 
 export default function AllJobApplications() {
 
-
     $(document).ready(function () {
-        $('#studentTable').DataTable({});
+        $('#allJobApplicationsTable').DataTable();
     });
 
     return (
-        <div className="all-user-table">
-            <div className="col-md-12 student-table-div">
+        <div className="allJobApplications">
+            <h2 className="pageTitle"><i
+                className="fa fa-arrow-left"/>Job Applications (Senior Software Engineer (Frontend Developer))</h2>
+            <div className="report">
+                <button type="button" className="btn btn-primary downloadReportButton"><i
+                    className="fa fa-download"/>Download Report
+                </button>
+            </div>
+            <div className="col-md-12 job-applications-table-div">
                 <div className="scrollbar">
                     <table
-                        id="studentTable"
-                        className="table table-bordered table-striped table-sm nowrap table-hover student-table"
+                        id="allJobApplicationsTable"
+                        className="table table-bordered table-sm nowrap table-hover job-applications-table"
                     >
                         <thead>
                         <tr>
@@ -34,8 +40,9 @@ export default function AllJobApplications() {
                         <tr>
                             <td>
                                 <img
-                                    src=""
+                                    src="./images/user.jpg"
                                     className="tableImg"
+                                    alt=""
                                 />
                             </td>
                             <td>Nimal Perera</td>
@@ -47,6 +54,28 @@ export default function AllJobApplications() {
                                 <img
                                     src="./../images/editing.png"
                                     className="tableEdit"
+                                    alt=""
+                                />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img
+                                    src="./images/user.jpg"
+                                    className="tableImg"
+                                    alt=""/>
+                            </td>
+                            <td>Nimal Perera</td>
+                            <td>Male</td>
+                            <td>0768899283</td>
+                            <td>18/12/2012, 03:00:00</td>
+                            <td>20/12/2012, 03:00:00</td>
+                            <td>
+                                <img
+                                    src="./../images/editing.png"
+                                    className="tableEdit"
+                                    alt=""
                                 />
                             </td>
                         </tr>
