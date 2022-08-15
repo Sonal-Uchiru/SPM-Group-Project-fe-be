@@ -41,3 +41,20 @@
     border-color: #28A745;
 }
 
+@media (max-width: 767px) {
+    .job-application-form .logo {
+        display: flex;
+        justify-content: center !important;
+    }
+
+    .job-application-form .company-logo {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .job-application-form .container .company-logo {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}

@@ -95,7 +95,7 @@ function JobApplicationForm(props) {
                             {/*step 1*/}
                             {step1 && <div>
                                 <h3 className="blue-text-color ms-2">Personal Details</h3>
-                                <form className="me-5 ms-5">
+                                <form className="me-4 ms-4">
                                     <div className="mb-2">
                                         <label htmlFor="exampleInputEmail1" className="form-label">
                                             <b>Title

@@ -42,7 +42,7 @@ function App() {
                 <Route path="/i" element={<EditUserProfile/>}/>
                 <Route path="/j" element={<EditJob/>}/>
                 <Route path="/k" element={<EditCompanyProfile/>}/>
-                <Route path="/l" element={<CompanySummary/>}/>
+                <Route path="/l" element={<JobApplicationForm/>}/>
             </Routes>
             <Footer/>
         </Router>
