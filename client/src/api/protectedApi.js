@@ -1,5 +1,6 @@
 import axios from "axios";
-import {getTokenFromLocalStorage} from "../components/external_components/tokenHandling";
+import {getTokenFromLocalStorage} from "../components/authentication/tokenHandling";
+
 
 export const protectedApi = (method, url, data) => {
     return new Promise(async (resolve, reject) => {
