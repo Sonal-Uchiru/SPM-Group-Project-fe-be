@@ -1,0 +1,35 @@
+.viewAppliedJobs .searchBar {
+    margin-top: 40px;
+    max-width: 540px;
+}
+
+.viewAppliedJobs .form-control {
+    border: 1px solid #1363DF;
+}
+
+.viewAppliedJobs .searchIcon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.viewAppliedJobs .searchIcon:hover {
+    transform: scale(1.05);
+}
+
+.viewAppliedJobs ::placeholder {
+    color: #ABB5BE;
+}
+
+.viewAppliedJobs .p-viewer {
+    float: right;
+    margin-top: -32px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.viewAppliedJobs .pageBody {
+    margin-top: 50px;
+}

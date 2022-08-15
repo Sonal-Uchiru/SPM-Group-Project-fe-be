@@ -1,0 +1,33 @@
+.company-main .card {
+  border: 1px solid #1363df;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 750px;
+
+  margin: 50px auto auto;
+}
+
+.company-main .user-img {
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media (max-width: 768px) {
+  .company-main .user-img {
+    width: 300px;
+  }
+  .company-main .card {
+    margin: 20px;
+  }
+}
+@media (max-width: 548px) {
+  .company-main .user-img {
+    width: 240px;
+  }
+}
+@media (max-width: 470px) {
+  .company-main .user-img {
+    width: 200px;
+  }
+}

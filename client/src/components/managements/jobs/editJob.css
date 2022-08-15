@@ -1,0 +1,162 @@
+.edit-job .container .company-logo {
+    width: 170px;
+    height: 170px;
+}
+
+.edit-job .logo {
+    text-align: center !important;
+}
+
+.edit-job .blue-text-color {
+    color: #1363DF;
+}
+
+.edit-job .grey-text-color {
+    color: #808080;
+}
+
+.edit-job .light-blue-btn {
+    background-color: #47B5FF;
+    color: #ffffff;
+    width: 80%;
+}
+
+.editJob .modal-title-edit {
+    margin-top: -28px;
+}
+
+.editJob .modal-title {
+    color: #06283D;
+}
+
+.edit-job textarea {
+    border: 1px solid #1363DF !important;
+}
+
+.edit-job .custom-input-fields {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.edit-job .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
+.edit-job .saveButton {
+    width: 150px;
+    background-color: #28A745;
+    border: none;
+    font-size: 18px;
+    margin: 12px;
+}
+
+.edit-job .saveButton:hover {
+    background-color: #008d26;
+}
+
+.edit-job .cancelButton {
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    background-color: #E15141;
+    margin: 12px;
+}
+
+.edit-job .cancelButton:hover {
+    background-color: #cd1f0d;
+}
+
+/* The switch - the box around the slider */
+.edit-job .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* The slider */
+.edit-job .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E15141;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.edit-job .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.edit-job input:checked + .slider {
+    background-color: #28A745;
+}
+
+.edit-job input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.edit-job input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.edit-job .slider.round {
+    border-radius: 34px;
+}
+
+.edit-job .slider.round:before {
+    border-radius: 50%;
+}
+
+.edit-job .status {
+    color: #47B5FF;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+@media (max-width: 479px) {
+    .edit-job .saveButton {
+        width: 140px;
+    }
+
+    .edit-job .cancelButton {
+        width: 140px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .edit-job .container .company-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .edit-job .editJobForm {
+        margin-right: 4px !important;
+        margin-left: 4px !important;
+    }
+
+    .edit-job .saveButton {
+        margin-left: 22px;
+    }
+
+    .edit-job .cancelButton {
+        margin-left: 22px;
+    }
+
+}
