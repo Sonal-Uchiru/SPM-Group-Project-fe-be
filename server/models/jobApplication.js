@@ -5,6 +5,7 @@ import baseEntity from './base.js'
 const jobApplicationSchema = extendSchema(baseEntity, {
     applicant: {type: String, required: true},
     jobId: {type: String, required: true},
+    companyId: {type: String, required: true},
     applicantOtherDetails: {
         dob: {type: Date, required: false},
         address: {type: String, required: false},

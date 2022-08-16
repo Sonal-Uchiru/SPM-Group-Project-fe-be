@@ -5,6 +5,7 @@ import {updateById} from "../shared/updateById.js";
 import {deleteById} from "../shared/deleteById.js";
 import {getById} from "../shared/getById.js";
 import {getAllContentByToken} from "../shared/getAllContentByToken.js";
+import {getModel} from "../shared/modelSelector.js";
 
 export const saveJobApplication = async (req, res) => {
     try {
@@ -40,8 +41,36 @@ export const getJobApplicationById = async (req, res) => {
 
 export const getJobApplicationsByToken = async (req, res) => {
     try {
-        const userId = await decode(req);
-        await getAllContentByToken(req, res, 'jobApplication', {applicant: userId._id})
+        const applicant = await decode(req);
+
+        const content = await JobApplication.aggregate([
+            {
+                $match: {applicant: applicant._id}
+            },
+            {"$addFields": {"jobId": {"$toObjectId": "$jobId"}}},
+            {
+                $lookup: {
+                    from: "jobs",
+                    localField: "jobId",
+                    foreignField: "_id",
+                    as: "jobDetails"
+                }
+            },
+            {"$addFields": {"companyId": {"$toObjectId": "$companyId"}}},
+            {
+                $lookup: {
+                    from: "companies",
+                    localField: "companyId",
+                    foreignField: "_id",
+                    as: "companyDetails"
+                }
+            },
+        ])
+
+        if (content) {
+            return res.status(200).json(content)
+        }
+        return res.status(404).send({message: `JOB APPLICATION model ${applicant} not found`});
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
     }
@@ -75,10 +104,63 @@ export const updateJobApplicationStatus = async (req, res) => {
                 modifiedUser: userId._id,
             },
         })
-        
+
         if (content) {
             return res.status(200).send({message: `${req.params.id} content updated successfully`})
         }
+
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
+}
+
+export const getJobApplicationsByJobId = async (req, res) => {
+    try {
+
+        if (!req.params.id) {
+            return res.status(404).send({message: 'id not found'})
+        }
+
+        const jobId = req.params.id
+
+        const content = await JobApplication.aggregate([
+            {
+                $match: {jobId}
+            },
+            {"$addFields": {"applicant": {"$toObjectId": "$applicant"}}},
+            {
+                $lookup: {
+                    from: "users",
+                    localField: "applicant",
+                    foreignField: "_id",
+                    as: "userDetails"
+                }
+            },
+        ])
+
+        if (content) {
+            return res.status(200).send({
+                content,
+            })
+        }
+
+        res.status(404).send({
+            message: `Job applications model ${req.params.id} not found`,
+        })
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
+}
+
+export const getNoJobApplications = async (req, res) => {
+    try {
+
+        if (!req.params.id) {
+            return res.status(404).send({message: 'id not found'})
+        }
+
+        const content = await JobApplication.find({companyId: req.params.id})
+        res.status(200).send({noOfJobApplications: content.length})
 
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
