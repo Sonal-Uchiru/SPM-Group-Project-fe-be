@@ -222,7 +222,7 @@ function JobApplicationForm(props) {
                                     <div className="text-center mt-2">
                                         <h6 className="blue-text-color">We are saving your time by auto filling your
                                             personal details</h6>
-                                        <Button type="button" className="btn btn-success btn-lg"
+                                        <Button type="button" className="btn btn-success "
                                                 onClick={() => nextStep('1')}>Next<BsArrowRight/></Button>
                                     </div>
                                 </form>
@@ -232,7 +232,7 @@ function JobApplicationForm(props) {
                                 <h3 className="blue-text-color ms-2 mb-3">Licenses and Certificates</h3>
                                 <div className="text-center mb-4">
                                     <button type="button" id="licensesBtn"
-                                            className="btn light-blue-btn btn-lg btn-block"
+                                            className="btn light-blue-btn btn-block"
                                             onClick={() => fileRef.current.click()}
                                     >ADD
                                         <input id="inputTagLicense" type="file" ref={fileRef} hidden/>
@@ -247,7 +247,7 @@ function JobApplicationForm(props) {
                                     </mark>
                                 </h3>
                                 <div className="text-center">
-                                    <button type="button" className="btn light-blue-btn btn-lg btn-block"
+                                    <button type="button" className="btn light-blue-btn btn-block"
                                             onClick={() => fileRef2.current.click()}
                                     >ADD
                                         <input id="inputTagResume" type="file" ref={fileRef2} hidden/>
@@ -257,19 +257,19 @@ function JobApplicationForm(props) {
                                         Resume)</h6>
                                 </div>
                                 <h3 className="blue-text-color ms-2 mb-3 mt-4">Cover Letter</h3>
-                                <div className="form-group me-5 ms-5">
+                                <div className="form-group me-4 ms-4">
                                     <textarea className="form-control " id="exampleFormControlTextarea1"
                                               rows="3"/>
                                 </div>
                                 <div className="text-center mt-2">
-                                    <Button type="button" className="btn btn-success btn-lg"
+                                    <Button type="button" className="btn btn-success"
                                             onClick={() => nextStep('2')}>Next<BsArrowRight/></Button>
                                 </div>
                             </div>}
                             {/*step 3 */}
                             {step3 && <div>
                                 <h3 className="blue-text-color ms-2">Other Details</h3>
-                                <form className="me-5 ms-5">
+                                <form className="me-4 ms-4">
                                     <div className="mb-2">
                                         <label htmlFor="exampleInputEmail1" className="form-label">
                                             <b>Preferred Name</b>
@@ -314,9 +314,9 @@ function JobApplicationForm(props) {
                                                placeholder="Postal Code"/>
                                     </div>
                                     <div className="text-center mt-2">
-                                        <Button type="button" className="btn btn-success btn-lg me-2">Save
+                                        <Button type="button" className="btn btn-success saveChanges me-3">Save
                                             Changes</Button>
-                                        <Button type="button" className="btn btn-danger btn-lg"
+                                        <Button type="button" className="btn btn-danger cancel"
                                                 onClick={closeModal}>Cancel</Button>
                                     </div>
                                 </form>

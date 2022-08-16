@@ -16,15 +16,6 @@ export default function AppliedJobCard() {
                             <h4 className="card-title">Software Engineer (Full Stack Developer)</h4>
                             <p className="card-text1">Full Time Job</p>
                             <p className="card-text2">10 Applicants</p>
-
-                            <div className="text-center">
-                                <div className="btn-group me-2">
-                                    <button type="button" className="btn btn-primary editButton">Edit</button>
-                                </div>
-                                <div className="btn-group me-2">
-                                    <button type="button" className="btn btn-primary deleteButton">Delete</button>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -32,6 +23,14 @@ export default function AppliedJobCard() {
                         <div className="recImage text-center">
                             <img src="./images/cross-button.png" className="img-fluid recruitingStatus"
                                  alt="recruiting_status"/>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <div className="btn-group me-2">
+                            <button type="button" className="btn btn-primary editButton">Edit</button>
+                        </div>
+                        <div className="btn-group me-2">
+                            <button type="button" className="btn btn-primary deleteButton">Delete</button>
                         </div>
                     </div>
                 </div>

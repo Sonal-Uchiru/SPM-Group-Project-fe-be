@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="code refactored">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="New Folder Structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/protectedApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/protectedApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/adminHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/adminHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationFormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationFormStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/appliedJobCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/appliedJobCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/appliedJobCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/appliedJobCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="user-management" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +42,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -65,6 +74,7 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
+      <workItem from="1660645700339" duration="2850000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
