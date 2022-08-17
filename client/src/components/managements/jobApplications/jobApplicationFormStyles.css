@@ -18,6 +18,7 @@
 }
 
 
+
 .modal-title-edit {
     margin-top: -28px;
 }
@@ -41,6 +42,14 @@
     border-color: #28A745;
 }
 
+.job-application-form .cancel {
+    width: 140px;
+}
+
+.job-application-form .saveChanges {
+    width: 140px;
+}
+
 @media (max-width: 767px) {
     .job-application-form .logo {
         display: flex;
@@ -52,9 +61,33 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 394px) {
+
+    .job-application-form .saveChanges {
+        width: 130px;
+    }
+
+    .job-application-form .cancel {
+        width: 130px;
+    }
+}
+
+@media (max-width: 374px) {
+
+    .job-application-form .saveChanges {
+        margin-bottom: 10px;
+        margin-left: 14px;
+    }
+
+    .job-application-form .cancel {
+        width: 130px;
+    }
+}
+
+@media (max-width: 354px) {
     .job-application-form .container .company-logo {
         width: 120px !important;
         height: 120px !important;
     }
+
 }
