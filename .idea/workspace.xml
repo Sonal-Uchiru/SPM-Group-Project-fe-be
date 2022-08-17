@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="code refactored">
-      <change afterPath="$PROJECT_DIR$/client/src/api/authApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/api/protectedApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/api/unprotectedApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/baseApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/tokenHandling.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/tokenHandling.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/protectedApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/protectedApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
