@@ -42,6 +42,8 @@
     margin-left: 14px;
     background-color: #1363DF;
     border: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
     font-size: 18px;
 }
 
@@ -54,6 +56,8 @@
     margin-left: 40px;
     font-size: 18px;
     border: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
     background-color: #E15141;
 }
 
@@ -63,8 +67,8 @@
 
 @media (max-width: 767px) {
     .appliedJobCard .recruitingStatus {
-        margin-top: 10px;
-        padding-bottom: 10px;
+        margin-top: -30px;
+        margin-bottom: 30px;
     }
 }
 
