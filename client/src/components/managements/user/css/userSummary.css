@@ -1,0 +1,41 @@
+.user-summary .card {
+  border: 1px solid #1363df;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 420px;
+  height: 350px;
+  margin: 50px auto auto;
+}
+
+.user-summary .summary-topic {
+  color: #1363df;
+}
+.user-summary .sub-text {
+  color: #06283d;
+}
+
+.user-summary .summary-div {
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  border: 8px solid green;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.user-summary .summary-text {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .user-summary .summary-div {
+    width: 150px;
+    height: 150px;
+    border: 8px solid green;
+  }
+  .user-summary .summary-text {
+    padding-top: 6px;
+    font-size: 20px;
+  }
+}
