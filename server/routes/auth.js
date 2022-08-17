@@ -2,6 +2,7 @@ import express from 'express'
 import bcrypt from 'bcrypt'
 import {User} from "../models/user.js";
 import {validateAuth} from "../validations/auth.js";
+import {Company} from "../models/company.js";
 
 
 const authRouter = express.Router()
@@ -17,13 +18,20 @@ authRouter.post('/', async (req, res) => {
             await authenticateCredentials(req, res, user, user.role)
             return
         }
+
+        let company = await Company.findOne({email: req.body.email})
+        if (company) {
+            await authenticateCredentials(req, res, company, 'company')
+            return
+        }
+
         return res.status(401).send({message: 'Invalid Email or Password'})
     } catch (error) {
         res.status(500).send({message: 'Internal Server Error'})
     }
 })
 
-// update the validations router to login admin and the company
+// update the auth router to login admin and the company
 
 const authenticateCredentials = async (req, res, user, role) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password)
