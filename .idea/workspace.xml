@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="after reset (merge issue)">
-      <change afterPath="$PROJECT_DIR$/server/confirmation/passwordConfirmation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service/company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/shared/changePassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/shared/getAllContentByToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/changePassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/validations/job.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/constant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/constant/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/job.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/job.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/deleteByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/deleteByToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/getById.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/getById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/shared/getByToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/getByToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="after reset (merge issue) fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660742466520</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="after reset (merge issue) fixed">
+      <created>1660742568416</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1660742568416</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +258,8 @@
     <MESSAGE value="backend implementations completed" />
     <MESSAGE value="code refactored" />
     <MESSAGE value="after reset (merge issue)" />
-    <option name="LAST_COMMIT_MESSAGE" value="after reset (merge issue)" />
+    <MESSAGE value="after reset (merge issue) fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="after reset (merge issue) fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
