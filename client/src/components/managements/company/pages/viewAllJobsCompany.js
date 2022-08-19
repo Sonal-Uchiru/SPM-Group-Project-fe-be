@@ -24,7 +24,6 @@ export default function ViewAllJobsCompany() {
     const content = await protectedApi("GET", "jobs", "");
     setJobsArray(content.data);
     setDuplicateJobsArray(content.data);
-    console.log(content.data);
   }
 
   function onCrud() {
@@ -99,7 +98,13 @@ export default function ViewAllJobsCompany() {
           <h4 class="text-danger mb-5">{errorText}</h4>
         </center>
         {jobsArray.map((post) => {
-          return <AllJobsCardCompany changeFunction={onCrud} content={post} />;
+          return (
+            <AllJobsCardCompany
+              key={post._id}
+              changeFunction={onCrud}
+              content={post}
+            />
+          );
         })}
       </div>
 
