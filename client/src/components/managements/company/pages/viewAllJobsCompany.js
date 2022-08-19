@@ -22,7 +22,7 @@ export default function ViewAllJobsCompany() {
     setJobdArray(content.data);
   }
 
-  function uponAdded() {
+  function onCrud() {
     setOpenModal(false);
     getAllJobs();
   }
@@ -73,7 +73,7 @@ export default function ViewAllJobsCompany() {
 
       <div className="pageBody">
         {jobsArray.map((post) => {
-          return <AllJobsCardCompany content={post} />;
+          return <AllJobsCardCompany deletedFunction={onCrud} content={post} />;
         })}
       </div>
 
@@ -98,7 +98,7 @@ export default function ViewAllJobsCompany() {
             </span>
           </button>
         </Modal.Header>
-        <AddNewJob addedFunction={uponAdded} />
+        <AddNewJob addedFunction={onCrud} />
       </Modal>
     </div>
   );

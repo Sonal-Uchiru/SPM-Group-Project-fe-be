@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import "../css/allJobsCardCompany.css";
 import Icon from "../pages/test";
+import { protectedApi } from "../../../../api/protectedApi";
+import { SuccessAlert } from "../../../../sweet_alerts/success";
+import { ErrorAlert } from "../../../../sweet_alerts/error";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
 
+  async function deleteJob() {
+    try {
+      const content = await protectedApi("DELETE", `jobs/${jobContent._id}`, "");
+      SuccessAlert("Job Deleted Successfully");
+    } catch (e) {
+      ErrorAlert(e);
+    }
+    props.deletedFunction();
+  }
   return (
     <div className="container allJobsCardCompany">
       <div className="card mb-3">
@@ -106,7 +118,11 @@ export default function AllJobsCardCompany(props) {
                 </button>
               </div>
               <div className="btn-group me-2">
-                <button type="button" className="btn btn-primary deleteButton">
+                <button
+                  type="button"
+                  onClick={() => deleteJob()}
+                  className="btn btn-primary deleteButton"
+                >
                   Delete
                 </button>
               </div>
