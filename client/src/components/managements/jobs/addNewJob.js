@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { protectedApi } from "../../../api/protectedApi";
 import "./addNewJob.css";
+import { SuccessAlert } from "../../../sweet_alerts/success";
+import { ErrorAlert } from "../../../sweet_alerts/error";
 
 export default function AddNewJob(props) {
   const [position, setPosition] = useState("");
@@ -13,7 +15,6 @@ export default function AddNewJob(props) {
   const [otherRequirements, setOtherRequirements] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
 
- 
   async function createJob(e) {
     e.preventDefault();
 
@@ -27,9 +28,17 @@ export default function AddNewJob(props) {
       otherRequirements: otherRequirements,
       //   companyId: "62f9e742d06c6643a5f74e65",
     };
-    const status = await protectedApi("POST", "jobs", jobData);
-    console.log(status);
-    alert("s");
+    try {
+      const response = await protectedApi("POST", "jobs", jobData);
+      if (response.status == 201) {
+        SuccessAlert("Job added successfully");
+        props.addedFunction();
+      } else {
+        ErrorAlert("Something went wrong");
+      }
+    } catch (e) {
+      ErrorAlert(e);
+    }
   }
 
   return (
@@ -109,10 +118,10 @@ export default function AddNewJob(props) {
                     }}
                     required
                   >
-                    <option selected value="Full Time">
+                    <option selected value="Full time">
                       Full Time
                     </option>
-                    <option value="Part Time">Part Time</option>
+                    <option value="Part time">Part Time</option>
                   </select>
                 </div>
 

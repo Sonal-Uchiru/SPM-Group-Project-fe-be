@@ -22,6 +22,11 @@ export default function ViewAllJobsCompany() {
     setJobdArray(content.data);
   }
 
+  function uponAdded() {
+    setOpenModal(false);
+    getAllJobs();
+  }
+
   return (
     <div className="viewAllJobsCompany">
       <div className="searchBar text-center container">
@@ -93,7 +98,7 @@ export default function ViewAllJobsCompany() {
             </span>
           </button>
         </Modal.Header>
-        <AddNewJob />
+        <AddNewJob addedFunction={uponAdded} />
       </Modal>
     </div>
   );
