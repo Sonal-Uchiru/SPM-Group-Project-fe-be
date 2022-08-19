@@ -73,7 +73,7 @@ export default function ViewAllJobsCompany() {
 
       <div className="pageBody">
         {jobsArray.map((post) => {
-          return <AllJobsCardCompany deletedFunction={onCrud} content={post} />;
+          return <AllJobsCardCompany changeFunction={onCrud} content={post} />;
         })}
       </div>
 

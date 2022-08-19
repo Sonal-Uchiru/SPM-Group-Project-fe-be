@@ -1,5 +1,5 @@
 import { Job } from '../models/job.js'
-import { validatePost } from '../validations/job.js'
+import { validatePost, validatePut } from '../validations/job.js'
 import { getById } from '../shared/getById.js'
 import { updateById } from '../shared/updateById.js'
 import { decode } from '../middleware/tokenDecode.js'
@@ -73,7 +73,7 @@ export const getJob = async (req, res) => {
 
 // URL: http://localhost:8080/api/protected/job/62f29917458b29eab498a1f1
 export const updateJob = async (req, res) => {
-    await updateById(req, res, 'job', validatePost)
+    await updateById(req, res, 'job', validatePut)
 }
 
 export const deleteJobsByCompanyId = async (companyId) => {

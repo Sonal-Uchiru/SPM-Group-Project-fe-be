@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../css/allJobsCardCompany.css";
 import Icon from "../pages/test";
+import { Modal } from "react-bootstrap";
+import EditJob from "../../jobs/editJob";
+
 import { protectedApi } from "../../../../api/protectedApi";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
@@ -9,16 +12,45 @@ export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
+  const [applicants, setApplicants] = useState("");
 
+  const [openModal, setOpenModal] = useState(props.modalStatus);
+
+  useState(() => {
+    //Change this route to correct one
+    getJobApplicants();
+  }, []);
+
+  async function getJobApplicants() {
+    const response = await protectedApi(
+      "GET",
+      `jobs/companies/summary/${jobContent._id}`,
+      ""
+    );
+    setApplicants(response.data.noOfJobPosted);
+  }
   async function deleteJob() {
     try {
-      const content = await protectedApi("DELETE", `jobs/${jobContent._id}`, "");
+      const content = await protectedApi(
+        "DELETE",
+        `jobs/${jobContent._id}`,
+        ""
+      );
       SuccessAlert("Job Deleted Successfully");
     } catch (e) {
       ErrorAlert(e);
     }
-    props.deletedFunction();
+    props.changeFunction();
   }
+
+  function editedFunction() {
+    setOpenModal(false);
+    props.changeFunction();
+  }
+  function editJob() {
+    setOpenModal(true);
+  }
+
   return (
     <div className="container allJobsCardCompany">
       <div className="card mb-3">
@@ -36,7 +68,7 @@ export default function AllJobsCardCompany(props) {
             <div className="card-body">
               <h4 className="card-title">{jobContent.position}</h4>
               <p className="card-text1">{jobContent.jobType}</p>
-              <p className="card-text2">10 Applicants</p>
+              <p className="card-text2">{applicants} Applicants</p>
             </div>
           </div>
 
@@ -113,7 +145,11 @@ export default function AllJobsCardCompany(props) {
                 </button>
               </div>
               <div className="btn-group me-2">
-                <button type="button" className="btn btn-primary editButton">
+                <button
+                  type="button"
+                  onClick={() => editJob()}
+                  className="btn btn-primary editButton"
+                >
                   Edit
                 </button>
               </div>
@@ -141,6 +177,29 @@ export default function AllJobsCardCompany(props) {
         </div>
       </div>
       <br />
+      <Modal show={openModal} size="lg">
+        <Modal.Header>
+          <div>
+            <h4 className="ms-4 modal-title">
+              <b>Edit Job </b>
+            </h4>
+          </div>
+          <button
+            type="button"
+            className="btn"
+            data-dismiss="modal"
+            aria-label="Close"
+            onClick={() => {
+              setOpenModal(false);
+            }}
+          >
+            <span aria-hidden="true">
+              <b>&times;</b>
+            </span>
+          </button>
+        </Modal.Header>
+        <EditJob editFunction={editedFunction} content={jobContent} />
+      </Modal>
     </div>
   );
 }
