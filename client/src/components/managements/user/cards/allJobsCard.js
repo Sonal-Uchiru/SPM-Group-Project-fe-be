@@ -5,6 +5,7 @@ import "../css/allJobsCard.css";
 export default function AllJobsCard(props) {
   const jobContent = props.content;
   const [applicants, setApplicants] = useState("");
+  const [image, setImage] = useState("");
 
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
@@ -17,9 +18,8 @@ export default function AllJobsCard(props) {
 
   async function getCompanyData() {
     const token = getTokenFromLocalStorage();
-    const content = await protectedApi("GET", "jobs", "");
-
-    console.log(token);
+    const content = await protectedApi("GET", "companies", "");
+    setImage(content.logo);
   }
   async function getJobApplicants() {
     const response = await protectedApi(
@@ -35,7 +35,7 @@ export default function AllJobsCard(props) {
           <div className="col-md-3">
             <div className="logoImage text-center">
               <img
-                src="./images/rootCode.png"
+                src={image}
                 className="img-fluid companyLogo"
                 alt="company_logo"
               />
