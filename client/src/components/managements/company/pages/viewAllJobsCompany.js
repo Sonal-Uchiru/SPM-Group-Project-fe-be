@@ -4,10 +4,14 @@ import "../css/viewAllJobsCompany.css";
 import AllJobsCardCompany from "../cards/allJobsCardCompany";
 import AddNewJob from "../../jobs/addNewJob";
 import { protectedApi } from "../../../../api/protectedApi";
+import Loading from "../../../external_components/spinners/loading";
 
 export default function ViewAllJobsCompany() {
   const [openModal, setOpenModal] = useState(false);
-  const [jobsArray, setJobdArray] = useState([]);
+  const [loadingStatus, setLoadingStatus] = useState(true);
+  const [jobsArray, setJobsArray] = useState([]);
+  const [duplicateJobsArray, setDuplicateJobsArray] = useState([]);
+  const [errorText, setErrorText] = useState("");
   useEffect(() => {
     getAllJobs();
   }, []);
@@ -18,13 +22,29 @@ export default function ViewAllJobsCompany() {
 
   async function getAllJobs() {
     const content = await protectedApi("GET", "jobs", "");
+    setJobsArray(content.data);
+    setDuplicateJobsArray(content.data);
     console.log(content.data);
-    setJobdArray(content.data);
   }
 
   function onCrud() {
     setOpenModal(false);
     getAllJobs();
+  }
+
+  function handleSearch(userIn) {
+    setLoadingStatus(false);
+    const result = duplicateJobsArray.filter((job) =>
+      job.position.toLowerCase().includes(userIn.toLowerCase())
+    );
+    if (result.length > 0) {
+      setJobsArray(result);
+      setErrorText("");
+    } else {
+      setJobsArray(result);
+      setErrorText(`No Jobs by name ${userIn}`);
+    }
+    setLoadingStatus(true);
   }
 
   return (
@@ -36,6 +56,7 @@ export default function ViewAllJobsCompany() {
             type="search"
             placeholder="Search Applied Jobs"
             aria-label="Search"
+            onChange={(e) => handleSearch(e.target.value)}
           />
           <span className="p-viewer">
             <img
@@ -70,8 +91,13 @@ export default function ViewAllJobsCompany() {
         <br />
         <br />
       </div>
-
+      <div hidden={loadingStatus}>
+        <Loading />
+      </div>
       <div className="pageBody">
+        <center>
+          <h4 class="text-danger mb-5">{errorText}</h4>
+        </center>
         {jobsArray.map((post) => {
           return <AllJobsCardCompany changeFunction={onCrud} content={post} />;
         })}
