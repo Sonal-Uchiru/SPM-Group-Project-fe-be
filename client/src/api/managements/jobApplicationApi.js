@@ -16,3 +16,27 @@ export const saveJobApplication = async (data) => {
         await ErrorAlert()
     }
 }
+
+export const getAppliedJobApplications = async () => {
+    try {
+        return await protectedApi('get', 'jobApplications')
+    } catch (e) {
+        await ErrorAlert()
+    }
+}
+
+export const getAppliedJobApplicationsByJobId = async (id) => {
+    try {
+        return await protectedApi('get', `jobApplications/jobs/${id}`)
+    } catch (e) {
+        await ErrorAlert()
+    }
+}
+
+export const deleteJobApplication = async (id) => {
+    try {
+        return await protectedApi('delete', `jobApplications/${id}`)
+    } catch (e) {
+        await ErrorAlert()
+    }
+}

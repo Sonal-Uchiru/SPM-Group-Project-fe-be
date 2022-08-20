@@ -94,7 +94,7 @@ function JobApplicationForm(props) {
             setCurrentUser(content.data)
 
         } catch (e) {
-            await ErrorAlert()
+            await ErrorAlert("Something went wrong!")
         }
     }, [])
 
