@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { getJobsApplicants } from "../../../../api/managements/jobApi";
 import { protectedApi } from "../../../../api/protectedApi";
 import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
 import "../css/allJobsCard.css";
+
 export default function AllJobsCard(props) {
   const jobContent = props.content;
   const [applicants, setApplicants] = useState("");
@@ -22,10 +24,7 @@ export default function AllJobsCard(props) {
     setImage(content.logo);
   }
   async function getJobApplicants() {
-    const response = await protectedApi(
-      "GET",
-      `jobs/companies/summary/${jobContent._id}`
-    );
+    const response = await getJobsApplicants(jobContent._id)
     setApplicants(response.data.noOfJobPosted);
   }
   return (

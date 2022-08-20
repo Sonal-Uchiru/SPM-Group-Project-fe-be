@@ -3,8 +3,8 @@ import { Button, Modal } from "react-bootstrap";
 import { protectedApi } from "../../../api/protectedApi";
 import { ErrorAlert } from "../../../sweet_alerts/error";
 import { SuccessAlert } from "../../../sweet_alerts/success";
+import Loading from "../../external_components/spinners/loading";
 import "./editJob.css";
-
 export default function EditJob(props) {
   const jobContent = props.content;
   const [position, setPosition] = useState("");
@@ -15,6 +15,7 @@ export default function EditJob(props) {
   const [requirements, setRequirements] = useState("");
   const [otherRequirements, setOtherRequirements] = useState("");
   const [status, setStatus] = useState("");
+  const [loadingStatus, setLoadingStatus] = useState(false);
 
   useEffect(() => {
     assignData();
@@ -34,6 +35,7 @@ export default function EditJob(props) {
 
   async function editJob(e) {
     e.preventDefault();
+    setLoadingStatus(true);
 
     const jobData = {
       position: position,
@@ -51,6 +53,8 @@ export default function EditJob(props) {
         `jobs/${jobContent._id}`,
         jobData
       );
+      setLoadingStatus(false);
+
       SuccessAlert("Job updated successfully");
       props.editFunction();
     } catch (e) {
@@ -240,6 +244,8 @@ export default function EditJob(props) {
                   </label>
                   <p className="status">Actively Recurting ?</p>
                 </div>
+                {loadingStatus && <Loading />}
+
                 <div className="text-center mt-3">
                   <div className="btn-group me-2">
                     <button

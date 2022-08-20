@@ -4,10 +4,12 @@ import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
 import EditJob from "../../jobs/editJob";
 
-import { protectedApi } from "../../../../api/protectedApi";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
-
+import {
+  deleteJob,
+  getJobsApplicants,
+} from "../../../../api/managements/jobApi";
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
   const [step1, setStep1] = useState(false);
@@ -22,20 +24,12 @@ export default function AllJobsCardCompany(props) {
   }, []);
 
   async function getJobApplicants() {
-    const response = await protectedApi(
-      "GET",
-      `jobs/companies/summary/${jobContent._id}`,
-      ""
-    );
+    const response = await getJobsApplicants(jobContent._id);
     setApplicants(response.data.noOfJobPosted);
   }
-  async function deleteJob() {
+  async function deleteSelectedJob() {
     try {
-      const content = await protectedApi(
-        "DELETE",
-        `jobs/${jobContent._id}`,
-        ""
-      );
+      const content = await deleteJob(jobContent._id);
       SuccessAlert("Job Deleted Successfully");
     } catch (e) {
       ErrorAlert(e);
@@ -74,25 +68,20 @@ export default function AllJobsCardCompany(props) {
 
           <div className="col-md-2">
             <div className="recImage text-center">
-              {jobContent.status == 1 ? (
-                <div>
-                  <img
-                    src="./images/accuracy.png"
-                    className="img-fluid recruitingStatus"
-                    alt="recruiting_status"
-                  />
-                  <p className="status1">Actively Recruiting</p>
-                </div>
-              ) : (
-                <div>
-                  <img
-                    src="./images/close.png"
-                    className="img-fluid recruitingStatus"
-                    alt="recruiting_status"
-                  />
-                  <p className="status2">Actively Recruiting</p>
-                </div>
-              )}
+              <div>
+                <img
+                  src={
+                    jobContent.status == 1
+                      ? "./images/accuracy.png"
+                      : "./images/close.png"
+                  }
+                  className="img-fluid recruitingStatus"
+                  alt="recruiting_status"
+                />
+                <p className={jobContent.status == 1 ? "status1" : "status2"}>
+                  {jobContent.status == 1 ? "Actively Recruiting" : "Closed"}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -156,7 +145,7 @@ export default function AllJobsCardCompany(props) {
               <div className="btn-group me-2">
                 <button
                   type="button"
-                  onClick={() => deleteJob()}
+                  onClick={() => deleteSelectedJob()}
                   className="btn btn-primary deleteButton"
                 >
                   Delete

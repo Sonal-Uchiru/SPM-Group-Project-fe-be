@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { protectedApi } from "../../../api/protectedApi";
 import "./addNewJob.css";
 import { SuccessAlert } from "../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../sweet_alerts/error";
+import { addNewJobs } from "../../../api/managements/jobApi";
+import Loading from "../../external_components/spinners/loading";
 
 export default function AddNewJob(props) {
   const [position, setPosition] = useState("");
@@ -14,10 +15,11 @@ export default function AddNewJob(props) {
   const [requirements, setRequirements] = useState("");
   const [otherRequirements, setOtherRequirements] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
+  const [loadingStatus, setLoadingStatus] = useState(false);
 
   async function createJob(e) {
     e.preventDefault();
-
+    setLoadingStatus(true);
     const jobData = {
       position: position,
       developmentArea: developmentArea,
@@ -29,13 +31,10 @@ export default function AddNewJob(props) {
       //   companyId: "62f9e742d06c6643a5f74e65",
     };
     try {
-      const response = await protectedApi("POST", "jobs", jobData);
-      if (response.status == 201) {
-        SuccessAlert("Job added successfully");
-        props.addedFunction();
-      } else {
-        ErrorAlert("Something went wrong");
-      }
+      const response = await addNewJobs(jobData);
+      setLoadingStatus(false);
+      SuccessAlert("Job added successfully");
+      props.addedFunction();
     } catch (e) {
       ErrorAlert(e);
     }
@@ -118,9 +117,10 @@ export default function AddNewJob(props) {
                     }}
                     required
                   >
-                    <option selected value="Full time">
-                      Full Time
+                    <option selected value="">
+                      Please select
                     </option>
+                    <option value="Full time">Full Time</option>
                     <option value="Part time">Part Time</option>
                   </select>
                 </div>
@@ -199,6 +199,7 @@ export default function AddNewJob(props) {
                     }}
                   />
                 </div>
+                {loadingStatus && <Loading />}
 
                 <div className="text-center mt-3">
                   <Button type="submit" className="btn btn-success">

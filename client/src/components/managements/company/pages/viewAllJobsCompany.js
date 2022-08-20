@@ -3,8 +3,8 @@ import { Modal } from "react-bootstrap";
 import "../css/viewAllJobsCompany.css";
 import AllJobsCardCompany from "../cards/allJobsCardCompany";
 import AddNewJob from "../../jobs/addNewJob";
-import { protectedApi } from "../../../../api/protectedApi";
 import Loading from "../../../external_components/spinners/loading";
+import { getAllJobsByToken } from "../../../../api/managements/jobApi";
 
 export default function ViewAllJobsCompany() {
   const [openModal, setOpenModal] = useState(false);
@@ -12,6 +12,7 @@ export default function ViewAllJobsCompany() {
   const [jobsArray, setJobsArray] = useState([]);
   const [duplicateJobsArray, setDuplicateJobsArray] = useState([]);
   const [errorText, setErrorText] = useState("");
+
   useEffect(() => {
     getAllJobs();
   }, []);
@@ -21,9 +22,16 @@ export default function ViewAllJobsCompany() {
   }
 
   async function getAllJobs() {
-    const content = await protectedApi("GET", "jobs", "");
+    const content = await getAllJobsByToken();
     setJobsArray(content.data);
     setDuplicateJobsArray(content.data);
+    if (!content.data.length) {
+      setErrorText("No jobs available");
+    } else {
+      setErrorText("");
+    }
+
+    setLoadingStatus(false);
   }
 
   function onCrud() {
@@ -32,7 +40,9 @@ export default function ViewAllJobsCompany() {
   }
 
   function handleSearch(userIn) {
-    setLoadingStatus(false);
+    if (!duplicateJobsArray.length) return;
+
+    setLoadingStatus(true);
     const result = duplicateJobsArray.filter((job) =>
       job.position.toLowerCase().includes(userIn.toLowerCase())
     );
@@ -43,7 +53,7 @@ export default function ViewAllJobsCompany() {
       setJobsArray(result);
       setErrorText(`No Jobs by name ${userIn}`);
     }
-    setLoadingStatus(true);
+    setLoadingStatus(false);
   }
 
   return (
@@ -90,9 +100,7 @@ export default function ViewAllJobsCompany() {
         <br />
         <br />
       </div>
-      <div hidden={loadingStatus}>
-        <Loading />
-      </div>
+      {loadingStatus && <Loading />}
       <div className="pageBody">
         <center>
           <h4 class="text-danger mb-5">{errorText}</h4>

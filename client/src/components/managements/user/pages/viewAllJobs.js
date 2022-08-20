@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { protectedApi } from "../../../../api/protectedApi";
+import { getAllJobsByToken } from "../../../../api/managements/jobApi";
 import Loading from "../../../external_components/spinners/loading";
 import AllJobsCard from "../cards/allJobsCard";
 import "../css/viewAllJobs.css";
+
 export default function ViewAllJobs() {
   const [loadingStatus, setLoadingStatus] = useState(true);
   const [jobsArray, setJobsArray] = useState([]);
@@ -13,7 +14,7 @@ export default function ViewAllJobs() {
   }, []);
 
   async function getAllJobs() {
-    const content = await protectedApi("GET", "jobs", "");
+    const content = await getAllJobsByToken();
     setJobsArray(content.data);
     setDuplicateJobsArray(content.data);
   }

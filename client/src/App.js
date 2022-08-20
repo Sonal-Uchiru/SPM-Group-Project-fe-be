@@ -12,7 +12,7 @@ function App() {
     <Router>
       <CompanyHeader />
       <Routes>
-        <Route path="/" element={<ViewAllJobs />} />
+        <Route path="/" element={<ViewAllJobsCompany />} />
       </Routes>
       <Footer />
     </Router>
