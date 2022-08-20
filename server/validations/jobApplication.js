@@ -8,7 +8,7 @@ export const validate = (data) => {
         resume: Joi.string().required().label('resume'),
         coverLetter: Joi.string().optional().label('cover letter').truncate(true),
         title: Joi.string().valid('Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.').required().label('title'),
-        preferredName: Joi.string().min(3).max(10).optional().label('preferred name').truncate(true),
+        preferredName: Joi.string().min(3).max(50).optional().label('preferred name').truncate(true),
         // true -> yes | false -> no
         companyWorked: Joi.boolean().required().label('company worked'),
         // true -> yes | false -> no
