@@ -1,0 +1,74 @@
+.companyLists {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.companyLists .company-list-table-div {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.companyLists .company-list-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.companyLists .dataTables_filter {
+  margin-bottom: 15px;
+}
+
+.companyLists .company-list-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.companyLists .company-list-table td .tableImg {
+  vertical-align: middle;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  align-content: center;
+  text-align: center;
+}
+
+.companyLists .company-list-table td .tableEdit {
+  width: 30px;
+  height: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.companyLists .company-list-table td .tableEdit:hover {
+  transform: scale(1.1);
+  align-content: center;
+  text-align: center;
+}
+
+.companyLists .pageTitle {
+  color: #1363df;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.companyLists .downloadReportButton {
+  background-color: #28a745;
+  border: none;
+  height: 40px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.companyLists .downloadReportButton:hover {
+  background-color: #008d26;
+  border: none;
+}
+
+.companyLists .fa {
+  margin-right: 5px;
+}
+
+.companyLists .fa-arrow-left {
+  margin-right: 10px;
+}
