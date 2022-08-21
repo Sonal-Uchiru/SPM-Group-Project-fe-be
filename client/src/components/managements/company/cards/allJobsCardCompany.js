@@ -3,30 +3,39 @@ import "../css/allJobsCardCompany.css";
 import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
 import EditJob from "../../jobs/editJob";
-
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import {
   deleteJob,
+  getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
+import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
+
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
   const [applicants, setApplicants] = useState("");
-
+  const [image, setImage] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
 
   useState(() => {
     //Change this route to correct one
     getJobApplicants();
+    getCompanyData();
   }, []);
 
   async function getJobApplicants() {
     const response = await getJobsApplicants(jobContent._id);
     setApplicants(response.data.noOfJobPosted);
   }
+
+  async function getCompanyData() {
+    const content = await getCompanyDataForJob();
+    setImage(content.data.logo);
+  }
+
   async function deleteSelectedJob() {
     try {
       const content = await deleteJob(jobContent._id);
@@ -52,7 +61,7 @@ export default function AllJobsCardCompany(props) {
           <div className="col-md-3">
             <div className="logoImage text-center">
               <img
-                src="./images/rootCode.png"
+                src={image}
                 className="img-fluid companyLogo"
                 alt="company_logo"
               />

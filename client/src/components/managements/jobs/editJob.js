@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { getCompanyDataForJob } from "../../../api/managements/jobApi";
 import { protectedApi } from "../../../api/protectedApi";
 import { ErrorAlert } from "../../../sweet_alerts/error";
 import { SuccessAlert } from "../../../sweet_alerts/success";
 import Loading from "../../external_components/spinners/loading";
 import "./editJob.css";
+
 export default function EditJob(props) {
   const jobContent = props.content;
   const [position, setPosition] = useState("");
@@ -16,9 +18,11 @@ export default function EditJob(props) {
   const [otherRequirements, setOtherRequirements] = useState("");
   const [status, setStatus] = useState("");
   const [loadingStatus, setLoadingStatus] = useState(false);
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     assignData();
+    getCompanyData();
   }, []);
 
   function assignData() {
@@ -70,6 +74,12 @@ export default function EditJob(props) {
       setStatus(1);
     }
   }
+
+  async function getCompanyData() {
+    const content = await getCompanyDataForJob();
+    setImage(content.data.logo);
+  }
+
   return (
     <div className="editJob">
       <div className="">
@@ -79,7 +89,7 @@ export default function EditJob(props) {
               <div className="row">
                 <div className="logo">
                   <img
-                    src="https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg"
+                    src={image}
                     alt="company logo"
                     className="rounded company-logo"
                   />

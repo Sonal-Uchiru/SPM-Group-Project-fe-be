@@ -3,7 +3,10 @@ import { Button, Modal } from "react-bootstrap";
 import "./addNewJob.css";
 import { SuccessAlert } from "../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../sweet_alerts/error";
-import { addNewJobs } from "../../../api/managements/jobApi";
+import {
+  addNewJobs,
+  getCompanyDataForJob,
+} from "../../../api/managements/jobApi";
 import Loading from "../../external_components/spinners/loading";
 
 export default function AddNewJob(props) {
@@ -14,9 +17,14 @@ export default function AddNewJob(props) {
   const [responsibilities, setResponsibilities] = useState("");
   const [requirements, setRequirements] = useState("");
   const [otherRequirements, setOtherRequirements] = useState("");
-  const [openModal, setOpenModal] = useState(props.modalStatus);
   const [loadingStatus, setLoadingStatus] = useState(false);
+  const [image, setImage] = useState("");
 
+  useEffect(() => {
+    getCompanyData();
+  }, []);
+
+  
   async function createJob(e) {
     e.preventDefault();
     setLoadingStatus(true);
@@ -40,6 +48,11 @@ export default function AddNewJob(props) {
     }
   }
 
+  async function getCompanyData() {
+    const content = await getCompanyDataForJob();
+    setImage(content.data.logo);
+  }
+
   return (
     <div className="addNewJob">
       <div className="">
@@ -49,7 +62,7 @@ export default function AddNewJob(props) {
               <div className="row">
                 <div className="logo">
                   <img
-                    src="https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg"
+                    src={image}
                     alt="company logo"
                     className="rounded company-logo"
                   />

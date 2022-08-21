@@ -31,3 +31,11 @@ export const deleteJob = async (jobId) => {
     alert("oppps");
   }
 };
+
+export const getCompanyDataForJob = async () => {
+  try {
+    return await protectedApi("GET", "companies");
+  } catch (e) {
+    alert("oppps");
+  }
+};
