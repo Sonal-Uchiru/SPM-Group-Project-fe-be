@@ -1,10 +1,19 @@
-import { protectedApi } from "../protectedApi";
+import {protectedApi} from "../protectedApi";
+import {ErrorAlert} from "../../sweet_alerts/error";
 
 export const getAllJobsByToken = async () => {
   try {
     return await protectedApi("get", "jobs");
   } catch (e) {
     alert("oppps");
+  }
+};
+
+export const getAllJobs = async () => {
+  try {
+    return await protectedApi("get", "jobs/list");
+  } catch (e) {
+    await ErrorAlert();
   }
 };
 

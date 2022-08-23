@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {
-  getCompanyDataForJob,
-  getJobsApplicants,
+    getCompanyDataForJob,
+    getJobsApplicants,
 } from "../../../../api/managements/jobApi";
 import { protectedApi } from "../../../../api/protectedApi";
 import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
@@ -12,35 +12,36 @@ export default function AllJobsCard(props) {
   const [applicants, setApplicants] = useState("");
   const [image, setImage] = useState("");
 
-  const [step1, setStep1] = useState(false);
-  const [step2, setStep2] = useState(true);
+    const [step1, setStep1] = useState(false);
+    const [step2, setStep2] = useState(true);
 
-  useState(() => {
-    //Change this route to correct one
-    getCompanyData();
-    getJobApplicants();
-  }, []);
+    useEffect(async () => {
+        //Change this route to correct one
+        // await getCompanyData();
+        await getJobApplicants();
+    }, []);
 
-  async function getCompanyData() {
-    const token = getTokenFromLocalStorage();
-    const content = await getCompanyDataForJob();
-    setImage(content.logo);
-  }
+    // async function getCompanyData() {
+    //   const token = getTokenFromLocalStorage();
+    //   const content = await getCompanyDataForJob();
+    //   setImage(content.logo);
+    // }
 
-  async function getJobApplicants() {
-    const response = await getJobsApplicants(jobContent._id);
-    setApplicants(response.data.noOfJobPosted);
-  }
-  return (
-    <div className="container allJobsCard">
-      <div className="card mb-3">
-        <div className="row g-0">
+    async function getJobApplicants() {
+        const response = await getJobsApplicants(jobContent._id);
+        setApplicants(response.data.noOfJobPosted);
+    }
+
+    return (
+        <div className="container allJobsCard">
+            <div className="card mb-3">
+                <div className="row g-0">
           <div className="col-md-3">
             <div className="logoImage text-center">
               <img
-                src={image}
-                className="img-fluid companyLogo"
-                alt="company_logo"
+                  src={jobContent.companyDetails[0].logo}
+                  className="img-fluid companyLogo"
+                  alt="company_logo"
               />
             </div>
           </div>
@@ -65,12 +66,12 @@ export default function AllJobsCard(props) {
                 </div>
               ) : (
                 <div>
-                  <img
-                    src="./images/close.png"
-                    className="img-fluid recruitingStatus"
-                    alt="recruiting_status"
-                  />
-                  <p className="status2">Actively Recruiting</p>
+                    <img
+                        src="./images/close.png"
+                        className="img-fluid recruitingStatus"
+                        alt="recruiting_status"
+                    />
+                    <p className="status2">Closed</p>
                 </div>
               )}
             </div>
@@ -118,10 +119,10 @@ export default function AllJobsCard(props) {
           </div>
 
           <div className="text-center">
-            <button type="button" className="btn btn-primary apply">
-              Apply
-            </button>
-            <br />
+              <button type="button" className="btn btn-primary apply" onClick={props.onModalOpen}>
+                  Apply
+              </button>
+              <br/>
             <img
               src="./images/arrow-up.png"
               className="img-fluid showLess"
