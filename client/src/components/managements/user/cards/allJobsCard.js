@@ -6,11 +6,14 @@ import {
 import { protectedApi } from "../../../../api/protectedApi";
 import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
 import "../css/allJobsCard.css";
+import {isApplied} from "../../../../api/managements/jobApplicationApi";
 
 export default function AllJobsCard(props) {
-  const jobContent = props.content;
-  const [applicants, setApplicants] = useState("");
-  const [image, setImage] = useState("");
+    const jobContent = props.content;
+    const [applicants, setApplicants] = useState("");
+    const [image, setImage] = useState("");
+    const [isAppliedToJob, setIsAppliedToJob] = useState(false);
+
 
     const [step1, setStep1] = useState(false);
     const [step2, setStep2] = useState(true);
@@ -18,6 +21,8 @@ export default function AllJobsCard(props) {
     useEffect(async () => {
         //Change this route to correct one
         // await getCompanyData();
+        const content = await isApplied(jobContent._id)
+        setIsAppliedToJob(content.data.isApplied)
         await getJobApplicants();
     }, []);
 
@@ -31,6 +36,7 @@ export default function AllJobsCard(props) {
         const response = await getJobsApplicants(jobContent._id);
         setApplicants(response.data.noOfJobPosted);
     }
+
 
     return (
         <div className="container allJobsCard">
@@ -118,19 +124,20 @@ export default function AllJobsCard(props) {
             </div>
           </div>
 
-          <div className="text-center">
-              <button type="button" className="btn btn-primary apply" onClick={props.onModalOpen}>
-                  Apply
-              </button>
-              <br/>
-            <img
-              src="./images/arrow-up.png"
-              className="img-fluid showLess"
-              alt="show_less"
-              onClick={() => {
-                setStep1(false);
-                setStep2(true);
-              }}
+            <div className="text-center">
+                <button type="button" className="btn btn-primary apply" onClick={props.onModalOpen}
+                        disabled={isAppliedToJob}>
+                    {isAppliedToJob ? 'Applied' : 'Apply'}
+                </button>
+                <br/>
+                <img
+                    src="./images/arrow-up.png"
+                    className="img-fluid showLess"
+                    alt="show_less"
+                    onClick={() => {
+                        setStep1(false);
+                        setStep2(true);
+                    }}
             />
           </div>
         </div>

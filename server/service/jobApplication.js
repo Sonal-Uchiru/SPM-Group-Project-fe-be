@@ -4,8 +4,6 @@ import {validate, validationStatusChange} from "../validations/jobApplication.js
 import {updateById} from "../shared/updateById.js";
 import {deleteById} from "../shared/deleteById.js";
 import {getById} from "../shared/getById.js";
-import {getAllContentByToken} from "../shared/getAllContentByToken.js";
-import {getModel} from "../shared/modelSelector.js";
 
 export const saveJobApplication = async (req, res) => {
     try {
@@ -161,6 +159,24 @@ export const getNoJobApplications = async (req, res) => {
 
         const content = await JobApplication.find({companyId: req.params.id})
         res.status(200).send({noOfJobApplications: content.length})
+
+    } catch (e) {
+        res.status(500).send({message: 'Internal Server Error'})
+    }
+}
+
+export const isApplied = async (req, res) => {
+    try {
+
+        if (!req.params.id) {
+            return res.status(404).send({message: 'id not found'})
+        }
+
+        const user = await decode(req)
+
+        const content = await JobApplication.find({applicant: user._id, jobId: req.params.id})
+
+        res.status(200).send({isApplied: content.length > 0})
 
     } catch (e) {
         res.status(500).send({message: 'Internal Server Error'})
