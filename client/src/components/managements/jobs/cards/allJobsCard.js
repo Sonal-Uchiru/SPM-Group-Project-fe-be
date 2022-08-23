@@ -22,9 +22,13 @@ export default function AllJobsCard(props) {
   useEffect(async () => {
     const content = await isApplied(jobContent._id);
     setIsAppliedToJob(content.data.isApplied);
+    await getJobsApplicants();
+  }, []);
+
+  async function getJobsApplicants() {
     const response = await getAppliedJobApplicationsByJobId(jobContent._id);
     setApplicants(response.data.content.length);
-  }, []);
+  }
 
   return (
     <div className="container allJobsCard">

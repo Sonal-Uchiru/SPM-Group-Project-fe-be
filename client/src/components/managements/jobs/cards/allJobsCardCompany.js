@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "../css/allJobsCardCompany.css";
-import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
-import EditJob from "../../jobs/editJob";
+import EditJob from "../modals/editJob";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import {
