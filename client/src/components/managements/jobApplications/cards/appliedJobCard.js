@@ -68,7 +68,9 @@ export default function AppliedJobCard(props) {
                     </div>
                     <div className="text-center">
                         <div className="btn-group me-2">
-                            <button type="button" className="btn btn-primary editButton">Edit</button>
+                            <button type="button" className="btn btn-primary editButton"
+                                    onClick={props.onModalOpen}>Edit
+                            </button>
                         </div>
                         <div className="btn-group me-2">
                             <button type="button" className="btn btn-primary deleteButton"

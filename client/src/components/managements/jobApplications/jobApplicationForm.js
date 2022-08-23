@@ -6,20 +6,25 @@ import {handleKeyDown} from "../../external_components/validations/preventWhiteS
 import moment from 'moment';
 import {validateNegative} from "./jobApplicationValidation";
 import {getUser} from "../../../api/managements/userApi";
-import {saveJobApplication} from "../../../api/managements/jobApplicationApi";
+import {
+    getJobApplicationById,
+    saveJobApplication,
+    updateJobApplication
+} from "../../../api/managements/jobApplicationApi";
 import {uploadFile} from "../../../firebase/uploadFile";
 import {ErrorAlert} from "../../../sweet_alerts/error";
 import {SaveChangesAlert} from "../../../sweet_alerts/saveChanges";
 import {SuccessAlert} from "../../../sweet_alerts/success";
 import Loading from "../../external_components/spinners/loading";
 
-function JobApplicationForm(props) {
+export function JobApplicationForm(props) {
     const [openModal, setOpenModal] = useState(true)
     const [step1, setStep1] = useState(true)
     const [step2, setStep2] = useState(false)
     const [step3, setStep3] = useState(false)
     const [isDocRequired, setIsDocRequired] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [companyId, setCompanyId] = useState('')
 
     const fileRef = React.useRef();
     const fileRef2 = React.useRef();
@@ -38,6 +43,7 @@ function JobApplicationForm(props) {
     const closeModal = () => {
         if (loading) return
         setOpenModal(false)
+        props.onModalClose()
     }
 
     const navigateBack = () => {
@@ -98,6 +104,20 @@ function JobApplicationForm(props) {
         }
     }, [])
 
+    useEffect(async () => {
+        try {
+            if (props.jobApplicationId) {
+                const content = await getJobApplicationById(props.jobApplicationId)
+                setApplicantOtherDetails(content.data.applicantOtherDetails)
+                content.data.applicantOtherDetails = undefined
+                setJobApplication(content.data)
+                setCompanyId(content.data.companyId)
+            }
+        } catch (e) {
+            await ErrorAlert("Something went wrong!")
+        }
+    }, [])
+
 
     const saveJobApplicationDB = async (e) => {
         try {
@@ -107,18 +127,30 @@ function JobApplicationForm(props) {
 
             setLoading(true)
 
-            const supportingDocumentUrl = await uploadFile(supportingDocument, 'Resumes');
+            const supportingDocumentUrl = supportingDocument !== '' ? await uploadFile(supportingDocument, 'Resumes') : '';
+
             const licensesAndCertificatesUrl = licensesAndCertificates !== '' ? await uploadFile(licensesAndCertificates, 'Licenses and Certificates') : '';
 
             const data = {
                 ...jobApplication,
                 companyWorked: checkSelectedField(jobApplication.companyWorked),
                 employedWithCurrentCompany: checkSelectedField(jobApplication.employedWithCurrentCompany),
-                resume: supportingDocumentUrl,
+                resume: props.jobApplicationId ? jobApplication.resume : supportingDocumentUrl,
                 licensesAndCertificates: [licensesAndCertificatesUrl],
-                jobId: "62f9e781d06c6643a5f74e69",
-                companyId: "62fe586aa8fdce45b98c1f3b"
+                jobId: props.jobApplicationId ? props.jobApplicationId : "62f9e781d06c6643a5f74e69",
+                companyId: props.jobApplicationId ? companyId : "62fe586aa8fdce45b98c1f3b"
             }
+
+            if (props.jobApplicationId) {
+                data._id = ''
+                data.createdDate = ''
+                data.updatedDate = ''
+                data.applicant = ''
+                data.status = ''
+                data.__v = ''
+            }
+
+            if (data.modifiedUser) data.modifiedUser = ''
 
             const cleanJobApplication = Object.fromEntries(Object.entries(data).filter(([_, v]) => v !== ''));
             const cleanApplicantDetails = Object.fromEntries(Object.entries(applicantOtherDetails).filter(([_, v]) => v !== ''));
@@ -128,6 +160,15 @@ function JobApplicationForm(props) {
                     ...cleanApplicantDetails
                 },
                 ...cleanJobApplication
+            }
+
+            if (props.jobApplicationId) {
+                const result = await updateJobApplication(content, props.jobApplicationId)
+
+                if (result) await SuccessAlert("Job application updated successfully!")
+
+                setLoading(false)
+                return
             }
 
             const result = await saveJobApplication(content)
@@ -146,24 +187,21 @@ function JobApplicationForm(props) {
         return true
     }
 
+    useEffect(() => {
+        setOpenModal(true)
+        setStep1(true)
+        setStep2(false)
+        setStep3(false)
+        setIsDocRequired(false)
+        setLoading(false)
+    }, [])
+
+    const handleQuestion = (ans) => {
+        if (ans) return 'yes'
+        return 'no'
+    }
     return (
         <div className="apply-job-application">
-            <div>
-                <button
-                    type="button"
-                    onClick={() => {
-                        setOpenModal(true)
-                        setStep1(true)
-                        setStep2(false)
-                        setStep3(false)
-                        setIsDocRequired(false)
-                        setLoading(false)
-                    }}
-                    className="primary"
-                >
-                    View Panel Details
-                </button>
-            </div>
             <div className="modal">
                 <Modal show={openModal} size="lg">
                     <Modal.Header>
@@ -216,7 +254,7 @@ function JobApplicationForm(props) {
                                             </b>
                                         </label>
                                         <select className="form-select custom-input-fields" name="title"
-                                                onChange={handleJobApplicationFormChange}
+                                                onChange={handleJobApplicationFormChange} value={jobApplication.title}
                                                 aria-label="Default select example" required>
                                             <option selected value={""}>Select Your Title</option>
                                             <option value="Mr.">Mr.</option>
@@ -282,9 +320,11 @@ function JobApplicationForm(props) {
                                                 </label>
                                                 <input type="date" className="form-control custom-input-fields"
                                                        onChange={handleUserChange} name="dob"
-                                                       readOnly={!!currentUser.dob}
+                                                       readOnly={!!(currentUser.dob || (props.jobApplicationId && applicantOtherDetails.dob))}
                                                        max={moment().format("YYYY-MM-DD")} required
-                                                       Value={currentUser.dob && moment(currentUser.dob).format("YYYY-MM-DD")}
+                                                       Value={
+                                                           currentUser.dob ? moment(currentUser.dob).format("YYYY-MM-DD") :
+                                                               props.jobApplicationId && moment(applicantOtherDetails.dob).format("YYYY-MM-DD")}
                                                 />
                                             </div>
                                         </div>
@@ -312,7 +352,7 @@ function JobApplicationForm(props) {
                                         <input type="text" className="form-control custom-input-fields"
                                                onChange={handleUserChange} readOnly={!!currentUser.address}
                                                name="address" placeholder="Address" maxLength={200} required
-                                               Value={currentUser.address}/>
+                                               Value={currentUser.address ? currentUser.address : props.jobApplicationId && applicantOtherDetails.address}/>
                                     </div>
                                     <div className="mb-2">
                                         <label htmlFor="exampleInputPostalCode" className="form-label">
@@ -324,6 +364,7 @@ function JobApplicationForm(props) {
                                         </label>
                                         <input type="number" className="form-control custom-input-fields"
                                                name="postalCode" onChange={handleUserChange}
+                                               Value={props.jobApplicationId && applicantOtherDetails.postalCode}
                                                placeholder="Postal Code" onKeyPress={validateNegative} required/>
                                     </div>
                                     <div className="mb-2">
@@ -336,7 +377,9 @@ function JobApplicationForm(props) {
                                         </label>
                                         <select className="form-select custom-input-fields" onChange={handleUserChange}
                                                 name="gender" disabled={!!currentUser.gender}
-                                                aria-label="Default select example" required value={currentUser.gender}>
+                                                aria-label="Default select example" required
+                                                value={currentUser.gender ? currentUser.gender :
+                                                    props.jobApplicationId && applicantOtherDetails.gender}>
                                             <option selected value={""}>Select Your Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -353,7 +396,7 @@ function JobApplicationForm(props) {
                             {step2 && <div>
                                 <form onSubmit={(e) => {
                                     e.preventDefault()
-                                    if (supportingDocument === '') {
+                                    if (supportingDocument === '' && !props.jobApplicationId) {
                                         setIsDocRequired(true)
                                         return
                                     }
@@ -375,6 +418,18 @@ function JobApplicationForm(props) {
                                             and
                                             certificates.</h6>
                                     </div>
+                                    {(props.jobApplicationId && jobApplication.licensesAndCertificates[0] !== '') && (
+                                        <div className="text-center mb-4">
+                                            <button type="button" id="licensesBtn"
+                                                    className="btn light-blue-btn btn-block"
+                                                    onClick={() => {
+                                                        window.open(jobApplication.licensesAndCertificates[0], '_blank')
+                                                    }}
+                                            >Download
+                                            </button>
+                                        </div>)
+                                    }
+
                                     <h3 className="blue-text-color ms-2 mb-3">Supporting Documents
                                         <mark className="required-icon">
                                             *
@@ -395,9 +450,24 @@ function JobApplicationForm(props) {
                                             <p className="red-text-color mt-2">Supporting Document is required
                                             </p>}
                                     </div>
+
+                                    {props.jobApplicationId && (
+                                        <div className="text-center mb-4">
+                                            <button type="button" id="licensesBtn"
+                                                    className="btn light-blue-btn btn-block"
+                                                    onClick={() => {
+                                                        window.open(jobApplication.resume, '_blank')
+                                                    }}
+                                            >Download
+                                            </button>
+                                        </div>)
+                                    }
+
+
                                     <h3 className="blue-text-color ms-2 mb-3 mt-4">Cover Letter</h3>
                                     <div className="form-group me-4 ms-4">
                                     <textarea className="form-control " id="exampleFormControlTextarea1"
+                                              Value={jobApplication.coverLetter}
                                               name="coverLetter"
                                               rows="3" maxLength={250} onChange={handleJobApplicationFormChange}/>
                                     </div>
@@ -416,6 +486,7 @@ function JobApplicationForm(props) {
                                         </label>
                                         <input type="text" className="form-control custom-input-fields"
                                                name="preferredName" onChange={handleJobApplicationFormChange}
+                                               Value={jobApplication.preferredName}
                                                placeholder="Preferred Name" onKeyPress={handleKeyDown} maxLength={50}
                                                minLength={3}/>
                                     </div>
@@ -429,6 +500,7 @@ function JobApplicationForm(props) {
                                         </label>
                                         <select className="form-select custom-input-fields" name="companyWorked"
                                                 onChange={handleJobApplicationFormChange}
+                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.companyWorked) : ''}
                                                 aria-label="Default select example" required>
                                             <option selected value="yes">Yes</option>
                                             <option value="no">No</option>
@@ -443,6 +515,7 @@ function JobApplicationForm(props) {
                                             </b>
                                         </label>
                                         <select className="form-select custom-input-fields"
+                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.employedWithCurrentCompany) : ''}
                                                 name="employedWithCurrentCompany"
                                                 aria-label="Default select example" required
                                                 onChange={handleJobApplicationFormChange}
@@ -457,7 +530,7 @@ function JobApplicationForm(props) {
                                             </b>
                                         </label>
                                         <input type="url" className="form-control custom-input-fields"
-                                               name="portfolioLink"
+                                               name="portfolioLink" Value={jobApplication.portfolioLink}
                                                placeholder="Portfolio Link" onChange={handleJobApplicationFormChange}/>
                                     </div>
                                     {loading && <Loading/>}

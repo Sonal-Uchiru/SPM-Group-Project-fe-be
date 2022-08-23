@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="apply for a job completed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="view applied job application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/appliedJobCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/appliedJobCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/appliedJobCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/appliedJobCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/appliedJobCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/appliedJobCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
