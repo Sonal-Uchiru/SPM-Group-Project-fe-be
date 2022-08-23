@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const protectedApi = (method, url, data) => {
+export const unProtectedApi = (method, url, data) => {
     return new Promise(async (resolve, reject) => {
         await axios({
             url: `http://localhost:8080/api/${url}`,

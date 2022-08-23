@@ -3,20 +3,18 @@ import React from "react";
 import CompanyHeader from "./components/managements/company/navigation/companyHeader";
 import Footer from "./components/external_components/navigation/footer";
 import JobApplicationForm from "./components/managements/jobApplications/jobApplicationForm";
-import ViewAllJobsCompany from "./components/managements/company/pages/viewAllJobsCompany";
-import UserSignUP from "./components/managements/user/pages/signup";
-import ViewAllJobs from "./components/managements/user/pages/viewAllJobs";
+import ViewAppliedJobs from "./components/managements/jobApplications/viewAppliedJobs";
 
 function App() {
-  return (
-    <Router>
-      <CompanyHeader />
-      <Routes>
-        <Route path="/" element={<ViewAllJobsCompany />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    return (
+        <Router>
+            <CompanyHeader/>
+            <Routes>
+                <Route path="/" element={<ViewAppliedJobs/>}/>
+            </Routes>
+            <Footer/>
+        </Router>
+    );
 }
 
 export default App;
