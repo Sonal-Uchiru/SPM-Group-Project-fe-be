@@ -11,6 +11,12 @@ export default function ViewAppliedJobs() {
     const [appliedJobApplication, setAppliedJobApplication] = useState([])
     const [appliedJobApplicationTemp, setAppliedJobApplicationTemp] = useState([])
     const [jobApplicationId, setJobApplicationId] = useState('')
+    const [jobDetails, setJobDetails] = useState({
+        logo: '',
+        jobType: '',
+        position: '',
+        developmentArea: ''
+    })
     const [loading, setLoading] = useState(true)
     const [empty, setEmpty] = useState(false)
     const [show, setShow] = useState(false)
@@ -64,8 +70,14 @@ export default function ViewAppliedJobs() {
         setLoading(false)
     }
 
-    const openModal = (id) => {
-        setJobApplicationId(id)
+    const openModal = (appliedJobApplication) => {
+        setJobApplicationId(appliedJobApplication._id)
+        setJobDetails({
+            logo: appliedJobApplication.companyDetails[0].logo,
+            jobType: appliedJobApplication.jobDetails[0].jobType,
+            position: appliedJobApplication.jobDetails[0].position,
+            developmentArea: appliedJobApplication.jobDetails[0].developmentArea
+        })
         setShow(true)
     }
 
@@ -92,7 +104,7 @@ export default function ViewAppliedJobs() {
                             <>
                                 <AppliedJobCard key={index} jobApplicationDetails={appliedJobApplication}
                                                 onDelete={() => removeContent(index)}
-                                                onModalOpen={() => openModal(appliedJobApplication._id)}/>
+                                                onModalOpen={() => openModal(appliedJobApplication)}/>
                             </>
                         )
                     })}
@@ -102,7 +114,8 @@ export default function ViewAppliedJobs() {
                     <h3 className="red-text-color text-center"><b>There are no any Applied Jobs available</b></h3>}
             </div>
 
-            {show && <JobApplicationForm onModalClose={closeModal} jobApplicationId={jobApplicationId}/>}
+            {show && <JobApplicationForm onModalClose={closeModal} jobApplicationId={jobApplicationId}
+                                         otherDetails={jobDetails}/>}
         </>
     )
 }

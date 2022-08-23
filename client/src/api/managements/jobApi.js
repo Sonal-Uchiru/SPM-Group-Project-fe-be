@@ -10,19 +10,28 @@ export const getAllJobsByToken = async () => {
 };
 
 export const getAllJobs = async () => {
-  try {
-    return await protectedApi("get", "jobs/list");
-  } catch (e) {
-    await ErrorAlert();
-  }
+    try {
+        return await protectedApi("get", "jobs/list");
+    } catch (e) {
+        await ErrorAlert();
+    }
 };
 
+export const getJobById = async (id) => {
+    try {
+        return await protectedApi("get", `jobs/${id}`);
+    } catch (e) {
+        await ErrorAlert();
+    }
+};
+
+
 export const addNewJobs = async (data) => {
-  try {
-    return await protectedApi("POST", "jobs", data);
-  } catch (e) {
-    alert("oppps");
-  }
+    try {
+        return await protectedApi("POST", "jobs", data);
+    } catch (e) {
+        alert("oppps");
+    }
 };
 
 export const getJobsApplicants = async (companyId) => {
@@ -48,3 +57,5 @@ export const getCompanyDataForJob = async () => {
     alert("oppps");
   }
 };
+
+

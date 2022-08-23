@@ -12,6 +12,13 @@ export default function ViewAllJobs() {
   const [errorText, setErrorText] = useState("");
   const [show, setShow] = useState(false)
   const [jobId, setJobId] = useState('')
+  const [companyId, setCompanyId] = useState('')
+  const [jobDetails, setJobDetails] = useState({
+    logo: '',
+    jobType: '',
+    position: '',
+    developmentArea: ''
+  })
 
   useEffect(async () => {
     const content = await getAllJobs();
@@ -37,8 +44,15 @@ export default function ViewAllJobs() {
     setLoadingStatus(true);
   }
 
-  const openModal = (id) => {
-    setJobId(id)
+  const openModal = (job) => {
+    setJobId(job._id)
+    setCompanyId(job.companyDetails[0]._id)
+    setJobDetails({
+      logo: job.companyDetails[0].logo,
+      jobType: job.jobType,
+      position: job.position,
+      developmentArea: job.developmentArea
+    })
     setShow(true)
   }
 
@@ -75,11 +89,12 @@ export default function ViewAllJobs() {
               <h4 className="text-danger mb-5">{errorText}</h4>
             </center>
             {jobsArray.map((post) => {
-              return <AllJobsCard key={post._id} content={post} onModalOpen={() => openModal(post._id)}/>;
+              return <AllJobsCard key={post._id} content={post} onModalOpen={() => openModal(post)}/>;
             })}
           </div>
         </div>
-        {show && <JobApplicationForm onModalClose={closeModal} jobId={jobId}/>}
+        {show && <JobApplicationForm onModalClose={closeModal} jobId={jobId} companyId={companyId}
+                                     otherDetails={jobDetails}/>}
       </>
   );
 }

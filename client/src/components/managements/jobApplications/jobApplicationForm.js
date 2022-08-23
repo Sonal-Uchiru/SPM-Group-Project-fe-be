@@ -16,6 +16,7 @@ import {ErrorAlert} from "../../../sweet_alerts/error";
 import {SaveChangesAlert} from "../../../sweet_alerts/saveChanges";
 import {SuccessAlert} from "../../../sweet_alerts/success";
 import Loading from "../../external_components/spinners/loading";
+import {getJobById} from "../../../api/managements/jobApi";
 
 export function JobApplicationForm(props) {
     const [openModal, setOpenModal] = useState(true)
@@ -118,7 +119,6 @@ export function JobApplicationForm(props) {
         }
     }, [])
 
-
     const saveJobApplicationDB = async (e) => {
         try {
             e.preventDefault()
@@ -137,8 +137,8 @@ export function JobApplicationForm(props) {
                 employedWithCurrentCompany: checkSelectedField(jobApplication.employedWithCurrentCompany),
                 resume: props.jobApplicationId ? jobApplication.resume : supportingDocumentUrl,
                 licensesAndCertificates: [licensesAndCertificatesUrl],
-                jobId: props.jobApplicationId ? props.jobApplicationId : "62f9e781d06c6643a5f74e69",
-                companyId: props.jobApplicationId ? companyId : "62fe586aa8fdce45b98c1f3b"
+                jobId: props.jobApplicationId ? props.jobApplicationId : props.jobId,
+                companyId: props.jobApplicationId ? companyId : props.companyId
             }
 
             if (props.jobApplicationId) {
@@ -207,7 +207,8 @@ export function JobApplicationForm(props) {
                     <Modal.Header>
                         <div>
                             {!step1 && <BsArrowLeft onClick={navigateBack}/>}
-                            <h4 className={`ms-4 modal-title ${!step1 && 'modal-title-edit'}`}><b>Apply for the Job</b>
+                            <h4 className={`ms-4 modal-title ${!step1 && 'modal-title-edit'}`}>
+                                <b>{props.jobApplicationId ? 'Edit Application' : 'Apply for the Job'}</b>
                             </h4>
                         </div>
                         <button
@@ -226,14 +227,14 @@ export function JobApplicationForm(props) {
                                 <div className="row">
                                     <div className="col-md-auto logo">
                                         <img
-                                            src="https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg"
+                                            src={props.otherDetails.logo}
                                             alt="company logo" className="rounded float-left company-logo"
                                         />
                                     </div>
                                     <div className="col-sm">
-                                        <h3 className="text-center blue-text-color">Software Engineer (Full Stack
-                                            Developer)</h3>
-                                        <h4 className="text-center grey-text-color">Full Time Job</h4>
+                                        <h3 className="text-center blue-text-color">{`${props.otherDetails.position}
+                                        (${props.otherDetails.developmentArea})`}</h3>
+                                        <h4 className="text-center grey-text-color">{props.otherDetails.jobType}</h4>
                                     </div>
                                 </div>
                                 <br/>
