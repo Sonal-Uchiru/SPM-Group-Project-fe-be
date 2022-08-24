@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import UserDetails from "../cards/userDetails";
 import ProfileMain from "../cards/userProfileMain";
 import UserSummary from "../cards/userSummary";
@@ -7,6 +7,18 @@ import {BsArrowLeft} from "react-icons/all";
 
 
 export default function UserProfile() {
+
+    // const [user, setUser] = useState("");
+    //
+    // useEffect(() => {
+    //     getUser();
+    // }, []);
+    //
+    // async function getUser(){
+    //     const content = await
+    //     setUser(content.data)
+    // }
+
     return (
         <div className="userProfile">
             <h2 className="title"><BsArrowLeft/> User Profile</h2>

@@ -4,6 +4,9 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {ErrorAlert} from "../../../../sweet_alerts/error";
+import {SuccessAlert} from "../../../../sweet_alerts/success";
+
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
@@ -11,7 +14,9 @@ const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
 export default function UserSignUP() {
     const [passwordShown, setPasswordShown] = useState(false);
     const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
-    const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false)
+    const [confirmPassword, setConfirmPassword] = useState('');
+
     // Password toggle handler
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -21,9 +26,73 @@ export default function UserSignUP() {
         setConfirmPasswordShown(!confirmPasswordShown);
     };
 
-    // const isNumberRegx = /\d/
-    // const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
 
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        password: "",
+    })
+
+    const handleUserSignUp = (e) => {
+        setUser(prev => ({...prev, [e.target.name]: e.target.value}))
+    }
+
+    async function inputValidation() {
+
+        if (user.firstName.length === 0) {
+            await ErrorAlert("First Name is required")
+            return true
+        }
+        if (user.lastName.length === 0) {
+            await ErrorAlert("Last Name is required")
+            return true
+        }
+        if (user.email.length === 0) {
+            await ErrorAlert("Email is required")
+            return true
+        }
+
+        if (user.mobile.length === 0) {
+            await ErrorAlert("Phone Number is required")
+            return true
+        }
+
+        if (user.password.length === 0) {
+            await ErrorAlert("Password is required")
+            return true
+        }
+    }
+
+    const saveUserToDB = async (e) => {
+        try {
+            e.preventDefault();
+            setLoading(false)
+
+            if (await inputValidation()) {
+                setLoading(true)
+                return false
+            }
+
+            if (user.password === confirmPassword) {
+                await ErrorAlert("Password Mismatch!")
+            } else {
+
+            }
+
+
+        } catch (e) {
+            setLoading(false)
+            await ErrorAlert("Something went wrong!")
+        }
+    }
+
+    async function saveUser() {
+        const newUser = {
+            ...user
+        }
+    }
 
     return (
         <div className="userSignUp">
@@ -64,7 +133,9 @@ export default function UserSignUP() {
                                                         type='text'
                                                         id='firstName'
                                                         className='form-control'
+                                                        name='firstName'
                                                         placeholder='First Name'
+                                                        onChange={handleUserSignUp} value={user.firstName}
                                                     />
                                                 </div>
                                             </div>
@@ -77,8 +148,10 @@ export default function UserSignUP() {
                                                     <input
                                                         type='text'
                                                         id='lastname'
+                                                        name='lastName'
                                                         className='form-control'
                                                         placeholder='Last Name'
+                                                        onChange={handleUserSignUp} value={user.lastName}
                                                     />
                                                 </div>
                                             </div>
@@ -96,8 +169,10 @@ export default function UserSignUP() {
                                         <input
                                             type='email'
                                             id='email'
+                                            name='email'
                                             className='form-control form-control-lg'
                                             placeholder='Email'
+                                            onChange={handleUserSignUp} value={user.email}
                                         />
                                     </div>
 
@@ -111,9 +186,11 @@ export default function UserSignUP() {
                                         </label>
                                         <input
                                             type='text'
-                                            id='form3Example3'
+                                            name='mobile'
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
+                                            onChange={handleUserSignUp} value={user.mobile}
+
                                         />
                                     </div>
 
@@ -127,12 +204,11 @@ export default function UserSignUP() {
                                         </label>
                                         <input
                                             type={passwordShown ? "text" : "password"}
-                                            id='form3Example3'
+                                            name='password'
                                             className='form-control form-control-lg'
                                             placeholder='Password'
-                                            onChange={(e) => {
-                                                setPassword(e.target.value)
-                                            }}
+                                            onChange={handleUserSignUp} value={user.password}
+
                                         />
                                         <span className="p-viewer">
                                         <i
@@ -146,7 +222,7 @@ export default function UserSignUP() {
                                         </i>
                                       </span>
                                     </div>
-                                    <PasswordStrengthMeter password={password}/>
+                                    <PasswordStrengthMeter password={user.password}/>
                                     <div className='form-outline mb-3'>
                                         <label
                                             className='form-label'
@@ -158,8 +234,12 @@ export default function UserSignUP() {
                                         <input
                                             type={confirmPasswordShown ? "text" : "password"}
                                             id='form3Example3'
+                                            name="confirmPassword"
                                             className='form-control form-control-lg'
                                             placeholder='Confirm Password'
+                                            onChange={(e) => {
+                                                setConfirmPassword(e.target.value)
+                                            }}
                                         />
                                         <span className="p-viewer">
                                         <i
