@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="merge conflicts resolved">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCard.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="update job list after applying implemented">
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +73,7 @@
       <workItem from="1660967997132" duration="20487000" />
       <workItem from="1661276363331" duration="805000" />
       <workItem from="1661277451184" duration="370000" />
-      <workItem from="1661320877821" duration="6801000" />
+      <workItem from="1661320877821" duration="7105000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -295,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661321426889</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update job list after applying implemented">
+      <created>1661328419086</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1661328419086</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +342,8 @@
     <MESSAGE value="is applied for the job validation implement in be and fe" />
     <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
     <MESSAGE value="merge conflicts resolved" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge conflicts resolved" />
+    <MESSAGE value="update job list after applying implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="update job list after applying implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

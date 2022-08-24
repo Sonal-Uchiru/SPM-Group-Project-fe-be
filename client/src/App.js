@@ -11,7 +11,7 @@ function App() {
     <Router>
       <CompanyHeader />
       <Routes>
-        <Route path="/" element={<ViewAllJobs />} />
+        <Route path="/" element={<ViewAppliedJobs/>}/>
       </Routes>
       <Footer />
     </Router>
