@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="minor bug fixed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application be edit validation updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <workItem from="1660967997132" duration="20487000" />
       <workItem from="1661276363331" duration="805000" />
       <workItem from="1661277451184" duration="370000" />
-      <workItem from="1661320877821" duration="7462000" />
+      <workItem from="1661320877821" duration="11156000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -308,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661328628577</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="job application be edit validation updated">
+      <created>1661329129129</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1661329129130</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +332,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
     <MESSAGE value="server shared functions implementations" />
@@ -352,7 +356,8 @@
     <MESSAGE value="merge conflicts resolved" />
     <MESSAGE value="update job list after applying implemented" />
     <MESSAGE value="minor bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bug fixed" />
+    <MESSAGE value="job application be edit validation updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="job application be edit validation updated" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

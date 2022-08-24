@@ -148,12 +148,13 @@ export function JobApplicationForm(props) {
                 data.applicant = ''
                 data.status = ''
                 data.__v = ''
+                data.applicantOtherDetails = ''
             }
 
             if (data.modifiedUser) data.modifiedUser = ''
 
-            const cleanJobApplication = Object.fromEntries(Object.entries(data).filter(([_, v]) => v !== ''));
-            const cleanApplicantDetails = Object.fromEntries(Object.entries(applicantOtherDetails).filter(([_, v]) => v !== ''));
+            const cleanJobApplication = Object.fromEntries(Object.entries(data).filter(([_, v]) => v !== ''))
+            const cleanApplicantDetails = Object.fromEntries(Object.entries(applicantOtherDetails).filter(([_, v]) => v !== ''))
 
             const content = {
                 applicantOtherDetails: {
@@ -162,17 +163,18 @@ export function JobApplicationForm(props) {
                 ...cleanJobApplication
             }
 
+
             if (props.jobApplicationId) {
                 const result = await updateJobApplication(content, props.jobApplicationId)
-                if (result) await SuccessAlert("Job application updated successfully!")
                 setLoading(false)
+                if (result) await SuccessAlert("Job application updated successfully!")
                 props.onSave()
                 return
             }
 
             const result = await saveJobApplication(content)
-            if (result) await SuccessAlert("You applied for the job successfully!")
             setLoading(false)
+            if (result) await SuccessAlert("You applied for the job successfully!")
             props.onSave()
 
         } catch (e) {
@@ -196,8 +198,8 @@ export function JobApplicationForm(props) {
     }, [])
 
     const handleQuestion = (ans) => {
-        if (ans) return 'yes'
-        return 'no'
+        if (ans) return "yes"
+        return "no"
     }
     return (
         <div className="apply-job-application">
@@ -500,7 +502,7 @@ export function JobApplicationForm(props) {
                                         </label>
                                         <select className="form-select custom-input-fields" name="companyWorked"
                                                 onChange={handleJobApplicationFormChange}
-                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.companyWorked) : ''}
+                                                defaultValue={props.jobApplicationId ? handleQuestion(jobApplication.companyWorked) : ''}
                                                 aria-label="Default select example" required>
                                             <option selected value="yes">Yes</option>
                                             <option value="no">No</option>
@@ -516,7 +518,7 @@ export function JobApplicationForm(props) {
                                             </b>
                                         </label>
                                         <select className="form-select custom-input-fields"
-                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.employedWithCurrentCompany) : ''}
+                                                defaultValue={props.jobApplicationId ? handleQuestion(jobApplication.employedWithCurrentCompany) : ''}
                                                 name="employedWithCurrentCompany"
                                                 aria-label="Default select example" required
                                                 onChange={handleJobApplicationFormChange}
