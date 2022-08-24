@@ -164,18 +164,17 @@ export function JobApplicationForm(props) {
 
             if (props.jobApplicationId) {
                 const result = await updateJobApplication(content, props.jobApplicationId)
-
                 if (result) await SuccessAlert("Job application updated successfully!")
-
                 setLoading(false)
+                props.onSave()
                 return
             }
 
             const result = await saveJobApplication(content)
-
             if (result) await SuccessAlert("You applied for the job successfully!")
-
             setLoading(false)
+            props.onSave()
+
         } catch (e) {
             setLoading(false)
             await ErrorAlert("Something went wrong!")
@@ -509,7 +508,8 @@ export function JobApplicationForm(props) {
                                     </div>
                                     <div className="mb-2">
                                         <label htmlFor="exampleInputQ2" className="form-label">
-                                            <b>Are you currently employed by IFS or one of the IFS group companies?
+                                            <b>Are you currently employed by {props.otherDetails.companyName} or one of
+                                                the {props.otherDetails.companyName} group companies?
                                                 <mark className="required-icon">
                                                     *
                                                 </mark>

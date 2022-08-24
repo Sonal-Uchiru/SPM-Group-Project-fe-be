@@ -1,10 +1,4 @@
-import React, { useEffect, useState } from "react";
-import {
-  getCompanyDataForJob,
-  getJobsApplicants,
-} from "../../../../api/managements/jobApi";
-import { protectedApi } from "../../../../api/protectedApi";
-import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
+import React, {useEffect, useImperativeHandle, useState} from "react";
 import "../css/allJobsCard.css";
 import {
   getAppliedJobApplicationsByJobId,
@@ -30,15 +24,22 @@ export default function AllJobsCard(props) {
     setApplicants(response.data.content.length);
   }
 
+  useImperativeHandle(props.refs, () => ({
+    updateCard() {
+      setIsAppliedToJob(true)
+      setApplicants(prev => (prev + 1))
+    },
+  }))
+
   return (
-    <div className="container allJobsCard">
-      <div className="card mb-3">
-        <div className="row g-0">
-          <div className="col-md-3">
-            <div className="logoImage text-center">
-              <img
-                src={jobContent.companyDetails[0].logo}
-                className="img-fluid companyLogo"
+      <div className="container allJobsCard">
+        <div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-3">
+              <div className="logoImage text-center">
+                <img
+                    src={jobContent.companyDetails[0].logo}
+                    className="img-fluid companyLogo"
                 alt="company_logo"
               />
             </div>
@@ -119,23 +120,24 @@ export default function AllJobsCard(props) {
           </div>
 
           <div className="text-center">
-            <button
-              type="button"
-              className="btn btn-primary apply"
-              onClick={props.onModalOpen}
-              disabled={isAppliedToJob}
+            {jobContent.status === 1 && <button
+                type="button"
+                className="btn btn-primary apply"
+                onClick={props.onModalOpen}
+                disabled={isAppliedToJob}
             >
               {isAppliedToJob ? "Applied" : "Apply"}
-            </button>
-            <br />
+            </button>}
+
+            <br/>
             <img
-              src="./images/arrow-up.png"
-              className="img-fluid showLess"
-              alt="show_less"
-              onClick={() => {
-                setStep1(false);
-                setStep2(true);
-              }}
+                src="./images/arrow-up.png"
+                className="img-fluid showLess"
+                alt="show_less"
+                onClick={() => {
+                  setStep1(false);
+                  setStep2(true);
+                }}
             />
           </div>
         </div>

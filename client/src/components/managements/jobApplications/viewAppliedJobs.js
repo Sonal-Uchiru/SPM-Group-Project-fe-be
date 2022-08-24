@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./css/viewAppliedJobs.css"
 import AppliedJobCard from "./cards/appliedJobCard";
 import {getAppliedJobApplications} from "../../../api/managements/jobApplicationApi";
@@ -27,6 +27,10 @@ export default function ViewAppliedJobs() {
     });
 
     useEffect(async () => {
+        await getUserAppliedJobApplications()
+    }, [])
+
+    const getUserAppliedJobApplications = async () => {
         try {
             const content = await getAppliedJobApplications()
             if (!content.data.length) setEmpty(true)
@@ -37,7 +41,7 @@ export default function ViewAppliedJobs() {
             setLoading(false)
             await ErrorAlert("Something went wrong!")
         }
-    }, [])
+    }
 
     const removeContent = (deletedJobApplicationIndex) => {
         const newJobApplications = appliedJobApplication.filter((jobApplication, index) => {
@@ -73,6 +77,7 @@ export default function ViewAppliedJobs() {
     const openModal = (appliedJobApplication) => {
         setJobApplicationId(appliedJobApplication._id)
         setJobDetails({
+            companyName: appliedJobApplication.companyDetails[0].name,
             logo: appliedJobApplication.companyDetails[0].logo,
             jobType: appliedJobApplication.jobDetails[0].jobType,
             position: appliedJobApplication.jobDetails[0].position,
@@ -82,6 +87,10 @@ export default function ViewAppliedJobs() {
     }
 
     const closeModal = () => {
+        setShow(false)
+    }
+
+    const onSaveCloseModal = () => {
         setShow(false)
     }
 
@@ -104,7 +113,8 @@ export default function ViewAppliedJobs() {
                             <>
                                 <AppliedJobCard key={index} jobApplicationDetails={appliedJobApplication}
                                                 onDelete={() => removeContent(index)}
-                                                onModalOpen={() => openModal(appliedJobApplication)}/>
+                                                onModalOpen={() => openModal(appliedJobApplication)}
+                                />
                             </>
                         )
                     })}
@@ -115,7 +125,7 @@ export default function ViewAppliedJobs() {
             </div>
 
             {show && <JobApplicationForm onModalClose={closeModal} jobApplicationId={jobApplicationId}
-                                         otherDetails={jobDetails}/>}
+                                         otherDetails={jobDetails} onSave={onSaveCloseModal}/>}
         </>
     )
 }
