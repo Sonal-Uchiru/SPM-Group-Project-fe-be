@@ -1,7 +1,7 @@
 import { decode } from '../middleware/tokenDecode.js'
 import { JobApplication } from '../models/jobApplication.js'
 import {
-    validate,
+    validateSave, validateUpdate,
     validationStatusChange,
 } from '../validations/jobApplication.js'
 import { updateById } from '../shared/updateById.js'
@@ -10,7 +10,7 @@ import { getById } from '../shared/getById.js'
 
 export const saveJobApplication = async (req, res) => {
     try {
-        const { error } = validate(req.body)
+        const {error} = validateSave(req.body)
 
         if (error)
             return res.status(400).send({ message: error.details[0].message })
@@ -39,7 +39,7 @@ export const saveJobApplication = async (req, res) => {
 }
 
 export const updateJobApplicationById = async (req, res) => {
-    await updateById(req, res, 'jobApplication', validate)
+    await updateById(req, res, 'jobApplication', validateUpdate)
 }
 
 export const deleteJobApplicationById = async (req, res) => {

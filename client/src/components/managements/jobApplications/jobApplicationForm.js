@@ -137,8 +137,8 @@ export function JobApplicationForm(props) {
                 employedWithCurrentCompany: checkSelectedField(jobApplication.employedWithCurrentCompany),
                 resume: props.jobApplicationId ? jobApplication.resume : supportingDocumentUrl,
                 licensesAndCertificates: [licensesAndCertificatesUrl],
-                jobId: props.jobApplicationId ? props.jobApplicationId : props.jobId,
-                companyId: props.jobApplicationId ? companyId : props.companyId
+                jobId: props.jobApplicationId ? '' : props.jobId,
+                companyId: props.jobApplicationId ? '' : props.companyId
             }
 
             if (props.jobApplicationId) {
