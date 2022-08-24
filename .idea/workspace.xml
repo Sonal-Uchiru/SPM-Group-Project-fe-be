@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Checked All UIs &amp; Corrected Minor CSS Issues">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="after reset (merge issue) fixed">
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="user-management" />
+        <entry key="$PROJECT_DIR$" value="ui-implementation-1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,7 +32,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -64,8 +64,6 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
-      <workItem from="1660645700339" duration="3035000" />
-      <workItem from="1660763596760" duration="498000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -214,14 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660583432146</updated>
     </task>
-    <task id="LOCAL-00022" summary="Checked All UIs &amp; Corrected Minor CSS Issues">
-      <created>1660648772934</created>
+    <task id="LOCAL-00022" summary="after reset (merge issue)">
+      <created>1660742466520</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1660648772934</updated>
+      <updated>1660742466520</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="after reset (merge issue) fixed">
+      <created>1660742568416</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1660742568416</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +244,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial" />
     <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
@@ -253,8 +259,9 @@
     <MESSAGE value="code refactored and unwanted files removed" />
     <MESSAGE value="backend implementations completed" />
     <MESSAGE value="code refactored" />
-    <MESSAGE value="Checked All UIs &amp; Corrected Minor CSS Issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checked All UIs &amp; Corrected Minor CSS Issues" />
+    <MESSAGE value="after reset (merge issue)" />
+    <MESSAGE value="after reset (merge issue) fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="after reset (merge issue) fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
