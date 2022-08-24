@@ -46,7 +46,6 @@ export default function ViewAllJobs() {
 
   const openModal = (job) => {
     setJobId(job._id)
-    console.log(job)
     setCompanyId(job.companyDetails[0]._id)
     setJobDetails({
       logo: job.companyDetails[0].logo,

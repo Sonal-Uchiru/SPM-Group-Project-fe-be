@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../css/allJobsCardCompany.css";
 import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
@@ -10,7 +10,6 @@ import {
   getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
-import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
@@ -20,10 +19,10 @@ export default function AllJobsCardCompany(props) {
   const [image, setImage] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
 
-  useState(() => {
+  useEffect(async () => {
     //Change this route to correct one
-    getJobApplicants();
-    getCompanyData();
+    await getJobApplicants();
+    await getCompanyData();
   }, []);
 
   async function getJobApplicants() {
@@ -79,16 +78,16 @@ export default function AllJobsCardCompany(props) {
             <div className="recImage text-center">
               <div>
                 <img
-                  src={
-                    jobContent.status == 1
-                      ? "./images/accuracy.png"
-                      : "./images/close.png"
-                  }
-                  className="img-fluid recruitingStatus"
-                  alt="recruiting_status"
+                    src={
+                      jobContent.status == 1
+                          ? "./images/accuracy.png"
+                          : "./images/close.png"
+                    }
+                    className="img-fluid recruitingStatus"
+                    alt="recruiting_status"
                 />
-                <p className={jobContent.status == 1 ? "status1" : "status2"}>
-                  {jobContent.status == 1 ? "Actively Recruiting" : "Closed"}
+                <p className={jobContent.status === 1 ? "status1" : "status2"}>
+                  {jobContent.status === 1 ? "Actively Recruiting" : "Closed"}
                 </p>
               </div>
             </div>

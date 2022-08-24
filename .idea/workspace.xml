@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application from connected to the job management">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="is applied for the job validation implement in be and fe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/allJobsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/allJobsCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/cards/allJobsCardCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/cards/allJobsCardCompany.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/viewAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/viewAllJobs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/jobApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,8 @@
       <workItem from="1660832918054" duration="5425000" />
       <workItem from="1660933494513" duration="531000" />
       <workItem from="1660967997132" duration="20487000" />
+      <workItem from="1661276363331" duration="805000" />
+      <workItem from="1661277451184" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -272,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661253855552</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="is applied for the job validation implement in be and fe">
+      <created>1661263367449</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661263367449</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +318,8 @@
     <MESSAGE value="edit application implemented" />
     <MESSAGE value="job development has so many problems" />
     <MESSAGE value="job application from connected to the job management" />
-    <option name="LAST_COMMIT_MESSAGE" value="job application from connected to the job management" />
+    <MESSAGE value="is applied for the job validation implement in be and fe" />
+    <option name="LAST_COMMIT_MESSAGE" value="is applied for the job validation implement in be and fe" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
