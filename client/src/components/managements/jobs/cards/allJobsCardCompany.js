@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../css/allJobsCardCompany.css";
 import { Modal } from "react-bootstrap";
 import EditJob from "../modals/editJob";
@@ -9,6 +9,7 @@ import {
   getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
+import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;

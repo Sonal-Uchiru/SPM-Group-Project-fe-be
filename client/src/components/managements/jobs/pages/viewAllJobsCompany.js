@@ -13,8 +13,8 @@ export default function ViewAllJobsCompany() {
   const [duplicateJobsArray, setDuplicateJobsArray] = useState([]);
   const [errorText, setErrorText] = useState("");
 
-  useEffect(() => {
-    getAllJobs();
+  useEffect(async () => {
+    await getAllJobs();
   }, []);
 
   function createJob() {
