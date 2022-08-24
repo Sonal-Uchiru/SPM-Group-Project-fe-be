@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
 import "../css/allJobsCardCompany.css";
-import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
-import EditJob from "../../jobs/editJob";
+import EditJob from "../modals/editJob";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import {
@@ -26,8 +25,8 @@ export default function AllJobsCardCompany(props) {
   }, []);
 
   async function getJobApplicants() {
-    const response = await getJobsApplicants(jobContent._id);
-    setApplicants(response.data.noOfJobPosted);
+    const response = await getAppliedJobApplicationsByJobId(jobContent._id);
+    setApplicants(response.data.content.length);
   }
 
   async function getCompanyData() {
@@ -129,7 +128,9 @@ export default function AllJobsCardCompany(props) {
 
           <div className="col-md-6">
             <div className="">
-              <h4 className="title">Other Requirements</h4>
+              {jobContent.otherRequirements && (
+                <h4 className="title">Other Requirements</h4>
+              )}
               <p>{jobContent.otherRequirements}</p>
             </div>
           </div>
