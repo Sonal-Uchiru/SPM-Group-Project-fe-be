@@ -39,41 +39,11 @@ export default function UserSignUP() {
         setUser(prev => ({...prev, [e.target.name]: e.target.value}))
     }
 
-    async function inputValidation() {
-
-        if (user.firstName.length === 0) {
-            await ErrorAlert("First Name is required")
-            return true
-        }
-        if (user.lastName.length === 0) {
-            await ErrorAlert("Last Name is required")
-            return true
-        }
-        if (user.email.length === 0) {
-            await ErrorAlert("Email is required")
-            return true
-        }
-
-        if (user.mobile.length === 0) {
-            await ErrorAlert("Phone Number is required")
-            return true
-        }
-
-        if (user.password.length === 0) {
-            await ErrorAlert("Password is required")
-            return true
-        }
-    }
 
     const saveUserToDB = async (e) => {
         try {
             e.preventDefault();
             setLoading(false)
-
-            if (await inputValidation()) {
-                setLoading(true)
-                return false
-            }
 
             if (user.password === confirmPassword) {
                 await ErrorAlert("Password Mismatch!")
@@ -92,6 +62,7 @@ export default function UserSignUP() {
         const newUser = {
             ...user
         }
+
     }
 
     return (

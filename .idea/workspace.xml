@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="after reset (merge issue) fixed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Sign Up Save User To DB Partially Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660742568416</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Sign Up Save User To DB Partially Done">
+      <created>1661361324031</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1661361324031</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +269,8 @@
     <MESSAGE value="code refactored" />
     <MESSAGE value="after reset (merge issue)" />
     <MESSAGE value="after reset (merge issue) fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="after reset (merge issue) fixed" />
+    <MESSAGE value="Sign Up Save User To DB Partially Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Save User To DB Partially Done" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
