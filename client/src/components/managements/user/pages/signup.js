@@ -24,7 +24,6 @@ export default function UserSignUP() {
     // const isNumberRegx = /\d/
     // const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
 
-
     return (
         <div className="userSignUp">
             <section className=''>

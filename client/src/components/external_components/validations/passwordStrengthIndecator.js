@@ -2,7 +2,7 @@ import React from 'react';
 import zxcvbn from 'zxcvbn';
 
 const PasswordStrengthMeter = ({password}) => {
-    const testResult = zxcvbn(password);
+    const testResult = getPasswordStrengthResult(password);
     const num = testResult.score * 100 / 4;
 
     const createPassLabel = () => {
@@ -53,6 +53,10 @@ const PasswordStrengthMeter = ({password}) => {
             <p style={{color: funcProgressColor()}}>{createPassLabel()}</p>
         </>
     )
+}
+
+export const getPasswordStrengthResult = (password) => {
+    return zxcvbn(password);
 }
 
 export default PasswordStrengthMeter
