@@ -68,7 +68,7 @@ const getScore = (password) => {
     return schema.validate(password, {details: true}).length
 }
 
-export const isStrongPassword = (password) => {
+export const isPasswordComplex = (password) => {
     return getScore(password) === 0
 }
 
