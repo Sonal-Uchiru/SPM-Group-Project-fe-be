@@ -2,17 +2,18 @@ import React, {useState} from "react";
 import "../css/userDetails.css";
 
 export default function UserDetails() {
+
   return (
-    <div className="container user-details">
-      <div className="card">
-        <div className="row m-4">
-          <div className="row">
-            <h3 className="summary-topic">Personal Details</h3>
-          </div>
-          <div className="row mt-3">
-            <div className="col-md-6 mt-2">
-              <p className="profile-data">Phone Number: 077-8970847</p>
-              <p className="profile-data ">
+      <div className="container user-details">
+        <div className="card">
+          <div className="row m-4">
+            <div className="row">
+              <h3 className="summary-topic">Personal Details</h3>
+            </div>
+            <div className="row mt-3">
+              <div className="col-md-6 mt-2">
+                <p className="profile-data">Phone Number: 077-8970847</p>
+                <p className="profile-data ">
                 Address : Calista Wise 7292 Dictum Av. San Antonio MI 47096
               </p>
             </div>
