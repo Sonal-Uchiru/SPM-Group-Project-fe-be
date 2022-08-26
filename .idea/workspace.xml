@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Sign Up Save User To DB Partially Done">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="merge conflict fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/development" />
+    <option name="BRANCH" value="origin/user_management" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -238,7 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661361324031</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="password complexity checker implemented">
+      <created>1661494620445</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1661494620445</updated>
+    </task>
+    <task id="LOCAL-00026" summary="merge conflict fixed">
+      <created>1661494748806</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661494748807</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +285,9 @@
     <MESSAGE value="after reset (merge issue)" />
     <MESSAGE value="after reset (merge issue) fixed" />
     <MESSAGE value="Sign Up Save User To DB Partially Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Save User To DB Partially Done" />
+    <MESSAGE value="password complexity checker implemented" />
+    <MESSAGE value="merge conflict fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge conflict fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

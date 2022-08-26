@@ -8,6 +8,8 @@ export const PasswordStrengthMeter = ({password}) => {
     const createPassLabel = () => {
         const score = getScore(password)
 
+        if (score === 5) return 'Very weak'
+
         if (score === 4) return 'Very weak'
 
         if (score === 3) return 'Weak'
@@ -23,6 +25,8 @@ export const PasswordStrengthMeter = ({password}) => {
 
     const funcProgressColor = () => {
         const score = getScore(password)
+
+        if (score === 5) return '#828282'
 
         if (score === 4) return '#828282'
 
@@ -61,6 +65,7 @@ const getScore = (password) => {
         .is().max(100)  // Maximum length 100
         .has().uppercase()   // Must have uppercase letters
         .has().lowercase()   // Must have lowercase letters
+        .has().symbols(1)
         .has().digits(2)  // Must have at least 2 digits
         .has().not().spaces()    // Should not have spaces
         .is().not().oneOf(['Passw0rd', 'Password123', 'Email123']);
