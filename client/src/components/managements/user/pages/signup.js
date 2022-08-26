@@ -3,9 +3,14 @@ import "../css/signUp.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {
+    isPasswordStrong, PasswordStrengthMeter
+} from "../../../external_components/validations/passwordStrengthIndecator";
 import {ErrorAlert} from "../../../../sweet_alerts/error";
 import {SuccessAlert} from "../../../../sweet_alerts/success";
+import {saveUser} from "../../../../api/managements/userApi";
+import {useNavigate} from "react-router";
+import Loading from "../../../external_components/spinners/loading";
 
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
@@ -16,6 +21,7 @@ export default function UserSignUP() {
     const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
     const [loading, setLoading] = useState(false)
     const [confirmPassword, setConfirmPassword] = useState('');
+    const navigate = useNavigate();
 
     // Password toggle handler
     const togglePasswordVisibility = () => {
@@ -33,6 +39,7 @@ export default function UserSignUP() {
         email: "",
         mobile: "",
         password: "",
+        role: "user"
     })
 
     const handleUserSignUp = (e) => {
@@ -43,14 +50,30 @@ export default function UserSignUP() {
     const saveUserToDB = async (e) => {
         try {
             e.preventDefault();
-            setLoading(false)
 
-            if (user.password === confirmPassword) {
-                await ErrorAlert("Password Mismatch!")
-            } else {
+            console.log(user)
+            console.log(confirmPassword)
 
+            if (!isPasswordStrong(user.password)) {
+                await ErrorAlert("Not a Strong Password!")
+                return
             }
 
+            if (user.password !== confirmPassword) {
+                await ErrorAlert("Password Mismatch!")
+                return
+            }
+
+            setLoading(true)
+
+            const content = await saveUser(user)
+
+            if (content) {
+                await SuccessAlert("Successfully Created Account!")
+                // navigate("/login")
+            }
+
+            setLoading(false)
 
         } catch (e) {
             setLoading(false)
@@ -58,12 +81,6 @@ export default function UserSignUP() {
         }
     }
 
-    async function saveUser() {
-        const newUser = {
-            ...user
-        }
-
-    }
 
     return (
         <div className="userSignUp">
@@ -90,7 +107,7 @@ export default function UserSignUP() {
                             <h1 className='signup'>Sign Up</h1>
                             <br/>
 
-                            <form>
+                            <form onSubmit={saveUserToDB}>
                                 <div className='step1'>
                                     <br/>
                                     <div className='form-outline'>
@@ -107,6 +124,7 @@ export default function UserSignUP() {
                                                         name='firstName'
                                                         placeholder='First Name'
                                                         onChange={handleUserSignUp} value={user.firstName}
+                                                        required
                                                     />
                                                 </div>
                                             </div>
@@ -123,6 +141,7 @@ export default function UserSignUP() {
                                                         className='form-control'
                                                         placeholder='Last Name'
                                                         onChange={handleUserSignUp} value={user.lastName}
+                                                        required
                                                     />
                                                 </div>
                                             </div>
@@ -144,6 +163,7 @@ export default function UserSignUP() {
                                             className='form-control form-control-lg'
                                             placeholder='Email'
                                             onChange={handleUserSignUp} value={user.email}
+                                            required
                                         />
                                     </div>
 
@@ -161,6 +181,7 @@ export default function UserSignUP() {
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
                                             onChange={handleUserSignUp} value={user.mobile}
+                                            required
 
                                         />
                                     </div>
@@ -179,6 +200,7 @@ export default function UserSignUP() {
                                             className='form-control form-control-lg'
                                             placeholder='Password'
                                             onChange={handleUserSignUp} value={user.password}
+                                            required
 
                                         />
                                         <span className="p-viewer">
@@ -211,6 +233,7 @@ export default function UserSignUP() {
                                             onChange={(e) => {
                                                 setConfirmPassword(e.target.value)
                                             }}
+                                            required
                                         />
                                         <span className="p-viewer">
                                         <i
@@ -224,9 +247,9 @@ export default function UserSignUP() {
                                         </i>
                                       </span>
                                     </div>
-
+                                    {loading && <Loading/>}
                                     <button
-                                        type='button'
+                                        type='submit'
                                         className='btn rounded signupBtn'
                                     >
                                         Sign Up
