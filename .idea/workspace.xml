@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="User Sign Up Page Done">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="merge conflict fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/development" />
+    <option name="BRANCH" value="origin/user_management" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ui-implementation-1" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -73,9 +66,6 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
-      <workItem from="1661490760997" duration="773000" />
-      <workItem from="1661494082463" duration="188000" />
-      <workItem from="1661528885269" duration="3701000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -238,21 +228,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660742568416</updated>
     </task>
-    <task id="LOCAL-00024" summary="get password test score implementation done">
-      <created>1661408860332</created>
+    <task id="LOCAL-00024" summary="Sign Up Save User To DB Partially Done">
+      <created>1661361324031</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1661408860332</updated>
+      <updated>1661361324031</updated>
     </task>
-    <task id="LOCAL-00025" summary="User Sign Up Page Done">
-      <created>1661494242708</created>
+    <task id="LOCAL-00025" summary="password complexity checker implemented">
+      <created>1661494620445</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1661494242708</updated>
+      <updated>1661494620445</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="merge conflict fixed">
+      <created>1661494748806</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661494748807</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,9 +284,10 @@
     <MESSAGE value="code refactored" />
     <MESSAGE value="after reset (merge issue)" />
     <MESSAGE value="after reset (merge issue) fixed" />
-    <MESSAGE value="get password test score implementation done" />
-    <MESSAGE value="User Sign Up Page Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Sign Up Page Done" />
+    <MESSAGE value="Sign Up Save User To DB Partially Done" />
+    <MESSAGE value="password complexity checker implemented" />
+    <MESSAGE value="merge conflict fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge conflict fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

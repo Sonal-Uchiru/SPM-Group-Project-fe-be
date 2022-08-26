@@ -4,7 +4,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import {
-    isPasswordStrong, PasswordStrengthMeter
+    isPasswordComplex,
+    PasswordStrengthMeter
 } from "../../../external_components/validations/passwordStrengthIndecator";
 import {ErrorAlert} from "../../../../sweet_alerts/error";
 import {SuccessAlert} from "../../../../sweet_alerts/success";
@@ -51,10 +52,7 @@ export default function UserSignUP() {
         try {
             e.preventDefault();
 
-            console.log(user)
-            console.log(confirmPassword)
-
-            if (!isPasswordStrong(user.password)) {
+            if (!isPasswordComplex(user.password)) {
                 await ErrorAlert("Not a Strong Password!")
                 return
             }
