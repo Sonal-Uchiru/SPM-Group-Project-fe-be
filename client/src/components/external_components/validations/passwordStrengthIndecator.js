@@ -14,7 +14,7 @@ export const PasswordStrengthMeter = ({password}) => {
 
         if (score === 3) return 'Weak'
 
-        if (score === 2) return 'Fear'
+        if (score === 2) return 'Fair'
 
         if (score === 1) return 'Good'
 

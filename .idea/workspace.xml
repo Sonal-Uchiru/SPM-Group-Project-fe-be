@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="merge conflict fixed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="User Sign Up Page Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +69,7 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
+      <workItem from="1661568921992" duration="2135000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
