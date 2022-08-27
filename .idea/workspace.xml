@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="User Sign Up Page Done">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Login Page Partially Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/validations/passwordStrengthIndecator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +76,7 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
-      <workItem from="1661568921992" duration="2135000" />
+      <workItem from="1661568921992" duration="7008000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -253,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661494748807</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Login Page Partially Done">
+      <created>1661571490058</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661571490058</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +305,20 @@
     <MESSAGE value="Sign Up Save User To DB Partially Done" />
     <MESSAGE value="password complexity checker implemented" />
     <MESSAGE value="merge conflict fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge conflict fixed" />
+    <MESSAGE value="Login Page Partially Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Page Partially Done" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

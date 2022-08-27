@@ -28,22 +28,22 @@ export default function Login() {
 
   function navigateToPage(role) {
 
-    (role === "company") ? (alert("Company")) : (role === "user") ? (alert("User")) : (alert("admin"))
-    //
-    // if (role === "company") {
-    //   // navigate("/adminHome");
-    //   alert("company");
-    //   return
-    // }
-    //
-    // if (role === "user") {
-    //   alert("user")
-    //   return
-    //   // navigate("/userHome");
-    // }
-    //
-    // alert("admin")
-    // // navigate("/companyHome");
+    if (role === "company") {
+      // navigate("/adminHome");
+      alert("company");
+      return
+    }
+
+    if (role === "user") {
+      alert("user")
+      return
+      // navigate("/userHome");
+    }
+
+    if (role === "admin") {
+      alert("admin")
+      // navigate("/companyHome");
+    }
   }
 
   async function UserLogin(e) {
@@ -64,16 +64,19 @@ export default function Login() {
         await SuccessAlert("Successfully!")
         await setTokenToLocalStorage(login.data.token)
         navigateToPage(login.data.role);
+        setLoading(false)
       }
-      setLoading(false)
 
     } catch (error) {
+
+      setLoading(false)
       console.log(error)
-      // if (error.response.status === 401) {
-      //   await ErrorAlert("Invalid Email or Password!");
-      //   return;
-      // }
-      // await ErrorAlert("Something went wrong!");
+      if (error.response.status === 401) {
+        await ErrorAlert("Invalid Email or Password!");
+        setLoading(false)
+        return;
+      }
+      await ErrorAlert("Something went wrong!");
     }
 
   }
