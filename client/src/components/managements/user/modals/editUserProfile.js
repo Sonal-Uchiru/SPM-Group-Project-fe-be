@@ -1,14 +1,28 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import '../css/editUserProfile.css'
 import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {getUserDetails} from "../../../../api/managements/userApi";
+import moment from 'moment';
 
-export default function EditUserProfile() {
+export default function EditUserProfile(props) {
 
     const [openModal, setOpenModal] = useState(true)
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
     let [placeHolder, setPlaceHolder] = useState(false)
+    const [user, setUser] = useState('');
+
+
+    async function getUser() {
+        const content = await getUserDetails()
+        setUser(content.data)
+        console.log(content.data)
+    }
+
+    useEffect(() => {
+        getUser();
+    }, [])
 
     const onChangePicture = (e) => {
         if (e.target.files[0]) {
@@ -24,18 +38,6 @@ export default function EditUserProfile() {
 
     return (
         <div className="editUserProfile">
-            <div>
-                <button
-                    type="button"
-                    onClick={() => {
-                        setOpenModal(true)
-                    }}
-                    className="primary"
-                >
-                    Edit Profile
-
-                </button>
-            </div>
             <div className="modal">
                 <Modal show={openModal} size="lg">
                     <Modal.Header>
@@ -63,22 +65,33 @@ export default function EditUserProfile() {
                                     <span>
                     <center>
                       <div className='box'>
-                        <img
-                            className='z-depth-2 Img1'
-                            alt='profile_image'
-                            src='./images/user (8).png'
-                            data-holder-rendered='true'
-                            hidden={placeHolder}
-                        />
+                          {!user.profilePicture &&
+                              <img
+                                  className='z-depth-2 Img1'
+                                  alt='profile_image'
+                                  src="./images/user (8).png"
+                                  data-holder-rendered='true'
+                                  hidden={placeHolder}
+                              />
+                          }
+                          {user.profilePicture &&
+                              <img
+                                  className='z-depth-2 Img1'
+                                  alt='profile_image'
+                                  src={user.profilePicture}
+                                  data-holder-rendered='true'
+                                  hidden={placeHolder}
+                              />
+                          }
 
-                        <img
-                            className='z-depth-2 Img1'
-                            alt='profile_image'
-                            src={imgData}
-                            id='movieImage'
-                            data-holder-rendered='true'
-                            hidden={!placeHolder}
-                        />
+                          <img
+                              className='z-depth-2 Img1'
+                              alt='profile_image'
+                              src={imgData}
+                              id='movieImage'
+                              data-holder-rendered='true'
+                              hidden={!placeHolder}
+                          />
 
                         <div className='image-upload'>
                           <label htmlFor='file-input'>
@@ -111,8 +124,10 @@ export default function EditUserProfile() {
 
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
-                                                       id="email"
-                                                       placeholder="First Name"/>
+                                                       id="firstName"
+                                                       value={user.firstName}
+                                                       placeholder="First Name"
+                                                />
                                             </div>
                                         </div>
                                         <div className="col">
@@ -125,7 +140,9 @@ export default function EditUserProfile() {
 
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
-                                                       placeholder="Last Name"/>
+                                                       placeholder="Last Name"
+                                                       value={user.lastName}
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -142,7 +159,9 @@ export default function EditUserProfile() {
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
                                                        id="phone"
-                                                       placeholder="Phone Number"/>
+                                                       placeholder="Phone Number"
+                                                       value={user.mobile}
+                                                />
                                             </div>
                                         </div>
                                         <div className="col">
@@ -151,6 +170,7 @@ export default function EditUserProfile() {
                                                     Date of Birth
                                                 </label>
                                                 <input type="date" className="form-control custom-input-fields"
+                                                       value={moment(user.dob).format("YYYY-MM-DD")}
                                                 />
                                             </div>
                                         </div>
@@ -172,6 +192,7 @@ export default function EditUserProfile() {
                                             id='form3Example3'
                                             className='form-control form-control-lg'
                                             placeholder='Email'
+                                            value={user.email}
                                         />
                                     </div>
 
@@ -188,6 +209,7 @@ export default function EditUserProfile() {
                                             id='address'
                                             className='form-control form-control-lg'
                                             placeholder='Address'
+                                            value={user.address}
                                         />
                                     </div>
 
@@ -202,8 +224,9 @@ export default function EditUserProfile() {
                                         <select
                                             className='form-select mb-3'
                                             aria-label='.form-select-lg example'
+                                            value={user.gender}
                                         >
-                                            <option selected disabled>Gender</option>
+                                            <option selected disabled value=''>Select Your Gender</option>
                                             <option value='Male'>Male</option>
                                             <option value='Female'>Female</option>
                                         </select>
@@ -218,7 +241,9 @@ export default function EditUserProfile() {
                                             About Me
                                         </label>
                                         <textarea className="form-control" id="aboutMe" rows="2"
-                                                  placeholder='A small description about yourself...'/>
+                                                  placeholder='A small description about yourself...'
+                                                  value={user.aboutMe}
+                                        />
                                     </div>
 
                                     <div className="text-center mt-3">
@@ -231,7 +256,8 @@ export default function EditUserProfile() {
                                             </button>
                                         </div>
                                         <div className="btn-group me-2">
-                                            <button type="button" className="btn btn-primary cancelButton">Cancel
+                                            <button type="button" className="btn btn-primary cancelButton"
+                                                    onClick={() => props.onCancel2()}>Cancel
                                             </button>
                                         </div>
                                     </div>

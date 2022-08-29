@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Login Page Done">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="User Profile Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/modals/confirmModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/confirmModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/userProfileMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userProfileMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/userSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,10 @@
       <workItem from="1661568921992" duration="9794000" />
       <workItem from="1661605560491" duration="150000" />
       <workItem from="1661625060764" duration="9857000" />
-      <workItem from="1661742535375" duration="1082000" />
+      <workItem from="1661742535375" duration="1919000" />
+      <workItem from="1661745248747" duration="1711000" />
+      <workItem from="1661748364352" duration="1740000" />
+      <workItem from="1661787624749" duration="3593000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -287,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661576217335</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="User Profile Completed">
+      <created>1661743719991</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661743719991</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +335,8 @@
     <MESSAGE value="merge conflict fixed" />
     <MESSAGE value="Login Page Partially Done" />
     <MESSAGE value="Login Page Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Page Done" />
+    <MESSAGE value="User Profile Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profile Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

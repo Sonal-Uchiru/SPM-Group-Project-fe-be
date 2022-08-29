@@ -6,6 +6,7 @@ import JobApplicationForm from "./components/managements/jobApplications/jobAppl
 import UserSignUP from "./components/managements/user/pages/signup";
 import Login from "./components/authentication/loginPage";
 import UserProfile from "./components/managements/user/pages/userProfile";
+import EditUserProfile from "./components/managements/user/modals/editUserProfile";
 
 function App() {
     return (

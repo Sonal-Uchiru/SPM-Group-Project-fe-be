@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 import "./css/confirmModal.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import {faEye} from "@fortawesome/free-solid-svg-icons";
+import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 
-const eye = <FontAwesomeIcon icon={faEye} />;
-const sleye = <FontAwesomeIcon icon={faEyeSlash} />;
-export default function ConfirmModal() {
+const eye = <FontAwesomeIcon icon={faEye}/>;
+const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
+
+export default function ConfirmModal(props) {
+
   const [passwordShown, setPasswordShown] = useState(false);
 
   // Password toggle handler
@@ -14,8 +16,8 @@ export default function ConfirmModal() {
     setPasswordShown(!passwordShown);
   };
   return (
-    <div>
-      
+      <div>
+
         <div className="container confirm-modal">
           <h3>Confirm Password</h3>
           <form>
@@ -43,12 +45,12 @@ export default function ConfirmModal() {
             </div>
             <div className="text-center">
               <button
-                type="button"
-                className="btn btn-success confirmButton"
+                  type="button"
+                  className="btn btn-success confirmButton"
               >
                 Confirm
               </button>
-              <button type="button" className="btn btn-danger cancelButton">
+              <button type="button" className="btn btn-danger cancelButton" onClick={() => props.onCancel()}>
                 Cancel
               </button>
             </div>
@@ -56,7 +58,7 @@ export default function ConfirmModal() {
           <br />
           <br />
         </div>
-    
-    </div>
+
+      </div>
   );
 }
