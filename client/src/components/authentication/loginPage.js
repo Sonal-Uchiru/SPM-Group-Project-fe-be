@@ -70,7 +70,7 @@ export default function Login() {
     } catch (error) {
 
       setLoading(false)
-      console.log(error)
+      // console.log(error)
       if (error.response.status === 401) {
         await ErrorAlert("Invalid Email or Password!");
         setLoading(false)

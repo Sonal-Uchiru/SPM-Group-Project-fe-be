@@ -3,24 +3,30 @@
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   max-width: 750px;
-  
-  margin: 50px auto auto;
+
+    margin: 50px auto auto;
 }
 
 .usermain .user-img {
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.usermain .details {
+    margin-top: 80px;
 }
 
 @media (max-width: 768px) {
-  .usermain .user-img {
-    width: 300px;
-  }
-  .usermain .card {
-    margin: 20px;
-  }
+    .usermain .user-img {
+        width: 300px;
+    }
+
+    .usermain .card {
+        margin: 20px;
+    }
 }
+
 @media (max-width: 548px) {
   .usermain .user-img {
     width: 240px;
