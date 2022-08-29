@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import '../css/editUserProfile.css'
-import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
 import {getUserDetails} from "../../../../api/managements/userApi";
 import moment from 'moment';
 
@@ -50,9 +49,7 @@ export default function EditUserProfile(props) {
                             className="btn"
                             data-dismiss="modal"
                             aria-label="Close"
-                            onClick={() => {
-                                setOpenModal(false);
-                            }}
+                            onClick={() => props.onCancel2()}
                         >
                             <span aria-hidden="true"><b>&times;</b></span>
                         </button>

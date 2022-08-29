@@ -19,6 +19,6 @@ export const getUserAppliedJobs = async () => {
     return await protectedApi('get', 'jobApplications')
 }
 
-export const deleteUserProfile = async () => {
-    return await protectedApi('delete', 'users')
+export const deleteUserProfile = async (data) => {
+    return await protectedApi('delete', 'users', data)
 }

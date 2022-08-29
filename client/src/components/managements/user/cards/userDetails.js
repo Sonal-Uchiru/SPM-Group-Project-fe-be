@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import "../css/userDetails.css";
-import {deleteUserProfile} from "../../../../api/managements/userApi";
 import ConfirmModal from "../../../external_components/modals/confirmModal";
 import EditUserProfile from "../modals/editUserProfile";
 import moment from "moment";

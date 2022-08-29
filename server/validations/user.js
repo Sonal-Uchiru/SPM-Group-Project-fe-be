@@ -33,7 +33,7 @@ export const validationUpdate = (data) => {
 
 export const validationDelete = (data) => {
     const schema = Joi.object({
-        password: passwordComplexity().required().label('Password')
+        password: Joi.string().required().label('Password')
     })
     return schema.validate(data)
 }
