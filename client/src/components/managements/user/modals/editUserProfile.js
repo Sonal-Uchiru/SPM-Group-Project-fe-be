@@ -7,6 +7,7 @@ import {isPasswordComplex} from "../../../external_components/validations/passwo
 import {ErrorAlert} from "../../../../sweet_alerts/error";
 import {SuccessAlert} from "../../../../sweet_alerts/success";
 import Loading from "../../../external_components/spinners/loading";
+import {uploadFile} from "../../../../firebase/uploadFile";
 
 export default function EditUserProfile(props) {
 
@@ -15,6 +16,7 @@ export default function EditUserProfile(props) {
     const [picture, setPicture] = useState('')
     let [placeHolder, setPlaceHolder] = useState(false)
     const [loading, setLoading] = useState(false)
+
 
     async function getUser() {
         const content = await getUserDetails()
@@ -59,26 +61,32 @@ export default function EditUserProfile(props) {
             e.preventDefault();
             setLoading(true)
 
+            let imageUrl = "";
+
+            if (picture !== "") {
+                imageUrl = await uploadFile(picture, "userProfilePicture")
+            }
+
             const editUser = {
                 firstName: updateUser.firstName,
                 lastName: updateUser.lastName,
                 dob: updateUser.dob,
                 address: updateUser.address,
                 mobile: updateUser.mobile,
-                email: updateUser.email,
                 aboutMe: updateUser.aboutMe,
-                profilePicture: updateUser.profilePicture,
+                profilePicture: imageUrl === "" ? updateUser.profilePicture ? updateUser.profilePicture : "" : imageUrl,
                 gender: updateUser.gender
             }
 
-            console.log(editUser)
+            const cleanEditUser = Object.fromEntries(Object.entries(editUser).filter(([_, v]) => v !== ''))
 
-            // const content = await editUserProfile(editUser)
-            //
-            // if (content) {
-            //     await SuccessAlert("Successfully Updated Your Account!")
-            //     // navigate("/login")
-            // }
+            console.log(cleanEditUser)
+
+            const content = await editUserProfile(editUser)
+
+            if (content) {
+                await SuccessAlert("Successfully Updated Your Account!")
+            }
 
             setLoading(false)
 
@@ -185,6 +193,7 @@ export default function EditUserProfile(props) {
                                                        Value={updateUser.firstName}
                                                        onChange={handleEditUserProfile}
                                                        placeholder="First Name"
+                                                       required
                                                 />
                                             </div>
                                         </div>
@@ -202,6 +211,7 @@ export default function EditUserProfile(props) {
                                                        name="lastName"
                                                        Value={updateUser.lastName}
                                                        onChange={handleEditUserProfile}
+                                                       required
                                                 />
                                             </div>
                                         </div>
@@ -223,6 +233,7 @@ export default function EditUserProfile(props) {
                                                        placeholder="Phone Number"
                                                        Value={updateUser.mobile}
                                                        onChange={handleEditUserProfile}
+                                                       required
                                                 />
                                             </div>
                                         </div>
@@ -233,6 +244,7 @@ export default function EditUserProfile(props) {
                                                 </label>
                                                 <input type="date" className="form-control custom-input-fields"
                                                        name="dob"
+                                                       id="dob"
                                                        Value={moment(updateUser.dob).format("YYYY-MM-DD")}
                                                        onChange={handleEditUserProfile}
                                                 />
@@ -258,7 +270,8 @@ export default function EditUserProfile(props) {
                                             className='form-control form-control-lg'
                                             placeholder='Email'
                                             Value={updateUser.email}
-                                            onChange={handleEditUserProfile}
+                                            readOnly
+                                            required
                                         />
                                     </div>
 

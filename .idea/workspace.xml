@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Delete User Profile Successfully Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/viewAllJobsCompany.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAllJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

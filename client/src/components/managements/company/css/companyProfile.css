@@ -1,5 +1,6 @@
 .companyProfile {
     overflow-x: hidden;
+    min-height: 600px;
 }
 
 .companyProfile .title {

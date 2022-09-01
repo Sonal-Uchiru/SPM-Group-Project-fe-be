@@ -17,7 +17,6 @@ export const validationUpdate = (data) => {
     const schema = Joi.object({
         firstName: Joi.string().max(50).required().label('First Name'),
         lastName: Joi.string().max(50).required().label('Last Name'),
-        email: Joi.string().email().max(100).required().label('Email'),
         password: Joi.string().label('Password'),
         role: Joi.string().label('Role'),
         mobile: Joi.number().integer().required().label('Phone Number'),
