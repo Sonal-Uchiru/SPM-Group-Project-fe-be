@@ -5,13 +5,16 @@ import Footer from "./components/external_components/navigation/footer";
 import JobApplicationForm from "./components/managements/jobApplications/jobApplicationForm";
 import UserSignUP from "./components/managements/user/pages/signup";
 import CompanyRegistration from "./components/managements/company/pages/companyRegistration";
+import Login from "./components/authentication/loginPage";
+import CompanyProfile from "./components/managements/company/pages/companyProfile";
+
 
 function App() {
     return (
         <Router>
             <CompanyHeader/>
             <Routes>
-                <Route path="/" element={<CompanyRegistration/>}/>
+                <Route path="/" element={<CompanyProfile/>}/>
             </Routes>
             <Footer/>
         </Router>

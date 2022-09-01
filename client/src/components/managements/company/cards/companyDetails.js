@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../css/companyDetails.css";
 
-export default function CompanyDetails() {
+export default function CompanyDetails({ company }) {
   return (
     <div className="container company-details">
       <div className="card">
@@ -11,14 +11,12 @@ export default function CompanyDetails() {
           </div>
           <div className="row mt-3">
             <div className="col-md-6 mt-2">
-              <p className="profile-data">Phone Number: 077-8970847</p>
-              <p className="profile-data ">
-                Address : Calista Wise 7292 Dictum Av. San Antonio MI 47096
-              </p>
+              <p className="profile-data">{`Phone Number: ${company.mobile}`}</p>
+              <p className="profile-data ">{`Address : ${company.address}`}</p>
             </div>
             <div className="col-md-6 mt-2">
-              <p className="profile-data">Field : Information Technology</p>
-              <p className="profile-data">Site URL :  www.calcey.com</p>
+              <p className="profile-data">{`Field : ${company.field}`}</p>
+              <p className="profile-data">{`Site URL : ${company.siteUrl}`}</p>
             </div>
           </div>
           <div className="row d-flex justify-content-center">

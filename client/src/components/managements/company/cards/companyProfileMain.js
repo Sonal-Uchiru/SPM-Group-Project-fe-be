@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
+
 import "../css/companyProfileMain.css";
 
-export default function CompanyProfileMain() {
+export default function CompanyProfileMain({ company }) {
   return (
     <div className="company-main">
       <div className="card">
@@ -9,7 +10,7 @@ export default function CompanyProfileMain() {
           <div className="col-md-4">
             <div className="text-center m-4">
               <img
-                src="./images/calcey-logo-1-1.jpeg"
+                src={company.logo}
                 className="img-fluid user-img"
                 alt="Logo"
               />
@@ -17,16 +18,18 @@ export default function CompanyProfileMain() {
           </div>
           <div className="col-md-8">
             <div className="mt-3">
-              <h3 className="text-center">Calcey Technologies</h3>
+              <h3 className="text-center">{company.name}</h3>
               <h6 className="text-center" style={{ color: "#808080" }}>
-                calcey@gmail.com{" "}
+                {company.email}{" "}
               </h6>
               <p className="pe-2 ps-3">
-                Bloomberg's profile proves the company knows its audience,
+                {company.description
+                  ? company.description
+                  : ` Bloomberg's profile proves the company knows its audience,
                 because they offer a few quick statistics, and then link to
                 other areas of the site, such as Careers and Tech. While other
                 businesses might do well in offering a creative, long-form
-                story, Bloomberg's typical demographic is likely more.
+                story, Bloomberg's typical demographic is likely more.`}
               </p>
             </div>
           </div>
