@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="view applied job application">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application be edit validation updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/appliedJobCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/appliedJobCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="job_application_management" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +71,9 @@
       <workItem from="1660832918054" duration="5425000" />
       <workItem from="1660933494513" duration="531000" />
       <workItem from="1660967997132" duration="20487000" />
+      <workItem from="1661276363331" duration="805000" />
+      <workItem from="1661277451184" duration="370000" />
+      <workItem from="1661320877821" duration="11156000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -250,7 +250,70 @@
       <option name="project" value="LOCAL" />
       <updated>1661003133677</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="edit application implemented">
+      <created>1661239986737</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661239986737</updated>
+    </task>
+    <task id="LOCAL-00027" summary="job development has so many problems">
+      <created>1661241674631</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661241674631</updated>
+    </task>
+    <task id="LOCAL-00028" summary="job application from connected to the job management">
+      <created>1661253855552</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661253855552</updated>
+    </task>
+    <task id="LOCAL-00029" summary="is applied for the job validation implement in be and fe">
+      <created>1661263367449</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661263367449</updated>
+    </task>
+    <task id="LOCAL-00030" summary="is applied for the job validation implement in be and fe part 2">
+      <created>1661321001654</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1661321001654</updated>
+    </task>
+    <task id="LOCAL-00031" summary="merge conflicts resolved">
+      <created>1661321426889</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661321426889</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update job list after applying implemented">
+      <created>1661328419086</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1661328419086</updated>
+    </task>
+    <task id="LOCAL-00033" summary="minor bug fixed">
+      <created>1661328628577</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1661328628577</updated>
+    </task>
+    <task id="LOCAL-00034" summary="job application be edit validation updated">
+      <created>1661329129129</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1661329129130</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,8 +332,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial" />
-    <MESSAGE value="boiler template" />
     <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
     <MESSAGE value="server shared functions implementations" />
@@ -287,7 +348,16 @@
     <MESSAGE value="after reset (merge issue) fixed" />
     <MESSAGE value="client after merge issue and UI minor issues fix" />
     <MESSAGE value="apply for a job completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="apply for a job completed" />
+    <MESSAGE value="edit application implemented" />
+    <MESSAGE value="job development has so many problems" />
+    <MESSAGE value="job application from connected to the job management" />
+    <MESSAGE value="is applied for the job validation implement in be and fe" />
+    <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
+    <MESSAGE value="merge conflicts resolved" />
+    <MESSAGE value="update job list after applying implemented" />
+    <MESSAGE value="minor bug fixed" />
+    <MESSAGE value="job application be edit validation updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="job application be edit validation updated" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

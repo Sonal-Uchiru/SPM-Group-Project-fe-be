@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import "./addNewJob.css";
-import { SuccessAlert } from "../../../sweet_alerts/success";
-import { ErrorAlert } from "../../../sweet_alerts/error";
-import {
-  addNewJobs,
-  getCompanyDataForJob,
-} from "../../../api/managements/jobApi";
-import Loading from "../../external_components/spinners/loading";
+import { getCompanyDataForJob } from "../../../../api/managements/jobApi";
+import { protectedApi } from "../../../../api/protectedApi";
+import { SuccessAlert } from "../../../../sweet_alerts/success";
+import { ErrorAlert } from "../../../../sweet_alerts/error";
+import Loading from "../../../external_components/spinners/loading";
+import "./editJob.css";
 
-export default function AddNewJob(props) {
+export default function EditJob(props) {
+  const jobContent = props.content;
   const [position, setPosition] = useState("");
   const [developmentArea, setDevelopmentArea] = useState("");
   const [jobType, setJobType] = useState("");
@@ -17,17 +16,30 @@ export default function AddNewJob(props) {
   const [responsibilities, setResponsibilities] = useState("");
   const [requirements, setRequirements] = useState("");
   const [otherRequirements, setOtherRequirements] = useState("");
+  const [status, setStatus] = useState("");
   const [loadingStatus, setLoadingStatus] = useState(false);
   const [image, setImage] = useState("");
 
   useEffect(() => {
+    assignData();
     getCompanyData();
   }, []);
 
-  
-  async function createJob(e) {
+  function assignData() {
+    setPosition(jobContent.position);
+    setDevelopmentArea(jobContent.developmentArea);
+    setJobType(jobContent.jobType);
+    setRoleOverview(jobContent.roleOverview);
+    setResponsibilities(jobContent.responsibilities);
+    setRequirements(jobContent.requirements);
+    setOtherRequirements(jobContent.otherRequirements);
+    setStatus(jobContent.status);
+  }
+
+  async function editJob(e) {
     e.preventDefault();
     setLoadingStatus(true);
+
     const jobData = {
       position: position,
       developmentArea: developmentArea,
@@ -36,15 +48,28 @@ export default function AddNewJob(props) {
       responsibilities: responsibilities,
       requirements: requirements,
       otherRequirements: otherRequirements,
-      //   companyId: "62f9e742d06c6643a5f74e65",
+      status: status,
     };
     try {
-      const response = await addNewJobs(jobData);
+      const response = await protectedApi(
+        "PUT",
+        `jobs/${jobContent._id}`,
+        jobData
+      );
       setLoadingStatus(false);
-      SuccessAlert("Job added successfully");
-      props.addedFunction();
+
+      SuccessAlert("Job updated successfully");
+      props.editFunction();
     } catch (e) {
       ErrorAlert(e);
+    }
+  }
+
+  async function changeStatus() {
+    if (status == 1) {
+      setStatus(2);
+    } else {
+      setStatus(1);
     }
   }
 
@@ -54,10 +79,10 @@ export default function AddNewJob(props) {
   }
 
   return (
-    <div className="addNewJob">
+    <div className="editJob">
       <div className="">
         <Modal.Body>
-          <div className="add-new-job">
+          <div className="edit-job">
             <div className="container">
               <div className="row">
                 <div className="logo">
@@ -74,8 +99,10 @@ export default function AddNewJob(props) {
             <div>
               <h3 className="blue-text-color ms-2">Job Details</h3>
               <form
-                className="ms-4 me-4 addNewJobForm"
-                onSubmit={(e) => createJob(e)}
+                className="ms-4 me-4 editJobForm"
+                onSubmit={(e) => {
+                  editJob(e);
+                }}
               >
                 <div className="mb-2">
                   <label htmlFor="exampleInputEmail1" className="form-label">
@@ -87,11 +114,11 @@ export default function AddNewJob(props) {
                   <input
                     type="text"
                     className="form-control custom-input-fields"
-                    id="position"
                     placeholder="Position"
-                    onChange={(e) => {
-                      setPosition(e.target.value);
-                    }}
+                    id="position"
+                    value={position}
+                    maxLength={100}
+                    onChange={(e) => setPosition(e.target.value)}
                     required
                   />
                 </div>
@@ -108,9 +135,9 @@ export default function AddNewJob(props) {
                     className="form-control custom-input-fields"
                     id="developmentArea"
                     placeholder="Development Area"
-                    onChange={(e) => {
-                      setDevelopmentArea(e.target.value);
-                    }}
+                    value={developmentArea}
+                    maxLength={100}
+                    onChange={(e) => setDevelopmentArea(e.target.value)}
                     required
                   />
                 </div>
@@ -125,13 +152,11 @@ export default function AddNewJob(props) {
                   <select
                     className="form-select custom-input-fields"
                     aria-label="Default select example"
-                    onChange={(e) => {
-                      setJobType(e.target.value);
-                    }}
+                    onChange={(e) => setJobType(e.target.value)}
                     required
                   >
-                    <option selected value="">
-                      Please select
+                    <option selected value={jobType}>
+                      Full Time
                     </option>
                     <option value="Full time">Full Time</option>
                     <option value="Part time">Part Time</option>
@@ -150,9 +175,9 @@ export default function AddNewJob(props) {
                     id="roleOverview"
                     rows="2"
                     placeholder="Role Overview"
-                    onChange={(e) => {
-                      setRoleOverview(e.target.value);
-                    }}
+                    value={roleOverview}
+                    maxLength={200}
+                    onChange={(e) => setRoleOverview(e.target.value)}
                     required
                   />
                 </div>
@@ -168,10 +193,10 @@ export default function AddNewJob(props) {
                     className="form-control"
                     id="responsibilities"
                     rows="2"
+                    maxLength={200}
                     placeholder="Responsibilities"
-                    onChange={(e) => {
-                      setResponsibilities(e.target.value);
-                    }}
+                    value={responsibilities}
+                    onChange={(e) => setResponsibilities(e.target.value)}
                     required
                   />
                 </div>
@@ -188,9 +213,9 @@ export default function AddNewJob(props) {
                     id="requirements"
                     rows="2"
                     placeholder="Requirements"
-                    onChange={(e) => {
-                      setRequirements(e.target.value);
-                    }}
+                    maxLength={200}
+                    value={requirements}
+                    onChange={(e) => setRequirements(e.target.value)}
                     required
                   />
                 </div>
@@ -206,18 +231,52 @@ export default function AddNewJob(props) {
                     className="form-control"
                     id="otherRequirements"
                     rows="2"
+                    maxLength={200}
                     placeholder="Other Requirements"
-                    onChange={(e) => {
-                      setOtherRequirements(e.target.value);
-                    }}
+                    value={otherRequirements}
+                    onChange={(e) => setOtherRequirements(e.target.value)}
                   />
+                </div>
+
+                <div className="text-center mt-3">
+                  <label class="switch">
+                    {status == "1" ? (
+                      <input
+                        type="checkbox"
+                        onClick={() => changeStatus()}
+                        checked="checked"
+                      />
+                    ) : (
+                      <input
+                        type="checkbox"
+                        onClick={(e) => {
+                          changeStatus();
+                        }}
+                      />
+                    )}
+                    <span class="slider round" />
+                  </label>
+                  <p className="status">Actively Recurting ?</p>
                 </div>
                 {loadingStatus && <Loading />}
 
                 <div className="text-center mt-3">
-                  <Button type="submit" className="btn btn-success">
-                    Create Job
-                  </Button>
+                  <div className="btn-group me-2">
+                    <button
+                      type="submit"
+                      className="btn btn-primary saveButton"
+                    >
+                      Save Changes
+                    </button>
+                  </div>
+                  <div className="btn-group me-2">
+                    <button
+                      type="button"
+                      className="btn btn-primary cancelButton"
+                    >
+                      Cancel
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

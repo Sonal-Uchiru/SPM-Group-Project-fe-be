@@ -16,6 +16,7 @@ import {ErrorAlert} from "../../../sweet_alerts/error";
 import {SaveChangesAlert} from "../../../sweet_alerts/saveChanges";
 import {SuccessAlert} from "../../../sweet_alerts/success";
 import Loading from "../../external_components/spinners/loading";
+import {getJobById} from "../../../api/managements/jobApi";
 
 export function JobApplicationForm(props) {
     const [openModal, setOpenModal] = useState(true)
@@ -118,7 +119,6 @@ export function JobApplicationForm(props) {
         }
     }, [])
 
-
     const saveJobApplicationDB = async (e) => {
         try {
             e.preventDefault()
@@ -137,8 +137,8 @@ export function JobApplicationForm(props) {
                 employedWithCurrentCompany: checkSelectedField(jobApplication.employedWithCurrentCompany),
                 resume: props.jobApplicationId ? jobApplication.resume : supportingDocumentUrl,
                 licensesAndCertificates: [licensesAndCertificatesUrl],
-                jobId: props.jobApplicationId ? props.jobApplicationId : "62f9e781d06c6643a5f74e69",
-                companyId: props.jobApplicationId ? companyId : "62fe586aa8fdce45b98c1f3b"
+                jobId: props.jobApplicationId ? '' : props.jobId,
+                companyId: props.jobApplicationId ? '' : props.companyId
             }
 
             if (props.jobApplicationId) {
@@ -148,12 +148,13 @@ export function JobApplicationForm(props) {
                 data.applicant = ''
                 data.status = ''
                 data.__v = ''
+                data.applicantOtherDetails = ''
             }
 
             if (data.modifiedUser) data.modifiedUser = ''
 
-            const cleanJobApplication = Object.fromEntries(Object.entries(data).filter(([_, v]) => v !== ''));
-            const cleanApplicantDetails = Object.fromEntries(Object.entries(applicantOtherDetails).filter(([_, v]) => v !== ''));
+            const cleanJobApplication = Object.fromEntries(Object.entries(data).filter(([_, v]) => v !== ''))
+            const cleanApplicantDetails = Object.fromEntries(Object.entries(applicantOtherDetails).filter(([_, v]) => v !== ''))
 
             const content = {
                 applicantOtherDetails: {
@@ -162,20 +163,20 @@ export function JobApplicationForm(props) {
                 ...cleanJobApplication
             }
 
+
             if (props.jobApplicationId) {
                 const result = await updateJobApplication(content, props.jobApplicationId)
-
-                if (result) await SuccessAlert("Job application updated successfully!")
-
                 setLoading(false)
+                if (result) await SuccessAlert("Job application updated successfully!")
+                props.onSave()
                 return
             }
 
             const result = await saveJobApplication(content)
-
-            if (result) await SuccessAlert("You applied for the job successfully!")
-
             setLoading(false)
+            if (result) await SuccessAlert("You applied for the job successfully!")
+            props.onSave()
+
         } catch (e) {
             setLoading(false)
             await ErrorAlert("Something went wrong!")
@@ -197,8 +198,8 @@ export function JobApplicationForm(props) {
     }, [])
 
     const handleQuestion = (ans) => {
-        if (ans) return 'yes'
-        return 'no'
+        if (ans) return "yes"
+        return "no"
     }
     return (
         <div className="apply-job-application">
@@ -207,7 +208,8 @@ export function JobApplicationForm(props) {
                     <Modal.Header>
                         <div>
                             {!step1 && <BsArrowLeft onClick={navigateBack}/>}
-                            <h4 className={`ms-4 modal-title ${!step1 && 'modal-title-edit'}`}><b>Apply for the Job</b>
+                            <h4 className={`ms-4 modal-title ${!step1 && 'modal-title-edit'}`}>
+                                <b>{props.jobApplicationId ? 'Edit Application' : 'Apply for the Job'}</b>
                             </h4>
                         </div>
                         <button
@@ -226,14 +228,14 @@ export function JobApplicationForm(props) {
                                 <div className="row">
                                     <div className="col-md-auto logo">
                                         <img
-                                            src="https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg"
+                                            src={props.otherDetails.logo}
                                             alt="company logo" className="rounded float-left company-logo"
                                         />
                                     </div>
                                     <div className="col-sm">
-                                        <h3 className="text-center blue-text-color">Software Engineer (Full Stack
-                                            Developer)</h3>
-                                        <h4 className="text-center grey-text-color">Full Time Job</h4>
+                                        <h3 className="text-center blue-text-color">{`${props.otherDetails.position}
+                                        (${props.otherDetails.developmentArea})`}</h3>
+                                        <h4 className="text-center grey-text-color">{props.otherDetails.jobType}</h4>
                                     </div>
                                 </div>
                                 <br/>
@@ -500,7 +502,7 @@ export function JobApplicationForm(props) {
                                         </label>
                                         <select className="form-select custom-input-fields" name="companyWorked"
                                                 onChange={handleJobApplicationFormChange}
-                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.companyWorked) : ''}
+                                                defaultValue={props.jobApplicationId ? handleQuestion(jobApplication.companyWorked) : ''}
                                                 aria-label="Default select example" required>
                                             <option selected value="yes">Yes</option>
                                             <option value="no">No</option>
@@ -508,14 +510,15 @@ export function JobApplicationForm(props) {
                                     </div>
                                     <div className="mb-2">
                                         <label htmlFor="exampleInputQ2" className="form-label">
-                                            <b>Are you currently employed by IFS or one of the IFS group companies?
+                                            <b>Are you currently employed by {props.otherDetails.companyName} or one of
+                                                the {props.otherDetails.companyName} group companies?
                                                 <mark className="required-icon">
                                                     *
                                                 </mark>
                                             </b>
                                         </label>
                                         <select className="form-select custom-input-fields"
-                                                Value={props.jobApplicationId ? handleQuestion(jobApplication.employedWithCurrentCompany) : ''}
+                                                defaultValue={props.jobApplicationId ? handleQuestion(jobApplication.employedWithCurrentCompany) : ''}
                                                 name="employedWithCurrentCompany"
                                                 aria-label="Default select example" required
                                                 onChange={handleJobApplicationFormChange}

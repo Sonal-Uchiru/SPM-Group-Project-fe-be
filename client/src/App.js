@@ -4,17 +4,18 @@ import CompanyHeader from "./components/managements/company/navigation/companyHe
 import Footer from "./components/external_components/navigation/footer";
 import JobApplicationForm from "./components/managements/jobApplications/jobApplicationForm";
 import ViewAppliedJobs from "./components/managements/jobApplications/viewAppliedJobs";
-
+import ViewAllJobsCompany from "./components/managements/jobs/pages/viewAllJobsCompany";
+import ViewAllJobs from "./components/managements/jobs/pages/viewAllJobs";
 function App() {
-    return (
-        <Router>
-            <CompanyHeader/>
-            <Routes>
-                <Route path="/" element={<ViewAppliedJobs/>}/>
-            </Routes>
-            <Footer/>
-        </Router>
-    );
+  return (
+    <Router>
+      <CompanyHeader />
+      <Routes>
+        <Route path="/" element={<ViewAppliedJobs/>}/>
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

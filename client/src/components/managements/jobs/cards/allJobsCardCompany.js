@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../css/allJobsCardCompany.css";
-import Icon from "../pages/test";
 import { Modal } from "react-bootstrap";
-import EditJob from "../../jobs/editJob";
+import EditJob from "../modals/editJob";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import {
@@ -10,7 +9,7 @@ import {
   getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
-import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
+import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
@@ -20,15 +19,15 @@ export default function AllJobsCardCompany(props) {
   const [image, setImage] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
 
-  useState(() => {
+  useEffect(async () => {
     //Change this route to correct one
-    getJobApplicants();
-    getCompanyData();
+    await getJobApplicants();
+    await getCompanyData();
   }, []);
 
   async function getJobApplicants() {
-    const response = await getJobsApplicants(jobContent._id);
-    setApplicants(response.data.noOfJobPosted);
+    const response = await getAppliedJobApplicationsByJobId(jobContent._id);
+    setApplicants(response.data.content.length);
   }
 
   async function getCompanyData() {
@@ -79,16 +78,16 @@ export default function AllJobsCardCompany(props) {
             <div className="recImage text-center">
               <div>
                 <img
-                  src={
-                    jobContent.status == 1
-                      ? "./images/accuracy.png"
-                      : "./images/close.png"
-                  }
-                  className="img-fluid recruitingStatus"
-                  alt="recruiting_status"
+                    src={
+                      jobContent.status == 1
+                          ? "./images/accuracy.png"
+                          : "./images/close.png"
+                    }
+                    className="img-fluid recruitingStatus"
+                    alt="recruiting_status"
                 />
-                <p className={jobContent.status == 1 ? "status1" : "status2"}>
-                  {jobContent.status == 1 ? "Actively Recruiting" : "Closed"}
+                <p className={jobContent.status === 1 ? "status1" : "status2"}>
+                  {jobContent.status === 1 ? "Actively Recruiting" : "Closed"}
                 </p>
               </div>
             </div>
@@ -130,7 +129,9 @@ export default function AllJobsCardCompany(props) {
 
           <div className="col-md-6">
             <div className="">
-              <h4 className="title">Other Requirements</h4>
+              {jobContent.otherRequirements && (
+                <h4 className="title">Other Requirements</h4>
+              )}
               <p>{jobContent.otherRequirements}</p>
             </div>
           </div>

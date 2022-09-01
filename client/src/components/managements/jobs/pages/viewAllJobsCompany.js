@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import "../css/viewAllJobsCompany.css";
 import AllJobsCardCompany from "../cards/allJobsCardCompany";
-import AddNewJob from "../../jobs/addNewJob";
+import AddNewJob from "../modals/addNewJob";
 import Loading from "../../../external_components/spinners/loading";
 import { getAllJobsByToken } from "../../../../api/managements/jobApi";
 
@@ -13,8 +13,8 @@ export default function ViewAllJobsCompany() {
   const [duplicateJobsArray, setDuplicateJobsArray] = useState([]);
   const [errorText, setErrorText] = useState("");
 
-  useEffect(() => {
-    getAllJobs();
+  useEffect(async () => {
+    await getAllJobs();
   }, []);
 
   function createJob() {

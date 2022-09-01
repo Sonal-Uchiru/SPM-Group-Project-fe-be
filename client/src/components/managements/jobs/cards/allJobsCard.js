@@ -1,45 +1,45 @@
-import React, { useState } from "react";
-import {
-  getCompanyDataForJob,
-  getJobsApplicants,
-} from "../../../../api/managements/jobApi";
-import { protectedApi } from "../../../../api/protectedApi";
-import { getTokenFromLocalStorage } from "../../../authentication/tokenHandling";
+import React, {useEffect, useImperativeHandle, useState} from "react";
 import "../css/allJobsCard.css";
+import {
+  getAppliedJobApplicationsByJobId,
+  isApplied,
+} from "../../../../api/managements/jobApplicationApi";
 
 export default function AllJobsCard(props) {
   const jobContent = props.content;
   const [applicants, setApplicants] = useState("");
-  const [image, setImage] = useState("");
+  const [isAppliedToJob, setIsAppliedToJob] = useState(false);
 
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
 
-  useState(() => {
-    //Change this route to correct one
-    getCompanyData();
-    getJobApplicants();
+  useEffect(async () => {
+    const content = await isApplied(jobContent._id);
+    setIsAppliedToJob(content.data.isApplied);
+    await getJobsApplicants();
   }, []);
 
-  async function getCompanyData() {
-    const token = getTokenFromLocalStorage();
-    const content = await getCompanyDataForJob();
-    setImage(content.logo);
+  async function getJobsApplicants() {
+    const response = await getAppliedJobApplicationsByJobId(jobContent._id);
+    setApplicants(response.data.content.length);
   }
 
-  async function getJobApplicants() {
-    const response = await getJobsApplicants(jobContent._id);
-    setApplicants(response.data.noOfJobPosted);
-  }
+  useImperativeHandle(props.refs, () => ({
+    updateCard() {
+      setIsAppliedToJob(true)
+      setApplicants(prev => (prev + 1))
+    },
+  }))
+
   return (
-    <div className="container allJobsCard">
-      <div className="card mb-3">
-        <div className="row g-0">
-          <div className="col-md-3">
-            <div className="logoImage text-center">
-              <img
-                src={image}
-                className="img-fluid companyLogo"
+      <div className="container allJobsCard">
+        <div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-3">
+              <div className="logoImage text-center">
+                <img
+                    src={jobContent.companyDetails[0].logo}
+                    className="img-fluid companyLogo"
                 alt="company_logo"
               />
             </div>
@@ -70,7 +70,7 @@ export default function AllJobsCard(props) {
                     className="img-fluid recruitingStatus"
                     alt="recruiting_status"
                   />
-                  <p className="status2">Actively Recruiting</p>
+                  <p className="status2">Closed</p>
                 </div>
               )}
             </div>
@@ -112,24 +112,32 @@ export default function AllJobsCard(props) {
 
           <div className="col-md-6">
             <div className="">
-              <h4 className="title">Other Requirements</h4>
+              {jobContent.otherRequirements && (
+                <h4 className="title">Other Requirements</h4>
+              )}
               <p>{jobContent.otherRequirements}</p>
             </div>
           </div>
 
           <div className="text-center">
-            <button type="button" className="btn btn-primary apply">
-              Apply
-            </button>
-            <br />
+            {jobContent.status === 1 && <button
+                type="button"
+                className="btn btn-primary apply"
+                onClick={props.onModalOpen}
+                disabled={isAppliedToJob}
+            >
+              {isAppliedToJob ? "Applied" : "Apply"}
+            </button>}
+
+            <br/>
             <img
-              src="./images/arrow-up.png"
-              className="img-fluid showLess"
-              alt="show_less"
-              onClick={() => {
-                setStep1(false);
-                setStep2(true);
-              }}
+                src="./images/arrow-up.png"
+                className="img-fluid showLess"
+                alt="show_less"
+                onClick={() => {
+                  setStep1(false);
+                  setStep2(true);
+                }}
             />
           </div>
         </div>

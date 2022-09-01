@@ -49,3 +49,11 @@ export const getJobApplicationById = async (id) => {
     }
 }
 
+export const isApplied = async (id) => {
+    try {
+        return await protectedApi('get', `jobApplications/isApplied/${id}`)
+    } catch (e) {
+        await ErrorAlert()
+    }
+}
+
