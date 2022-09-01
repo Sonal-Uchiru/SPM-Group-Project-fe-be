@@ -33,8 +33,7 @@ export default function AllJobApplications() {
             await ErrorAlert('Something went wrong!')
         })
     }, [])
-
-
+    
     useEffect(() => {
         getJobById(jobId).then((res) => {
             if (res.data) setJob(res.data)
