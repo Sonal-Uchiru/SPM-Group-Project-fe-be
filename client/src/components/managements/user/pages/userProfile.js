@@ -4,20 +4,22 @@ import ProfileMain from "../cards/userProfileMain";
 import UserSummary from "../cards/userSummary";
 import "../css/userProfile.css";
 import {BsArrowLeft} from "react-icons/all";
+import {getUserDetails} from "../../../../api/managements/userApi";
 
 
-export default function UserProfile() {
+export default function UserProfile(props) {
 
-    // const [user, setUser] = useState("");
-    //
-    // useEffect(() => {
-    //     getUser();
-    // }, []);
-    //
-    // async function getUser(){
-    //     const content = await
-    //     setUser(content.data)
-    // }
+    const [user, setUser] = useState("");
+
+    useEffect(() => {
+        getUser();
+    }, []);
+
+    async function getUser() {
+        const content = await getUserDetails()
+        setUser(content.data)
+        // console.log(content.data)
+    }
 
     return (
         <div className="userProfile">
@@ -27,14 +29,14 @@ export default function UserProfile() {
                 </div>
             </div>
             <div className="about">
-                <ProfileMain/>
+                <ProfileMain userDetails={user}/>
             </div>
             <div className="row otherD">
                 <div className="col-md-5">
                     <UserSummary/>
                 </div>
                 <div className="col-md-7">
-                    <UserDetails/>
+                    <UserDetails personalDetails={user}/>
                 </div>
             </div>
         </div>

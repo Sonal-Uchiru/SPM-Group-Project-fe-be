@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Login Page Partially Done">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Delete User Profile Successfully Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/viewAllJobsCompany.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAllJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/viewAppliedJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +52,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/api/managements" />
       <recent name="$PROJECT_DIR$/server/database" />
@@ -76,7 +83,16 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
-      <workItem from="1661568921992" duration="7008000" />
+      <workItem from="1661568921992" duration="9794000" />
+      <workItem from="1661605560491" duration="150000" />
+      <workItem from="1661625060764" duration="9857000" />
+      <workItem from="1661742535375" duration="1919000" />
+      <workItem from="1661745248747" duration="1711000" />
+      <workItem from="1661748364352" duration="1740000" />
+      <workItem from="1661787624749" duration="10126000" />
+      <workItem from="1661874809371" duration="4330000" />
+      <workItem from="1661915423823" duration="1911000" />
+      <workItem from="1662010650232" duration="964000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -267,7 +283,35 @@
       <option name="project" value="LOCAL" />
       <updated>1661571490058</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Login Page Done">
+      <created>1661576217335</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661576217335</updated>
+    </task>
+    <task id="LOCAL-00029" summary="User Profile Completed">
+      <created>1661743719991</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661743719991</updated>
+    </task>
+    <task id="LOCAL-00030" summary="View User Profile Successfully Completed">
+      <created>1661797713196</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1661797713196</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Delete User Profile Successfully Completed">
+      <created>1661800250256</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661800250256</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +350,11 @@
     <MESSAGE value="password complexity checker implemented" />
     <MESSAGE value="merge conflict fixed" />
     <MESSAGE value="Login Page Partially Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Page Partially Done" />
+    <MESSAGE value="Login Page Done" />
+    <MESSAGE value="User Profile Completed" />
+    <MESSAGE value="View User Profile Successfully Completed" />
+    <MESSAGE value="Delete User Profile Successfully Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete User Profile Successfully Completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -315,7 +363,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js</url>
           <line>54</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
