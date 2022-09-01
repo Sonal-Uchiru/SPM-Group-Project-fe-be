@@ -6,6 +6,7 @@ import JobApplicationForm from "./components/managements/jobApplications/jobAppl
 import ViewAppliedJobs from "./components/managements/jobApplications/viewAppliedJobs";
 import ViewAllJobsCompany from "./components/managements/jobs/pages/viewAllJobsCompany";
 import ViewAllJobs from "./components/managements/jobs/pages/viewAllJobs";
+
 function App() {
   return (
     <Router>
