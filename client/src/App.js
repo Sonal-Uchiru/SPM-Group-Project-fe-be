@@ -9,13 +9,14 @@ import ViewAllJobs from "./components/managements/jobs/pages/viewAllJobs";
 import CompanyList from "./components/managements/admin/data_tables/companyList";
 import AllJobApplications from "./components/managements/admin/data_tables/jobApplicationsList";
 import AllJobApplicationsList from "./components/managements/admin/data_tables/jobApplicationsList";
+import JobApplications from "./components/managements/jobApplications/jobApplications";
 
 function App() {
     return (
         <Router>
             <CompanyHeader/>
             <Routes>
-                <Route path="/" element={<AllJobApplicationsList/>}/>
+                <Route path="/" element={<JobApplications/>}/>
             </Routes>
             <Footer/>
         </Router>

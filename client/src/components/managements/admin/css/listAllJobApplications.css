@@ -72,3 +72,16 @@
 .allJobApplications .fa-arrow-left {
     margin-right: 10px;
 }
+
+.allJobApplications .tableEdit {
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+}
+
+.allJobApplications .tableEdit:hover {
+    transform: scale(1.1);
+    align-content: center;
+    text-align: center;
+}
