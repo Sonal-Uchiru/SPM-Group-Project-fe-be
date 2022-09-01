@@ -4,9 +4,8 @@
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Delete User Profile Successfully Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/modals/confirmModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/modals/confirmModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/cards/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/cards/userDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/validations/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,10 @@
       <workItem from="1661742535375" duration="1919000" />
       <workItem from="1661745248747" duration="1711000" />
       <workItem from="1661748364352" duration="1740000" />
-      <workItem from="1661787624749" duration="6081000" />
+      <workItem from="1661787624749" duration="10126000" />
+      <workItem from="1661874809371" duration="4330000" />
+      <workItem from="1661915423823" duration="1911000" />
+      <workItem from="1662010650232" duration="964000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -300,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661797713196</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Delete User Profile Successfully Completed">
+      <created>1661800250256</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661800250256</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

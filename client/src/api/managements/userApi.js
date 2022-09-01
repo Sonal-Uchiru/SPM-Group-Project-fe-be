@@ -1,5 +1,4 @@
 import {unProtectedApi} from "../unprotectedApi";
-import {ErrorAlert} from "../../sweet_alerts/error";
 import {authApi} from "../authApi";
 import {protectedApi} from "../protectedApi";
 
@@ -21,4 +20,8 @@ export const getUserAppliedJobs = async () => {
 
 export const deleteUserProfile = async (data) => {
     return await protectedApi('delete', 'users', data)
+}
+
+export const editUserProfile = async (data) => {
+    return await protectedApi('put', 'users', data)
 }

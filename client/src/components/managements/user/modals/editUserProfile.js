@@ -1,8 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import '../css/editUserProfile.css'
-import {getUserDetails} from "../../../../api/managements/userApi";
+import {editUserProfile, getUserDetails, saveUser} from "../../../../api/managements/userApi";
 import moment from 'moment';
+import {isPasswordComplex} from "../../../external_components/validations/passwordStrengthIndecator";
+import {ErrorAlert} from "../../../../sweet_alerts/error";
+import {SuccessAlert} from "../../../../sweet_alerts/success";
+import Loading from "../../../external_components/spinners/loading";
 
 export default function EditUserProfile(props) {
 
@@ -10,13 +14,11 @@ export default function EditUserProfile(props) {
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
     let [placeHolder, setPlaceHolder] = useState(false)
-    const [user, setUser] = useState('');
-
+    const [loading, setLoading] = useState(false)
 
     async function getUser() {
         const content = await getUserDetails()
-        setUser(content.data)
-        console.log(content.data)
+        setUpdateUser(content.data)
     }
 
     useEffect(() => {
@@ -34,6 +36,62 @@ export default function EditUserProfile(props) {
             reader.readAsDataURL(e.target.files[0])
         }
     }
+
+    const [updateUser, setUpdateUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        address: "",
+        dob: "",
+        aboutMe: "",
+        gender: "",
+        profilePicture: ""
+    })
+
+    const handleEditUserProfile = (e) => {
+        setUpdateUser(prev => ({...prev, [e.target.name]: e.target.value}))
+    }
+
+
+    const UpdateUser = async (e) => {
+        try {
+            e.preventDefault();
+            setLoading(true)
+
+            const editUser = {
+                firstName: updateUser.firstName,
+                lastName: updateUser.lastName,
+                dob: updateUser.dob,
+                address: updateUser.address,
+                mobile: updateUser.mobile,
+                email: updateUser.email,
+                aboutMe: updateUser.aboutMe,
+                profilePicture: updateUser.profilePicture,
+                gender: updateUser.gender
+            }
+
+            console.log(editUser)
+
+            // const content = await editUserProfile(editUser)
+            //
+            // if (content) {
+            //     await SuccessAlert("Successfully Updated Your Account!")
+            //     // navigate("/login")
+            // }
+
+            setLoading(false)
+
+        } catch (error) {
+            setLoading(false)
+            if (error.response.status === 409) {
+                await ErrorAlert("Email already exists");
+                return;
+            }
+            await ErrorAlert("Something went wrong!");
+        }
+    }
+
 
     return (
         <div className="editUserProfile">
@@ -56,13 +114,13 @@ export default function EditUserProfile(props) {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="edit-user-profile">
-                            <form className="ms-4 me-4">
+                            <form className="ms-4 me-4" onSubmit={UpdateUser}>
                                 <div>
                                     <br/>
                                     <span>
                     <center>
                       <div className='box'>
-                          {!user.profilePicture &&
+                          {!updateUser.profilePicture &&
                               <img
                                   className='z-depth-2 Img1'
                                   alt='profile_image'
@@ -71,11 +129,12 @@ export default function EditUserProfile(props) {
                                   hidden={placeHolder}
                               />
                           }
-                          {user.profilePicture &&
+
+                          {updateUser.profilePicture &&
                               <img
                                   className='z-depth-2 Img1'
                                   alt='profile_image'
-                                  src={user.profilePicture}
+                                  src={updateUser.profilePicture}
                                   data-holder-rendered='true'
                                   hidden={placeHolder}
                               />
@@ -122,7 +181,9 @@ export default function EditUserProfile(props) {
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
                                                        id="firstName"
-                                                       value={user.firstName}
+                                                       name="firstName"
+                                                       Value={updateUser.firstName}
+                                                       onChange={handleEditUserProfile}
                                                        placeholder="First Name"
                                                 />
                                             </div>
@@ -138,7 +199,9 @@ export default function EditUserProfile(props) {
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
                                                        placeholder="Last Name"
-                                                       value={user.lastName}
+                                                       name="lastName"
+                                                       Value={updateUser.lastName}
+                                                       onChange={handleEditUserProfile}
                                                 />
                                             </div>
                                         </div>
@@ -156,8 +219,10 @@ export default function EditUserProfile(props) {
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
                                                        id="phone"
+                                                       name="mobile"
                                                        placeholder="Phone Number"
-                                                       value={user.mobile}
+                                                       Value={updateUser.mobile}
+                                                       onChange={handleEditUserProfile}
                                                 />
                                             </div>
                                         </div>
@@ -167,7 +232,9 @@ export default function EditUserProfile(props) {
                                                     Date of Birth
                                                 </label>
                                                 <input type="date" className="form-control custom-input-fields"
-                                                       value={moment(user.dob).format("YYYY-MM-DD")}
+                                                       name="dob"
+                                                       Value={moment(updateUser.dob).format("YYYY-MM-DD")}
+                                                       onChange={handleEditUserProfile}
                                                 />
                                             </div>
                                         </div>
@@ -186,10 +253,12 @@ export default function EditUserProfile(props) {
                                         </label>
                                         <input
                                             type='email'
+                                            name="email"
                                             id='form3Example3'
                                             className='form-control form-control-lg'
                                             placeholder='Email'
-                                            value={user.email}
+                                            Value={updateUser.email}
+                                            onChange={handleEditUserProfile}
                                         />
                                     </div>
 
@@ -204,9 +273,11 @@ export default function EditUserProfile(props) {
                                         <input
                                             type='text'
                                             id='address'
+                                            name="address"
                                             className='form-control form-control-lg'
                                             placeholder='Address'
-                                            value={user.address}
+                                            Value={updateUser.address}
+                                            onChange={handleEditUserProfile}
                                         />
                                     </div>
 
@@ -221,7 +292,9 @@ export default function EditUserProfile(props) {
                                         <select
                                             className='form-select mb-3'
                                             aria-label='.form-select-lg example'
-                                            value={user.gender}
+                                            value={updateUser.gender}
+                                            name="gender"
+                                            onChange={handleEditUserProfile}
                                         >
                                             <option selected disabled value=''>Select Your Gender</option>
                                             <option value='Male'>Male</option>
@@ -239,17 +312,22 @@ export default function EditUserProfile(props) {
                                         </label>
                                         <textarea className="form-control" id="aboutMe" rows="2"
                                                   placeholder='A small description about yourself...'
-                                                  value={user.aboutMe}
+                                                  name="aboutMe"
+                                                  value={updateUser.aboutMe}
+                                                  onChange={handleEditUserProfile}
+
                                         />
                                     </div>
 
+                                    {loading && <Loading/>}
                                     <div className="text-center mt-3">
                                         <Button type="button" className="btn btn-primary changePswButton">Change
                                             Password</Button>
                                     </div>
                                     <div className="text-center mt-1">
                                         <div className="btn-group me-2">
-                                            <button type="button" className="btn btn-primary saveButton">Save Changes
+                                            <button type="submit" className="btn btn-primary saveButton"
+                                                    onClick={UpdateUser}>Save Changes
                                             </button>
                                         </div>
                                         <div className="btn-group me-2">

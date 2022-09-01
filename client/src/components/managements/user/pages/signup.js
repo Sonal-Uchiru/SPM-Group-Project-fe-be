@@ -75,10 +75,8 @@ export default function UserSignUP() {
 
         } catch (error) {
             setLoading(false)
-
             if (error.response.status === 409) {
                 await ErrorAlert("Email already exists");
-                setLoading(false)
                 return;
             }
             await ErrorAlert("Something went wrong!");
