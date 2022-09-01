@@ -174,6 +174,7 @@ export default function CompanyRegistration() {
                         onChange={handleCompanyRegistrationFormChange}
                         className="form-control form-control-lg"
                         placeholder="Company Name"
+                        required={true}
                       />
                     </div>
 
@@ -192,6 +193,7 @@ export default function CompanyRegistration() {
                         placeholder="Phone Number"
                         name="mobile"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       />
                     </div>
 
@@ -210,6 +212,7 @@ export default function CompanyRegistration() {
                         placeholder="Address"
                         name="address"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       />
                     </div>
 
@@ -226,6 +229,7 @@ export default function CompanyRegistration() {
                         aria-label=".form-select-lg example"
                         name="field"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       >
                         <option selected disabled>
                           Field
@@ -268,12 +272,13 @@ export default function CompanyRegistration() {
                         Site URL
                       </label>
                       <input
-                        type="text"
+                        type="url"
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Site URL"
                         name="siteUrl"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       />
                     </div>
 
@@ -292,6 +297,7 @@ export default function CompanyRegistration() {
                         placeholder="Email"
                         name="email"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       />
                     </div>
 
@@ -310,6 +316,7 @@ export default function CompanyRegistration() {
                         placeholder="Password"
                         name="password"
                         onChange={handleCompanyRegistrationFormChange}
+                        required={true}
                       />
                       <span className="p-viewer">
                         <i
@@ -337,6 +344,7 @@ export default function CompanyRegistration() {
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Confirm Password"
+                        required={true}
                       />
                       <span className="p-viewer">
                         <i

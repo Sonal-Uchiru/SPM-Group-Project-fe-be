@@ -19,3 +19,4 @@ export const getApplicantsOfCompany = async (companyId) => {
     `jobApplications/companies/summary/${companyId}`
   );
 };
+
