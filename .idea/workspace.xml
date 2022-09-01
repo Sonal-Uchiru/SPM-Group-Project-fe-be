@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="view applied job application">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="List all job applications for a specific job (Admin) implemented">
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllAppliedJobsApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllAppliedJobsApplications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllAppliedJobsApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661329129130</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="List all job applications for a specific job (Admin) implemented">
+      <created>1662015323893</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1662015323893</updated>
+    </task>
+    <task id="LOCAL-00036" summary="List all job applications for a specific job (Admin) implemented">
+      <created>1662016389806</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1662016389806</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +346,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="schema extend implemented" />
     <MESSAGE value="backend environment configuration" />
     <MESSAGE value="server shared functions implementations" />
     <MESSAGE value="server shared functions implementations part 2 completed" />
@@ -360,7 +370,8 @@
     <MESSAGE value="update job list after applying implemented" />
     <MESSAGE value="minor bug fixed" />
     <MESSAGE value="job application be edit validation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="job application be edit validation updated" />
+    <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="List all job applications for a specific job (Admin) implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

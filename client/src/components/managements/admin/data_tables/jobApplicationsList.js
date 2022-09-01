@@ -9,7 +9,7 @@ import {ErrorAlert} from "../../../../sweet_alerts/error";
 import moment from "moment";
 import {getJobById} from "../../../../api/managements/jobApi";
 
-export default function AllJobApplications() {
+export default function AllJobApplicationsList() {
     const [jobApplications, setJobApplications] = useState([])
     const [job, setJob] = useState([])
     const [selectedJobApplications, setSelectedJobApplications] = useState(0)
@@ -33,7 +33,7 @@ export default function AllJobApplications() {
             await ErrorAlert('Something went wrong!')
         })
     }, [])
-    
+
     useEffect(() => {
         getJobById(jobId).then((res) => {
             if (res.data) setJob(res.data)
