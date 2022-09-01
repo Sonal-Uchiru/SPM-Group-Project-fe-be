@@ -17,12 +17,8 @@ export default function AllJobsAvailable() {
         Calcey Technologies Job List
       </h2>
       <div className="row d-flex justify-content-center">
-        <div className="col-md-4">
           <SummaryCard topic="Actively Reqruiting" count="10" />
-        </div>
-        <div className="col-md-4">
           <SummaryCard topic="Closed" count="5" />
-        </div>
       </div>
 
       <div className="col-md-12 job-available-table-div">
@@ -67,15 +63,16 @@ export default function AllJobsAvailable() {
                 <td>20/12/2012, 03:00:00</td>
                 <td>
                   <img
-                    src="./../images/resume.png"
-                    className="tableEdit"
-                    alt=""
+                      src="./../images/resume.png"
+                      className="tableEdit"
+                      alt=""
                   />
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <br/>
       </div>
       <br />
     </div>

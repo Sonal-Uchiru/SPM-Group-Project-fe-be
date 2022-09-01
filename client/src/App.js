@@ -7,12 +7,14 @@ import AllJobApplications from "./components/managements/admin/data_tables/listA
 import AllJobsAvailable from "./components/managements/admin/data_tables/listAllJobs";
 import CompanyList from "./components/managements/admin/data_tables/companyList";
 import UserList from "./components/managements/admin/data_tables/userList";
+import ListAllAppliedJobApplicationsCompany
+    from "./components/managements/company/data_tables/listAllAppliedJobApplicationsCompany";
 function App() {
   return (
     <Router>
       <CompanyHeader />
       <Routes>
-        <Route path="/" element={<UserList />} />
+          <Route path="/" element={<ListAllAppliedJobApplicationsCompany/>}/>
       </Routes>
       <Footer />
     </Router>

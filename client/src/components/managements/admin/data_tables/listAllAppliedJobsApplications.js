@@ -13,38 +13,28 @@ export default function AllJobApplications() {
   return (
     <div className="allJobApplications">
       <h2 className="pageTitle">
-        <i className="fa fa-arrow-left" />
+        <i className="fa fa-arrow-left"/>
         Job Applications (Senior Software Engineer (Frontend Developer))
       </h2>
       <div className="row d-flex justify-content-center">
-        <div className="col-md-4">
-          <SummaryCard topic="Selected Applications" count="40" />
-        </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Rejected Applications" count="30" />
-        </div>
+        <SummaryCard topic="Selected Applications" count="40"/>
+        <SummaryCard topic="Rejected Applications" count="30"/>
       </div>
-      <div className="report">
-        <button type="button" className="btn btn-primary downloadReportButton">
-          <i className="fa fa-download" />
-          Download Report
-        </button>
-      </div>
+      <br/><br/>
       <div className="col-md-12 job-applications-table-div">
         <div className="scrollbar">
           <table
-            id="allJobApplicationsTable"
-            className="table table-bordered table-sm nowrap table-hover job-applications-table"
+              id="allJobApplicationsTable"
+              className="table table-bordered table-sm nowrap table-hover job-applications-table"
           >
             <thead>
-              <tr>
-                <th />
-                <th>Name</th>
+            <tr>
+              <th/>
+              <th>Name</th>
                 <th>Gender</th>
                 <th>Mobile</th>
                 <th>Applied Date</th>
                 <th>Last Updated Date</th>
-                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -57,13 +47,6 @@ export default function AllJobApplications() {
                 <td>0768899283</td>
                 <td>18/12/2012, 03:00:00</td>
                 <td>20/12/2012, 03:00:00</td>
-                <td>
-                  <img
-                    src="./../images/editing.png"
-                    className="tableEdit"
-                    alt=""
-                  />
-                </td>
               </tr>
 
               <tr>
@@ -75,17 +58,11 @@ export default function AllJobApplications() {
                 <td>0768899283</td>
                 <td>18/12/2012, 03:00:00</td>
                 <td>20/12/2012, 03:00:00</td>
-                <td>
-                  <img
-                    src="./../images/editing.png"
-                    className="tableEdit"
-                    alt=""
-                  />
-                </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <br/>
       </div>
       <br />
     </div>

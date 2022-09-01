@@ -13,36 +13,32 @@ export default function CompanyList() {
   return (
     <div className="companyLists">
       <h2 className="pageTitle">
-        <i className="fa fa-arrow-left" />
+        <i className="fa fa-arrow-left"/>
         Company List
       </h2>
       <div className="row d-flex justify-content-center">
-        <div className="col-md-4">
-          <SummaryCard topic="Information Technology" count="40" />
-        </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Banking" count="30" />
-        </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Other" count="30" />
-        </div>
+        <SummaryCard topic="Information Technology" count="40"/>
+        <SummaryCard topic="Banking" count="30"/>
+        <SummaryCard topic="Other" count="30"/>
       </div>
-      <div className="report mt-2">
+      <br/><br/>
+      <div className="report mt-2 mb-4">
         <button type="button" className="btn btn-primary downloadReportButton">
-          <i className="fa fa-download" />
+          <i className="fa fa-download"/>
           Download Report
         </button>
       </div>
+      <br/>
       <div className="col-md-12 company-list-table-div">
         <div className="scrollbar">
           <table
-            id="allJobApplicationsTable"
-            className="table table-bordered table-sm nowrap table-hover company-list-table"
+              id="allJobApplicationsTable"
+              className="table table-bordered table-sm nowrap table-hover company-list-table"
           >
             <thead>
-              <tr>
-                <th />
-                <th>Name</th>
+            <tr>
+              <th/>
+              <th>Name</th>
                 <th>Field type</th>
                 <th>Mobile</th>
                 <th>Site Url</th>
@@ -66,14 +62,14 @@ export default function CompanyList() {
                 <td>18/12/2012, 03:00:00</td>
                 <td>
                   <img
-                    src="./../images/view.png"
-                    className="tableEdit me-2"
-                    alt=""
+                      src="./../images/document.png"
+                      className="tableEdit"
+                      alt=""
                   />
                   <img
-                    src="./../images/resume.png"
-                    className="tableEdit"
-                    alt=""
+                      src="./../images/eye.png"
+                      className="tableEdit me-2"
+                      alt=""
                   />
                 </td>
               </tr>
@@ -92,20 +88,21 @@ export default function CompanyList() {
                 <td>18/12/2012, 03:00:00</td>
                 <td>
                   <img
-                    src="./../images/view.png"
-                    className="tableEdit me-2"
-                    alt=""
+                      src="./../images/document.png"
+                      className="tableEdit"
+                      alt=""
                   />
                   <img
-                    src="./../images/resume.png"
-                    className="tableEdit"
-                    alt=""
+                      src="./../images/eye.png"
+                      className="tableEdit me-2"
+                      alt=""
                   />
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <br/>
       </div>
       <br />
     </div>
