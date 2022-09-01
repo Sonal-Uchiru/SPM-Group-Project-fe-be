@@ -3,16 +3,16 @@ import React from "react";
 import CompanyHeader from "./components/managements/company/navigation/companyHeader";
 import Footer from "./components/external_components/navigation/footer";
 import JobApplicationForm from "./components/managements/jobApplications/jobApplicationForm";
-import AllJobApplications from "./components/managements/admin/data_tables/listAllAppliedJobsApplications";
-import AllJobsAvailable from "./components/managements/admin/data_tables/listAllJobs";
-import CompanyList from "./components/managements/admin/data_tables/companyList";
-import UserList from "./components/managements/admin/data_tables/userList";
+import ViewAppliedJobs from "./components/managements/jobApplications/viewAppliedJobs";
+import ViewAllJobsCompany from "./components/managements/jobs/pages/viewAllJobsCompany";
+import ViewAllJobs from "./components/managements/jobs/pages/viewAllJobs";
+
 function App() {
   return (
     <Router>
       <CompanyHeader />
       <Routes>
-        <Route path="/" element={<UserList />} />
+        <Route path="/" element={<ViewAppliedJobs/>}/>
       </Routes>
       <Footer />
     </Router>

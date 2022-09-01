@@ -17,6 +17,10 @@
     transform: scale(1.05);
 }
 
+.viewAppliedJobs .red-text-color {
+    color: #FF0000;
+}
+
 .viewAppliedJobs ::placeholder {
     color: #ABB5BE;
 }
