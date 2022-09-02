@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { PasswordStrengthMeter } from "../../../external_components/validations/passwordStrengthIndecator";
-import { BsArrowLeft } from "react-icons/all";
+import { uploadFile } from "../../../../firebase/uploadFile";
+import { ErrorAlert } from "../../../../sweet_alerts/error";
+import { isPasswordComplex } from "../../../external_components/validations/passwordStrengthIndecator";
+import { createCompany } from "../../../../api/managements/companyAPI";
+import { SuccessAlert } from "../../../../sweet_alerts/success";
 
 const eye = <FontAwesomeIcon icon={faEye} />;
 const sleye = <FontAwesomeIcon icon={faEyeSlash} />;
@@ -17,8 +21,7 @@ export default function CompanyRegistration() {
   const [imgData, setImgData] = useState("");
   const [picture, setPicture] = useState("");
   let [placeHolder, setPlaceHolder] = useState(false);
-  const [password, setPassword] = useState("");
-  const [companyName, setCompanyName] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const [company, setCompany] = useState({
     name: "",
@@ -27,7 +30,7 @@ export default function CompanyRegistration() {
     address: "",
     field: "",
     password: "",
-    mobile: 0,
+    mobile: "",
     siteUrl: "",
   });
 
@@ -54,24 +57,6 @@ export default function CompanyRegistration() {
     setConfirmPasswordShown(!confirmPasswordShown);
   };
 
-  const [passwordValidity, setPasswordValidity] = useState({
-    minChar: null,
-    number: null,
-    specialChar: null,
-  });
-  const isNumberRegx = /\d/;
-  const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
-  function validatePassword() {
-    if (
-      passwordValidity.minChar &&
-      passwordValidity.number &&
-      passwordValidity.specialChar
-    ) {
-      return true;
-    }
-  }
-
   const onChangePicture = (e) => {
     if (e.target.files[0]) {
       setPlaceHolder(true);
@@ -84,8 +69,46 @@ export default function CompanyRegistration() {
     }
   };
 
-  const handleSignUp = () => {
-    console.log(company);
+  const handleSignUp = async () => {
+    if (!isPasswordComplex(company.password)) {
+      await ErrorAlert("Not a Strong Password!");
+      return;
+    } else if (company.password !== confirmPassword) {
+      await ErrorAlert("Password Mismatch!");
+      return;
+    } else {
+      let imageUrl = "";
+
+      if (picture !== "") {
+        imageUrl = await uploadFile(picture, "companyProfilePictures");
+      }
+
+      const companyPayload = {
+        name: company.name,
+        logo: imageUrl,
+        email: company.email,
+        address: company.address,
+        field: company.field,
+        password: company.password,
+        mobile: company.mobile,
+        siteUrl: company.siteUrl,
+      };
+
+      console.log(companyPayload);
+      try {
+        const content = await createCompany(companyPayload);
+
+        if (content) {
+          SuccessAlert("Company Registered Successfully!");
+        }
+      } catch (e) {
+        if (e.response.status === 409) {
+          ErrorAlert("Company with that email already excists!");
+          return;
+        }
+        ErrorAlert("Something went wrong!");
+      }
+    }
   };
 
   return (
@@ -174,7 +197,7 @@ export default function CompanyRegistration() {
                         onChange={handleCompanyRegistrationFormChange}
                         className="form-control form-control-lg"
                         placeholder="Company Name"
-                        required={true}
+                        required
                       />
                     </div>
 
@@ -187,13 +210,13 @@ export default function CompanyRegistration() {
                         Phone Number
                       </label>
                       <input
-                        type="text"
+                        type="number"
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Phone Number"
                         name="mobile"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       />
                     </div>
 
@@ -212,7 +235,7 @@ export default function CompanyRegistration() {
                         placeholder="Address"
                         name="address"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       />
                     </div>
 
@@ -229,7 +252,7 @@ export default function CompanyRegistration() {
                         aria-label=".form-select-lg example"
                         name="field"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       >
                         <option selected disabled>
                           Field
@@ -278,7 +301,7 @@ export default function CompanyRegistration() {
                         placeholder="Site URL"
                         name="siteUrl"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       />
                     </div>
 
@@ -297,7 +320,7 @@ export default function CompanyRegistration() {
                         placeholder="Email"
                         name="email"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       />
                     </div>
 
@@ -316,7 +339,7 @@ export default function CompanyRegistration() {
                         placeholder="Password"
                         name="password"
                         onChange={handleCompanyRegistrationFormChange}
-                        required={true}
+                        required
                       />
                       <span className="p-viewer">
                         <i
@@ -330,7 +353,7 @@ export default function CompanyRegistration() {
                         </i>
                       </span>
                     </div>
-                    <PasswordStrengthMeter password={password} />
+                    <PasswordStrengthMeter password={company.password} />
                     <div className="form-outline mb-3">
                       <label
                         className="form-label"
@@ -344,7 +367,10 @@ export default function CompanyRegistration() {
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Confirm Password"
-                        required={true}
+                        required
+                        onChange={(e) => {
+                          setConfirmPassword(e.target.value);
+                        }}
                       />
                       <span className="p-viewer">
                         <i

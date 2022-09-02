@@ -56,10 +56,10 @@ export default function ChangePasswordModal({ type }) {
   const handleChangePassword = async () => {
     if (!isPasswordComplex(password.newPassword)) {
       await ErrorAlert("Not a Strong Password!");
-      return false;
+      return;
     } else if (password.newPassword !== password.confirmPassword) {
       await ErrorAlert("Password Mismatch!");
-      return false;
+      return;
     } else {
       try {
         const content = await changePassword(

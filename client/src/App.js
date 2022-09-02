@@ -15,7 +15,7 @@ function App() {
       <CompanyHeader />
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<ChangePasswordModal />} />
+        <Route path="/" element={<CompanyRegistration />} />
       </Routes>
       <Footer />
     </Router>
