@@ -3,7 +3,10 @@ import "../css/signUp.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {
+    isPasswordStrong,
+    PasswordStrengthMeter
+} from "../../../external_components/validations/passwordStrengthIndecator";
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
@@ -23,8 +26,6 @@ export default function UserSignUP() {
 
     // const isNumberRegx = /\d/
     // const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
-
-
     return (
         <div className="userSignUp">
             <section className=''>
