@@ -1,5 +1,6 @@
 .userProfile {
     overflow-x: hidden;
+    min-height: 600px;
 }
 
 .userProfile .title {

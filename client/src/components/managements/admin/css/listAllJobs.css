@@ -1,0 +1,74 @@
+.allJobsAvailable {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.allJobsAvailable .job-available-table-div {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.allJobsAvailable .job-available-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.allJobsAvailable .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.allJobsAvailable .job-available-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.allJobsAvailable .job-available-table td .tableImg {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.allJobsAvailable .job-available-table td .tableEdit {
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+}
+
+.allJobsAvailable .job-available-table td .tableEdit:hover {
+    transform: scale(1.1);
+    align-content: center;
+    text-align: center;
+}
+
+.allJobsAvailable .pageTitle {
+    color: #1363DF;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.allJobsAvailable .downloadReportButton {
+    background-color: #28A745;
+    border: none;
+    height: 40px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.allJobsAvailable .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.allJobsAvailable .fa {
+    margin-right: 5px;
+}
+
+.allJobsAvailable .fa-arrow-left {
+    margin-right: 10px;
+}

@@ -3,7 +3,16 @@ import "../css/signUp.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {
+    isPasswordComplex,
+    PasswordStrengthMeter
+} from "../../../external_components/validations/passwordStrengthIndecator";
+import {ErrorAlert} from "../../../../sweet_alerts/error";
+import {SuccessAlert} from "../../../../sweet_alerts/success";
+import {saveUser} from "../../../../api/managements/userApi";
+import {useNavigate} from "react-router";
+import Loading from "../../../external_components/spinners/loading";
+
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
@@ -11,7 +20,10 @@ const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
 export default function UserSignUP() {
     const [passwordShown, setPasswordShown] = useState(false);
     const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
-    const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false)
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const navigate = useNavigate();
+
     // Password toggle handler
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -21,8 +33,55 @@ export default function UserSignUP() {
         setConfirmPasswordShown(!confirmPasswordShown);
     };
 
-    // const isNumberRegx = /\d/
-    // const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        password: "",
+        role: "user"
+    })
+
+    const handleUserSignUp = (e) => {
+        setUser(prev => ({...prev, [e.target.name]: e.target.value}))
+    }
+
+
+    const saveUserToDB = async (e) => {
+        try {
+            e.preventDefault();
+
+            if (!isPasswordComplex(user.password)) {
+                await ErrorAlert("Not a Strong Password!")
+                return
+            }
+
+            if (user.password !== confirmPassword) {
+                await ErrorAlert("Password Mismatch!")
+                return
+            }
+
+            setLoading(true)
+
+            const content = await saveUser(user)
+
+            if (content) {
+                await SuccessAlert("Successfully Created Account!")
+                // navigate("/login")
+            }
+
+            setLoading(false)
+
+        } catch (error) {
+            setLoading(false)
+            if (error.response.status === 409) {
+                await ErrorAlert("Email already exists");
+                return;
+            }
+            await ErrorAlert("Something went wrong!");
+        }
+    }
 
 
     return (
@@ -50,7 +109,7 @@ export default function UserSignUP() {
                             <h1 className='signup'>Sign Up</h1>
                             <br/>
 
-                            <form>
+                            <form onSubmit={saveUserToDB}>
                                 <div className='step1'>
                                     <br/>
                                     <div className='form-outline'>
@@ -64,7 +123,10 @@ export default function UserSignUP() {
                                                         type='text'
                                                         id='firstName'
                                                         className='form-control'
+                                                        name='firstName'
                                                         placeholder='First Name'
+                                                        onChange={handleUserSignUp} value={user.firstName}
+                                                        required
                                                     />
                                                 </div>
                                             </div>
@@ -77,8 +139,11 @@ export default function UserSignUP() {
                                                     <input
                                                         type='text'
                                                         id='lastname'
+                                                        name='lastName'
                                                         className='form-control'
                                                         placeholder='Last Name'
+                                                        onChange={handleUserSignUp} value={user.lastName}
+                                                        required
                                                     />
                                                 </div>
                                             </div>
@@ -96,8 +161,11 @@ export default function UserSignUP() {
                                         <input
                                             type='email'
                                             id='email'
+                                            name='email'
                                             className='form-control form-control-lg'
                                             placeholder='Email'
+                                            onChange={handleUserSignUp} value={user.email}
+                                            required
                                         />
                                     </div>
 
@@ -111,9 +179,12 @@ export default function UserSignUP() {
                                         </label>
                                         <input
                                             type='text'
-                                            id='form3Example3'
+                                            name='mobile'
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
+                                            onChange={handleUserSignUp} value={user.mobile}
+                                            required
+
                                         />
                                     </div>
 
@@ -127,12 +198,12 @@ export default function UserSignUP() {
                                         </label>
                                         <input
                                             type={passwordShown ? "text" : "password"}
-                                            id='form3Example3'
+                                            name='password'
                                             className='form-control form-control-lg'
                                             placeholder='Password'
-                                            onChange={(e) => {
-                                                setPassword(e.target.value)
-                                            }}
+                                            onChange={handleUserSignUp} value={user.password}
+                                            required
+
                                         />
                                         <span className="p-viewer">
                                         <i
@@ -146,7 +217,7 @@ export default function UserSignUP() {
                                         </i>
                                       </span>
                                     </div>
-                                    <PasswordStrengthMeter password={password}/>
+                                    <PasswordStrengthMeter password={user.password}/>
                                     <div className='form-outline mb-3'>
                                         <label
                                             className='form-label'
@@ -158,8 +229,13 @@ export default function UserSignUP() {
                                         <input
                                             type={confirmPasswordShown ? "text" : "password"}
                                             id='form3Example3'
+                                            name="confirmPassword"
                                             className='form-control form-control-lg'
                                             placeholder='Confirm Password'
+                                            onChange={(e) => {
+                                                setConfirmPassword(e.target.value)
+                                            }}
+                                            required
                                         />
                                         <span className="p-viewer">
                                         <i
@@ -173,9 +249,9 @@ export default function UserSignUP() {
                                         </i>
                                       </span>
                                     </div>
-
+                                    {loading && <Loading/>}
                                     <button
-                                        type='button'
+                                        type='submit'
                                         className='btn rounded signupBtn'
                                     >
                                         Sign Up

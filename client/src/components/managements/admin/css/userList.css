@@ -1,0 +1,74 @@
+.userList {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.userList .user-list-table-div {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.userList .user-list-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.userList .dataTables_filter {
+  margin-bottom: 15px;
+}
+
+.userList .user-list-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.userList .user-list-table td .tableImg {
+  vertical-align: middle;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  align-content: center;
+  text-align: center;
+}
+
+.userList .user-list-table td .tableEdit {
+  width: 30px;
+  height: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.userList .user-list-table td .tableEdit:hover {
+  transform: scale(1.1);
+  align-content: center;
+  text-align: center;
+}
+
+.userList .pageTitle {
+  color: #1363df;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.userList .downloadReportButton {
+  background-color: #28a745;
+  border: none;
+  height: 40px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.userList .downloadReportButton:hover {
+  background-color: #008d26;
+  border: none;
+}
+
+.userList .fa {
+  margin-right: 5px;
+}
+
+.userList .fa-arrow-left {
+  margin-right: 10px;
+}

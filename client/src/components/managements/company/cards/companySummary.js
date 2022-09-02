@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import React from "react";
 import "../css/companySummary.css";
 
-export default function CompanySummary() {
+export default function CompanySummary({ jobs, applicants }) {
   return (
     <div className="container company-summary">
       <div className="card">
@@ -10,20 +9,20 @@ export default function CompanySummary() {
           <div>
             <h2 className="summary-topic">Summary</h2>
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <div className="d-flex justify-content-center">
               <div className="text-center summary-div1">
-                <p className="summary-text">20</p>
+                <p className="summary-text">{jobs}</p>
               </div>
             </div>
             <h5 className="text-center sub-text mt-3">
               Number of the Jobs posted
             </h5>
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <div className="d-flex justify-content-center">
               <div className="text-center summary-div2">
-                <p className="summary-text">20</p>
+                <p className="summary-text">{applicants}</p>
               </div>
             </div>
             <h5 className="text-center sub-text mt-3">
@@ -37,7 +36,3 @@ export default function CompanySummary() {
     </div>
   );
 }
-
-// <div className="text-center summary-div2 p-5">
-// <p className="summary-text">20</p>
-// </div>
