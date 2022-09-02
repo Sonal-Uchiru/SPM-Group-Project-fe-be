@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="get password test score implementation done" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="try catch removed">
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ui-implementation-1" />
+        <entry key="$PROJECT_DIR$" value="job_application_management" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,12 +38,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/css" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications" />
       <recent name="$PROJECT_DIR$/client/src/api/managements" />
       <recent name="$PROJECT_DIR$/server/database" />
     </key>
@@ -62,6 +72,13 @@
       <workItem from="1660191004840" duration="10410000" />
       <workItem from="1660543099236" duration="8538000" />
       <workItem from="1660583076218" duration="2111000" />
+      <workItem from="1660832918054" duration="5425000" />
+      <workItem from="1660933494513" duration="531000" />
+      <workItem from="1660967997132" duration="20487000" />
+      <workItem from="1661276363331" duration="805000" />
+      <workItem from="1661277451184" duration="370000" />
+      <workItem from="1661320877821" duration="11156000" />
+      <workItem from="1662092146028" duration="7447000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -224,14 +241,168 @@
       <option name="project" value="LOCAL" />
       <updated>1660742568416</updated>
     </task>
-    <task id="LOCAL-00024" summary="get password test score implementation done">
-      <created>1661408860332</created>
+    <task id="LOCAL-00024" summary="client after merge issue and UI minor issues fix">
+      <created>1660743640822</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1661408860332</updated>
+      <updated>1660743640822</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="apply for a job completed">
+      <created>1661003133677</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1661003133677</updated>
+    </task>
+    <task id="LOCAL-00026" summary="edit application implemented">
+      <created>1661239986737</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661239986737</updated>
+    </task>
+    <task id="LOCAL-00027" summary="job development has so many problems">
+      <created>1661241674631</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661241674631</updated>
+    </task>
+    <task id="LOCAL-00028" summary="job application from connected to the job management">
+      <created>1661253855552</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661253855552</updated>
+    </task>
+    <task id="LOCAL-00029" summary="is applied for the job validation implement in be and fe">
+      <created>1661263367449</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661263367449</updated>
+    </task>
+    <task id="LOCAL-00030" summary="is applied for the job validation implement in be and fe part 2">
+      <created>1661321001654</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1661321001654</updated>
+    </task>
+    <task id="LOCAL-00031" summary="merge conflicts resolved">
+      <created>1661321426889</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661321426889</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update job list after applying implemented">
+      <created>1661328419086</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1661328419086</updated>
+    </task>
+    <task id="LOCAL-00033" summary="minor bug fixed">
+      <created>1661328628577</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1661328628577</updated>
+    </task>
+    <task id="LOCAL-00034" summary="job application be edit validation updated">
+      <created>1661329129129</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1661329129130</updated>
+    </task>
+    <task id="LOCAL-00035" summary="List all job applications for a specific job (Admin) implemented">
+      <created>1662015323893</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1662015323893</updated>
+    </task>
+    <task id="LOCAL-00036" summary="List all job applications for a specific job (Admin) implemented">
+      <created>1662016389806</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1662016389806</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Code and files refactored">
+      <created>1662016479995</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1662016479995</updated>
+    </task>
+    <task id="LOCAL-00038" summary="list all job applications partials completed">
+      <created>1662055659842</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662055659842</updated>
+    </task>
+    <task id="LOCAL-00039" summary="required images added to the system">
+      <created>1662099536061</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099536061</updated>
+    </task>
+    <task id="LOCAL-00040" summary="xml">
+      <created>1662099542826</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099542826</updated>
+    </task>
+    <task id="LOCAL-00041" summary="app.js modified">
+      <created>1662099558808</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099558808</updated>
+    </task>
+    <task id="LOCAL-00042" summary="job applications partially completed">
+      <created>1662099615551</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099615551</updated>
+    </task>
+    <task id="LOCAL-00043" summary="view application modal implemented">
+      <created>1662099630364</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099630364</updated>
+    </task>
+    <task id="LOCAL-00044" summary="view cover letter modal implemented">
+      <created>1662099642606</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099642606</updated>
+    </task>
+    <task id="LOCAL-00045" summary="job applications change status implemented">
+      <created>1662100810732</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1662100810732</updated>
+    </task>
+    <task id="LOCAL-00046" summary="try catch removed">
+      <created>1662100884210</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1662100884210</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,24 +421,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial" />
-    <MESSAGE value="boiler template" />
-    <MESSAGE value="schema extend implemented" />
-    <MESSAGE value="backend environment configuration" />
-    <MESSAGE value="server shared functions implementations" />
-    <MESSAGE value="server shared functions implementations part 2 completed" />
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="get all users implemented, delete user bug fixed" />
-    <MESSAGE value="unwanted code removed" />
-    <MESSAGE value="implementing folder structure" />
-    <MESSAGE value="change password route implemented" />
-    <MESSAGE value="code refactored and unwanted files removed" />
-    <MESSAGE value="backend implementations completed" />
     <MESSAGE value="code refactored" />
     <MESSAGE value="after reset (merge issue)" />
     <MESSAGE value="after reset (merge issue) fixed" />
-    <MESSAGE value="get password test score implementation done" />
-    <option name="LAST_COMMIT_MESSAGE" value="get password test score implementation done" />
+    <MESSAGE value="client after merge issue and UI minor issues fix" />
+    <MESSAGE value="apply for a job completed" />
+    <MESSAGE value="edit application implemented" />
+    <MESSAGE value="job development has so many problems" />
+    <MESSAGE value="job application from connected to the job management" />
+    <MESSAGE value="is applied for the job validation implement in be and fe" />
+    <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
+    <MESSAGE value="merge conflicts resolved" />
+    <MESSAGE value="update job list after applying implemented" />
+    <MESSAGE value="minor bug fixed" />
+    <MESSAGE value="job application be edit validation updated" />
+    <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
+    <MESSAGE value="Code and files refactored" />
+    <MESSAGE value="list all job applications partials completed" />
+    <MESSAGE value="required images added to the system" />
+    <MESSAGE value="xml" />
+    <MESSAGE value="app.js modified" />
+    <MESSAGE value="job applications partially completed" />
+    <MESSAGE value="view application modal implemented" />
+    <MESSAGE value="view cover letter modal implemented" />
+    <MESSAGE value="job applications change status implemented" />
+    <MESSAGE value="try catch removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="try catch removed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
