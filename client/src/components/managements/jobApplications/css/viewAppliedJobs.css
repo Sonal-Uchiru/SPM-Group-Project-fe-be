@@ -2,9 +2,9 @@
     min-height: 600px;
 }
 
-.viwAppliedJobs .searchBar {
+.searchBar {
     margin-top: 40px;
-    max-width: 540px;
+    max-width: 500px;
 }
 
 .viewAppliedJobs .form-control {
@@ -25,7 +25,7 @@
     color: #FF0000;
 }
 
-.viewAppliedJobs ::placeholder {
+.viewAppliedJobs::placeholder {
     color: #ABB5BE;
 }
 

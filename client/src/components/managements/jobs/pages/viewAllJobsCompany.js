@@ -61,11 +61,11 @@ export default function ViewAllJobsCompany() {
       <div className="searchBar text-center container">
         <form className="form-inline">
           <input
-            className="form-control mr-sm-2"
-            type="search"
-            placeholder="Search Applied Jobs"
-            aria-label="Search"
-            onChange={(e) => handleSearch(e.target.value)}
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search Jobs"
+              aria-label="Search"
+              onChange={(e) => handleSearch(e.target.value)}
           />
           <span className="p-viewer">
             <img

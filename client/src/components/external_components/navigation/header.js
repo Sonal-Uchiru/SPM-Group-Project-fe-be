@@ -36,6 +36,9 @@ export default function Header() {
     useEffect(() => {
         if (!auth) return
 
+        setName('')
+        setImage(imagePlaceholder)
+
         if (role === 'user') {
             getUserDetails().then((res) => {
                 setName(`${res.data.firstName} ${res.data.lastName}`)
@@ -56,7 +59,7 @@ export default function Header() {
                 await ErrorAlert('Something went wrong!')
             })
         }
-    })
+    }, [])
 
     const logout = async () => {
         setName('')
