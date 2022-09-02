@@ -210,7 +210,7 @@ export default function CompanyRegistration() {
                         Phone Number
                       </label>
                       <input
-                        type="number"
+                        type=""
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Phone Number"

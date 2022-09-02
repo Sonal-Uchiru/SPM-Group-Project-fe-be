@@ -1,15 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
 import "../css/editCompanyProfile.css";
+import {
+  getCompany,
+  updateCompany,
+} from "../../../../api/managements/companyAPI";
+import Loading from "../../../external_components/spinners/loading";
+import { uploadFile } from "../../../../firebase/uploadFile";
+import { ErrorAlert } from "../../../../sweet_alerts/error";
+import { SuccessAlert } from "../../../../sweet_alerts/success";
 
 export default function EditCompanyProfile(props) {
   const [imgData, setImgData] = useState("");
   const [picture, setPicture] = useState("");
+  const [loading, setLoading] = useState(false);
   let [placeHolder, setPlaceHolder] = useState(false);
 
   const [imgData2, setImgData2] = useState("");
   const [picture2, setPicture2] = useState("");
   let [placeHolder2, setPlaceHolder2] = useState(false);
+  const [company, setCompany] = useState({
+    name: "",
+    logo: imgData,
+    email: "",
+    address: "",
+    field: "",
+    password: "",
+    mobile: "",
+    siteUrl: "",
+    description: "",
+    moto: "",
+    coverImage: "",
+  });
+
+  const handleEditCompanyFormOnChange = (e) => {
+    setCompany((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  useEffect(() => {
+    const getCompanyDetails = async () => {
+      const companyData = await getCompany();
+
+      setCompany(companyData.data);
+    };
+    getCompanyDetails();
+  }, []);
 
   const onChangePicture = (e) => {
     if (e.target.files[0]) {
@@ -35,6 +70,57 @@ export default function EditCompanyProfile(props) {
     }
   };
 
+  const handleEditCompany = async () => {
+    try {
+      setLoading(true);
+
+      let imageUrl = "";
+
+      if (picture !== "") {
+        imageUrl = await uploadFile(picture, "companyProfilePictures");
+      }
+
+      let coverImageUrl = "";
+
+      if (picture2 !== "") {
+        coverImageUrl = await uploadFile(picture2, "companyCoverPictures");
+      }
+
+      const companyPayload = {
+        name: company.name,
+        logo: imageUrl === "" ? (company.logo ? company.logo : "") : imageUrl,
+        email: company.email,
+        address: company.address,
+        field: company.field,
+        mobile: company.mobile,
+        siteUrl: company.siteUrl,
+        description: company.description ? company.description : "",
+        moto: company.moto ? company.moto : "",
+        coverImage:
+          coverImageUrl === ""
+            ? company.coverImage
+              ? company.coverImage
+              : ""
+            : coverImageUrl,
+      };
+
+      const content = await updateCompany(companyPayload);
+
+      if (content) {
+        await SuccessAlert("Successfully Updated Your Company Profile!");
+      }
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      if (error.response.status === 409) {
+        await ErrorAlert("Email already exists");
+        return;
+      }
+      await ErrorAlert("Something went wrong!");
+    }
+  };
+
   return (
     <div className="editCompanyProfile">
       <div className="modal">
@@ -50,9 +136,9 @@ export default function EditCompanyProfile(props) {
               className="btn"
               data-dismiss="modal"
               aria-label="Close"
-              onClick={() => {
-                props.closeModal();
-              }}
+              // onClick={() => {
+              //   props.closeModal();
+              // }}
             >
               <span aria-hidden="true">
                 <b>&times;</b>
@@ -64,7 +150,11 @@ export default function EditCompanyProfile(props) {
               <form className="">
                 <div className="coverImage">
                   <img
-                    src="./images/cover.jpeg"
+                    src={
+                      company.coverImage && company.coverImage.length === 0
+                        ? company.coverImage
+                        : `./images/cover.jpeg`
+                    }
                     className="cover"
                     alt="cover_image"
                     hidden={placeHolder2}
@@ -102,7 +192,7 @@ export default function EditCompanyProfile(props) {
                         <img
                           className="z-depth-2 Img1"
                           alt="company_logo"
-                          src="./images/calcey-logo-1-1.jpeg"
+                          src={company.logo}
                           data-holder-rendered="true"
                           hidden={placeHolder}
                         />
@@ -153,6 +243,9 @@ export default function EditCompanyProfile(props) {
                             className="form-control custom-input-fields"
                             id="company_name"
                             placeholder="Company Name"
+                            Value={company.name}
+                            name="name"
+                            onChange={handleEditCompanyFormOnChange}
                           />
                         </div>
                       </div>
@@ -168,6 +261,9 @@ export default function EditCompanyProfile(props) {
                           <select
                             className="form-select mb-3"
                             aria-label=".form-select-lg example"
+                            value={company.field}
+                            name="field"
+                            onChange={handleEditCompanyFormOnChange}
                           >
                             <option selected value="Information Technology">
                               Information Technology
@@ -192,9 +288,12 @@ export default function EditCompanyProfile(props) {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Email"
+                        Value={company.email}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
 
@@ -203,6 +302,7 @@ export default function EditCompanyProfile(props) {
                         className="form-label"
                         form="form3Example3"
                         id="address"
+                        name="address"
                       >
                         Address
                         <mark className="required-icon">*</mark>
@@ -212,6 +312,8 @@ export default function EditCompanyProfile(props) {
                         id="address"
                         className="form-control form-control-lg"
                         placeholder="Address"
+                        Value={company.address}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
 
@@ -225,10 +327,13 @@ export default function EditCompanyProfile(props) {
                         <mark className="required-icon">*</mark>
                       </label>
                       <input
-                        type="text"
+                        type="number"
                         id="phone"
+                        name="mobile"
                         className="form-control form-control-lg"
                         placeholder="Phone Number"
+                        Value={company.mobile}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
 
@@ -243,8 +348,11 @@ export default function EditCompanyProfile(props) {
                       <input
                         type="text"
                         id="moto"
+                        name="moto"
                         className="form-control form-control-lg"
                         placeholder="Moto"
+                        Value={company.moto}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
 
@@ -259,8 +367,11 @@ export default function EditCompanyProfile(props) {
                       <textarea
                         className="form-control"
                         id="description"
+                        name="description"
                         rows="2"
                         placeholder="A Small description about your company..."
+                        Value={company.description}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
 
@@ -278,9 +389,13 @@ export default function EditCompanyProfile(props) {
                         id="url"
                         className="form-control form-control-lg"
                         placeholder="Website URL"
+                        name="siteUrl"
+                        Value={company.siteUrl}
+                        onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
                   </div>
+                  {loading && <Loading />}
                   <div className="text-center mt-3">
                     <Button
                       type="button"
@@ -294,6 +409,9 @@ export default function EditCompanyProfile(props) {
                       <button
                         type="button"
                         className="btn btn-primary saveButton"
+                        onClick={() => {
+                          handleEditCompany();
+                        }}
                       >
                         Save Changes
                       </button>
@@ -302,7 +420,7 @@ export default function EditCompanyProfile(props) {
                       <button
                         type="button"
                         className="btn btn-primary cancelButton"
-                        onClick={props.closeModal()}
+                        // onClick={props.closeModal()}
                       >
                         Cancel
                       </button>

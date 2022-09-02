@@ -20,3 +20,8 @@ export const getApplicantsOfCompany = async (companyId) => {
   );
 };
 
+
+export const updateCompany = async (data) => {
+  return await protectedApi("PUT", "companies", data);
+};
+

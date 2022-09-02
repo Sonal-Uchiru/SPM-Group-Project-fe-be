@@ -8,6 +8,7 @@ import CompanyRegistration from "./components/managements/company/pages/companyR
 import Login from "./components/authentication/loginPage";
 import CompanyProfile from "./components/managements/company/pages/companyProfile";
 import ChangePasswordModal from "./components/external_components/modals/changePasswordModal";
+import EditCompanyProfile from "./components/managements/company/modals/editCompanyProfile";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <CompanyHeader />
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<CompanyRegistration />} />
+        <Route path="/" element={<EditCompanyProfile />} />
       </Routes>
       <Footer />
     </Router>
