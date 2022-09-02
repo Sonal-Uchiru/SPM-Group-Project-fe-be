@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 app connected">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/viewAppliedJobs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="UI improved" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -419,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662135097097</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="UI improved">
+      <created>1662140724096</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1662140724096</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +439,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="after reset (merge issue) fixed" />
     <MESSAGE value="client after merge issue and UI minor issues fix" />
     <MESSAGE value="apply for a job completed" />
     <MESSAGE value="edit application implemented" />
@@ -463,7 +463,8 @@
     <MESSAGE value="try catch removed" />
     <MESSAGE value="before merge" />
     <MESSAGE value="sprint 1 app connected" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint 1 app connected" />
+    <MESSAGE value="UI improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI improved" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
