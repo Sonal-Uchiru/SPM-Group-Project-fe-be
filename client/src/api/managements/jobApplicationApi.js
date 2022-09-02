@@ -24,6 +24,10 @@ export const getJobApplicationById = async (id) => {
         return await protectedApi('get', `jobApplications/${id}`)
 }
 
+export const updateJobApplicationStatus = async (id, data) => {
+        return await protectedApi('patch', `jobApplications/${id}`, data)
+}
+
 export const isApplied = async (id) => {
         return await protectedApi('get', `jobApplications/isApplied/${id}`)
 }

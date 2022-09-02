@@ -26,7 +26,7 @@ function ViewApplication(props) {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="cover-letter-container">
-                                {props.jobApplication._id}
+
                             </div>
                         </Modal.Body>
                     </Modal>

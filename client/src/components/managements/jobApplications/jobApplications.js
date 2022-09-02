@@ -4,13 +4,14 @@ import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
 import "../../managements/admin/css/listAllJobApplications.css";
 import SummaryCard from "../admin/cards/summaryCard";
-import {getAppliedJobApplicationsByJobId} from "../../../api/managements/jobApplicationApi";
+import {getAppliedJobApplicationsByJobId, updateJobApplicationStatus} from "../../../api/managements/jobApplicationApi";
 import {ErrorAlert} from "../../../sweet_alerts/error";
 import moment from "moment";
 import {getJobById} from "../../../api/managements/jobApi";
 import {AiOutlineCloseCircle, FcApproval, MdPendingActions, TiTickOutline} from "react-icons/all";
 import ViewCoverLetter from "./modals/viewCoverLetter";
 import ViewApplication from "./modals/viewApplication";
+import {SuccessAlert} from "../../../sweet_alerts/success";
 
 export default function JobApplications() {
     const [jobApplications, setJobApplications] = useState([])
@@ -59,6 +60,21 @@ export default function JobApplications() {
         }).length;
     }
 
+    const changeJobApplicationStatus = async (id, status) => {
+        try {
+            const data = {
+                status
+            }
+            const content = await updateJobApplicationStatus(id, data)
+
+            if (content) await SuccessAlert("Job Application Status updated successfully!")
+
+        } catch (error) {
+            console.log(error)
+            await ErrorAlert('Something went wrong!')
+        }
+    }
+
     return (
         <>
             <div className="allJobApplications">
@@ -74,7 +90,7 @@ export default function JobApplications() {
                         <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
                     </div>
                     <div className="col-md-4">
-                        <SummaryCard topic="Pending Applications" count={rejectedJobApplications}/>
+                        <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
                     </div>
                 </div>
                 <div className="col-md-12 job-applications-table-div">
@@ -138,13 +154,17 @@ export default function JobApplications() {
                                                 />
                                                 <div className="btn-group me-2" role="group" aria-label="Second group">
                                                     <button type="button"
-                                                            className={`btn btn-outline-success ${jobApplication.status === 1 && 'active'}`}>
+                                                            className={`btn btn-outline-success ${jobApplication.status === 1 && 'active'}`}
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 1)}
+                                                    >
                                                         <TiTickOutline/></button>
                                                     <button type="button"
-                                                            className={`btn btn-outline-warning ${jobApplication.status === 0 && 'active'}`}>
+                                                            className={`btn btn-outline-warning ${jobApplication.status === 0 && 'active'}`}
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 0)}>
                                                         <MdPendingActions/></button>
                                                     <button type="button"
-                                                            className={`btn btn-outline-danger ${jobApplication.status === 2 && 'active'}`}>
+                                                            className={`btn btn-outline-danger ${jobApplication.status === 2 && 'active'}`}
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 2)}>
                                                         <AiOutlineCloseCircle/></button>
                                                 </div>
                                             </th>

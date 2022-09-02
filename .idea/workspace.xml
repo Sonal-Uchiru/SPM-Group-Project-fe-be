@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="list all job applications partials completed">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewCoverLetter.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="view cover letter modal implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/view.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/view.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/jobApplicationApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/jobApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
       <workItem from="1661276363331" duration="805000" />
       <workItem from="1661277451184" duration="370000" />
       <workItem from="1661320877821" duration="11156000" />
-      <workItem from="1662092146028" duration="5914000" />
+      <workItem from="1662092146028" duration="7091000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -350,7 +349,49 @@
       <option name="project" value="LOCAL" />
       <updated>1662055659842</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="required images added to the system">
+      <created>1662099536061</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099536061</updated>
+    </task>
+    <task id="LOCAL-00040" summary="xml">
+      <created>1662099542826</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099542826</updated>
+    </task>
+    <task id="LOCAL-00041" summary="app.js modified">
+      <created>1662099558808</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099558808</updated>
+    </task>
+    <task id="LOCAL-00042" summary="job applications partially completed">
+      <created>1662099615551</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099615551</updated>
+    </task>
+    <task id="LOCAL-00043" summary="view application modal implemented">
+      <created>1662099630364</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099630364</updated>
+    </task>
+    <task id="LOCAL-00044" summary="view cover letter modal implemented">
+      <created>1662099642606</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1662099642606</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,12 +410,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="server shared functions implementations part 2 completed" />
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="get all users implemented, delete user bug fixed" />
-    <MESSAGE value="unwanted code removed" />
-    <MESSAGE value="implementing folder structure" />
-    <MESSAGE value="change password route implemented" />
     <MESSAGE value="code refactored and unwanted files removed" />
     <MESSAGE value="backend implementations completed" />
     <MESSAGE value="code refactored" />
@@ -394,7 +429,13 @@
     <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
     <MESSAGE value="Code and files refactored" />
     <MESSAGE value="list all job applications partials completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="list all job applications partials completed" />
+    <MESSAGE value="required images added to the system" />
+    <MESSAGE value="xml" />
+    <MESSAGE value="app.js modified" />
+    <MESSAGE value="job applications partially completed" />
+    <MESSAGE value="view application modal implemented" />
+    <MESSAGE value="view cover letter modal implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="view cover letter modal implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
