@@ -1,3 +1,7 @@
+.viewAllJobs {
+    min-height: 600px;
+}
+
 .viewAllJobs .searchBar {
     margin-top: 40px;
     max-width: 540px;

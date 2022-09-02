@@ -1,4 +1,8 @@
-.viewAppliedJobs .searchBar {
+.viewAppliedJobs {
+    min-height: 600px;
+}
+
+.viwAppliedJobs .searchBar {
     margin-top: 40px;
     max-width: 540px;
 }

@@ -1,14 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import '../css/editUserProfile.css'
-import PasswordStrengthMeter from "../../../external_components/validations/passwordStrengthIndecator";
+import {editUserProfile, getUserDetails, saveUser} from "../../../../api/managements/userApi";
+import moment from 'moment';
+import {isPasswordComplex} from "../../../external_components/validations/passwordStrengthIndecator";
+import {ErrorAlert} from "../../../../sweet_alerts/error";
+import {SuccessAlert} from "../../../../sweet_alerts/success";
+import Loading from "../../../external_components/spinners/loading";
+import {uploadFile} from "../../../../firebase/uploadFile";
 
-export default function EditUserProfile() {
+export default function EditUserProfile(props) {
 
     const [openModal, setOpenModal] = useState(true)
     const [imgData, setImgData] = useState('')
     const [picture, setPicture] = useState('')
     let [placeHolder, setPlaceHolder] = useState(false)
+    const [loading, setLoading] = useState(false)
+
+
+    async function getUser() {
+        const content = await getUserDetails()
+        setUpdateUser(content.data)
+    }
+
+    useEffect(() => {
+        getUser();
+    }, [])
 
     const onChangePicture = (e) => {
         if (e.target.files[0]) {
@@ -22,20 +39,70 @@ export default function EditUserProfile() {
         }
     }
 
+    const [updateUser, setUpdateUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        address: "",
+        dob: "",
+        aboutMe: "",
+        gender: "",
+        profilePicture: ""
+    })
+
+    const handleEditUserProfile = (e) => {
+        setUpdateUser(prev => ({...prev, [e.target.name]: e.target.value}))
+    }
+
+
+    const UpdateUser = async (e) => {
+        try {
+            e.preventDefault();
+            setLoading(true)
+
+            let imageUrl = "";
+
+            if (picture !== "") {
+                imageUrl = await uploadFile(picture, "userProfilePicture")
+            }
+
+            const editUser = {
+                firstName: updateUser.firstName,
+                lastName: updateUser.lastName,
+                dob: updateUser.dob,
+                address: updateUser.address,
+                mobile: updateUser.mobile,
+                aboutMe: updateUser.aboutMe,
+                profilePicture: imageUrl === "" ? updateUser.profilePicture ? updateUser.profilePicture : "" : imageUrl,
+                gender: updateUser.gender
+            }
+
+            const cleanEditUser = Object.fromEntries(Object.entries(editUser).filter(([_, v]) => v !== ''))
+
+            console.log(cleanEditUser)
+
+            const content = await editUserProfile(editUser)
+
+            if (content) {
+                await SuccessAlert("Successfully Updated Your Account!")
+            }
+
+            setLoading(false)
+
+        } catch (error) {
+            setLoading(false)
+            if (error.response.status === 409) {
+                await ErrorAlert("Email already exists");
+                return;
+            }
+            await ErrorAlert("Something went wrong!");
+        }
+    }
+
+
     return (
         <div className="editUserProfile">
-            <div>
-                <button
-                    type="button"
-                    onClick={() => {
-                        setOpenModal(true)
-                    }}
-                    className="primary"
-                >
-                    Edit Profile
-
-                </button>
-            </div>
             <div className="modal">
                 <Modal show={openModal} size="lg">
                     <Modal.Header>
@@ -48,37 +115,47 @@ export default function EditUserProfile() {
                             className="btn"
                             data-dismiss="modal"
                             aria-label="Close"
-                            onClick={() => {
-                                setOpenModal(false);
-                            }}
+                            onClick={() => props.onCancel2()}
                         >
                             <span aria-hidden="true"><b>&times;</b></span>
                         </button>
                     </Modal.Header>
                     <Modal.Body>
                         <div className="edit-user-profile">
-                            <form className="ms-4 me-4">
+                            <form className="ms-4 me-4" onSubmit={UpdateUser}>
                                 <div>
                                     <br/>
                                     <span>
                     <center>
                       <div className='box'>
-                        <img
-                            className='z-depth-2 Img1'
-                            alt='profile_image'
-                            src='./images/user (8).png'
-                            data-holder-rendered='true'
-                            hidden={placeHolder}
-                        />
+                          {!updateUser.profilePicture &&
+                              <img
+                                  className='z-depth-2 Img1'
+                                  alt='profile_image'
+                                  src="./images/user (8).png"
+                                  data-holder-rendered='true'
+                                  hidden={placeHolder}
+                              />
+                          }
 
-                        <img
-                            className='z-depth-2 Img1'
-                            alt='profile_image'
-                            src={imgData}
-                            id='movieImage'
-                            data-holder-rendered='true'
-                            hidden={!placeHolder}
-                        />
+                          {updateUser.profilePicture &&
+                              <img
+                                  className='z-depth-2 Img1'
+                                  alt='profile_image'
+                                  src={updateUser.profilePicture}
+                                  data-holder-rendered='true'
+                                  hidden={placeHolder}
+                              />
+                          }
+
+                          <img
+                              className='z-depth-2 Img1'
+                              alt='profile_image'
+                              src={imgData}
+                              id='movieImage'
+                              data-holder-rendered='true'
+                              hidden={!placeHolder}
+                          />
 
                         <div className='image-upload'>
                           <label htmlFor='file-input'>
@@ -111,8 +188,13 @@ export default function EditUserProfile() {
 
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
-                                                       id="email"
-                                                       placeholder="First Name"/>
+                                                       id="firstName"
+                                                       name="firstName"
+                                                       Value={updateUser.firstName}
+                                                       onChange={handleEditUserProfile}
+                                                       placeholder="First Name"
+                                                       required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col">
@@ -125,7 +207,12 @@ export default function EditUserProfile() {
 
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
-                                                       placeholder="Last Name"/>
+                                                       placeholder="Last Name"
+                                                       name="lastName"
+                                                       Value={updateUser.lastName}
+                                                       onChange={handleEditUserProfile}
+                                                       required
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -142,7 +229,12 @@ export default function EditUserProfile() {
                                                 </label>
                                                 <input type="text" className="form-control custom-input-fields"
                                                        id="phone"
-                                                       placeholder="Phone Number"/>
+                                                       name="mobile"
+                                                       placeholder="Phone Number"
+                                                       Value={updateUser.mobile}
+                                                       onChange={handleEditUserProfile}
+                                                       required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col">
@@ -151,6 +243,10 @@ export default function EditUserProfile() {
                                                     Date of Birth
                                                 </label>
                                                 <input type="date" className="form-control custom-input-fields"
+                                                       name="dob"
+                                                       id="dob"
+                                                       Value={moment(updateUser.dob).format("YYYY-MM-DD")}
+                                                       onChange={handleEditUserProfile}
                                                 />
                                             </div>
                                         </div>
@@ -169,9 +265,13 @@ export default function EditUserProfile() {
                                         </label>
                                         <input
                                             type='email'
+                                            name="email"
                                             id='form3Example3'
                                             className='form-control form-control-lg'
                                             placeholder='Email'
+                                            Value={updateUser.email}
+                                            readOnly
+                                            required
                                         />
                                     </div>
 
@@ -186,8 +286,11 @@ export default function EditUserProfile() {
                                         <input
                                             type='text'
                                             id='address'
+                                            name="address"
                                             className='form-control form-control-lg'
                                             placeholder='Address'
+                                            Value={updateUser.address}
+                                            onChange={handleEditUserProfile}
                                         />
                                     </div>
 
@@ -202,8 +305,11 @@ export default function EditUserProfile() {
                                         <select
                                             className='form-select mb-3'
                                             aria-label='.form-select-lg example'
+                                            value={updateUser.gender}
+                                            name="gender"
+                                            onChange={handleEditUserProfile}
                                         >
-                                            <option selected disabled>Gender</option>
+                                            <option selected disabled value=''>Select Your Gender</option>
                                             <option value='Male'>Male</option>
                                             <option value='Female'>Female</option>
                                         </select>
@@ -218,20 +324,28 @@ export default function EditUserProfile() {
                                             About Me
                                         </label>
                                         <textarea className="form-control" id="aboutMe" rows="2"
-                                                  placeholder='A small description about yourself...'/>
+                                                  placeholder='A small description about yourself...'
+                                                  name="aboutMe"
+                                                  value={updateUser.aboutMe}
+                                                  onChange={handleEditUserProfile}
+
+                                        />
                                     </div>
 
+                                    {loading && <Loading/>}
                                     <div className="text-center mt-3">
                                         <Button type="button" className="btn btn-primary changePswButton">Change
                                             Password</Button>
                                     </div>
                                     <div className="text-center mt-1">
                                         <div className="btn-group me-2">
-                                            <button type="button" className="btn btn-primary saveButton">Save Changes
+                                            <button type="submit" className="btn btn-primary saveButton"
+                                                    onClick={UpdateUser}>Save Changes
                                             </button>
                                         </div>
                                         <div className="btn-group me-2">
-                                            <button type="button" className="btn btn-primary cancelButton">Cancel
+                                            <button type="button" className="btn btn-primary cancelButton"
+                                                    onClick={() => props.onCancel2()}>Cancel
                                             </button>
                                         </div>
                                     </div>
