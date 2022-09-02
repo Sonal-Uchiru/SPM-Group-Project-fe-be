@@ -14,6 +14,7 @@ export default function AllJobApplicationsList() {
     const [job, setJob] = useState([])
     const [selectedJobApplications, setSelectedJobApplications] = useState(0)
     const [rejectedJobApplications, setRejectedJobApplications] = useState(0)
+    const [pendingJobApplications, setPendingJobApplications] = useState(0)
 
     const jobId = "62f9e781d06c6643a5f74e69";
     const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
@@ -24,6 +25,7 @@ export default function AllJobApplicationsList() {
                 setJobApplications(res.data.content)
                 setSelectedJobApplications(jobApplicationsCount(res.data.content, 1))
                 setRejectedJobApplications(jobApplicationsCount(res.data.content, 2))
+                setPendingJobApplications(jobApplicationsCount(res.data.content, 0))
                 $(document).ready(function () {
                     $("#allJobApplicationsTable").DataTable();
                 });
@@ -61,6 +63,9 @@ export default function AllJobApplicationsList() {
                 </div>
                 <div className="col-md-4">
                     <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
+                </div>
+                <div className="col-md-4">
+                    <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
                 </div>
             </div>
             <div className="col-md-12 job-applications-table-div">
