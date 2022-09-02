@@ -4,7 +4,7 @@ import {BsArrowLeft, BsArrowRight} from "react-icons/all";
 import './css/jobApplicationFormStyles.css'
 import {handleKeyDown} from "../../external_components/validations/preventWhiteSpace";
 import moment from 'moment';
-import {validateNegative} from "./jobApplicationValidation";
+import {validateNegative} from "./validations/jobApplicationValidation";
 import {getUserDetails} from "../../../api/managements/userApi";
 import {
     getJobApplicationById,
