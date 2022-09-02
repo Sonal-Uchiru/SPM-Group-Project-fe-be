@@ -9,36 +9,37 @@ import {userLogin} from "../../api/managements/userApi";
 import {SuccessAlert} from "../../sweet_alerts/success";
 import {ErrorAlert} from "../../sweet_alerts/error";
 import {setTokenToLocalStorage} from "./tokenHandling";
+import {App_Routes} from "../../constant/appRoutes";
+import {Link} from "react-router-dom";
+import {setRoleToLocalStorage} from "./roleHandling";
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
 const sleye = <FontAwesomeIcon icon={faEyeSlash}/>;
 
 export default function Login() {
 
-  const [passwordShown, setPasswordShown] = useState(false);
-  const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+    const [passwordShown, setPasswordShown] = useState(false);
+    const [loading, setLoading] = useState(false)
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-  // Password toggle handler
-  const togglePasswordVisibility = () => {
-    setPasswordShown(!passwordShown);
-  };
+    // Password toggle handler
+    const togglePasswordVisibility = () => {
+        setPasswordShown(!passwordShown);
+    };
 
-  function navigateToPage(role) {
+    const navigateToPage = async (role) => {
+        await setRoleToLocalStorage(role)
+        if (role === "company") {
+            navigate(App_Routes.VIEW_ALL_COMPANY_OWN_JOBS);
+            return
+        }
 
-    if (role === "company") {
-      // navigate("/adminHome");
-      alert("company");
-      return
-    }
-
-    if (role === "user") {
-      alert("user")
-      return
-      // navigate("/userHome");
-    }
+        if (role === "user") {
+            navigate(App_Routes.VIEW_ALL_JOBS);
+            return
+        }
 
     if (role === "admin") {
       alert("admin")
@@ -62,9 +63,9 @@ export default function Login() {
 
       if (login) {
         await SuccessAlert("Successfully!")
-        await setTokenToLocalStorage(login.data.token)
-        navigateToPage(login.data.role);
-        setLoading(false)
+          await setTokenToLocalStorage(login.data.token)
+          await navigateToPage(login.data.role);
+          setLoading(false)
       }
 
     } catch (error) {
@@ -149,9 +150,9 @@ export default function Login() {
           </form>
 
           <span className="text-center" id="links">
-            <a id="clickme">Join Now</a>
-            <br id="clikmeBr" />
-            <a id="clickme">Start Hiring</a>
+            <Link id="clickme" to={App_Routes.USER_SIGN_UP}>Join Now</Link>
+            <br id="clikmeBr"/>
+            <Link id="clickme" to={App_Routes.COMPANY_SIGN_UP}>Start Hiring</Link>
           </span>
         </div>
       </div>

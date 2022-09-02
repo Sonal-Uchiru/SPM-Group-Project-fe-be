@@ -5,7 +5,7 @@ import './css/jobApplicationFormStyles.css'
 import {handleKeyDown} from "../../external_components/validations/preventWhiteSpace";
 import moment from 'moment';
 import {validateNegative} from "./jobApplicationValidation";
-import {getUser} from "../../../api/managements/userApi";
+import {getUserDetails} from "../../../api/managements/userApi";
 import {
     getJobApplicationById,
     saveJobApplication,
@@ -97,7 +97,7 @@ export function JobApplicationForm(props) {
 
     useEffect(async () => {
         try {
-            const content = await getUser()
+            const content = await getUserDetails()
             setCurrentUser(content.data)
 
         } catch (e) {

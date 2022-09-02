@@ -9,3 +9,6 @@ export function getTokenFromLocalStorage() {
 export async function removeTokenFromLocalStorage() {
   await localStorage.removeItem("Job-Search-Token");
 }
+
+
+

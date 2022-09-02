@@ -34,9 +34,9 @@ export const getAllJobsByToken = async (req, res) => {
         const company = await Company.findById(ObjectId(companyId._id))
 
         if (content && company) {
-            res.status(200).send(content)
+            return res.status(200).send(content)
         }
-        if (content == false || company == false) {
+        if (content === false || company === false) {
             res.status(404).send({
                 message: `There are no jobs related to company ${companyId._id} `,
             })

@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="try catch removed" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="before merge">
+      <change afterPath="$PROJECT_DIR$/client/src/components/authentication/userRoles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/adminHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/companyHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/userHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/constant/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/constant/appRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/tokenHandling.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/tokenHandling.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/404/notFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/404/notFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/adminHeader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/navigation/adminHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/navigation/companyHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userHeader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/navigation/userHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/testPdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constant/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/roleHandling.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/private/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/private/protectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/job.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/job.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/development" />
+    <option name="BRANCH" value="origin/company_management_development" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,11 +71,11 @@
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components" />
+      <recent name="$PROJECT_DIR$/client/src/components/external_components/css" />
+      <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation" />
+      <recent name="$PROJECT_DIR$/client/src/constant" />
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/css" />
-      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards" />
-      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications" />
-      <recent name="$PROJECT_DIR$/client/src/api/managements" />
-      <recent name="$PROJECT_DIR$/server/database" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -399,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662100884210</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="before merge">
+      <created>1662122147915</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1662122147915</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="code refactored" />
     <MESSAGE value="after reset (merge issue)" />
     <MESSAGE value="after reset (merge issue) fixed" />
     <MESSAGE value="client after merge issue and UI minor issues fix" />
@@ -443,7 +475,8 @@
     <MESSAGE value="view cover letter modal implemented" />
     <MESSAGE value="job applications change status implemented" />
     <MESSAGE value="try catch removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="try catch removed" />
+    <MESSAGE value="before merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="before merge" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
