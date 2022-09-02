@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Code and files refactored">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="list all job applications partials completed">
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewCoverLetter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/images/view.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/view.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobApplications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +42,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/css" />
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards" />
@@ -80,6 +82,7 @@
       <workItem from="1661276363331" duration="805000" />
       <workItem from="1661277451184" duration="370000" />
       <workItem from="1661320877821" duration="11156000" />
+      <workItem from="1662092146028" duration="5914000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1659419767316</created>
@@ -340,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662016479995</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="list all job applications partials completed">
+      <created>1662055659842</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662055659842</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +369,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="server shared functions implementations" />
     <MESSAGE value="server shared functions implementations part 2 completed" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="get all users implemented, delete user bug fixed" />
@@ -384,7 +393,8 @@
     <MESSAGE value="job application be edit validation updated" />
     <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
     <MESSAGE value="Code and files refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code and files refactored" />
+    <MESSAGE value="list all job applications partials completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="list all job applications partials completed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
