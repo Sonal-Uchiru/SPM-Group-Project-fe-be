@@ -37,11 +37,16 @@ export default function ChangePasswordModal({ type }) {
     setPasswordShown3(!passwordShown3);
   };
 
-  const validatePasswords = () => {
-    return (
-      password.newPassword === password.confirmPassword &&
-      isPasswordComplex(password.newPassword)
-    );
+  const validatePasswords = async () => {
+    if (!isPasswordComplex(password.newPassword)) {
+      await ErrorAlert("Not a Strong Password!");
+      return false;
+    } else if (password.newPassword !== password.confirmPassword) {
+      await ErrorAlert("Password Mismatch!");
+      return false;
+    } else {
+      return true;
+    }
   };
 
   const handleChangePasswordFormOnChange = (e) => {
@@ -49,8 +54,13 @@ export default function ChangePasswordModal({ type }) {
   };
 
   const handleChangePassword = async () => {
-    const isValid = validatePasswords();
-    if (isValid) {
+    if (!isPasswordComplex(password.newPassword)) {
+      await ErrorAlert("Not a Strong Password!");
+      return false;
+    } else if (password.newPassword !== password.confirmPassword) {
+      await ErrorAlert("Password Mismatch!");
+      return false;
+    } else {
       try {
         const content = await changePassword(
           {
@@ -70,8 +80,6 @@ export default function ChangePasswordModal({ type }) {
         }
         ErrorAlert("Something went wrong!");
       }
-    } else {
-      ErrorAlert("Password Mismatch!");
     }
   };
   return (
