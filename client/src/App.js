@@ -10,6 +10,7 @@ import CompanyList from "./components/managements/admin/data_tables/companyList"
 import AllJobApplications from "./components/managements/admin/data_tables/jobApplicationsList";
 import AllJobApplicationsList from "./components/managements/admin/data_tables/jobApplicationsList";
 import JobApplications from "./components/managements/jobApplications/jobApplications";
+import ViewCoverLetter from "./components/managements/jobApplications/modals/viewCoverLetter";
 
 function App() {
     return (
