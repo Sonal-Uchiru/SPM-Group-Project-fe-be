@@ -12,6 +12,7 @@ import {SuccessAlert} from "../../../../sweet_alerts/success";
 import {saveUser} from "../../../../api/managements/userApi";
 import {useNavigate} from "react-router";
 import Loading from "../../../external_components/spinners/loading";
+import {App_Routes} from "../../../../constant/appRoutes";
 
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
@@ -68,7 +69,7 @@ export default function UserSignUP() {
 
             if (content) {
                 await SuccessAlert("Successfully Created Account!")
-                // navigate("/login")
+                navigate(App_Routes.ROOT)
             }
 
             setLoading(false)
