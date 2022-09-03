@@ -469,7 +469,7 @@ export function JobApplicationForm(props) {
                                     <h3 className="blue-text-color ms-2 mb-3 mt-4">Cover Letter</h3>
                                     <div className="form-group me-4 ms-4">
                                     <textarea className="form-control " id="exampleFormControlTextarea1"
-                                              Value={jobApplication.coverLetter}
+                                              value={jobApplication.coverLetter}
                                               name="coverLetter"
                                               rows="3" maxLength={250} onChange={handleJobApplicationFormChange}/>
                                     </div>
