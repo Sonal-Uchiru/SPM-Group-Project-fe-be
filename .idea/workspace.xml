@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="UI improved">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application cover letter displayed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplicationForm.js" afterDir="false" />
     </list>
@@ -79,13 +79,6 @@
       <workItem from="1661277451184" duration="370000" />
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial">
-      <created>1659419767316</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1659419767316</updated>
     </task>
     <task id="LOCAL-00002" summary="boiler template">
       <created>1659457302718</created>
@@ -423,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662140724096</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="job application cover letter displayed">
+      <created>1662189797558</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1662189797559</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +442,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="client after merge issue and UI minor issues fix" />
     <MESSAGE value="apply for a job completed" />
     <MESSAGE value="edit application implemented" />
     <MESSAGE value="job development has so many problems" />
@@ -467,7 +466,8 @@
     <MESSAGE value="before merge" />
     <MESSAGE value="sprint 1 app connected" />
     <MESSAGE value="UI improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI improved" />
+    <MESSAGE value="job application cover letter displayed" />
+    <option name="LAST_COMMIT_MESSAGE" value="job application cover letter displayed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

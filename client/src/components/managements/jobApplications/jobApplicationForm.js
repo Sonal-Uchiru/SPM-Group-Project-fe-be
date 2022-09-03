@@ -410,7 +410,7 @@ export function JobApplicationForm(props) {
                                         <button type="button" id="licensesBtn"
                                                 className="btn light-blue-btn btn-block"
                                                 onClick={() => fileRef.current.click()}
-                                        >ADD
+                                        >{licensesAndCertificates ? licensesAndCertificates[0].name : 'ADD'}
                                             <input id="inputTagLicense" type="file" ref={fileRef} hidden
                                                    accept="application/msword, application/pdf"
                                                    onChange={(e) => setLicensesAndCertificates(e.target.files)}/>
@@ -440,9 +440,12 @@ export function JobApplicationForm(props) {
                                     <div className="text-center">
                                         <button type="button" className="btn light-blue-btn btn-block"
                                                 onClick={() => fileRef2.current.click()}
-                                        >ADD
+                                        >{supportingDocument ? supportingDocument[0].name : 'ADD'}
                                             <input id="inputTagResume" type="file"
-                                                   onChange={(e) => setSupportingDocument(e.target.files)}
+                                                   onChange={(e) => {
+                                                       console.log(e.target.files)
+                                                       setSupportingDocument(e.target.files)
+                                                   }}
                                                    ref={fileRef2} hidden accept="application/msword, application/pdf"/>
                                         </button>
 
