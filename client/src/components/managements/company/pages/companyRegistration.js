@@ -258,7 +258,7 @@ export default function CompanyRegistration() {
                                                 required
                                             >
                                                 <option selected disabled>
-                                                    Field
+                                                    Select a Field
                                                 </option>
                                                 <option value="Information Technology">
                                                     Information Technology
