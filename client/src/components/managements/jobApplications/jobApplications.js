@@ -12,6 +12,7 @@ import {AiOutlineCloseCircle, FcApproval, MdPendingActions, TiTickOutline} from 
 import ViewCoverLetter from "./modals/viewCoverLetter";
 import ViewApplication from "./modals/viewApplication";
 import {SuccessAlert} from "../../../sweet_alerts/success";
+import {useParams} from "react-router";
 
 export default function JobApplications() {
     const [jobApplications, setJobApplications] = useState([])
@@ -24,12 +25,11 @@ export default function JobApplications() {
     const [coverLetter, setCoverLetter] = useState("")
     const [application, setApplication] = useState([])
 
-
-    const jobId = "62f9e781d06c6643a5f74e69";
+    const jobId = useParams();
     const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
 
     useEffect(() => {
-        getAppliedJobApplicationsByJobId(jobId).then((res) => {
+        getAppliedJobApplicationsByJobId(jobId.id).then((res) => {
             if (res.data.content) {
                 setJobApplications(res.data.content)
                 setSelectedJobApplications(jobApplicationsCount(res.data.content, 1))
@@ -46,7 +46,7 @@ export default function JobApplications() {
     }, [])
 
     useEffect(() => {
-        getJobById(jobId).then((res) => {
+        getJobById(jobId.id).then((res) => {
             if (res.data) setJob(res.data)
         }).catch(async (err) => {
             console.log(err)

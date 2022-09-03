@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import React, {Suspense} from "react";
 
-import {App_Routes} from "./constant/appRoutes";
+import {App_Routes, ID} from "./constant/appRoutes";
 import {Private} from "./private/protectedRoute";
 
 import Header from "./components/external_components/navigation/header";
@@ -19,6 +19,7 @@ import ViewAppliedJobs from "./components/managements/jobApplications/viewApplie
 import UserProfile from "./components/managements/user/pages/userProfile";
 import UserSignUP from "./components/managements/user/pages/signup";
 import NotFoundPage from "./components/external_components/404/notFound";
+import JobApplications from "./components/managements/jobApplications/jobApplications";
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
                            element={<Private Role={'company'} Component={ViewAllJobsCompany}/>}/>
                     <Route path={App_Routes.VIEW_USER_APPLIED_JOBS}
                            element={<Private Role={'user'} Component={ViewAppliedJobs}/>}/>
+                    <Route path={App_Routes.VIEW_JOB_OWN_JOB_APPLICATIONS + ID}
+                           element={<Private Role={'company'} Component={JobApplications}/>}/>
                     <Route path={App_Routes.ERROR} element={<NotFoundPage/>}/>
                 </Routes>
                 <Footer/>

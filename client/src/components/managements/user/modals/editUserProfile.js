@@ -80,9 +80,8 @@ export default function EditUserProfile(props) {
 
             const cleanEditUser = Object.fromEntries(Object.entries(editUser).filter(([_, v]) => v !== ''))
 
-            console.log(cleanEditUser)
 
-            const content = await editUserProfile(editUser)
+            const content = await editUserProfile(cleanEditUser)
 
             if (content) {
                 await SuccessAlert("Successfully Updated Your Account!")

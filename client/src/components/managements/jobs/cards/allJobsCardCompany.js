@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from "react";
 import "../css/allJobsCardCompany.css";
-import { Modal } from "react-bootstrap";
+import {Modal} from "react-bootstrap";
 import EditJob from "../modals/editJob";
-import { SuccessAlert } from "../../../../sweet_alerts/success";
-import { ErrorAlert } from "../../../../sweet_alerts/error";
+import {SuccessAlert} from "../../../../sweet_alerts/success";
+import {ErrorAlert} from "../../../../sweet_alerts/error";
 import {
   deleteJob,
   getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
 import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
+import {useNavigate} from "react-router";
+import {App_Routes} from "../../../../constant/appRoutes";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
@@ -18,6 +20,7 @@ export default function AllJobsCardCompany(props) {
   const [applicants, setApplicants] = useState("");
   const [image, setImage] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
+  const navigate = useNavigate();
 
   useEffect(async () => {
     //Change this route to correct one
@@ -139,15 +142,16 @@ export default function AllJobsCardCompany(props) {
           <div className="text-center">
             <div className="text-center">
               <div className="btn-group me-2">
-                <button type="button" className="btn btn-primary viewButton">
+                <button type="button" className="btn btn-primary viewButton"
+                        onClick={() => navigate(`${App_Routes.VIEW_JOB_OWN_JOB_APPLICATIONS}/${jobContent._id}`)}>
                   View Job Applications
                 </button>
               </div>
               <div className="btn-group me-2">
                 <button
-                  type="button"
-                  onClick={() => editJob()}
-                  className="btn btn-primary editButton"
+                    type="button"
+                    onClick={() => editJob()}
+                    className="btn btn-primary editButton"
                 >
                   Edit
                 </button>

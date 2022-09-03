@@ -7,5 +7,8 @@ export const App_Routes = {
     USER_PROFILE: '/my-profile',
     COMPANY_PROFILE: '/company-profile',
     VIEW_ALL_COMPANY_OWN_JOBS: '/company-jobs',
+    VIEW_JOB_OWN_JOB_APPLICATIONS: '/job-applications',
     ERROR: '*'
 }
+
+export const ID = '/:id'
