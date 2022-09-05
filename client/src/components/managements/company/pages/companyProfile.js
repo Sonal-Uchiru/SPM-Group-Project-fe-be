@@ -35,7 +35,7 @@ export default function CompanyProfile() {
       </h2>
       <div className="coverImage">
         <img
-          src="./images/cover.jpeg"
+          src={company.coverImage ? company.coverImage : `./images/cover.jpeg`}
           className="cover img-fluid container-fluid"
           alt="cover_image"
         />

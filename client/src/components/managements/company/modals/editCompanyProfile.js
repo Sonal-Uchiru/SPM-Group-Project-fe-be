@@ -46,7 +46,9 @@ export default function EditCompanyProfile(props) {
     getCompanyDetails();
   }, []);
 
-  const onChangePicture = (e) => {
+  const onChangeProfilePicture = (e) => {
+    console.log("Profile Picture");
+
     if (e.target.files[0]) {
       setPlaceHolder(true);
       setPicture(e.target.files);
@@ -58,7 +60,9 @@ export default function EditCompanyProfile(props) {
     }
   };
 
-  const onChangePicture2 = (e) => {
+  const onChangeCoverPicture = (e) => {
+    console.log("Cover Picture");
+
     if (e.target.files[0]) {
       setPlaceHolder2(true);
       setPicture2(e.target.files);
@@ -104,7 +108,11 @@ export default function EditCompanyProfile(props) {
             : coverImageUrl,
       };
 
-      const content = await updateCompany(companyPayload);
+      const cleanedCompanyPayload = Object.fromEntries(
+        Object.entries(companyPayload).filter(([_, v]) => v !== "")
+      );
+
+      const content = await updateCompany(cleanedCompanyPayload);
 
       if (content) {
         await SuccessAlert("Successfully Updated Your Company Profile!");
@@ -136,9 +144,9 @@ export default function EditCompanyProfile(props) {
               className="btn"
               data-dismiss="modal"
               aria-label="Close"
-              // onClick={() => {
-              //   props.closeModal();
-              // }}
+              onClick={() => {
+                props.closeModal();
+              }}
             >
               <span aria-hidden="true">
                 <b>&times;</b>
@@ -147,7 +155,12 @@ export default function EditCompanyProfile(props) {
           </Modal.Header>
           <Modal.Body>
             <div className="edit-company-profile">
-              <form className="">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleEditCompany();
+                }}
+              >
                 <div className="coverImage">
                   <img
                     src={
@@ -179,11 +192,12 @@ export default function EditCompanyProfile(props) {
                       <input
                         id="file-input"
                         type="file"
-                        onChange={onChangePicture2}
+                        onChange={onChangeCoverPicture}
                       />
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <br />
                   <span>
@@ -192,7 +206,11 @@ export default function EditCompanyProfile(props) {
                         <img
                           className="z-depth-2 Img1"
                           alt="company_logo"
-                          src={company.logo}
+                          src={
+                            company.logo
+                              ? company.logo
+                              : `./images/logo-placeholder-image-modified.png`
+                          }
                           data-holder-rendered="true"
                           hidden={placeHolder}
                         />
@@ -216,9 +234,9 @@ export default function EditCompanyProfile(props) {
                             />
                           </label>
                           <input
-                            id="file-input"
+                            id="file-input2"
                             type="file"
-                            onChange={onChangePicture}
+                            onChange={onChangeProfilePicture}
                           />
                         </div>
                       </div>
@@ -246,6 +264,7 @@ export default function EditCompanyProfile(props) {
                             Value={company.name}
                             name="name"
                             onChange={handleEditCompanyFormOnChange}
+                            required
                           />
                         </div>
                       </div>
@@ -264,6 +283,7 @@ export default function EditCompanyProfile(props) {
                             value={company.field}
                             name="field"
                             onChange={handleEditCompanyFormOnChange}
+                            required
                           >
                             <option selected value="Information Technology">
                               Information Technology
@@ -294,6 +314,7 @@ export default function EditCompanyProfile(props) {
                         placeholder="Email"
                         Value={company.email}
                         onChange={handleEditCompanyFormOnChange}
+                        required
                       />
                     </div>
 
@@ -314,6 +335,7 @@ export default function EditCompanyProfile(props) {
                         placeholder="Address"
                         Value={company.address}
                         onChange={handleEditCompanyFormOnChange}
+                        required
                       />
                     </div>
 
@@ -334,6 +356,7 @@ export default function EditCompanyProfile(props) {
                         placeholder="Phone Number"
                         Value={company.mobile}
                         onChange={handleEditCompanyFormOnChange}
+                        required
                       />
                     </div>
 
@@ -385,12 +408,13 @@ export default function EditCompanyProfile(props) {
                         <mark className="required-icon">*</mark>
                       </label>
                       <input
-                        type="text"
+                        type="url"
                         id="url"
                         className="form-control form-control-lg"
                         placeholder="Website URL"
                         name="siteUrl"
                         Value={company.siteUrl}
+                        required
                         onChange={handleEditCompanyFormOnChange}
                       />
                     </div>
@@ -407,11 +431,8 @@ export default function EditCompanyProfile(props) {
                   <div className="text-center mt-1">
                     <div className="btn-group me-2">
                       <button
-                        type="button"
+                        type="submit"
                         className="btn btn-primary saveButton"
-                        onClick={() => {
-                          handleEditCompany();
-                        }}
                       >
                         Save Changes
                       </button>
@@ -420,7 +441,9 @@ export default function EditCompanyProfile(props) {
                       <button
                         type="button"
                         className="btn btn-primary cancelButton"
-                        // onClick={props.closeModal()}
+                        onClick={() => {
+                          props.closeModal();
+                        }}
                       >
                         Cancel
                       </button>
