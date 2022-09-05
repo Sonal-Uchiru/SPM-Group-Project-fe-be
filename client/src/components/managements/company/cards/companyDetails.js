@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "../css/companyDetails.css";
 import EditCompanyProfile from "../modals/editCompanyProfile";
+import ChangePasswordModal from "../../../external_components/modals/changePasswordModal";
+import ConfirmModal from "../../../external_components/modals/confirmModal";
 
 export default function CompanyDetails({ company }) {
   const [editModalOpen, setEditModalOpen] = useState(false);
+  const [ChangePasswordModalOpen, setChangePasswordModalOpen] = useState(true);
+  const [show, setShow] = useState(false);
 
   const closeEditModal = () => {
     setEditModalOpen(false);
+  };
+
+  const closePasswordModal = () => {
+    setChangePasswordModalOpen(false);
   };
 
   return (
@@ -36,7 +44,10 @@ export default function CompanyDetails({ company }) {
               >
                 Edit Details
               </button>
-              <button className="btn btn-danger btn-md btn-delete">
+              <button
+                className="btn btn-danger btn-md btn-delete"
+                onClick={() => setShow(true)}
+              >
                 Delete Profile
               </button>
             </div>
@@ -51,7 +62,21 @@ export default function CompanyDetails({ company }) {
           closeModal={() => {
             closeEditModal();
           }}
+          openChangePassword={() => {
+            console.log("Open Change Password");
+            closeEditModal();
+            setChangePasswordModalOpen(true);
+          }}
         />
+      )}
+      {ChangePasswordModalOpen && (
+        <ChangePasswordModal
+          closePasswordModal={closePasswordModal()}
+          userRole="companies"
+        />
+      )}
+      {show && (
+        <ConfirmModal onCancel={() => setShow(false)} userType="company" />
       )}
     </>
   );
