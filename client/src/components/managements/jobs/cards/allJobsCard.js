@@ -1,4 +1,4 @@
-import React, {useEffect, useImperativeHandle, useState} from "react";
+import React, { useEffect, useImperativeHandle, useState } from "react";
 import "../css/allJobsCard.css";
 import {
   getAppliedJobApplicationsByJobId,
@@ -9,6 +9,7 @@ export default function AllJobsCard(props) {
   const jobContent = props.content;
   const [applicants, setApplicants] = useState("");
   const [isAppliedToJob, setIsAppliedToJob] = useState(false);
+  const [logo, setLogo] = useState("");
 
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(true);
@@ -16,8 +17,15 @@ export default function AllJobsCard(props) {
   useEffect(async () => {
     const content = await isApplied(jobContent._id);
     setIsAppliedToJob(content.data.isApplied);
+    await setCompanyLogo();
     await getJobsApplicants();
   }, []);
+
+  async function setCompanyLogo() {
+    jobContent.companyDetails[0].logo 
+      ? setLogo(jobContent.companyDetails[0].logo)
+      : setLogo('./images/user (8).png');
+  }
 
   async function getJobsApplicants() {
     const response = await getAppliedJobApplicationsByJobId(jobContent._id);
@@ -26,20 +34,20 @@ export default function AllJobsCard(props) {
 
   useImperativeHandle(props.refs, () => ({
     updateCard() {
-      setIsAppliedToJob(true)
-      setApplicants(prev => (prev + 1))
+      setIsAppliedToJob(true);
+      setApplicants((prev) => prev + 1);
     },
-  }))
+  }));
 
   return (
-      <div className="container allJobsCard">
-        <div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-3">
-              <div className="logoImage text-center">
-                <img
-                    src={jobContent.companyDetails[0].logo}
-                    className="img-fluid companyLogo"
+    <div className="container allJobsCard">
+      <div className="card mb-3">
+        <div className="row g-0">
+          <div className="col-md-3">
+            <div className="logoImage text-center">
+              <img
+                src={logo}
+                className="img-fluid companyLogo"
                 alt="company_logo"
               />
             </div>
@@ -120,24 +128,26 @@ export default function AllJobsCard(props) {
           </div>
 
           <div className="text-center">
-            {jobContent.status === 1 && <button
+            {jobContent.status === 1 && (
+              <button
                 type="button"
                 className="btn btn-primary apply"
                 onClick={props.onModalOpen}
                 disabled={isAppliedToJob}
-            >
-              {isAppliedToJob ? "Applied" : "Apply"}
-            </button>}
+              >
+                {isAppliedToJob ? "Applied" : "Apply"}
+              </button>
+            )}
 
-            <br/>
+            <br />
             <img
-                src="./images/arrow-up.png"
-                className="img-fluid showLess"
-                alt="show_less"
-                onClick={() => {
-                  setStep1(false);
-                  setStep2(true);
-                }}
+              src="./images/arrow-up.png"
+              className="img-fluid showLess"
+              alt="show_less"
+              onClick={() => {
+                setStep1(false);
+                setStep2(true);
+              }}
             />
           </div>
         </div>
