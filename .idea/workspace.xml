@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Css Issues Corrected" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Required mark added to the company registration page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfileMain.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,13 +84,6 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00006" summary="server shared functions implementations part 2 completed">
-      <created>1659854423635</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1659854423635</updated>
     </task>
     <task id="LOCAL-00007" summary="dev created">
       <created>1659981397177</created>
@@ -425,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662370797991</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Required mark added to the company registration page">
+      <created>1662371255690</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1662371255690</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
     <MESSAGE value="merge conflicts resolved" />
     <MESSAGE value="update job list after applying implemented" />
     <MESSAGE value="minor bug fixed" />
@@ -469,7 +471,8 @@
     <MESSAGE value="company reg minor improvement" />
     <MESSAGE value="sprint 1 improvement added" />
     <MESSAGE value="Css Issues Corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Css Issues Corrected" />
+    <MESSAGE value="Required mark added to the company registration page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Required mark added to the company registration page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
