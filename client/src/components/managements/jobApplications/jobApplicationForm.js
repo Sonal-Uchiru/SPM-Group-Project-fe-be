@@ -308,7 +308,8 @@ export function JobApplicationForm(props) {
                                                 </label>
                                                 <input type="number" className="form-control custom-input-fields"
                                                        readOnly Value={currentUser.mobile}
-                                                       placeholder="Phone Number" required/>
+                                                       placeholder="Phone Number" required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col-sm">

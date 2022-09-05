@@ -195,6 +195,7 @@ export default function UserSignUP() {
                                             name='mobile'
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
+                                            
                                             onChange={handleUserSignUp} value={user.mobile}
                                             required
 

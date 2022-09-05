@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Required mark added to the company registration page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfileMain.css" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Validation To DOB" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,20 +81,6 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00007" summary="dev created">
-      <created>1659981397177</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1659981397177</updated>
-    </task>
-    <task id="LOCAL-00008" summary="save job application in progress">
-      <created>1660145597703</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1660145597703</updated>
     </task>
     <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
       <created>1660195906540</created>
@@ -428,7 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662371255690</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Profile Image Issue Corrected">
+      <created>1662377994192</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1662377994192</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Add Validation To DOB">
+      <created>1662378139658</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1662378139659</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,8 +444,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="merge conflicts resolved" />
-    <MESSAGE value="update job list after applying implemented" />
     <MESSAGE value="minor bug fixed" />
     <MESSAGE value="job application be edit validation updated" />
     <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
@@ -472,7 +467,9 @@
     <MESSAGE value="sprint 1 improvement added" />
     <MESSAGE value="Css Issues Corrected" />
     <MESSAGE value="Required mark added to the company registration page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Required mark added to the company registration page" />
+    <MESSAGE value="Profile Image Issue Corrected" />
+    <MESSAGE value="Add Validation To DOB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Validation To DOB" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
