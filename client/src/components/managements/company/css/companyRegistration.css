@@ -11,6 +11,15 @@
     margin-bottom: 40px;
 }
 
+.companyRegistration .backToLogin {
+    color: #1363DF;
+}
+
+.companyRegistration .backToLogin:hover {
+    color: #06283D;
+}
+
+
 .companyRegistration .almostThere {
     color: #1363DF;
     text-align: center;

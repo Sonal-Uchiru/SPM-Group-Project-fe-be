@@ -281,6 +281,10 @@ export default function CompanyRegistration() {
                                                 aria-hidden="true"
                                             />
                                         </button>
+                                        <br/>
+                                        <div className="text-center">
+                                            <a href="/" className="link-primary backToLogin"><b>Back to Login</b></a>
+                                        </div>
                                     </div>
                                 )}
 

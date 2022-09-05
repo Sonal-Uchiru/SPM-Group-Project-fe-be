@@ -1,9 +1,11 @@
+
 .footer #footer {
     background-color: #06283D;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 50px;
+
 }
 
 .footer #copyright {

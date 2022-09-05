@@ -5,6 +5,8 @@ import UserSummary from "../cards/userSummary";
 import "../css/userProfile.css";
 import {BsArrowLeft} from "react-icons/all";
 import {getUserDetails} from "../../../../api/managements/userApi";
+import {App_Routes} from "../../../../constant/appRoutes";
+import {useNavigate} from "react-router";
 
 
 export default function UserProfile(props) {
@@ -20,6 +22,7 @@ export default function UserProfile(props) {
         setUser(content.data)
         // console.log(content.data)
     }
+
 
     return (
         <div className="userProfile">

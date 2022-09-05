@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 improvement added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCardCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCardCompany.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constant/appRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constant/appRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/notFoundPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/notFoundPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyRegistration.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyRegistration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyRegistration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobsCompany.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/signUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +32,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
