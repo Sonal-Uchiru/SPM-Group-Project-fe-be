@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 improvement added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="view application implemented">
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +92,6 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
-      <created>1660195906540</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1660195906540</updated>
     </task>
     <task id="LOCAL-00010" summary="get all by token">
       <created>1660196279343</created>
@@ -435,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662378139659</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="view application implemented">
+      <created>1662382161157</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382161158</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +455,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="minor bug fixed" />
     <MESSAGE value="job application be edit validation updated" />
     <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
     <MESSAGE value="Code and files refactored" />
@@ -479,7 +479,8 @@
     <MESSAGE value="Required mark added to the company registration page" />
     <MESSAGE value="Profile Image Issue Corrected" />
     <MESSAGE value="Add Validation To DOB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Validation To DOB" />
+    <MESSAGE value="view application implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="view application implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
