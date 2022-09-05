@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 improvement added">
-      <change afterPath="$PROJECT_DIR$/client/src/firebase/testFirebase.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="firebase file upload issue fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/firebase/uploadFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/firebase/uploadFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/cards/summaryCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/cards/summaryCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/company_management_development" />
@@ -83,21 +88,8 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="5070000" />
-      <workItem from="1662357514669" duration="1968000" />
-    </task>
-    <task id="LOCAL-00006" summary="server shared functions implementations part 2 completed">
-      <created>1659854423635</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1659854423635</updated>
-    </task>
-    <task id="LOCAL-00007" summary="dev created">
-      <created>1659981397177</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1659981397177</updated>
+      <workItem from="1662357514669" duration="2163000" />
+      <workItem from="1662360408339" duration="5178000" />
     </task>
     <task id="LOCAL-00008" summary="save job application in progress">
       <created>1660145597703</created>
@@ -428,7 +420,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662225442772</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="firebase file upload issue fixed">
+      <created>1662360009660</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1662360009662</updated>
+    </task>
+    <task id="LOCAL-00056" summary="firebase file upload issue fixed">
+      <created>1662360054131</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1662360054131</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +453,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="is applied for the job validation implement in be and fe" />
     <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
     <MESSAGE value="merge conflicts resolved" />
     <MESSAGE value="update job list after applying implemented" />
@@ -472,7 +477,8 @@
     <MESSAGE value="after successfull registration user redirects back to login page" />
     <MESSAGE value="company reg minor improvement" />
     <MESSAGE value="sprint 1 improvement added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint 1 improvement added" />
+    <MESSAGE value="firebase file upload issue fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="firebase file upload issue fixed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
