@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 improvement added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/notFoundPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/notFoundPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyRegistration.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyRegistration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyRegistration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobsCompany.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/viewAllJobsCompany.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/signUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfileMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
-    </list>
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Css Issues Corrected" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,13 +81,6 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00005" summary="server shared functions implementations">
-      <created>1659789793244</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1659789793244</updated>
     </task>
     <task id="LOCAL-00006" summary="server shared functions implementations part 2 completed">
       <created>1659854423635</created>
@@ -440,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662191827526</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Css Issues Corrected">
+      <created>1662370797990</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1662370797991</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +444,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="is applied for the job validation implement in be and fe" />
     <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
     <MESSAGE value="merge conflicts resolved" />
     <MESSAGE value="update job list after applying implemented" />
@@ -484,7 +468,8 @@
     <MESSAGE value="after successfull registration user redirects back to login page" />
     <MESSAGE value="company reg minor improvement" />
     <MESSAGE value="sprint 1 improvement added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint 1 improvement added" />
+    <MESSAGE value="Css Issues Corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Css Issues Corrected" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

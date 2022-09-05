@@ -11,6 +11,11 @@
     margin-bottom: 40px;
 }
 
+.companyRegistration .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
 .companyRegistration .backToLogin {
     color: #1363DF;
 }
