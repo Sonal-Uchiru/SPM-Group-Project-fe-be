@@ -244,6 +244,7 @@ export default function EditUserProfile(props) {
                                                 <input type="date" className="form-control custom-input-fields"
                                                        name="dob"
                                                        id="dob"
+                                                       max={moment().format("YYYY-MM-DD")}
                                                        Value={moment(updateUser.dob).format("YYYY-MM-DD")}
                                                        onChange={handleEditUserProfile}
                                                 />

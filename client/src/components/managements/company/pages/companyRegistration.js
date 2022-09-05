@@ -192,6 +192,9 @@ export default function CompanyRegistration() {
                                                 id="companyName"
                                             >
                                                 Company Name
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type="text"
@@ -211,6 +214,9 @@ export default function CompanyRegistration() {
                                                 id="phoneNumber"
                                             >
                                                 Phone Number
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type=""
@@ -230,6 +236,9 @@ export default function CompanyRegistration() {
                                                 id="address"
                                             >
                                                 Address
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type="text"
@@ -249,6 +258,9 @@ export default function CompanyRegistration() {
                                                 id="field"
                                             >
                                                 Field
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <select
                                                 className="form-select mb-3"
@@ -281,6 +293,10 @@ export default function CompanyRegistration() {
                                                 aria-hidden="true"
                                             />
                                         </button>
+                                        <br/>
+                                        <div className="text-center">
+                                            <a href="/" className="link-primary backToLogin"><b>Back to Login</b></a>
+                                        </div>
                                     </div>
                                 )}
 
@@ -296,6 +312,9 @@ export default function CompanyRegistration() {
                                                 id="phoneNumber"
                                             >
                                                 Site URL
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type="url"
@@ -315,6 +334,9 @@ export default function CompanyRegistration() {
                                                 id="email"
                                             >
                                                 Email
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type="email"
@@ -334,6 +356,9 @@ export default function CompanyRegistration() {
                                                 id="password"
                                             >
                                                 Password
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type={passwordShown ? "text" : "password"}
@@ -364,6 +389,9 @@ export default function CompanyRegistration() {
                                                 id="password"
                                             >
                                                 Confirm Password
+                                                <mark className="required-icon">
+                                                    *
+                                                </mark>
                                             </label>
                                             <input
                                                 type={confirmPasswordShown ? "text" : "password"}

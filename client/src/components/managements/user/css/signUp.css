@@ -11,6 +11,19 @@
     margin-bottom: 40px;
 }
 
+.userSignUp .backToLogin {
+    color: #1363DF;
+}
+
+.userSignUp .backToLogin:hover {
+    color: #06283D;
+}
+
+.userSignUp .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
 .userSignUp .quote {
     color: #1363DF;
 }
