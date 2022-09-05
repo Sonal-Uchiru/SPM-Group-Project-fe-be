@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import "./css/confirmModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,9 @@ import { deleteUserProfile, saveUser } from "../../../api/managements/userApi";
 import { SuccessAlert } from "../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../sweet_alerts/error";
 import { deleteCompanyProfile } from "../../../api/managements/companyAPI";
+import { App_Routes } from "../.././../constant/appRoutes";
+import { removeRoleFromLocalStorage } from "../../authentication/roleHandling";
+import { removeTokenFromLocalStorage } from "../../authentication/tokenHandling";
 
 const eye = <FontAwesomeIcon icon={faEye} />;
 const sleye = <FontAwesomeIcon icon={faEyeSlash} />;
@@ -16,7 +20,7 @@ export default function ConfirmModal(props) {
   const [passwordShown, setPasswordShown] = useState(false);
   const [openModal, setOpenModal] = useState(true);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const [confirm, setConfirm] = useState({
     password: "",
   });
@@ -41,7 +45,9 @@ export default function ConfirmModal(props) {
 
       if (content) {
         await SuccessAlert("Successfully Deleted Account!");
-        // navigate("/login")
+        await removeRoleFromLocalStorage();
+        await removeTokenFromLocalStorage();
+        navigate(App_Routes.ROOT);
       }
 
       setLoading(false);
