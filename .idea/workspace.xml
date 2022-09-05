@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sprint 1 improvement added">
+      <change afterPath="$PROJECT_DIR$/client/src/firebase/testFirebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCardCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/cards/allJobsCardCompany.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constant/appRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constant/appRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/firebase/uploadFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/firebase/uploadFile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="qa" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,14 +82,8 @@
       <workItem from="1661277451184" duration="370000" />
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
-      <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00005" summary="server shared functions implementations">
-      <created>1659789793244</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1659789793244</updated>
+      <workItem from="1662222474499" duration="5070000" />
+      <workItem from="1662357514669" duration="1968000" />
     </task>
     <task id="LOCAL-00006" summary="server shared functions implementations part 2 completed">
       <created>1659854423635</created>
@@ -430,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662191827526</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="sprint 1 improvement added">
+      <created>1662225442771</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1662225442772</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
