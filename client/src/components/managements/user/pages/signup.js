@@ -13,6 +13,7 @@ import {saveUser} from "../../../../api/managements/userApi";
 import {useNavigate} from "react-router";
 import Loading from "../../../external_components/spinners/loading";
 import {App_Routes} from "../../../../constant/appRoutes";
+import {validateNegative} from "../../jobApplications/validations/jobApplicationValidation";
 
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
@@ -195,7 +196,7 @@ export default function UserSignUP() {
                                             name='mobile'
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
-                                            
+                                            onKeyPress={validateNegative}
                                             onChange={handleUserSignUp} value={user.mobile}
                                             required
 
