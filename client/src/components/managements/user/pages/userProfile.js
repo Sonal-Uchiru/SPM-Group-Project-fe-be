@@ -26,7 +26,7 @@ export default function UserProfile(props) {
 
     return (
         <div className="userProfile">
-            <h2 className="title"><BsArrowLeft/> User Profile</h2>
+            <h2 className="title"><BsArrowLeft className="Back"/> User Profile</h2>
             <div className="container-fluid">
                 <div className="coverImage container-fluid">
                 </div>
