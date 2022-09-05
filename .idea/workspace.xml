@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Validation To DOB" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Validation To DOB">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/companyProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/pages/companyProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/userProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/pages/userProfile.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,13 +94,6 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
-      <created>1660195906540</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1660195906540</updated>
     </task>
     <task id="LOCAL-00010" summary="get all by token">
       <created>1660196279343</created>
@@ -432,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662378139659</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Add Validation To DOB">
+      <created>1662378394610</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662378394610</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
