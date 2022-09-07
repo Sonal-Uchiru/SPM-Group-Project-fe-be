@@ -10,7 +10,11 @@ export default function CompanyProfileMain({ company }) {
           <div className="col-md-4">
             <div className="text-center m-4">
               <img
-                src={company.logo}
+                src={
+                  company.logo
+                    ? company.logo
+                    : `./images/logo-placeholder-image-modified.png`
+                }
                 className="img-fluid user-img"
                 alt="Logo"
               />

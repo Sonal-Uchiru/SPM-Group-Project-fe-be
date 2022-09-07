@@ -308,7 +308,8 @@ export function JobApplicationForm(props) {
                                                 </label>
                                                 <input type="number" className="form-control custom-input-fields"
                                                        readOnly Value={currentUser.mobile}
-                                                       placeholder="Phone Number" required/>
+                                                       placeholder="Phone Number" required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col-sm">
@@ -410,7 +411,7 @@ export function JobApplicationForm(props) {
                                         <button type="button" id="licensesBtn"
                                                 className="btn light-blue-btn btn-block"
                                                 onClick={() => fileRef.current.click()}
-                                        >ADD
+                                        >{licensesAndCertificates ? licensesAndCertificates[0].name : 'ADD'}
                                             <input id="inputTagLicense" type="file" ref={fileRef} hidden
                                                    accept="application/msword, application/pdf"
                                                    onChange={(e) => setLicensesAndCertificates(e.target.files)}/>
@@ -440,9 +441,12 @@ export function JobApplicationForm(props) {
                                     <div className="text-center">
                                         <button type="button" className="btn light-blue-btn btn-block"
                                                 onClick={() => fileRef2.current.click()}
-                                        >ADD
+                                        >{supportingDocument ? supportingDocument[0].name : 'ADD'}
                                             <input id="inputTagResume" type="file"
-                                                   onChange={(e) => setSupportingDocument(e.target.files)}
+                                                   onChange={(e) => {
+                                                       console.log(e.target.files)
+                                                       setSupportingDocument(e.target.files)
+                                                   }}
                                                    ref={fileRef2} hidden accept="application/msword, application/pdf"/>
                                         </button>
 
@@ -469,7 +473,7 @@ export function JobApplicationForm(props) {
                                     <h3 className="blue-text-color ms-2 mb-3 mt-4">Cover Letter</h3>
                                     <div className="form-group me-4 ms-4">
                                     <textarea className="form-control " id="exampleFormControlTextarea1"
-                                              Value={jobApplication.coverLetter}
+                                              value={jobApplication.coverLetter}
                                               name="coverLetter"
                                               rows="3" maxLength={250} onChange={handleJobApplicationFormChange}/>
                                     </div>

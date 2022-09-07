@@ -1,3 +1,7 @@
+.not-found {
+    min-height: 715px;
+}
+
 .not-found .not-found-img {
     object-fit: contain;
     width: 500px;

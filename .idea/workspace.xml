@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="UI improved" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="sign up restrict negative added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/company_management_development" />
@@ -13,10 +22,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="job_application_management" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,6 +44,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -76,83 +90,7 @@
       <workItem from="1661277451184" duration="370000" />
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial">
-      <created>1659419767316</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1659419767316</updated>
-    </task>
-    <task id="LOCAL-00002" summary="boiler template">
-      <created>1659457302718</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1659457302718</updated>
-    </task>
-    <task id="LOCAL-00003" summary="schema extend implemented">
-      <created>1659459980276</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1659459980276</updated>
-    </task>
-    <task id="LOCAL-00004" summary="backend environment configuration">
-      <created>1659513308895</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1659513308895</updated>
-    </task>
-    <task id="LOCAL-00005" summary="server shared functions implementations">
-      <created>1659789793244</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1659789793244</updated>
-    </task>
-    <task id="LOCAL-00006" summary="server shared functions implementations part 2 completed">
-      <created>1659854423635</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1659854423635</updated>
-    </task>
-    <task id="LOCAL-00007" summary="dev created">
-      <created>1659981397177</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1659981397177</updated>
-    </task>
-    <task id="LOCAL-00008" summary="save job application in progress">
-      <created>1660145597703</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1660145597703</updated>
-    </task>
-    <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
-      <created>1660195906540</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1660195906540</updated>
-    </task>
-    <task id="LOCAL-00010" summary="get all by token">
-      <created>1660196279343</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1660196279343</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update status, delete job application by job ids">
-      <created>1660198538318</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1660198538318</updated>
+      <workItem from="1662222474499" duration="2927000" />
     </task>
     <task id="LOCAL-00012" summary="update status, delete job application by job ids">
       <created>1660199656142</created>
@@ -420,7 +358,84 @@
       <option name="project" value="LOCAL" />
       <updated>1662140724096</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="job application cover letter displayed">
+      <created>1662189797558</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1662189797559</updated>
+    </task>
+    <task id="LOCAL-00051" summary="job application improvements implemented">
+      <created>1662191329277</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1662191329277</updated>
+    </task>
+    <task id="LOCAL-00052" summary="after successfull registration user redirects back to login page">
+      <created>1662191690731</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1662191690731</updated>
+    </task>
+    <task id="LOCAL-00053" summary="company reg minor improvement">
+      <created>1662191827525</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1662191827526</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Css Issues Corrected">
+      <created>1662370797990</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1662370797991</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Required mark added to the company registration page">
+      <created>1662371255690</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1662371255690</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Profile Image Issue Corrected">
+      <created>1662377994192</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1662377994192</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Add Validation To DOB">
+      <created>1662378139658</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1662378139659</updated>
+    </task>
+    <task id="LOCAL-00058" summary="view application implemented">
+      <created>1662382161157</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382161158</updated>
+    </task>
+    <task id="LOCAL-00059" summary="back icon navigation added">
+      <created>1662382461500</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382461501</updated>
+    </task>
+    <task id="LOCAL-00060" summary="sign up restrict negative added">
+      <created>1662382656677</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382656677</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,18 +454,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="client after merge issue and UI minor issues fix" />
-    <MESSAGE value="apply for a job completed" />
-    <MESSAGE value="edit application implemented" />
-    <MESSAGE value="job development has so many problems" />
-    <MESSAGE value="job application from connected to the job management" />
-    <MESSAGE value="is applied for the job validation implement in be and fe" />
-    <MESSAGE value="is applied for the job validation implement in be and fe part 2" />
-    <MESSAGE value="merge conflicts resolved" />
-    <MESSAGE value="update job list after applying implemented" />
-    <MESSAGE value="minor bug fixed" />
-    <MESSAGE value="job application be edit validation updated" />
-    <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
     <MESSAGE value="Code and files refactored" />
     <MESSAGE value="list all job applications partials completed" />
     <MESSAGE value="required images added to the system" />
@@ -464,7 +467,19 @@
     <MESSAGE value="before merge" />
     <MESSAGE value="sprint 1 app connected" />
     <MESSAGE value="UI improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI improved" />
+    <MESSAGE value="job application cover letter displayed" />
+    <MESSAGE value="job application improvements implemented" />
+    <MESSAGE value="after successfull registration user redirects back to login page" />
+    <MESSAGE value="company reg minor improvement" />
+    <MESSAGE value="sprint 1 improvement added" />
+    <MESSAGE value="Css Issues Corrected" />
+    <MESSAGE value="Required mark added to the company registration page" />
+    <MESSAGE value="Profile Image Issue Corrected" />
+    <MESSAGE value="Add Validation To DOB" />
+    <MESSAGE value="view application implemented" />
+    <MESSAGE value="back icon navigation added" />
+    <MESSAGE value="sign up restrict negative added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sign up restrict negative added" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

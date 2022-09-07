@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "../css/allJobsCardCompany.css";
 import { Modal } from "react-bootstrap";
 import EditJob from "../modals/editJob";
@@ -9,7 +9,10 @@ import {
   getCompanyDataForJob,
   getJobsApplicants,
 } from "../../../../api/managements/jobApi";
-import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
+import { getAppliedJobApplicationsByJobId } from "../../../../api/managements/jobApplicationApi";
+import { useNavigate } from "react-router";
+import { App_Routes } from "../../../../constant/appRoutes";
+import { DeleteConfirm } from "../../../../sweet_alerts/deleteConfirm";
 
 export default function AllJobsCardCompany(props) {
   const jobContent = props.content;
@@ -18,6 +21,7 @@ export default function AllJobsCardCompany(props) {
   const [applicants, setApplicants] = useState("");
   const [image, setImage] = useState("");
   const [openModal, setOpenModal] = useState(props.modalStatus);
+  const navigate = useNavigate();
 
   useEffect(async () => {
     //Change this route to correct one
@@ -32,13 +36,19 @@ export default function AllJobsCardCompany(props) {
 
   async function getCompanyData() {
     const content = await getCompanyDataForJob();
-    setImage(content.data.logo);
+    content.data.logo
+      ? setImage(content.data.logo)
+      : setImage("./images/user (8).png");
   }
 
   async function deleteSelectedJob() {
     try {
+      if (!(await DeleteConfirm())) return;
+
       const content = await deleteJob(jobContent._id);
-      SuccessAlert("Job Deleted Successfully");
+      if (content) {
+        await SuccessAlert("Job Deleted Successfully");
+      }
     } catch (e) {
       ErrorAlert(e);
     }
@@ -78,13 +88,13 @@ export default function AllJobsCardCompany(props) {
             <div className="recImage text-center">
               <div>
                 <img
-                    src={
-                      jobContent.status == 1
-                          ? "./images/accuracy.png"
-                          : "./images/close.png"
-                    }
-                    className="img-fluid recruitingStatus"
-                    alt="recruiting_status"
+                  src={
+                    jobContent.status == 1
+                      ? "./images/accuracy.png"
+                      : "./images/close.png"
+                  }
+                  className="img-fluid recruitingStatus"
+                  alt="recruiting_status"
                 />
                 <p className={jobContent.status === 1 ? "status1" : "status2"}>
                   {jobContent.status === 1 ? "Actively Recruiting" : "Closed"}
@@ -139,7 +149,15 @@ export default function AllJobsCardCompany(props) {
           <div className="text-center">
             <div className="text-center">
               <div className="btn-group me-2">
-                <button type="button" className="btn btn-primary viewButton">
+                <button
+                  type="button"
+                  className="btn btn-primary viewButton"
+                  onClick={() =>
+                    navigate(
+                      `${App_Routes.VIEW_JOB_OWN_JOB_APPLICATIONS}/${jobContent._id}`
+                    )
+                  }
+                >
                   View Job Applications
                 </button>
               </div>

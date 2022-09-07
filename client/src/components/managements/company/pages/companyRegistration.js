@@ -9,6 +9,9 @@ import { ErrorAlert } from "../../../../sweet_alerts/error";
 import { isPasswordComplex } from "../../../external_components/validations/passwordStrengthIndecator";
 import { createCompany } from "../../../../api/managements/companyAPI";
 import { SuccessAlert } from "../../../../sweet_alerts/success";
+import { useNavigate } from "react-router";
+import { App_Routes } from "../../../../constant/appRoutes";
+import Loading from "../../../external_components/spinners/loading";
 
 const eye = <FontAwesomeIcon icon={faEye} />;
 const sleye = <FontAwesomeIcon icon={faEyeSlash} />;
@@ -21,7 +24,9 @@ export default function CompanyRegistration() {
   const [imgData, setImgData] = useState("");
   const [picture, setPicture] = useState("");
   let [placeHolder, setPlaceHolder] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const [company, setCompany] = useState({
     name: "",
@@ -70,6 +75,8 @@ export default function CompanyRegistration() {
   };
 
   const handleSignUp = async () => {
+    setLoading(true);
+
     if (!isPasswordComplex(company.password)) {
       await ErrorAlert("Not a Strong Password!");
       return;
@@ -94,19 +101,26 @@ export default function CompanyRegistration() {
         siteUrl: company.siteUrl,
       };
 
-      console.log(companyPayload);
+      const cleanedCompanyPayload = Object.fromEntries(
+        Object.entries(companyPayload).filter(([_, v]) => v !== "")
+      );
+
       try {
-        const content = await createCompany(companyPayload);
+        const content = await createCompany(cleanedCompanyPayload);
 
         if (content) {
-          SuccessAlert("Company Registered Successfully!");
+          await SuccessAlert("Successfully Created Account!");
+          navigate(App_Routes.ROOT);
         }
+
+        setLoading(false);
       } catch (e) {
+        setLoading(false);
         if (e.response.status === 409) {
-          ErrorAlert("Company with that email already excists!");
+          await ErrorAlert("Email already exists!");
           return;
         }
-        ErrorAlert("Something went wrong!");
+        await ErrorAlert("Something went wrong!");
       }
     }
   };
@@ -138,8 +152,14 @@ export default function CompanyRegistration() {
             <div className="col-md-8 col-lg-6 col-xl-5 offset-xl-1 rightSide">
               <h1 className="signup">Start Hiring</h1>
               <br />
-              <form>
-                {step1 && (
+
+              {step1 && (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    nextStep();
+                  }}
+                >
                   <div>
                     <br />
                     <span>
@@ -210,7 +230,7 @@ export default function CompanyRegistration() {
                         Phone Number
                       </label>
                       <input
-                        type=""
+                        type="number"
                         id="form3Example3"
                         className="form-control form-control-lg"
                         placeholder="Phone Number"
@@ -254,8 +274,8 @@ export default function CompanyRegistration() {
                         onChange={handleCompanyRegistrationFormChange}
                         required
                       >
-                        <option selected disabled>
-                          Field
+                        <option selected value={""} disabled>
+                          Select a Field
                         </option>
                         <option value="Information Technology">
                           Information Technology
@@ -267,11 +287,7 @@ export default function CompanyRegistration() {
                       </select>
                     </div>
 
-                    <button
-                      type="button"
-                      className="btn rounded next"
-                      onClick={() => nextStep()}
-                    >
+                    <button type="submit" className="btn rounded next">
                       Next
                       <i
                         className="fa fa-arrow-right arrow"
@@ -279,9 +295,16 @@ export default function CompanyRegistration() {
                       />
                     </button>
                   </div>
-                )}
+                </form>
+              )}
 
-                {step2 && (
+              {step2 && (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSignUp();
+                  }}
+                >
                   <div>
                     <h3 className="almostThere">Almost There...</h3>
                     <br />
@@ -385,19 +408,17 @@ export default function CompanyRegistration() {
                       </span>
                     </div>
 
-                    <button
-                      type="button"
-                      className="btn rounded signupBtn"
-                      onClick={handleSignUp}
-                    >
+                    {loading && <Loading />}
+
+                    <button type="submit" className="btn rounded signupBtn">
                       Sign Up
                     </button>
                     <p className="back">
                       <a onClick={navigateBack}> Back</a>
                     </p>
                   </div>
-                )}
-              </form>
+                </form>
+              )}
             </div>
           </div>
         </div>

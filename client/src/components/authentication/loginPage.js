@@ -62,10 +62,9 @@ export default function Login() {
       const login = await userLogin(content)
 
       if (login) {
-        await SuccessAlert("Successfully!")
           await setTokenToLocalStorage(login.data.token)
-          await navigateToPage(login.data.role);
           setLoading(false)
+          await navigateToPage(login.data.role);
       }
 
     } catch (error) {

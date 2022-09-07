@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
@@ -12,6 +12,8 @@ import {AiOutlineCloseCircle, FcApproval, MdPendingActions, TiTickOutline} from 
 import ViewCoverLetter from "./modals/viewCoverLetter";
 import ViewApplication from "./modals/viewApplication";
 import {SuccessAlert} from "../../../sweet_alerts/success";
+import {useParams} from "react-router";
+
 
 export default function JobApplications() {
     const [jobApplications, setJobApplications] = useState([])
@@ -24,14 +26,14 @@ export default function JobApplications() {
     const [coverLetter, setCoverLetter] = useState("")
     const [application, setApplication] = useState([])
 
-
-    const jobId = "62f9e781d06c6643a5f74e69";
+    const jobId = useParams();
     const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
 
     useEffect(() => {
-        getAppliedJobApplicationsByJobId(jobId).then((res) => {
+        getAppliedJobApplicationsByJobId(jobId.id).then((res) => {
             if (res.data.content) {
-                setJobApplications(res.data.content)
+                const sortedArray = sort(res.data.content)
+                setJobApplications(sortedArray)
                 setSelectedJobApplications(jobApplicationsCount(res.data.content, 1))
                 setRejectedJobApplications(jobApplicationsCount(res.data.content, 2))
                 setPendingJobApplications(jobApplicationsCount(res.data.content, 0))
@@ -46,7 +48,7 @@ export default function JobApplications() {
     }, [])
 
     useEffect(() => {
-        getJobById(jobId).then((res) => {
+        getJobById(jobId.id).then((res) => {
             if (res.data) setJob(res.data)
         }).catch(async (err) => {
             console.log(err)
@@ -60,20 +62,65 @@ export default function JobApplications() {
         }).length;
     }
 
-    const changeJobApplicationStatus = async (id, status) => {
+    const changeJobApplicationStatus = async (id, status, prevStatus) => {
         try {
             const data = {
                 status
             }
             const content = await updateJobApplicationStatus(id, data)
 
-            if (content) await SuccessAlert("Job Application Status updated successfully!")
+            if (content) {
+                await SuccessAlert("Job Application Status updated successfully!")
+                onStatusChange(status, prevStatus)
+                handleStatus(id, status)
+            }
+
 
         } catch (error) {
             console.log(error)
             await ErrorAlert('Something went wrong!')
         }
     }
+
+    const onStatusChange = (status, prevStatus) => {
+        switch (status) {
+            case 0 :
+                setPendingJobApplications(prev => prev + 1)
+                break
+            case 1 :
+                setSelectedJobApplications(prev => prev + 1)
+                break
+            case 2 :
+                setRejectedJobApplications(prev => prev + 1)
+        }
+
+        switch (prevStatus) {
+            case 0 :
+                setPendingJobApplications(prev => prev - 1)
+                break
+            case 1 :
+                setSelectedJobApplications(prev => prev - 1)
+                break
+            case 2 :
+                setRejectedJobApplications(prev => prev - 1)
+        }
+
+    }
+
+    const handleStatus = (id, status) => {
+        const content = jobApplications.find(item => item._id === id);
+        content.status = status
+        const filteredBulk = jobApplications.filter(item => item._id !== id)
+        filteredBulk.push(content)
+        setJobApplications(sort(filteredBulk))
+    }
+
+    const sort = (data) => {
+        return data.sort(function (a, b) {
+            return a.createdDate.toLocaleString().localeCompare(b.createdDate.toLocaleString());
+        });
+    }
+
 
     return (
         <>
@@ -155,16 +202,16 @@ export default function JobApplications() {
                                                 <div className="btn-group me-2" role="group" aria-label="Second group">
                                                     <button type="button"
                                                             className={`btn btn-outline-success ${jobApplication.status === 1 && 'active'}`}
-                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 1)}
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 1, jobApplication.status)}
                                                     >
                                                         <TiTickOutline/></button>
                                                     <button type="button"
                                                             className={`btn btn-outline-warning ${jobApplication.status === 0 && 'active'}`}
-                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 0)}>
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 0, jobApplication.status)}>
                                                         <MdPendingActions/></button>
                                                     <button type="button"
                                                             className={`btn btn-outline-danger ${jobApplication.status === 2 && 'active'}`}
-                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 2)}>
+                                                            onClick={() => changeJobApplicationStatus(jobApplication._id, 2, jobApplication.status)}>
                                                         <AiOutlineCloseCircle/></button>
                                                 </div>
                                             </th>

@@ -3,24 +3,26 @@ import CompanyProfileMain from "../cards/companyProfileMain";
 import CompanySummary from "../cards/companySummary";
 import CompanyDetails from "../cards/companyDetails";
 import "../css/companyProfile.css";
-import { BsArrowLeft } from "react-icons/all";
+import {BsArrowLeft} from "react-icons/all";
 import {
-  getApplicantsOfCompany,
-  getCompany,
-  getJobPostingsOfCompany,
+    getApplicantsOfCompany,
+    getCompany,
+    getJobPostingsOfCompany,
 } from "../../../../api/managements/companyAPI";
+import {useNavigate} from "react-router";
+import {App_Routes} from "../../../../constant/appRoutes";
+
 export default function CompanyProfile() {
-  const [company, setCompany] = useState({});
-  const [jobPostings, setJobPostings] = useState("");
-  const [jobsApplications, setJobApplications] = useState("");
+    const [company, setCompany] = useState({});
+    const [jobPostings, setJobPostings] = useState("");
+    const [jobsApplications, setJobApplications] = useState("");
+    const navigate = useNavigate()
 
-  useEffect(() => {
-    const getCompanyDetails = async () => {
-      const companyData = await getCompany();
-      const jobs = await getJobPostingsOfCompany();
+    useEffect(() => {
+        const getCompanyDetails = async () => {
+            const companyData = await getCompany();
+            const jobs = await getJobPostingsOfCompany();
       const applicants = await getApplicantsOfCompany();
-
-      console.log(companyData.data);
       setCompany(companyData.data);
       setJobPostings(jobs.data.noOfJobPosted);
       setJobApplications(applicants.data.noOfJobApplications);
@@ -35,7 +37,7 @@ export default function CompanyProfile() {
       </h2>
       <div className="coverImage">
         <img
-          src="./images/cover.jpeg"
+          src={company.coverImage ? company.coverImage : `./images/cover.jpeg`}
           className="cover img-fluid container-fluid"
           alt="cover_image"
         />

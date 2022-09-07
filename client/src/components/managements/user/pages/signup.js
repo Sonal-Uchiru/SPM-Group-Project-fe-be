@@ -12,6 +12,8 @@ import {SuccessAlert} from "../../../../sweet_alerts/success";
 import {saveUser} from "../../../../api/managements/userApi";
 import {useNavigate} from "react-router";
 import Loading from "../../../external_components/spinners/loading";
+import {App_Routes} from "../../../../constant/appRoutes";
+import {validateNegative} from "../../jobApplications/validations/jobApplicationValidation";
 
 
 const eye = <FontAwesomeIcon icon={faEye}/>;
@@ -68,7 +70,7 @@ export default function UserSignUP() {
 
             if (content) {
                 await SuccessAlert("Successfully Created Account!")
-                // navigate("/login")
+                navigate(App_Routes.ROOT)
             }
 
             setLoading(false)
@@ -118,6 +120,9 @@ export default function UserSignUP() {
                                                 <div className='form-outline'>
                                                     <label className='form-label' htmlFor='firstName'>
                                                         First Name
+                                                        <mark className="required-icon">
+                                                            *
+                                                        </mark>
                                                     </label>
                                                     <input
                                                         type='text'
@@ -135,6 +140,9 @@ export default function UserSignUP() {
                                                 <div className='form-outline'>
                                                     <label className='form-label' htmlFor='lastName'>
                                                         Last Name
+                                                        <mark className="required-icon">
+                                                            *
+                                                        </mark>
                                                     </label>
                                                     <input
                                                         type='text'
@@ -157,6 +165,9 @@ export default function UserSignUP() {
                                             id='email'
                                         >
                                             Email
+                                            <mark className="required-icon">
+                                                *
+                                            </mark>
                                         </label>
                                         <input
                                             type='email'
@@ -176,12 +187,16 @@ export default function UserSignUP() {
                                             id='phoneNumber'
                                         >
                                             Phone Number
+                                            <mark className="required-icon">
+                                                *
+                                            </mark>
                                         </label>
                                         <input
                                             type='text'
                                             name='mobile'
                                             className='form-control form-control-lg'
                                             placeholder='Phone Number'
+                                            onKeyPress={validateNegative}
                                             onChange={handleUserSignUp} value={user.mobile}
                                             required
 
@@ -195,6 +210,9 @@ export default function UserSignUP() {
                                             id='password'
                                         >
                                             Password
+                                            <mark className="required-icon">
+                                                *
+                                            </mark>
                                         </label>
                                         <input
                                             type={passwordShown ? "text" : "password"}
@@ -225,6 +243,9 @@ export default function UserSignUP() {
                                             id='password'
                                         >
                                             Confirm Password
+                                            <mark className="required-icon">
+                                                *
+                                            </mark>
                                         </label>
                                         <input
                                             type={confirmPasswordShown ? "text" : "password"}
@@ -256,6 +277,10 @@ export default function UserSignUP() {
                                     >
                                         Sign Up
                                     </button>
+                                </div>
+                                <br/>
+                                <div className="text-center">
+                                    <a href="/" className="backToLogin"><b>Back to Login</b></a>
                                 </div>
                             </form>
                         </div>

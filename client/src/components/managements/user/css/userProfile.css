@@ -1,6 +1,6 @@
 .userProfile {
     overflow-x: hidden;
-    min-height: 600px;
+    min-height: 715px;
 }
 
 .userProfile .title {
@@ -24,4 +24,8 @@
 
 .userProfile .otherD {
     margin-top: -50px;
+}
+
+.userProfile .Back:hover {
+    transform: scale(1.1);
 }

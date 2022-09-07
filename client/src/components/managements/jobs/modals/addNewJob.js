@@ -24,7 +24,6 @@ export default function AddNewJob(props) {
     getCompanyData();
   }, []);
 
-  
   async function createJob(e) {
     e.preventDefault();
     setLoadingStatus(true);
@@ -50,7 +49,9 @@ export default function AddNewJob(props) {
 
   async function getCompanyData() {
     const content = await getCompanyDataForJob();
-    setImage(content.data.logo);
+    content.data.logo
+      ? setImage(content.data.logo)
+      : setImage("./images/user (8).png");
   }
 
   return (
