@@ -1,0 +1,104 @@
+.appliedJobCard .card {
+    max-width: 1000px;
+    border: 1px solid #06283D;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+}
+
+.appliedJobCard .companyLogo {
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.appliedJobCard .card-title {
+    font-weight: bold;
+    color: #1363DF;
+}
+
+.appliedJobCard .card-text1 {
+    font-weight: bold;
+    font-size: 18px;
+    color: grey;
+}
+
+.appliedJobCard .card-text2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #28A745;
+}
+
+.appliedJobCard .recruitingStatus {
+    width: 90px;
+    height: 90px;
+    object-fit: fill;
+    margin-top: 50px;
+}
+
+
+.appliedJobCard .editButton {
+    width: 140px;
+    margin-left: 14px;
+    background-color: #1363DF;
+    border: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.appliedJobCard .editButton:hover {
+    background-color: #47B5FF;
+}
+
+.appliedJobCard .deleteButton {
+    width: 140px;
+    margin-left: 40px;
+    font-size: 18px;
+    border: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: #E15141;
+}
+
+.appliedJobCard .deleteButton:hover {
+    background-color: #cd1f0d;
+}
+
+@media (max-width: 767px) {
+    .appliedJobCard .recruitingStatus {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+    .appliedJobCard .editButton {
+        margin-left: 8px;
+    }
+
+    .appliedJobCard .deleteButton {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 369px) {
+    .appliedJobCard .editButton {
+        width: 110px;
+    }
+
+    .appliedJobCard .deleteButton {
+        width: 110px;
+    }
+}
+
+@media (max-width: 312px) {
+    .appliedJobCard .editButton {
+        width: 90px;
+    }
+
+    .appliedJobCard .deleteButton {
+        width: 90px;
+    }
+}

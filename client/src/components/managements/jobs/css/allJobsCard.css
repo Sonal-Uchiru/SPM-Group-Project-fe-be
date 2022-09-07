@@ -1,0 +1,99 @@
+.allJobsCard .card {
+    max-width: 1000px;
+    border: 1px solid #06283D;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+}
+
+.allJobsCard .companyLogo {
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.allJobsCard .card-title {
+    font-weight: bold;
+    color: #1363DF;
+}
+
+.allJobsCard .status {
+    font-weight: bold;
+    color: #28A745;
+    margin-top: 4px;
+}
+
+.allJobsCard .card-text1 {
+    font-weight: bold;
+    font-size: 18px;
+    color: grey;
+}
+
+.allJobsCard .card-text2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #28A745;
+}
+
+.allJobsCard .recruitingStatus {
+    width: 90px;
+    height: 90px;
+    object-fit: fill;
+    margin-top: 28px;
+}
+
+.allJobsCard .showMore {
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.allJobsCard .showMore:hover {
+    transform: scale(1.03);
+}
+
+.allJobsCard .showLess {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.allJobsCard .showLess:hover {
+    transform: scale(1.03);
+}
+
+.allJobsCard .col-md-6 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.allJobsCard .title {
+    color: #808080;
+}
+
+.allJobsCard .description {
+    color: #06283D;
+}
+
+.allJobsCard .apply {
+    width: 140px;
+}
+
+.allJobsCard .apply:hover {
+    background-color: #06283D;
+}
+
+@media (max-width: 767px) {
+    .allJobsCard .recruitingStatus {
+        margin-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .allJobsCard .showMore {
+        margin-top: -10px;
+    }
+}
+
+
+

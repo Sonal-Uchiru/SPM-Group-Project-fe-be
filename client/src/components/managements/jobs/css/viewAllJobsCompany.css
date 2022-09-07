@@ -1,0 +1,84 @@
+.viewAllJobsCompany {
+    min-height: 615px;
+}
+
+.viewAllJobsCompany .searchBar {
+    margin-top: 40px;
+    max-width: 540px;
+}
+
+.viewAllJobsCompany .form-control {
+    border: 1px solid #1363DF;
+}
+
+.viewAllJobsCompany .searchIcon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.viewAllJobsCompany .searchIcon:hover {
+    transform: scale(1.05);
+}
+
+.viewAllJobsCompany ::placeholder {
+    color: #ABB5BE;
+}
+
+.viewAllJobsCompany .downloadReportButton {
+    background-color: #28A745;
+    border: none;
+    height: 40px;
+}
+
+.viewAllJobsCompany .createJobButton {
+    background-color: #28A745;
+    border: none;
+    width: 168px;
+    height: 40px;
+}
+
+.viewAllJobsCompany .fa {
+    margin-right: 5px;
+}
+
+.viewAllJobsCompany .btns {
+    float: right !important;
+    margin-bottom: 5px;
+}
+
+.viewAllJobsCompany .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.viewAllJobsCompany .createJobButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.viewAllJobsCompany .p-viewer {
+    float: right;
+    margin-top: -32px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.viewAllJobsCompany .pageBody {
+    margin-top: 50px;
+}
+
+
+@media (min-width: 1199px) {
+    .viewAllJobsCompany .createJobButton {
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .viewAllJobsCompany .createJobButton {
+        margin-right: 140px;
+    }
+}

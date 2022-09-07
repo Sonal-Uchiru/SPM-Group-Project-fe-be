@@ -1,0 +1,31 @@
+.userProfile {
+    overflow-x: hidden;
+    min-height: 715px;
+}
+
+.userProfile .title {
+    font-weight: bold;
+    color: #1363df;
+    margin-top: 20px;
+    margin-left: 18px;
+    margin-bottom: 30px;
+}
+
+.userProfile .coverImage {
+    background-image: linear-gradient(to right top, #47b5ff, #2fa7fb, #1598f7, #0089f1, #0079ea, #026dd9, #0262c8, #0057b7, #004d98, #004179, #00355a, #06283d);
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
+
+.userProfile .about {
+    margin-top: -180px;
+}
+
+.userProfile .otherD {
+    margin-top: -50px;
+}
+
+.userProfile .Back:hover {
+    transform: scale(1.1);
+}

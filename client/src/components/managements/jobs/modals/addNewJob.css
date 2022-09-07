@@ -1,0 +1,68 @@
+.add-new-job .container .company-logo {
+    width: 170px;
+    height: 170px;
+}
+
+.add-new-job .logo {
+    text-align: center !important;
+}
+
+.add-new-job .blue-text-color {
+    color: #1363DF;
+}
+
+.add-new-job .grey-text-color {
+    color: #808080;
+}
+
+.add-new-job .light-blue-btn {
+    background-color: #47B5FF;
+    color: #ffffff;
+    width: 80%;
+}
+
+.addNewJob .modal-title-edit {
+    margin-top: -28px;
+}
+
+.addNewJob .modal-title {
+    color: #06283D;
+}
+
+.add-new-job textarea {
+    border: 1px solid #1363DF !important;
+}
+
+.add-new-job .custom-input-fields {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.add-new-job .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
+.add-new-job .btn-success {
+    background-color: #28A745 !important;
+    border: none;
+    height: 42px !important;
+}
+
+.add-new-job .btn-success:hover {
+    background-color: #008d26 !important;
+    border: none;
+}
+
+@media (max-width: 380px) {
+    .add-new-job .container .company-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .add-new-job .addNewJobForm {
+        margin-right: 4px !important;
+        margin-left: 4px !important;
+    }
+
+}

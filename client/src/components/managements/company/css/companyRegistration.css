@@ -1,0 +1,266 @@
+.companyRegistration .divider:after,
+.companyRegistration .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.companyRegistration .row1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.companyRegistration .required-icon {
+    color: #FF0000;
+    background-color: #ffffff;
+}
+
+.companyRegistration .backToLogin {
+    color: #1363DF;
+}
+
+.companyRegistration .backToLogin:hover {
+    color: #06283D;
+}
+
+
+.companyRegistration .almostThere {
+    color: #1363DF;
+    text-align: center;
+    font-weight: bold;
+}
+
+.companyRegistration .next {
+    background-color: #1363DF;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 36%;
+    margin-top: 40px;
+    height: 42px;
+}
+
+.companyRegistration .next:hover {
+    background-color: #06283D;
+}
+
+.companyRegistration .box {
+    width: 160px;
+    height: 160px;
+}
+
+.companyRegistration .arrow {
+    margin-left: 10px;
+}
+
+.companyRegistration .Img1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.companyRegistration .Img2 {
+    width: 25px;
+    height: 25px;
+}
+
+.companyRegistration .back {
+    color: #1363DF;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5PX;
+}
+
+.companyRegistration .back:hover {
+    color: #06283D;
+}
+
+.companyRegistration #image-upload-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 150px;
+    margin-top: -38px;
+    position: relative;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+}
+
+.companyRegistration .image-upload > input {
+    display: none;
+}
+
+
+.companyRegistration .quote {
+    color: #1363DF;
+}
+
+.companyRegistration .SiteLogo {
+    height: 200px;
+}
+
+.companyRegistration input {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.companyRegistration input,
+.companyRegistration input::placeholder {
+    font-size: 14px;
+}
+
+.companyRegistration select {
+    border: 1px solid #1363DF;
+    height: 42px;
+}
+
+.companyRegistration label {
+    color: #06283D;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.companyRegistration .rightSide {
+    border: 1px solid #06283D;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 40px 50px 30px;
+}
+
+.companyRegistration .signup {
+    font-weight: bold;
+    color: #06283D;
+    text-align: center;
+    font-size: 40px;
+}
+
+.companyRegistration .signupBtn {
+    background-color: #1363DF;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 36%;
+    margin-top: 40px;
+    height: 40px;
+}
+
+.companyRegistration .signupBtn:hover {
+    background-color: #06283D;
+}
+
+.companyRegistration #eyeIcon {
+    color: #1363DF;
+}
+
+.companyRegistration .p-viewer {
+    float: right;
+    margin-top: -33px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+@media (max-width: 996px) {
+    .companyRegistration .SiteLogo {
+        display: none;
+    }
+
+    .companyRegistration {
+        margin: 20px;
+        overflow-y: hidden;
+    }
+
+    .companyRegistration .col-md-8 {
+        width: 100%;
+    }
+
+    .companyRegistration .quote {
+        display: none;
+    }
+}
+
+@media (min-width: 996px) {
+    .companyRegistration .rightSide {
+        padding: 40px 50px 30px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 996px) {
+    .companyRegistration .rightSide {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .companyRegistration .rightSide {
+        padding: 30px 40px 20px;
+    }
+
+    .companyRegistration {
+        overflow-y: auto;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .companyRegistration .signupBtn {
+        width: 46%;
+    }
+
+    .companyRegistration .next {
+        width: 46%;
+    }
+}
+
+@media (max-width: 350px) {
+    .companyRegistration .box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .companyRegistration .rightSide {
+        padding: 10px 20px 10px;
+    }
+
+    .companyRegistration #image-upload-btn {
+        margin-left: 140px;
+    }
+
+}
+
+@media (max-width: 290px) {
+    .companyRegistration .box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .companyRegistration #image-upload-btn {
+        margin-left: 130px;
+    }
+
+    .companyRegistration .signupBtn {
+        width: 56%;
+    }
+
+    .companyRegistration .next {
+        width: 66%;
+    }
+}
