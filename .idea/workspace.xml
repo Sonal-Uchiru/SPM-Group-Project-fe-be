@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="hook issue fixed">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewApplication.css" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generator added">
+      <change afterPath="$PROJECT_DIR$/client/src/components/report/testPdf.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +64,11 @@
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/report" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/css" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation" />
       <recent name="$PROJECT_DIR$/client/src/constant" />
-      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,14 +96,8 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-      <workItem from="1662698487032" duration="9508000" />
-    </task>
-    <task id="LOCAL-00013" summary="job application implementation completed">
-      <created>1660201692368</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1660201692368</updated>
+      <workItem from="1662698487032" duration="9761000" />
+      <workItem from="1663088587064" duration="919000" />
     </task>
     <task id="LOCAL-00014" summary="job application implementation completed">
       <created>1660201801249</created>
@@ -441,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662706734845</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="view application implemented">
+      <created>1662710652942</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1662710652942</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="list all job applications partials completed" />
     <MESSAGE value="required images added to the system" />
     <MESSAGE value="xml" />
     <MESSAGE value="app.js modified" />
@@ -481,11 +481,12 @@
     <MESSAGE value="Required mark added to the company registration page" />
     <MESSAGE value="Profile Image Issue Corrected" />
     <MESSAGE value="Add Validation To DOB" />
-    <MESSAGE value="view application implemented" />
     <MESSAGE value="back icon navigation added" />
     <MESSAGE value="sign up restrict negative added" />
     <MESSAGE value="hook issue fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="hook issue fixed" />
+    <MESSAGE value="view application implemented" />
+    <MESSAGE value="report generator added" />
+    <option name="LAST_COMMIT_MESSAGE" value="report generator added" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
