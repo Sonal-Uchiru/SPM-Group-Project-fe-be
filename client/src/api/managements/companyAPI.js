@@ -20,8 +20,10 @@ export const getApplicantsOfCompany = async (companyId) => {
   );
 };
 
-
 export const updateCompany = async (data) => {
   return await protectedApi("PUT", "companies", data);
 };
 
+export const deleteCompanyProfile = async (data) => {
+  return await protectedApi("delete", "companies", data);
+};

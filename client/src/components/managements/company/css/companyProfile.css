@@ -1,6 +1,6 @@
 .companyProfile {
     overflow-x: hidden;
-    min-height: 615px;
+    min-height: 715px;
 }
 
 .companyProfile .title {
@@ -9,6 +9,10 @@
     margin-top: 20px;
     margin-left: 18px;
     margin-bottom: 30px;
+}
+
+.companyProfile .Back:hover {
+    transform: scale(1.1);
 }
 
 .companyProfile .cover {

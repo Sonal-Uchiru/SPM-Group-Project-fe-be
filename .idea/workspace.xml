@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Add Validation To DOB" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generator added">
+      <change afterPath="$PROJECT_DIR$/client/src/components/report/testPdf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -20,14 +26,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="job-application-management" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,11 +48,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -56,11 +64,11 @@
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/report" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/css" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation" />
       <recent name="$PROJECT_DIR$/client/src/constant" />
-      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,41 +96,8 @@
       <workItem from="1661320877821" duration="11156000" />
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
-    </task>
-    <task id="LOCAL-00009" summary="save, update, delete, get by id implemented">
-      <created>1660195906540</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1660195906540</updated>
-    </task>
-    <task id="LOCAL-00010" summary="get all by token">
-      <created>1660196279343</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1660196279343</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update status, delete job application by job ids">
-      <created>1660198538318</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1660198538318</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update status, delete job application by job ids">
-      <created>1660199656142</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1660199656142</updated>
-    </task>
-    <task id="LOCAL-00013" summary="job application implementation completed">
-      <created>1660201692368</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1660201692368</updated>
+      <workItem from="1662698487032" duration="9761000" />
+      <workItem from="1663088587064" duration="919000" />
     </task>
     <task id="LOCAL-00014" summary="job application implementation completed">
       <created>1660201801249</created>
@@ -432,7 +407,42 @@
       <option name="project" value="LOCAL" />
       <updated>1662378139659</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="view application implemented">
+      <created>1662382161157</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382161158</updated>
+    </task>
+    <task id="LOCAL-00059" summary="back icon navigation added">
+      <created>1662382461500</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382461501</updated>
+    </task>
+    <task id="LOCAL-00060" summary="sign up restrict negative added">
+      <created>1662382656677</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1662382656677</updated>
+    </task>
+    <task id="LOCAL-00061" summary="hook issue fixed">
+      <created>1662706734845</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1662706734845</updated>
+    </task>
+    <task id="LOCAL-00062" summary="view application implemented">
+      <created>1662710652942</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1662710652942</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,11 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="minor bug fixed" />
-    <MESSAGE value="job application be edit validation updated" />
-    <MESSAGE value="List all job applications for a specific job (Admin) implemented" />
-    <MESSAGE value="Code and files refactored" />
-    <MESSAGE value="list all job applications partials completed" />
     <MESSAGE value="required images added to the system" />
     <MESSAGE value="xml" />
     <MESSAGE value="app.js modified" />
@@ -476,7 +481,12 @@
     <MESSAGE value="Required mark added to the company registration page" />
     <MESSAGE value="Profile Image Issue Corrected" />
     <MESSAGE value="Add Validation To DOB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Validation To DOB" />
+    <MESSAGE value="back icon navigation added" />
+    <MESSAGE value="sign up restrict negative added" />
+    <MESSAGE value="hook issue fixed" />
+    <MESSAGE value="view application implemented" />
+    <MESSAGE value="report generator added" />
+    <option name="LAST_COMMIT_MESSAGE" value="report generator added" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
