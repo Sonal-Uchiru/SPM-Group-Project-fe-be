@@ -1,7 +1,4 @@
 import React, {useState} from "react";
-import CompanyProfileMain from "../cards/companyProfileMain";
-import CompanySummary from "../cards/companySummary";
-import CompanyDetails from "../cards/companyDetails";
 import "../css/companyProfile.css";
 import {BsArrowLeft, BsArrowRight, GrResume} from "react-icons/all";
 import {PDFExport} from "@progress/kendo-react-pdf";
