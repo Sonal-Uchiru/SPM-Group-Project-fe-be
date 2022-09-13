@@ -39,6 +39,7 @@ export default function EditUserProfile(props) {
         }
     }
 
+
     const [updateUser, setUpdateUser] = useState({
         firstName: "",
         lastName: "",
@@ -85,6 +86,7 @@ export default function EditUserProfile(props) {
 
             if (content) {
                 await SuccessAlert("Successfully Updated Your Account!")
+                // window.location.reload();
             }
 
             setLoading(false)
@@ -170,6 +172,7 @@ export default function EditUserProfile(props) {
                               type='file'
                               onChange={onChangePicture}
                           />
+
                         </div>
                       </div>
                     </center>
