@@ -23,11 +23,11 @@ import JobApplications from "./components/managements/jobApplications/jobApplica
 import ChangePasswordModal from "./components/external_components/modals/changePasswordModal";
 import {type} from "jquery";
 import JobApplicationReport from "./components/managements/jobApplications/report/jobApplicationReport";
-
+import AllJobsAvailable from "./components/managements/admin/data_tables/listAllJobs";
 function App() {
     return (
         <Router>
-            <JobApplicationReport/>
+            <AllJobsAvailable/>
             {/*<Suspense fallback={<Loading />}>*/}
             {/*  <Header />*/}
             {/*  <Routes>*/}
