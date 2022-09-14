@@ -24,15 +24,17 @@ import ChangePasswordModal from "./components/external_components/modals/changeP
 import { type } from "jquery";
 
 import JobApplicationReport from "./components/managements/jobApplications/report/jobApplicationReport";
+import CompanyList from "./components/managements/admin/data_tables/companyList";
 
 function App() {
   return (
     <Router>
       {/* <JobApplicationReport/> */}
-      <Suspense fallback={<Loading />}>
+      <CompanyList />
+      {/* <Suspense fallback={<Loading />}>
         <Header />
         <Routes>
-          {/*    /!*unprotected*!/*/}
+       
           <Route path={App_Routes.ROOT} element={<Login />} />
           <Route path={App_Routes.USER_SIGN_UP} element={<UserSignUP />} />
 
@@ -41,7 +43,7 @@ function App() {
             element={<CompanyRegistration />}
           />
 
-          {/*    /!*protected*!/*/}
+         
           <Route
             path={App_Routes.USER_PROFILE}
             element={<Private Role={"user"} Component={UserProfile} />}
@@ -71,7 +73,7 @@ function App() {
           <Route path={App_Routes.ERROR} element={<NotFoundPage />} />
         </Routes>
         <Footer />
-      </Suspense>
+      </Suspense> */}
     </Router>
   );
 }
