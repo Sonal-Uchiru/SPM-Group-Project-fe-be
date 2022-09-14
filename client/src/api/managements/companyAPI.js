@@ -9,6 +9,10 @@ export const getCompany = async () => {
   return await protectedApi("GET", "companies");
 };
 
+export const getAllCompanies = async () => {
+  return await protectedApi("GET", "companies/list");
+};
+
 export const getJobPostingsOfCompany = async (companyId) => {
   return await protectedApi("GET", `jobs/companies/summary/${companyId}`);
 };
