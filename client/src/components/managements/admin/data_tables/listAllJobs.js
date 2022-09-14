@@ -11,8 +11,8 @@ import Loading from "../../../external_components/spinners/loading";
 export default function AllJobsAvailable() {
   const [jobsArray, setJobsArray] = useState([]);
   const [loadingStatus, setLoadingStatus] = useState(true);
-  const [active, setActive] = useState("");
-  const [deactive, setDeactive] = useState("");
+  const [active, setActive] = useState("0");
+  const [deactive, setDeactive] = useState("0");
 
   useEffect(async () => {
     await allJobs();
@@ -24,17 +24,16 @@ export default function AllJobsAvailable() {
   const allJobs = async () => {
     try {
       let i = 0;
-      let active = 0;
-      let deactive = 0;
+      let activeval = 0;
+      let deactiveval = 0;
       const content = await getAllJobs();
-      console.log(content);
-      while (i <= content.data.content.length) {
-        content.data.content.status == 2 ? active++ : deactive++;
+      while (i < content.data.content.length) {
+        content.data.content[i].status == 1 ? activeval++ : deactiveval++;
         i++;
       }
 
-      setActive(active);
-      setDeactive(deactive);
+      setActive(activeval);
+      setDeactive(deactiveval);
 
       if (content) {
         setJobsArray(content.data.content);
@@ -83,7 +82,7 @@ export default function AllJobsAvailable() {
               {jobsArray.map((post, i) => {
                 return (
                   <tr>
-                    <td>{i + 1}</td>
+                    <td>{post.status}</td>
                     <td>{post.position}</td>
                     <td>{post.developmentArea}</td>
                     <td>{post.jobType}</td>
