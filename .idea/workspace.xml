@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generator added">
-      <change afterPath="$PROJECT_DIR$/client/src/components/report/testPdf.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/client/public/images/eye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/managements/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/userApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/cards/summaryCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/cards/summaryCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/companyList.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/companyList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobApplications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/listAllJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/summaryCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/summaryCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/userList.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/userList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +34,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/company_management_development" />
+    <option name="BRANCH" value="origin/development" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -32,8 +45,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -61,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,6 +112,7 @@
       <workItem from="1662222474499" duration="2927000" />
       <workItem from="1662698487032" duration="9761000" />
       <workItem from="1663088587064" duration="919000" />
+      <workItem from="1663136861717" duration="9542000" />
     </task>
     <task id="LOCAL-00014" summary="job application implementation completed">
       <created>1660201801249</created>

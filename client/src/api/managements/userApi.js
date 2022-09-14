@@ -25,3 +25,8 @@ export const deleteUserProfile = async (data) => {
 export const editUserProfile = async (data) => {
     return await protectedApi('put', 'users', data)
 }
+
+
+export const getAllUsers = async () => {
+    return await protectedApi('get', 'users/list')
+}

@@ -1,0 +1,101 @@
+.appliedJobApplications {
+    margin-left: 30px;
+    margin-right: 30px;
+    min-height: 715px;
+    overflow-x: hidden;
+}
+
+.appliedJobApplications .applied-job-applications-table-div {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.appliedJobApplications .applied-job-applications-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.appliedJobApplications .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.appliedJobApplications .applied-job-applications-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.appliedJobApplications .applied-job-applications-table th {
+    text-align: center;
+}
+
+.appliedJobApplications .applied-job-applications-table th {
+    text-align: center;
+}
+
+.appliedJobApplications .tableImg {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.appliedJobApplications .tableEdit {
+    width: 28px;
+    height: 28px;
+    margin: 7px;
+    align-content: center;
+    text-align: center;
+}
+
+.appliedJobApplications .tableEdit:hover {
+    transform: scale(1.1);
+    align-content: center;
+    text-align: center;
+}
+
+.appliedJobApplications .pageTitle {
+    color: #1363df;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.appliedJobApplications .downloadReportButton {
+    background-color: #28a745;
+    border: none;
+    height: 40px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.appliedJobApplications .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.appliedJobApplications .fa {
+    margin-right: 5px;
+}
+
+.appliedJobApplications .Back {
+    margin-right: 10px;
+}
+
+.appliedJobApplications .Back:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .appliedJobApplications .pageTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .appliedJobApplications .pageTitle {
+        font-size: 16px;
+    }
+}
