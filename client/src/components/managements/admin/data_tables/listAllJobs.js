@@ -8,6 +8,7 @@ import { getAllJobs } from "../../../../api/managements/jobApi";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import Loading from "../../../external_components/spinners/loading";
 import moment from "moment";
+import CompanyDetails from "../../company/cards/companyDetails";
 
 export default function AllJobsAvailable() {
   const [jobsArray, setJobsArray] = useState([]);
@@ -24,17 +25,9 @@ export default function AllJobsAvailable() {
 
   const allJobs = async () => {
     try {
-      let i = 0;
-      let activeval = 0;
-      let deactiveval = 0;
       const content = await getAllJobs();
-      while (i < content.data.content.length) {
-        content.data.content[i].status == 1 ? activeval++ : deactiveval++;
-        i++;
-      }
 
-      setActive(activeval);
-      setDeactive(deactiveval);
+      await filterData(content.data.content);
 
       if (content) {
         setJobsArray(content.data.content);
@@ -45,6 +38,17 @@ export default function AllJobsAvailable() {
     }
   };
 
+  async function filterData(data) {
+    const activeJobs = data.filter((post) => {
+      return post.status === 1;
+    }).length;
+    const deactiveJobs = data.filter((post) => {
+      return post.status === 2;
+    }).length;
+
+    setActive(activeJobs);
+    setDeactive(deactiveJobs);
+  }
   return (
     <div className="allJobsAvailable">
       <h2 className="pageTitle">
