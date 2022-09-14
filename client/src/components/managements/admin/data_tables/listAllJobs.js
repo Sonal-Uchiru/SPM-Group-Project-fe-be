@@ -7,6 +7,7 @@ import SummaryCard from "../cards/summaryCard";
 import { getAllJobs } from "../../../../api/managements/jobApi";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import Loading from "../../../external_components/spinners/loading";
+import moment from "moment";
 
 export default function AllJobsAvailable() {
   const [jobsArray, setJobsArray] = useState([]);
@@ -86,8 +87,12 @@ export default function AllJobsAvailable() {
                     <td>{post.position}</td>
                     <td>{post.developmentArea}</td>
                     <td>{post.jobType}</td>
-                    <td>{post.createdDate}</td>
-                    <td>{post.updatedDate}</td>
+                    <td>
+                      {moment(post.createdDate).format("YYYY-MM-DD HH:mm:ss")}
+                    </td>
+                    <td>
+                      {moment(post.updatedDate).format("YYYY-MM-DD HH:mm:ss")}
+                    </td>
 
                     <td>
                       <img
