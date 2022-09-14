@@ -6,6 +6,7 @@ import "../css/listAllJobs.css";
 import SummaryCard from "../cards/summaryCard";
 import { getAllJobs } from "../../../../api/managements/jobApi";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
+import Loading from "../../../external_components/spinners/loading";
 
 export default function AllJobsAvailable() {
   const [jobsArray, setJobsArray] = useState([]);
@@ -28,8 +29,7 @@ export default function AllJobsAvailable() {
       const content = await getAllJobs();
       console.log(content);
       while (i <= content.data.content.length) {
-        if (content.data.content.status == 1) active++;
-        else deactive++;
+        content.data.content.status == 2 ? active++ : deactive++;
         i++;
       }
 
@@ -59,6 +59,8 @@ export default function AllJobsAvailable() {
           <SummaryCard topic="Closed" count={deactive} />
         </div>
       </div>
+
+      {loadingStatus && <Loading />}
 
       <div className="col-md-12 job-available-table-div">
         <div className="scrollbar">
