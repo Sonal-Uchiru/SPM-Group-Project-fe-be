@@ -22,7 +22,6 @@ import NotFoundPage from "./components/external_components/404/notFound";
 import JobApplications from "./components/managements/jobApplications/jobApplications";
 import ChangePasswordModal from "./components/external_components/modals/changePasswordModal";
 import {type} from "jquery";
-
 import JobApplicationReport from "./components/managements/jobApplications/report/jobApplicationReport";
 
 function App() {
