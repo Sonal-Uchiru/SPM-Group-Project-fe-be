@@ -32,16 +32,17 @@ export default function CompanyProfile() {
 
   return (
     <div className="companyProfile">
-      <h2 className="title">
-        <BsArrowLeft /> My Company Profile
-      </h2>
-      <div className="coverImage">
-        <img
-          src={company.coverImage ? company.coverImage : `./images/cover.jpeg`}
-          className="cover img-fluid container-fluid"
-          alt="cover_image"
-        />
-      </div>
+        <h2 className="title">
+            <BsArrowLeft className="Back" onClick={() => navigate(App_Routes.VIEW_ALL_COMPANY_OWN_JOBS)}/> My Company
+            Profile
+        </h2>
+        <div className="coverImage">
+            <img
+                src="./images/cover.jpeg"
+                className="cover img-fluid container-fluid"
+                alt="cover_image"
+            />
+        </div>
       <div className="about">
         <CompanyProfileMain company={company} />
       </div>

@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken'
 
 const companySchema = extendSchema(baseEntity, {
     name: {type: String, required: true},
-    logo: {type: String, required: false},
+    logo: {type: String, required: true},
     coverImage: {type: String, required: false},
     address: {type: String, required: true},
     email: {type: String, required: true},

@@ -4,7 +4,7 @@ import Joi from "joi";
 export const validatePost = (data) => {
     const schema = Joi.object({
         name: Joi.string().max(50).required().label('Company Name'),
-        logo: Joi.string().optional().label('Company Logo'),
+        logo: Joi.string().required().label('Company Logo'),
         email: Joi.string().email().max(100).required().label('Email'),
         address: Joi.string().max(200).required().label('Company Address'),
         field: Joi.string().required().label('Field'),
@@ -19,7 +19,7 @@ export const validatePost = (data) => {
 export const validateUpdate = (data) => {
     const schema = Joi.object({
         name: Joi.string().max(50).required().label('Company Name'),
-        logo: Joi.string().optional().label('Company Logo'),
+        logo: Joi.string().required().label('Company Logo'),
         email: Joi.string().email().max(100).required().label('Email'),
         address: Joi.string().max(200).required().label('Company Address'),
         field: Joi.string().required().label('Field'),

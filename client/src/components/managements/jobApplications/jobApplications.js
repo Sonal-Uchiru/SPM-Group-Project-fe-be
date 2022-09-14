@@ -27,7 +27,7 @@ export default function JobApplications() {
     const [application, setApplication] = useState([])
 
     const jobId = useParams();
-    const userProfilePlaceHolder = 'https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781'
+    const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
 
     useEffect(() => {
         getAppliedJobApplicationsByJobId(jobId.id).then((res) => {
