@@ -1,44 +1,82 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
 import "../css/companyList.css";
 import SummaryCard from "../cards/summaryCard";
-import {BsArrowLeft} from "react-icons/all";
+import { getAllCompanies } from "../../../../api/managements/companyAPI";
 
 export default function CompanyList() {
-  $(document).ready(function () {
-    $("#allJobApplicationsTable").DataTable();
+  const [companies, setCompanies] = useState([]);
+  const [statistics, setStatistics] = useState({
+    statType1: 0,
+    statType2: 0,
+    statType3: 0,
   });
 
+  const filterStatistics = (payload, type1, type2) => {
+    const category1 = payload.filter((company) => {
+      return company.field.toLowerCase() === type1;
+    }).length;
+    const category2 = payload.filter((company) => {
+      return company.field.toLowerCase() === type2;
+    }).length;
+
+    setStatistics({
+      statType1: category1,
+      statType2: category2,
+      statType3: payload.length - (category1 + category2),
+    });
+  };
+
+  useEffect(() => {
+    const getCompanyDetails = async () => {
+      const companies = await getAllCompanies();
+      setCompanies(companies.data);
+      filterStatistics(companies.data, "information technology", "banking");
+      $(document).ready(function () {
+        $("#allJobApplicationsTable").DataTable();
+      });
+    };
+
+    getCompanyDetails();
+  }, []);
+
   return (
-      <div className="companyLists">
-        <h2 className="pageTitle">
-          <BsArrowLeft className="Back"/>
-          Company List
-        </h2>
-        <div className="row d-flex justify-content-center">
-          <SummaryCard topic="Information Technology" count="40"/>
-          <SummaryCard topic="Banking" count="30"/>
-          <SummaryCard topic="Other" count="30"/>
+    <div className="companyLists">
+      <h2 className="pageTitle">
+        <i className="fa fa-arrow-left" />
+        Company List
+      </h2>
+      <div className="row d-flex justify-content-center">
+        <div className="col-md-4">
+          <SummaryCard
+            topic="Information Technology"
+            count={statistics.statType1}
+          />
         </div>
-        <br/><br/>
-        <div className="report mt-2 mb-4">
-          <button type="button" className="btn btn-primary downloadReportButton">
-            <i className="fa fa-download"/>
-            Download Report
-          </button>
+        <div className="col-md-4">
+          <SummaryCard topic="Banking" count={statistics.statType2} />
         </div>
-        <br/>
-        <div className="col-md-12 company-list-table-div">
-          <div className="scrollbar">
-            <table
-                id="allJobApplicationsTable"
-                className="table table-bordered table-sm nowrap table-hover company-list-table"
-            >
-              <thead>
+        <div className="col-md-4">
+          <SummaryCard topic="Other" count={statistics.statType3} />
+        </div>
+      </div>
+      <div className="report mt-2">
+        <button type="button" className="btn btn-primary downloadReportButton">
+          <i className="fa fa-download" />
+          Download Report
+        </button>
+      </div>
+      <div className="col-md-12 company-list-table-div">
+        <div className="scrollbar">
+          <table
+            id="allJobApplicationsTable"
+            className="table table-bordered table-sm nowrap table-hover company-list-table"
+          >
+            <thead>
               <tr>
-                <th/>
+                <th />
                 <th>Name</th>
                 <th>Field type</th>
                 <th>Mobile</th>
@@ -46,66 +84,39 @@ export default function CompanyList() {
                 <th>Last Updated Date</th>
                 <th>Action</th>
               </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>
-                  <img
-                      src="./images/calcey-logo-1-1.jpeg"
-                      className="tableImg"
-                      alt=""
-                  />
-                </td>
-                <td>Calcey Technologies</td>
-                <td>IT</td>
-                <td>0778899384</td>
-                <td>Calcey.com</td>
-                <td>18/12/2012, 03:00:00</td>
-                <td>
-                  <img
-                      src="./../images/document.png"
-                      className="tableEdit"
-                      alt=""
-                  />
-                  <img
-                      src="./../images/eye.png"
-                      className="tableEdit me-2"
-                      alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                      src="./images/calcey-logo-1-1.jpeg"
-                      className="tableImg"
-                      alt=""
-                  />
-                </td>
-                <td>Calcey Technologies</td>
-                <td>IT</td>
-                <td>0778899384</td>
-                <td>Calcey.com</td>
-                <td>18/12/2012, 03:00:00</td>
-                <td>
-                  <img
-                      src="./../images/document.png"
-                      className="tableEdit"
-                      alt=""
-                  />
-                  <img
-                      src="./../images/eye.png"
-                      className="tableEdit me-2"
-                      alt=""
-                  />
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <br/>
+            </thead>
+            <tbody>
+              {companies.map((company, index) => {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <img src={company.logo} className="tableImg" alt="" />
+                    </td>
+                    <td>{company.name}</td>
+                    <td>{company.field}</td>
+                    <td>{company.mobile}</td>
+                    <td>{company.siteUrl ? company.siteUrl : "-"}</td>
+                    <td>{company.updatedDate}</td>
+                    <td>
+                      <img
+                        src="./../images/view.png"
+                        className="tableEdit me-2"
+                        alt=""
+                      />
+                      <img
+                        src="./../images/resume.png"
+                        className="tableEdit"
+                        alt=""
+                      />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-        <br/>
       </div>
+      <br />
+    </div>
   );
 }

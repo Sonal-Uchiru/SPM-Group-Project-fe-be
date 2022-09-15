@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Admin User List Partially Completed" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generator added">
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/generators/pdfGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/report/testPdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/testPdf 2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/testPdf.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,13 +21,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/development" />
+    <option name="BRANCH" value="origin/company_management_development" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -27,8 +38,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -56,15 +67,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/generators" />
       <recent name="$PROJECT_DIR$/client/src/components/report" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/css" />
       <recent name="$PROJECT_DIR$/client/src/components/external_components/navigation" />
-      <recent name="$PROJECT_DIR$/client/src/constant" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,15 +103,7 @@
       <workItem from="1662092146028" duration="7447000" />
       <workItem from="1662222474499" duration="2927000" />
       <workItem from="1662698487032" duration="9761000" />
-      <workItem from="1663088587064" duration="919000" />
-      <workItem from="1663136861717" duration="10236000" />
-    </task>
-    <task id="LOCAL-00015" summary="merged fixed">
-      <created>1660204069978</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1660204069978</updated>
+      <workItem from="1663088587064" duration="4429000" />
     </task>
     <task id="LOCAL-00016" summary="unwanted code removed">
       <created>1660206095438</created>
@@ -432,14 +434,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662710652942</updated>
     </task>
-    <task id="LOCAL-00063" summary="Admin User List Partially Completed">
-      <created>1663180227432</created>
+    <task id="LOCAL-00063" summary="report generator added">
+      <created>1663090836721</created>
       <option name="number" value="00063" />
       <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
-      <updated>1663180227432</updated>
+      <updated>1663090836722</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="report generator added">
+      <created>1663090864396</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1663090864396</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,6 +467,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="required images added to the system" />
     <MESSAGE value="xml" />
     <MESSAGE value="app.js modified" />
     <MESSAGE value="job applications partially completed" />
@@ -482,8 +492,7 @@
     <MESSAGE value="hook issue fixed" />
     <MESSAGE value="view application implemented" />
     <MESSAGE value="report generator added" />
-    <MESSAGE value="Admin User List Partially Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin User List Partially Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="report generator added" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
