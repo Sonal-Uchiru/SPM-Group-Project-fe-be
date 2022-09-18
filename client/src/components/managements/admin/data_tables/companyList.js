@@ -45,39 +45,34 @@ export default function CompanyList() {
   return (
     <div className="companyLists">
       <h2 className="pageTitle">
-        <i className="fa fa-arrow-left" />
-        Company List
+          <i className="fa fa-arrow-left"/>
+          Company List
       </h2>
-      <div className="row d-flex justify-content-center">
-        <div className="col-md-4">
-          <SummaryCard
-            topic="Information Technology"
-            count={statistics.statType1}
-          />
+        <div className="row d-flex justify-content-center">
+            <SummaryCard
+                topic="Information Technology"
+                count={statistics.statType1}
+            />
+            <SummaryCard topic="Banking" count={statistics.statType2}/>
+            <SummaryCard topic="Other" count={statistics.statType3}/>
         </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Banking" count={statistics.statType2} />
+        <div className="report mt-4 mb-4">
+            <button type="button" className="btn btn-primary downloadReportButton">
+                <i className="fa fa-download"/>
+                Download Report
+            </button>
         </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Other" count={statistics.statType3} />
-        </div>
-      </div>
-      <div className="report mt-2">
-        <button type="button" className="btn btn-primary downloadReportButton">
-          <i className="fa fa-download" />
-          Download Report
-        </button>
-      </div>
-      <div className="col-md-12 company-list-table-div">
-        <div className="scrollbar">
-          <table
-            id="allJobApplicationsTable"
-            className="table table-bordered table-sm nowrap table-hover company-list-table"
-          >
-            <thead>
-              <tr>
-                <th />
-                <th>Name</th>
+        <br/><br/>
+        <div className="col-md-12 company-list-table-div">
+            <div className="scrollbar">
+                <table
+                    id="allJobApplicationsTable"
+                    className="table table-bordered table-sm nowrap table-hover company-list-table"
+                >
+                    <thead>
+                    <tr>
+                        <th/>
+                        <th>Name</th>
                 <th>Field type</th>
                 <th>Mobile</th>
                 <th>Site Url</th>
@@ -104,19 +99,20 @@ export default function CompanyList() {
                         alt=""
                       />
                       <img
-                        src="./../images/resume.png"
-                        className="tableEdit"
-                        alt=""
+                          src="./../images/resume.png"
+                          className="tableEdit"
+                          alt=""
                       />
                     </td>
                   </tr>
                 );
               })}
             </tbody>
-          </table>
+                </table>
+            </div>
+            <br/>
         </div>
-      </div>
-      <br />
+        <br/>
     </div>
   );
 }

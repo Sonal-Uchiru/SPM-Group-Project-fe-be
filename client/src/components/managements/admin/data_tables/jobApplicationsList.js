@@ -8,6 +8,7 @@ import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobA
 import {ErrorAlert} from "../../../../sweet_alerts/error";
 import moment from "moment";
 import {getJobById} from "../../../../api/managements/jobApi";
+import {BsArrowLeft} from "react-icons/all";
 
 export default function AllJobApplicationsList() {
     const [jobApplications, setJobApplications] = useState([])
@@ -54,19 +55,13 @@ export default function AllJobApplicationsList() {
     return (
         <div className="allJobApplications">
             <h2 className="pageTitle">
-                <i className="fa fa-arrow-left"/>
+                <BsArrowLeft className="Back"/>
                 Job Applications ({`${job.position} (${job.developmentArea})`})
             </h2>
             <div className="row d-flex justify-content-center">
-                <div className="col-md-4">
                     <SummaryCard topic="Selected Applications" count={selectedJobApplications}/>
-                </div>
-                <div className="col-md-4">
                     <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
-                </div>
-                <div className="col-md-4">
                     <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
-                </div>
             </div>
             <div className="col-md-12 job-applications-table-div">
                 <div className="scrollbar">

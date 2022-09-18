@@ -1,0 +1,121 @@
+.company-report {
+    overflow-x: hidden;
+    min-height: 715px;
+}
+
+.company-report .Image {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.company-report .company-name {
+    margin-top: 40px;
+    font-weight: bold;
+    color: #1363DF;
+
+
+}
+
+.company-report .part-1 {
+    display: flex;
+}
+
+.company-report .field-type {
+    font-weight: bold;
+
+}
+
+.company-report .details {
+    margin-left: 20px;
+}
+
+.company-report .generated-date {
+    float: right;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 700px) {
+
+    .company-report .Image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .company-report .part-1 {
+        display: block;
+    }
+
+    .company-report .generated-date {
+        font-size: 12px;
+    }
+}
+
+.company-report .generated-month {
+    font-weight: bold;
+    margin-top: 30px;
+    color: #1363df;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.company-report .job-applications-table-div {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.company-report .job-applications-table {
+    width: 100%;
+    margin-top: 60px;
+
+}
+
+.company-report .downloadReportButton {
+    background-color: #28a745;
+    border: none;
+    height: 40px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.company-report .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
+
+.company-report .job-applications-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.company-report .job-applications-table th {
+    text-align: center;
+}
+
+.company-report .site-logo {
+    margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+    .company-report .downloadReportButton {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 475px) {
+    .company-report .generated-date {
+        display: none;
+    }
+
+    .company-report .col {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .company-report .email {
+        margin-left: -25px;
+    }
+}
