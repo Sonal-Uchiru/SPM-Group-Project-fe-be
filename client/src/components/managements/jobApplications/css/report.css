@@ -71,6 +71,18 @@
 
 }
 
+.company-report .downloadReportButton {
+    background-color: #28a745;
+    border: none;
+    height: 40px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.company-report .downloadReportButton:hover {
+    background-color: #008d26;
+    border: none;
+}
 
 .company-report .job-applications-table td {
     text-align: center;
@@ -83,6 +95,12 @@
 
 .company-report .site-logo {
     margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+    .company-report .downloadReportButton {
+        font-size: 12px !important;
+    }
 }
 
 @media (max-width: 475px) {
