@@ -71,16 +71,16 @@
 
 }
 
-.company-report .downloadReportButton {
+.downloadReportBtn {
     background-color: #28a745;
+    color: #ffffff;
     border: none;
     height: 40px;
-    float: right;
-    margin-bottom: 20px;
 }
 
-.company-report .downloadReportButton:hover {
+.downloadReportBtn:hover {
     background-color: #008d26;
+    color: #ffffff;
     border: none;
 }
 

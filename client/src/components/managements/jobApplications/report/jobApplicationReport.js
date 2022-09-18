@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import PdfGenerator from "../../../../generators/pdfGenerator";
-import JobApplicationTemplate from "./jobApplicationTemplate";
 import {getAllJobs} from "../../../../api/managements/jobApi";
+import Report from "./report";
+import "../css/report.css";
 
 function JobApplicationReport(props) {
     const [items, setItems] = useState([])
@@ -22,12 +23,13 @@ function JobApplicationReport(props) {
 
     return (
         <>
-            <div style={{textAlign: "center", marginBottom: 10}}>
-                <button onClick={generatePDF} style={{margin: "auto"}}>
-                    download
+            <div className="d-flex justify-content-end me-5 mt-2">
+                <button className="btn downloadReportBtn" onClick={generatePDF}>
+                    <i className="fa fa-download me-2"/>
+                    Download Report
                 </button>
             </div>
-            <PdfGenerator childComponent={<JobApplicationTemplate table1={items} color={"blue"}/>} refs={ref}
+            <PdfGenerator childComponent={<Report/>} refs={ref}
                           fileName={"apple.pdf"}/>
         </>
     );

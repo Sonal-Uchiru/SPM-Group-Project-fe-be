@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/report.css"
+import "../css/report.css";
 import SummaryCard from "../../admin/cards/summaryCard";
 import moment from "moment";
 
@@ -20,19 +20,12 @@ export default function Report() {
                         <p className="email">contactcommercialbank@gmail.com</p>
                         <p className="phone">+94112657815</p>
                     </div>
-
                 </div>
 
-                <div className="col">
+                <div className="col float-right">
                     <div className="generated-date text-center">
                         <h5>Generated on</h5>
-                        <p>2022/08/23 23:56:04</p>
-                        <div className="report mt-4 mb-4">
-                            <button type="button" className="btn btn-primary downloadReportButton">
-                                <i className="fa fa-download"/>
-                                Download Report
-                            </button>
-                        </div>
+                        <p>{moment(new Date()).format('YYYY-MM-DD HH:mm:ss')}</p>
                     </div>
                 </div>
             </div>

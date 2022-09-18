@@ -35,7 +35,7 @@ import Report from "./components/managements/jobApplications/report/report";
 function App() {
     return (
         <Router>
-            <Report/>
+            <JobApplicationReport/>
             {/*   <Suspense fallback={<Loading />}>*/}
             {/*  <Header />*/}
             {/*  <Routes>*/}
