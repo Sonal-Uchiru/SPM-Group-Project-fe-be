@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generator added">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/generators/pdfGenerator.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Admin User List Partially Completed">
+      <change afterPath="$PROJECT_DIR$/client/public/images/birthday-cake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/company.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/employee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/mailbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/maps-and-flags.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/telephone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/viewUserDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/admin/modals/viewCompanyDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/admin/modals/viewUserDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/report/testPdf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/testPdf 2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/testPdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/css/userList.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/css/userList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewApplication.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewApplication.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/viewAppliedJobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals/viewApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +45,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -67,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kavee\WebstormProjects\SPM-Group-Project-fe-be\client\public\images" />
       <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -104,6 +112,7 @@
       <workItem from="1662222474499" duration="2927000" />
       <workItem from="1662698487032" duration="9761000" />
       <workItem from="1663088587064" duration="4429000" />
+      <workItem from="1663300213444" duration="6868000" />
     </task>
     <task id="LOCAL-00016" summary="unwanted code removed">
       <created>1660206095438</created>

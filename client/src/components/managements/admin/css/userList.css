@@ -78,35 +78,6 @@
   margin-right: 10px;
 }
 
-.userList .user-list-table td .tableEdit:hover {
-  transform: scale(1.1);
-  align-content: center;
-  text-align: center;
-}
-
-.userList .pageTitle {
-  color: #1363df;
-  font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.userList .downloadReportButton {
-  background-color: #28a745;
-  border: none;
-  height: 40px;
-  float: right;
-  margin-bottom: 20px;
-}
-
-.userList .downloadReportButton:hover {
-  background-color: #008d26;
-  border: none;
-}
-
-.userList .fa {
-  margin-right: 5px;
-}
 
 .userList .Back {
   margin-right: 10px;
