@@ -21,6 +21,24 @@ function JobApplicationReport(props) {
         })
     }, [])
 
+    const companyDetails = {
+        name: "Millennium IT",
+        field: "IT",
+        address: "Athurigirya",
+        email: "MIT@dd.com",
+        mobile: "03878473"
+    }
+
+    const cards = [{
+        name: "Test 1",
+        count: 2
+    }, {
+        name: "Test 2",
+        count: 40
+    }]
+
+    const tableHeaders = ["no", "name", "updated time", " added time"]
+
     return (
         <>
             <div className="d-flex justify-content-end me-5 mt-2">
@@ -29,7 +47,8 @@ function JobApplicationReport(props) {
                     Download Report
                 </button>
             </div>
-            <PdfGenerator childComponent={<Report/>} refs={ref}
+            <PdfGenerator childComponent={<Report companyDetails={companyDetails} summaryCards={cards}
+                                                  tableHeaders={tableHeaders}/>} refs={ref}
                           fileName={"apple.pdf"}/>
         </>
     );
