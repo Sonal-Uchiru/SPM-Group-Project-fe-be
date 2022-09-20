@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="working on report generation implementation">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report code refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" afterDir="false" />
     </list>
@@ -101,14 +98,8 @@
       <workItem from="1662698487032" duration="9761000" />
       <workItem from="1663088587064" duration="4533000" />
       <workItem from="1663175870984" duration="1262000" />
-      <workItem from="1663522620967" duration="9140000" />
-    </task>
-    <task id="LOCAL-00018" summary="code refactored and unwanted files removed">
-      <created>1660488144486</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1660488144486</updated>
+      <workItem from="1663522620967" duration="9278000" />
+      <workItem from="1663694758306" duration="337000" />
     </task>
     <task id="LOCAL-00019" summary="backend implementations completed">
       <created>1660552199696</created>
@@ -446,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663524501291</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="report code refactored">
+      <created>1663684872649</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1663684872649</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +463,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="app.js modified" />
     <MESSAGE value="job applications partially completed" />
     <MESSAGE value="view application modal implemented" />
     <MESSAGE value="view cover letter modal implemented" />
@@ -490,7 +487,8 @@
     <MESSAGE value="report generator added" />
     <MESSAGE value="pdf generator refactored" />
     <MESSAGE value="working on report generation implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on report generation implementation" />
+    <MESSAGE value="report code refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="report code refactored" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

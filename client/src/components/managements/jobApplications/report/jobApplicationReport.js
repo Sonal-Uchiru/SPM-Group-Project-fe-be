@@ -48,7 +48,7 @@ function JobApplicationReport(props) {
                 </button>
             </div>
             <PdfGenerator childComponent={<Report companyDetails={companyDetails} summaryCards={cards}
-                                                  tableHeaders={tableHeaders}/>} refs={ref}
+                                                  tableHeaders={tableHeaders} tableMetaData={[4, 5]}/>} refs={ref}
                           fileName={"apple.pdf"}/>
         </>
     );

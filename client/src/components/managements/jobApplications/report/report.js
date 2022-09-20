@@ -27,13 +27,10 @@ export default function Report({tableHeaders = [], tableMetaData = [], companyDe
                             tableMetaData.map(data => {
                                 return (
                                     <tr>
-                                        <td>
-                                            {data.column1}
-                                            {data.column2}
-                                            {data.column3}
-                                            {data.column4}
-                                            {data.column5}
-                                        </td>
+                                        <td>fjjfk</td>
+                                        <td>fjjfk</td>
+                                        <td>fjjfk</td>
+                                        <td>fjjfk</td>
                                     </tr>
                                 )
                             })
