@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from "moment";
-import SummaryCard from "../../admin/cards/summaryCard";
 import "../css/report.css";
 import ReportFooter from "./reportFooter";
+import SummaryCardReport from "../cards/summaryCardReport";
 
 function ReportHeader({companyDetails, summaryCards = []}) {
     return (
@@ -48,16 +48,29 @@ function ReportHeader({companyDetails, summaryCards = []}) {
                 </div>
             </div>
             <h4 className="generated-month">{moment(new Date()).format('MMMM')} Report</h4>
-
+            {/*/!*{card.name}*!/{card.count}*/}
             <div className="row d-flex justify-content-center cards">
-                {summaryCards.map(card => {
-                    return (
-                        <SummaryCard
-                            topic={card.name}
-                            count={card.count}
-                        />
-                    )
-                })}
+                {/*{summaryCards.map(card => {*/}
+                {/*    return (*/}
+                <SummaryCardReport
+
+                    topic="Information Technology"
+                    count="50"
+                />
+
+                <SummaryCardReport
+
+                    topic="Selected Applications"
+                    count="50"
+                />
+
+                <SummaryCardReport
+
+                    topic="Rejected"
+                    count="50"
+                />
+                {/*    )*/}
+                {/*})}*/}
             </div>
         </>
     );
