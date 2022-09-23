@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report code refactored">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Report Template UI Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +27,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="job-application-management" />
+        <entry key="$PROJECT_DIR$" value="user-management-sprint-2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,6 +102,9 @@
       <workItem from="1663175870984" duration="1262000" />
       <workItem from="1663522620967" duration="9278000" />
       <workItem from="1663694758306" duration="337000" />
+      <workItem from="1663829911998" duration="1383000" />
+      <workItem from="1663842597443" duration="5912000" />
+      <workItem from="1663866311106" duration="1424000" />
     </task>
     <task id="LOCAL-00019" summary="backend implementations completed">
       <created>1660552199696</created>
