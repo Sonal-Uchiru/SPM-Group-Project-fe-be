@@ -30,7 +30,7 @@ import AllJobsAvailable from "./components/managements/admin/data_tables/listAll
 import AllJobApplicationsList from "./components/managements/admin/data_tables/jobApplicationsList";
 import ViewUserDetails from "./components/managements/admin/modals/viewUserDetails";
 import ViewCompanyDetails from "./components/managements/admin/modals/viewCompanyDetails";
-import Report from "./components/managements/jobApplications/report/report";
+import JobApplicationReportTemplate from "./components/managements/jobApplications/report/jobApplicationReportTemplate";
 
 function App() {
     return (

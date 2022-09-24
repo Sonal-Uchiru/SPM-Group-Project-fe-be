@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Report Template UI Design Patially Corrected">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/cards/summaryCardReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/summaryCardReport.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/managements/companyAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/companyAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationTemplate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReportTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportWaterMark.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/company.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +39,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

@@ -42,6 +42,15 @@
     text-align: center;
 }
 
+.tableImg {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+
 .appliedJobApplications .tableEdit {
     width: 28px;
     height: 28px;

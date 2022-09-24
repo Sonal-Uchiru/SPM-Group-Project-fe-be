@@ -25,9 +25,13 @@ export const getApplicantsOfCompany = async (companyId) => {
 };
 
 export const updateCompany = async (data) => {
-  return await protectedApi("PUT", "companies", data);
+    return await protectedApi("PUT", "companies", data);
 };
 
 export const deleteCompanyProfile = async (data) => {
-  return await protectedApi("delete", "companies", data);
+    return await protectedApi("delete", "companies", data);
 };
+
+export const getCompanyById = async (companyId) => {
+    return await protectedApi("get", `companies/${companyId}`)
+}

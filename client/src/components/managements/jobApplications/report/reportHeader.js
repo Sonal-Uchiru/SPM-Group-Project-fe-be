@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from "moment";
 import "../css/report.css";
-import ReportFooter from "./reportFooter";
 import SummaryCardReport from "../cards/summaryCardReport";
 
 function ReportHeader({companyDetails, summaryCards = []}) {
@@ -10,21 +9,21 @@ function ReportHeader({companyDetails, summaryCards = []}) {
             <div className="row container-fluid">
                 {companyDetails ? <div className="col-8 part-1 text-center">
                         <img
-                            src="./../images/comercial.png"
+                            src={companyDetails.logo ? companyDetails.logo : "./../images/logo-placeholder-image-modified.png"}
                             className="img-fluid Image"
-                            alt="image"
+                            alt="logo"
                         />
                         <div className="details">
-                            <h5 className="company-name">Calcey Technologies</h5>
-                            {/*{companyDetails.name}*/}
-                            <h5 className="field-type">Banking</h5>
-                            {/*{companyDetails.field}*/}
-                            <p className="sub-details">No,65/A,Galle Road,Colombo 06</p>
-                            {/*{companyDetails.address}*/}
-                            <p className="sub-details">contactcommercialbank@gmail.com</p>
-                            {/*{companyDetails.email}*/}
-                            <p className="sub-details">+94112657815</p>
-                            {/*{companyDetails.mobile}*/}
+                            <h5 className="company-name">{companyDetails.name}</h5>
+
+                            <h5 className="field-type">{companyDetails.field}</h5>
+
+                            <p className="sub-details">{companyDetails.address}</p>
+
+                            <p className="sub-details"><u>{companyDetails.email}</u></p>
+
+                            <p className="sub-details">{companyDetails.mobile}</p>
+
                         </div>
                     </div>
                     :
@@ -48,29 +47,15 @@ function ReportHeader({companyDetails, summaryCards = []}) {
                 </div>
             </div>
             <h4 className="generated-month">{moment(new Date()).format('MMMM')} Report</h4>
-            {/*/!*{card.name}*!/{card.count}*/}
             <div className="row d-flex justify-content-center cards">
-                {/*{summaryCards.map(card => {*/}
-                {/*    return (*/}
-                <SummaryCardReport
+                {summaryCards.map(card => {
+                    return (
+                        <SummaryCardReport
 
-                    topic="Information Technology"
-                    count="50"
-                />
-
-                <SummaryCardReport
-
-                    topic="Selected Applications"
-                    count="50"
-                />
-
-                <SummaryCardReport
-
-                    topic="Rejected"
-                    count="50"
-                />
-                {/*    )*/}
-                {/*})}*/}
+                            topic={card.name}
+                            count={card.count}
+                        />)
+                })}
             </div>
         </>
     );

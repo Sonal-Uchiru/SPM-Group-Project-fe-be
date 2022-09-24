@@ -1,7 +1,7 @@
 import React from 'react';
 import "../css/report.css";
 
-function ReportFooter(props) {
+function ReportWaterMark() {
     return (
         <div className="company-report">
             <div className="text-center site-logo">
@@ -15,4 +15,4 @@ function ReportFooter(props) {
     );
 }
 
-export default ReportFooter;
+export default ReportWaterMark;
