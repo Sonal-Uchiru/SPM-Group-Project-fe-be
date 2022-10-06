@@ -1,18 +1,20 @@
 import React, {useEffect, useRef, useState} from 'react';
 import PdfGenerator from "../../../../generators/pdfGenerator";
-import {getAllJobs, getJobById} from "../../../../api/managements/jobApi";
-import JobApplicationReportTemplate from "./jobApplicationReportTemplate";
+import {getAllJobs, getAllJobsByToken, getJobById} from "../../../../api/managements/jobApi";
+import UserReportTemplate from "./userReportTemplate";
 import "../css/report.css";
 import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
-import {getCompanyById} from "../../../../api/managements/companyAPI";
+import {getAllCompanies, getCompanyById} from "../../../../api/managements/companyAPI";
 import moment from "moment";
+import {getAllUsers} from "../../../../api/managements/userApi";
 
-function JobApplicationReport(props) {
+function UserReport(props) {
     const [items, setItems] = useState([])
     const [gen, setGen] = useState(false)
     const [company, setCompany] = useState([])
     const ref = useRef(null)
     const jobId = "63139786d20b38ecbd1721fe";
+
     const generatePDF = () => {
         ref.current.exportPDF()
     }
@@ -20,48 +22,53 @@ function JobApplicationReport(props) {
     const [summaryCards, setSummaryCards] = useState([])
 
     useEffect(() => {
-        getAppliedJobApplicationsByJobId(jobId).then((res) => {
-            const filteredData = res.data.content.filter(content => moment(content.createdDate).format('MMMM')
+        getAllUsers().then((res) => {
+            console.log(res)
+            const filteredData = res.data.filter(content => moment(content.createdDate).format('MMMM')
                 === moment(new Date).format('MMMM'))
             setItems(filteredData)
             genSummaryData(filteredData)
-            getCompanyDetails(res.data.content)
         }).catch((err) => {
             console.log(err)
         })
     }, [])
 
-    const getCompanyDetails = (content) => {
-        if (content.length) {
-            getCompanyById(content[0].companyId).then((res) => {
-                setCompany(res.data)
-            }).catch(err => {
-                console.log(err)
-            })
-        }
-    }
-
-    const jobApplicationsCount = (arr, status) => {
+    const userTypeCount = (arr, type) => {
         return arr.filter(obj => {
-            return obj.status === status;
+            return obj.role === type;
+        }).length;
+    }
+    const userGenderCount = (arr, type) => {
+        return arr.filter(obj => {
+            return obj.gender === type;
         }).length;
     }
 
     const genSummaryData = (data) => {
         if (data.length) {
-            const selectedCount = jobApplicationsCount(data, 1)
-            const rejectedCount = jobApplicationsCount(data, 2)
+            const admin = userTypeCount(data, "admin")
+            const user = userTypeCount(data, "user")
+            const male = userGenderCount(data, "Male")
+            const female = userGenderCount(data, "Female")
             setSummaryCards([{
-                name: "Selected Applications",
-                count: selectedCount
+                name: "Admin",
+                count: admin
             }, {
-                name: "Rejected Applications",
-                count: rejectedCount
-            }])
+                name: "User",
+                count: user
+            }, {
+                name: "Male",
+                count: male
+            },
+                {
+                    name: "Female",
+                    count: female
+                }])
+
         }
     }
 
-    const tableHeaders = ["", "Name", "Gender", "Mobile", "Applied Date", "Last Updated Date"]
+    const tableHeaders = ["", "Full Name", "Role", "Mobile", "Email", "Last Updated Date"]
 
     return (
         <>
@@ -71,7 +78,7 @@ function JobApplicationReport(props) {
                     Download Report
                 </button>
             </div>
-            <PdfGenerator childComponent={<JobApplicationReportTemplate
+            <PdfGenerator childComponent={<UserReportTemplate
                 companyDetails={company} summaryCards={summaryCards}
                 tableHeaders={tableHeaders}
                 tableMetaData={items}/>} refs={ref} fileName={"apple.pdf"}/>
@@ -79,4 +86,4 @@ function JobApplicationReport(props) {
     );
 }
 
-export default JobApplicationReport;
+export default UserReport;

@@ -31,11 +31,16 @@ import AllJobApplicationsList from "./components/managements/admin/data_tables/j
 import ViewUserDetails from "./components/managements/admin/modals/viewUserDetails";
 import ViewCompanyDetails from "./components/managements/admin/modals/viewCompanyDetails";
 import JobApplicationReportTemplate from "./components/managements/jobApplications/report/jobApplicationReportTemplate";
+import JobReport from "./components/managements/jobs/report/jobReport";
+import CompanyReport from "./components/managements/company/report/companyReport";
+import UserReport from "./components/managements/user/report/userReport";
 
 function App() {
     return (
         <Router>
-            <JobApplicationReport/>
+            <UserReport/>
+            {/*<JobApplicationReport/>*/}
+            {/*<JobReport/>*/}
             {/*   <Suspense fallback={<Loading />}>*/}
             {/*  <Header />*/}
             {/*  <Routes>*/}

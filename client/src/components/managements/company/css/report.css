@@ -1,0 +1,96 @@
+.page {
+    overflow-x: hidden;
+}
+
+.Image {
+    width: 110px;
+    height: 110px;
+    margin-top: 30px;
+}
+
+.company-name {
+    margin-top: 40px;
+    font-weight: bold;
+    color: #1363DF;
+    font-size: 18px;
+}
+
+.part-1 {
+    display: flex;
+}
+
+.field-type {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.generated-on {
+    font-size: 12px;
+}
+
+.details {
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+.generated-date {
+    float: right;
+    margin-top: 30px;
+    font-size: 9px;
+    margin-right: -20px;
+}
+
+
+.generated-month {
+    font-weight: bold;
+    margin-top: 30px;
+    color: #1363df;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.job-applications-table-div {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.job-applications-table {
+    width: 100%;
+    font-size: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.downloadReportBtn {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    height: 40px;
+}
+
+.sub-details {
+    font-size: 10px;
+    margin-top: -8px;
+}
+
+.downloadReportBtn:hover {
+    background-color: #008d26;
+    color: #ffffff;
+    border: none;
+}
+
+.company-report .job-applications-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.company-report .job-applications-table th {
+    text-align: center;
+}
+
+.company-report .site-logo {
+    margin-top: 10px;
+    opacity: 0.2;
+    height: 20px;
+}

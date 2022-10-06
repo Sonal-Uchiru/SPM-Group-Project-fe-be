@@ -1,18 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
 import PdfGenerator from "../../../../generators/pdfGenerator";
-import {getAllJobs, getJobById} from "../../../../api/managements/jobApi";
-import JobApplicationReportTemplate from "./jobApplicationReportTemplate";
+import {getAllJobs, getAllJobsByToken, getJobById} from "../../../../api/managements/jobApi";
+import CompanyReportTemplate from "./companyReportTemplate";
 import "../css/report.css";
 import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
-import {getCompanyById} from "../../../../api/managements/companyAPI";
+import {getAllCompanies, getCompanyById} from "../../../../api/managements/companyAPI";
 import moment from "moment";
 
-function JobApplicationReport(props) {
+function CompanyReport(props) {
     const [items, setItems] = useState([])
     const [gen, setGen] = useState(false)
     const [company, setCompany] = useState([])
     const ref = useRef(null)
     const jobId = "63139786d20b38ecbd1721fe";
+
     const generatePDF = () => {
         ref.current.exportPDF()
     }
@@ -20,48 +21,43 @@ function JobApplicationReport(props) {
     const [summaryCards, setSummaryCards] = useState([])
 
     useEffect(() => {
-        getAppliedJobApplicationsByJobId(jobId).then((res) => {
-            const filteredData = res.data.content.filter(content => moment(content.createdDate).format('MMMM')
+        getAllCompanies().then((res) => {
+            console.log(res)
+            const filteredData = res.data.filter(content => moment(content.createdDate).format('MMMM')
                 === moment(new Date).format('MMMM'))
             setItems(filteredData)
             genSummaryData(filteredData)
-            getCompanyDetails(res.data.content)
         }).catch((err) => {
             console.log(err)
         })
     }, [])
 
-    const getCompanyDetails = (content) => {
-        if (content.length) {
-            getCompanyById(content[0].companyId).then((res) => {
-                setCompany(res.data)
-            }).catch(err => {
-                console.log(err)
-            })
-        }
-    }
-
-    const jobApplicationsCount = (arr, status) => {
+    const companyTypeCount = (arr, type) => {
         return arr.filter(obj => {
-            return obj.status === status;
+            return obj.field === type;
         }).length;
     }
 
     const genSummaryData = (data) => {
         if (data.length) {
-            const selectedCount = jobApplicationsCount(data, 1)
-            const rejectedCount = jobApplicationsCount(data, 2)
+            const it = companyTypeCount(data, "Information Technology")
+            const banking = companyTypeCount(data, "Banking")
+            const other = companyTypeCount(data, "Other")
             setSummaryCards([{
-                name: "Selected Applications",
-                count: selectedCount
+                name: "Information Technology",
+                count: it
             }, {
-                name: "Rejected Applications",
-                count: rejectedCount
+                name: "Banking",
+                count: banking
+            }, {
+                name: "Other",
+                count: other
             }])
+
         }
     }
 
-    const tableHeaders = ["", "Name", "Gender", "Mobile", "Applied Date", "Last Updated Date"]
+    const tableHeaders = ["", "Name", "Field Type", "Mobile", "Site URL", "Last Updated Date"]
 
     return (
         <>
@@ -71,7 +67,7 @@ function JobApplicationReport(props) {
                     Download Report
                 </button>
             </div>
-            <PdfGenerator childComponent={<JobApplicationReportTemplate
+            <PdfGenerator childComponent={<CompanyReportTemplate
                 companyDetails={company} summaryCards={summaryCards}
                 tableHeaders={tableHeaders}
                 tableMetaData={items}/>} refs={ref} fileName={"apple.pdf"}/>
@@ -79,4 +75,4 @@ function JobApplicationReport(props) {
     );
 }
 
-export default JobApplicationReport;
+export default CompanyReport;

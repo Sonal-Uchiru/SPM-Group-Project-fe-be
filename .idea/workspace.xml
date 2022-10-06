@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Report Template UI Design Patially Corrected">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application generate report implemented">
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/report.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReportTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/report.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReportTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/report.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReportTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/managements/companyAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/managements/companyAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationTemplate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReportTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportWaterMark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/reportHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/company.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
@@ -60,7 +69,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/managements/user/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -68,7 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/components/managements/jobApplications/modals" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/user/css" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/user" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/company/css" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/company" />
+      <recent name="$PROJECT_DIR$/client/src/components/managements/jobs/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/generators" />
@@ -112,13 +125,8 @@
       <workItem from="1663842597443" duration="5912000" />
       <workItem from="1663866311106" duration="1424000" />
       <workItem from="1663956593695" duration="2588000" />
-    </task>
-    <task id="LOCAL-00020" summary="backend implementations completed">
-      <created>1660552969538</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1660552969538</updated>
+      <workItem from="1664904485718" duration="602000" />
+      <workItem from="1665059342592" duration="7741000" />
     </task>
     <task id="LOCAL-00021" summary="code refactored">
       <created>1660583432146</created>
@@ -456,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663956656253</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="job application generate report implemented">
+      <created>1664028881254</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1664028881255</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +490,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="view application modal implemented" />
     <MESSAGE value="view cover letter modal implemented" />
     <MESSAGE value="job applications change status implemented" />
     <MESSAGE value="try catch removed" />
@@ -500,7 +514,8 @@
     <MESSAGE value="working on report generation implementation" />
     <MESSAGE value="report code refactored" />
     <MESSAGE value="Report Template UI Design Patially Corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Report Template UI Design Patially Corrected" />
+    <MESSAGE value="job application generate report implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="job application generate report implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
