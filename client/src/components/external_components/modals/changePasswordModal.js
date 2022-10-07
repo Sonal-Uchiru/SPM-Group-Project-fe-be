@@ -62,7 +62,7 @@ export default function ChangePasswordModal(props) {
         }
       } catch (e) {
         if (e.response.status === 401) {
-          ErrorAlert("Invalid Credentials");
+          ErrorAlert("Invalid Password");
           return;
         }
         ErrorAlert("Something went wrong!");
@@ -179,7 +179,9 @@ export default function ChangePasswordModal(props) {
                 >
                   Save Changes
                 </button>
-                <button type="button" className="btn btn-danger cancelButton">
+                <button type="button" className="btn btn-danger cancelButton" onClick={()=>{
+                  props.closePasswordModal();
+                }}>
                   Cancel
                 </button>
               </div>
