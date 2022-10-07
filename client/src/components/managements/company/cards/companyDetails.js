@@ -4,7 +4,7 @@ import EditCompanyProfile from "../modals/editCompanyProfile";
 import ChangePasswordModal from "../../../external_components/modals/changePasswordModal";
 import ConfirmModal from "../../../external_components/modals/confirmModal";
 
-export default function CompanyDetails({ company }) {
+export default function CompanyDetails({ company, parentFunction2 }) {
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [ChangePasswordModalOpen, setChangePasswordModalOpen] = useState(true);
   const [show, setShow] = useState(false);
@@ -15,6 +15,10 @@ export default function CompanyDetails({ company }) {
 
   const closePasswordModal = () => {
     setChangePasswordModalOpen(false);
+  };
+
+  const parentFunction = () => {
+    parentFunction2();
   };
 
   return (
@@ -67,6 +71,7 @@ export default function CompanyDetails({ company }) {
             closeEditModal();
             setChangePasswordModalOpen(true);
           }}
+          parentFunction={parentFunction}
         />
       )}
       {ChangePasswordModalOpen && (

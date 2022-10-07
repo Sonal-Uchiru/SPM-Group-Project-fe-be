@@ -3,32 +3,37 @@ import CompanyProfileMain from "../cards/companyProfileMain";
 import CompanySummary from "../cards/companySummary";
 import CompanyDetails from "../cards/companyDetails";
 import "../css/companyProfile.css";
-import {BsArrowLeft} from "react-icons/all";
+import { BsArrowLeft } from "react-icons/all";
 import {
-    getApplicantsOfCompany,
-    getCompany,
-    getJobPostingsOfCompany,
+  getApplicantsOfCompany,
+  getCompany,
+  getJobPostingsOfCompany,
 } from "../../../../api/managements/companyAPI";
-import {useNavigate} from "react-router";
-import {App_Routes} from "../../../../constant/appRoutes";
+import { useNavigate } from "react-router";
+import { App_Routes } from "../../../../constant/appRoutes";
 
 export default function CompanyProfile() {
-    const [company, setCompany] = useState({});
-    const [jobPostings, setJobPostings] = useState("");
-    const [jobsApplications, setJobApplications] = useState("");
-    const navigate = useNavigate()
+  const [company, setCompany] = useState({});
+  const [jobPostings, setJobPostings] = useState("");
+  const [jobsApplications, setJobApplications] = useState("");
+  const [isReload, setIsReload] = useState(false);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const getCompanyDetails = async () => {
-            const companyData = await getCompany();
-            const jobs = await getJobPostingsOfCompany();
+  useEffect(() => {
+    const getCompanyDetails = async () => {
+      const companyData = await getCompany();
+      const jobs = await getJobPostingsOfCompany();
       const applicants = await getApplicantsOfCompany();
       setCompany(companyData.data);
       setJobPostings(jobs.data.noOfJobPosted);
       setJobApplications(applicants.data.noOfJobApplications);
     };
     getCompanyDetails();
-  }, []);
+  }, [isReload]);
+
+  const parentFunction2 = () => {
+    setIsReload(!isReload);
+  };
 
   return (
     <div className="companyProfile">
@@ -50,7 +55,7 @@ export default function CompanyProfile() {
           <CompanySummary jobs={jobPostings} applicants={jobsApplications} />
         </div>
         <div className="col-md-7">
-          <CompanyDetails company={company} />
+          <CompanyDetails company={company} parentFunction2={parentFunction2} />
         </div>
       </div>
     </div>

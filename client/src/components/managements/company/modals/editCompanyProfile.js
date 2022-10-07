@@ -51,8 +51,6 @@ export default function EditCompanyProfile(props) {
   }, []);
 
   const onChangeProfilePicture = (e) => {
-    console.log("Profile Picture");
-
     if (e.target.files[0]) {
       setPlaceHolder(true);
       setPicture(e.target.files);
@@ -65,8 +63,6 @@ export default function EditCompanyProfile(props) {
   };
 
   const onChangeCoverPicture = (e) => {
-    console.log("Cover Picture");
-
     if (e.target.files[0]) {
       setPlaceHolder2(true);
       setPicture2(e.target.files);
@@ -120,6 +116,7 @@ export default function EditCompanyProfile(props) {
 
       if (content) {
         await SuccessAlert("Successfully Updated Your Company Profile!");
+        props.parentFunction();
       }
 
       setLoading(false);
