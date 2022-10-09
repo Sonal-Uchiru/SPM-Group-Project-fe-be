@@ -9,6 +9,7 @@ import {deleteByToken} from "../shared/deleteByToken.js";
 import {decode} from "../middleware/tokenDecode.js";
 import express from "express";
 import {changePassword} from "../shared/changePassword.js";
+import {getById} from "../shared/getById.js";
 
 
 export const saveCompany = async (req, res) => {
@@ -60,4 +61,8 @@ export const deleteCompany = async (req, res) => {
 
 export const updatePassword = async (req, res) => {
     await changePassword(req, res, "company")
+}
+
+export const getCompanyById = async (req, res) => {
+    await getById(req, res, 'company')
 }

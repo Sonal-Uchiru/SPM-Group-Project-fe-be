@@ -1,0 +1,28 @@
+.group-summary-card-report {
+    border-style: solid;
+    border-color: #1363df;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #1363df;
+    font-weight: bold;
+    padding: 4px;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 160px;
+    height: 65px;
+}
+
+.group-summary-card-report .topic {
+    text-align: center !important;
+    font-size: 16px;
+    margin: auto;
+}
+
+.group-summary-card-report .faculty-total {
+    font-weight: bold;
+    margin-left: 20px;
+    color: black;
+    margin-bottom: 15px !important;
+    font-size: 16px;
+}
+
