@@ -1,5 +1,6 @@
 .viewAppliedJobs {
     min-height: 715px;
+    overflow-x: hidden;
 }
 
 .searchBar {

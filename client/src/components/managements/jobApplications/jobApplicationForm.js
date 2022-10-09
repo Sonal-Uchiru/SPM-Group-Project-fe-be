@@ -174,8 +174,10 @@ export function JobApplicationForm(props) {
 
             const result = await saveJobApplication(content)
             setLoading(false)
-            if (result) await SuccessAlert("You applied for the job successfully!")
-            props.onSave()
+            if (result) {
+                await SuccessAlert("You applied for the job successfully!")
+                props.onSave()
+            }
 
         } catch (e) {
             setLoading(false)

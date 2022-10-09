@@ -2,20 +2,21 @@ import React, {useEffect, useRef, useState} from "react";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
-import "../../managements/admin/css/listAllJobApplications.css";
+import "../jobApplications/css/listAllAppliedJobApplications.css"
 import SummaryCard from "../admin/cards/summaryCard";
 import {getAppliedJobApplicationsByJobId, updateJobApplicationStatus} from "../../../api/managements/jobApplicationApi";
 import {ErrorAlert} from "../../../sweet_alerts/error";
 import moment from "moment";
 import {getJobById} from "../../../api/managements/jobApi";
-import {AiOutlineCloseCircle, FcApproval, MdPendingActions, TiTickOutline} from "react-icons/all";
+import {AiOutlineCloseCircle, BsArrowLeft, FcApproval, MdPendingActions, TiTickOutline} from "react-icons/all";
 import ViewCoverLetter from "./modals/viewCoverLetter";
 import ViewApplication from "./modals/viewApplication";
 import {SuccessAlert} from "../../../sweet_alerts/success";
-import {useParams} from "react-router";
+import {useNavigate, useParams} from "react-router";
+import {App_Routes} from "../../../constant/appRoutes";
 
 
-export default function JobApplications() {
+export default function ListAllAppliedJobApplicationsCompany() {
     const [jobApplications, setJobApplications] = useState([])
     const [job, setJob] = useState([])
     const [selectedJobApplications, setSelectedJobApplications] = useState(0)
@@ -25,9 +26,10 @@ export default function JobApplications() {
     const [showApplications, setShowApplications] = useState(false)
     const [coverLetter, setCoverLetter] = useState("")
     const [application, setApplication] = useState([])
+    const navigate = useNavigate()
 
     const jobId = useParams();
-    const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
+    const userProfilePlaceHolder = 'https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781'
 
     useEffect(() => {
         getAppliedJobApplicationsByJobId(jobId.id).then((res) => {
@@ -124,27 +126,32 @@ export default function JobApplications() {
 
     return (
         <>
-            <div className="allJobApplications">
+            <div className="appliedJobApplications">
                 <h2 className="pageTitle">
-                    <i className="fa fa-arrow-left"/>
+                    <BsArrowLeft className="Back"/>
                     Job Applications ({`${job.position} (${job.developmentArea})`})
                 </h2>
                 <div className="row d-flex justify-content-center">
-                    <div className="col-md-4">
-                        <SummaryCard topic="Selected Applications" count={selectedJobApplications}/>
-                    </div>
-                    <div className="col-md-4">
-                        <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
-                    </div>
-                    <div className="col-md-4">
-                        <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
-                    </div>
+                    <SummaryCard topic="Selected Applications" count={selectedJobApplications}/>
+                    <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
+                    <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
                 </div>
-                <div className="col-md-12 job-applications-table-div">
+
+                <div className="btn-group me-2 btns view-btn">
+                    <button
+                        type="button"
+                        className="btn btn-primary downloadReportButton"
+                        onClick={() => navigate(App_Routes.JOB_APPLICATION_LIST_REPORT + `/${jobId.id}`)}
+                    >
+                        <i className="fa fa-download"/>
+                        View Report
+                    </button>
+                </div>
+                <div className="col-md-12 applied-job-applications-table-div">
                     <div className="scrollbar">
                         <table
                             id="allJobApplicationsTable"
-                            className="table table-bordered table-sm nowrap table-hover job-applications-table"
+                            className="table table-bordered table-sm nowrap table-hover applied-job-applications-table"
                         >
                             <thead>
                             <tr>

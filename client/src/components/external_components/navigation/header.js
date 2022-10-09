@@ -11,6 +11,8 @@ import AdminHeader from "./role_based_components/adminHeader";
 import {ErrorAlert} from "../../../sweet_alerts/error";
 import {getUserDetails} from "../../../api/managements/userApi";
 import {getCompany} from "../../../api/managements/companyAPI";
+import InitialsAvatar from 'react-initials-avatar';
+import 'react-initials-avatar/lib/ReactInitialsAvatar.css';
 
 
 export default function Header() {
@@ -36,7 +38,7 @@ export default function Header() {
     useEffect(() => {
         if (!auth) return
 
-        if (role === 'user') {
+        if (role === 'user' || role === 'admin') {
             getUserDetails().then((res) => {
                 setName(`${res.data.firstName} ${res.data.lastName}`)
 
@@ -96,7 +98,7 @@ export default function Header() {
                                         <img src={image} className="companyLogo"
                                              alt="company_logo" onClick={() => navigateProfile()}/></>}
                                     {role === 'admin' &&
-                                        <img src="./images/admin.png" className="adminImage" alt="admin_image"/>}
+                                        <InitialsAvatar name={name}/>}
                                     <img src="./images/logout.png" className="logout" alt="logout"
                                          onClick={() => logout()}/>
                                 </div>
