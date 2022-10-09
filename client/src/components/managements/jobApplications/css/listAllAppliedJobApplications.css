@@ -5,6 +5,10 @@
     overflow-x: hidden;
 }
 
+.view-btn {
+    float: right
+}
+
 .appliedJobApplications .applied-job-applications-table-div {
     margin-top: 20px;
     overflow-x: auto;

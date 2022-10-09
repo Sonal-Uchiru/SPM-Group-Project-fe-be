@@ -12,7 +12,8 @@ import {AiOutlineCloseCircle, BsArrowLeft, FcApproval, MdPendingActions, TiTickO
 import ViewCoverLetter from "./modals/viewCoverLetter";
 import ViewApplication from "./modals/viewApplication";
 import {SuccessAlert} from "../../../sweet_alerts/success";
-import {useParams} from "react-router";
+import {useNavigate, useParams} from "react-router";
+import {App_Routes} from "../../../constant/appRoutes";
 
 
 export default function ListAllAppliedJobApplicationsCompany() {
@@ -25,6 +26,7 @@ export default function ListAllAppliedJobApplicationsCompany() {
     const [showApplications, setShowApplications] = useState(false)
     const [coverLetter, setCoverLetter] = useState("")
     const [application, setApplication] = useState([])
+    const navigate = useNavigate()
 
     const jobId = useParams();
     const userProfilePlaceHolder = 'https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781'
@@ -133,6 +135,17 @@ export default function ListAllAppliedJobApplicationsCompany() {
                     <SummaryCard topic="Selected Applications" count={selectedJobApplications}/>
                     <SummaryCard topic="Rejected Applications" count={rejectedJobApplications}/>
                     <SummaryCard topic="Pending Applications" count={pendingJobApplications}/>
+                </div>
+
+                <div className="btn-group me-2 btns view-btn">
+                    <button
+                        type="button"
+                        className="btn btn-primary downloadReportButton"
+                        onClick={() => navigate(App_Routes.JOB_APPLICATION_LIST_REPORT + `/${jobId.id}`)}
+                    >
+                        <i className="fa fa-download"/>
+                        View Report
+                    </button>
                 </div>
                 <div className="col-md-12 applied-job-applications-table-div">
                     <div className="scrollbar">

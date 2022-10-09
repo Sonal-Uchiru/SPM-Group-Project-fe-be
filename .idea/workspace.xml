@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application generate report implemented">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReportTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReportTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReportTemplate.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generation implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/adminHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constant/appRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constant/appRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="user-management-sprint-2" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,14 +129,11 @@
       <workItem from="1663866311106" duration="1424000" />
       <workItem from="1663956593695" duration="2588000" />
       <workItem from="1664904485718" duration="602000" />
-      <workItem from="1665059342592" duration="7741000" />
-    </task>
-    <task id="LOCAL-00021" summary="code refactored">
-      <created>1660583432146</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1660583432146</updated>
+      <workItem from="1665059342592" duration="8450000" />
+      <workItem from="1665148235180" duration="458000" />
+      <workItem from="1665160239362" duration="4320000" />
+      <workItem from="1665212371219" duration="2717000" />
+      <workItem from="1665290323456" duration="1605000" />
     </task>
     <task id="LOCAL-00022" summary="after reset (merge issue)">
       <created>1660742466520</created>
@@ -471,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664028881255</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="report generation implemented">
+      <created>1665068128114</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1665068128115</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +497,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="view cover letter modal implemented" />
     <MESSAGE value="job applications change status implemented" />
     <MESSAGE value="try catch removed" />
     <MESSAGE value="before merge" />
@@ -515,7 +521,8 @@
     <MESSAGE value="report code refactored" />
     <MESSAGE value="Report Template UI Design Patially Corrected" />
     <MESSAGE value="job application generate report implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="job application generate report implemented" />
+    <MESSAGE value="report generation implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="report generation implemented" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
