@@ -1,28 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
 import "../css/companyList.css";
 import SummaryCard from "../cards/summaryCard";
-import { getAllCompanies } from "../../../../api/managements/companyAPI";
+import {getAllCompanies} from "../../../../api/managements/companyAPI";
+import {useNavigate} from "react-router";
+import {App_Routes} from "../../../../constant/appRoutes";
 
 export default function CompanyList() {
-  const [companies, setCompanies] = useState([]);
-  const [statistics, setStatistics] = useState({
-    statType1: 0,
-    statType2: 0,
-    statType3: 0,
-  });
+    const [companies, setCompanies] = useState([]);
+    const [statistics, setStatistics] = useState({
+        statType1: 0,
+        statType2: 0,
+        statType3: 0,
+    });
 
-  const filterStatistics = (payload, type1, type2) => {
-    const category1 = payload.filter((company) => {
-      return company.field.toLowerCase() === type1;
-    }).length;
-    const category2 = payload.filter((company) => {
-      return company.field.toLowerCase() === type2;
-    }).length;
+    const navigate = useNavigate();
 
-    setStatistics({
+    const filterStatistics = (payload, type1, type2) => {
+        const category1 = payload.filter((company) => {
+            return company.field.toLowerCase() === type1;
+        }).length;
+        const category2 = payload.filter((company) => {
+            return company.field.toLowerCase() === type2;
+        }).length;
+
+        setStatistics({
       statType1: category1,
       statType2: category2,
       statType3: payload.length - (category1 + category2),
@@ -57,9 +61,10 @@ export default function CompanyList() {
             <SummaryCard topic="Other" count={statistics.statType3}/>
         </div>
         <div className="report mt-4 mb-4">
-            <button type="button" className="btn btn-primary downloadReportButton">
+            <button type="button" className="btn btn-primary downloadReportButton"
+                    onClick={() => navigate(App_Routes.COMPANY_LIST_REPORT)}>
                 <i className="fa fa-download"/>
-                Download Report
+                View Report
             </button>
         </div>
         <br/><br/>
@@ -93,16 +98,17 @@ export default function CompanyList() {
                     <td>{company.siteUrl ? company.siteUrl : "-"}</td>
                     <td>{company.updatedDate}</td>
                     <td>
-                      <img
-                        src="./../images/view.png"
-                        className="tableEdit me-2"
-                        alt=""
-                      />
-                      <img
-                          src="./../images/resume.png"
-                          className="tableEdit"
-                          alt=""
-                      />
+                        <img
+                            src="./../images/view.png"
+                            className="tableEdit me-2"
+                            alt="view more"
+                        />
+                        <img
+                            src="./../images/resume.png"
+                            className="tableEdit"
+                            alt="view jobs"
+                            onClick={() => navigate(App_Routes.JOB_LIST + `/${company._id}`)}
+                        />
                     </td>
                   </tr>
                 );

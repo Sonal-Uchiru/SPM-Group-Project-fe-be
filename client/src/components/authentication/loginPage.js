@@ -41,11 +41,10 @@ export default function Login() {
             return
         }
 
-    if (role === "admin") {
-      alert("admin")
-      // navigate("/companyHome");
+        if (role === "admin") {
+            navigate(App_Routes.USER_LIST);
+        }
     }
-  }
 
   async function UserLogin(e) {
     try {
