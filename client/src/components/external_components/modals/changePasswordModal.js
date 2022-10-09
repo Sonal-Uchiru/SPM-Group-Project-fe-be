@@ -179,9 +179,13 @@ export default function ChangePasswordModal(props) {
                 >
                   Save Changes
                 </button>
-                <button type="button" className="btn btn-danger cancelButton" onClick={()=>{
-                  props.closePasswordModal();
-                }}>
+                <button
+                  type="button"
+                  className="btn btn-danger cancelButton"
+                  onClick={() => {
+                    props.closePasswordModal();
+                  }}
+                >
                   Cancel
                 </button>
               </div>

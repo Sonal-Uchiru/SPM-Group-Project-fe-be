@@ -17,7 +17,6 @@ export default function CompanyProfile() {
   const [jobPostings, setJobPostings] = useState("");
   const [jobsApplications, setJobApplications] = useState("");
   const [isReload, setIsReload] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const getCompanyDetails = async () => {
