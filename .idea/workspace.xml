@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="report generation implemented">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="admin and report generation connectivity completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authentication/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/adminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/role_based_components/adminHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/companyList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/listAllJobs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/userList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/listAllAppliedJobApplications.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/jobApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/pages/viewAllJobsCompany.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constant/appRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constant/appRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +124,7 @@
       <workItem from="1665160239362" duration="4320000" />
       <workItem from="1665212371219" duration="2717000" />
       <workItem from="1665290323456" duration="1605000" />
+      <workItem from="1665426788410" duration="1549000" />
     </task>
     <task id="LOCAL-00022" summary="after reset (merge issue)">
       <created>1660742466520</created>
