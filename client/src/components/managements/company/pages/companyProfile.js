@@ -37,15 +37,15 @@ export default function CompanyProfile() {
   return (
     <div className="companyProfile">
       <h2 className="title">
-        <BsArrowLeft /> My Company Profile
+          My Company Profile
       </h2>
-      <div className="coverImage">
-        <img
-          src={company.coverImage ? company.coverImage : `./images/cover.jpeg`}
-          className="cover img-fluid container-fluid"
-          alt="cover_image"
-        />
-      </div>
+        <div className="coverImage">
+            <img
+                src={company.coverImage ? company.coverImage : `./images/cover.jpeg`}
+                className="cover img-fluid container-fluid"
+                alt="cover_image"
+            />
+        </div>
       <div className="about">
         <CompanyProfileMain company={company} />
       </div>

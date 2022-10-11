@@ -128,7 +128,6 @@ export default function ListAllAppliedJobApplicationsCompany() {
         <>
             <div className="appliedJobApplications">
                 <h2 className="pageTitle">
-                    <BsArrowLeft className="Back"/>
                     Job Applications ({`${job.position} (${job.developmentArea})`})
                 </h2>
                 <div className="row d-flex justify-content-center">

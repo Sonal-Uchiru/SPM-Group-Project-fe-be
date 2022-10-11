@@ -56,7 +56,6 @@ export default function AllJobsAvailable() {
     return (
         <div className="allJobsAvailable">
             <h2 className="pageTitle">
-                <i className="fa fa-arrow-left"/>
                 Calcey Technologies Job List
             </h2>
             <div className="row d-flex justify-content-center">
