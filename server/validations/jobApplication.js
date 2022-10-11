@@ -7,7 +7,7 @@ export const validateSave = (data) => {
         applicantOtherDetails: Joi.any().optional().label('applicant other details'),
         resume: Joi.string().required().label('resume'),
         coverLetter: Joi.string().optional().label('cover letter').truncate(true),
-        title: Joi.string().valid('Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.').required().label('title'),
+        title: Joi.string().valid('Mr.', 'Ms.', 'Miss.', 'Dr.', 'Prof.').required().label('title'),
         preferredName: Joi.string().min(3).max(50).optional().label('preferred name').truncate(true),
         // true -> yes | false -> no
         companyWorked: Joi.boolean().required().label('company worked'),
@@ -31,7 +31,7 @@ export const validateUpdate = (data) => {
         applicantOtherDetails: Joi.any().optional().label('applicant other details'),
         resume: Joi.string().required().label('resume'),
         coverLetter: Joi.string().optional().label('cover letter').truncate(true),
-        title: Joi.string().valid('Mr.', 'Ms.', 'Miss', 'Dr.', 'Prof.').required().label('title'),
+        title: Joi.string().valid('Mr.', 'Ms.', 'Miss.', 'Dr.', 'Prof.').required().label('title'),
         preferredName: Joi.string().min(3).max(50).optional().label('preferred name').truncate(true),
         // true -> yes | false -> no
         companyWorked: Joi.boolean().required().label('company worked'),
