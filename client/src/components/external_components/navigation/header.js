@@ -102,8 +102,8 @@ export default function Header() {
                                                               onClick={() => navigateProfile()}>{name}</p>
                                         <img src={image} className="companyLogo"
                                              alt="company_logo" onClick={() => navigateProfile()}/></>}
-                                    {role === 'admin' &&
-                                        <InitialsAvatar name={name}/>}
+                                    {role === 'admin' && <> <p className="companyName">{name}</p>
+                                        <InitialsAvatar name={name}/></>}
                                     <img src="./images/logout.png" className="logout" alt="logout"
                                          onClick={() => logout()}/>
                                 </div>
