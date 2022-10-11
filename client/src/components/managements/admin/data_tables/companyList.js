@@ -98,11 +98,6 @@ export default function CompanyList() {
                     <td>{company.updatedDate}</td>
                     <td>
                         <img
-                            src="./../images/view.png"
-                            className="tableEdit me-2"
-                            alt="view more"
-                        />
-                        <img
                             src="./../images/resume.png"
                             className="tableEdit"
                             alt="view jobs"

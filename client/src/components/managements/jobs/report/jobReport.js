@@ -104,7 +104,7 @@ function JobReport(props) {
           />
         }
         refs={ref}
-        fileName={"apple.pdf"}
+        fileName={`${moment(new Date()).format('MMMM-YYYY')}-${company.name}-monthly-job-report.pdf`}
       />
     </>
   );

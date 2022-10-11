@@ -67,7 +67,7 @@ export default function AllJobsAvailable() {
                     <SummaryCard topic="Closed" count={deactive}/>
                 </div>
             </div>
-            {loadingStatus && <Loading/>
+            {loadingStatus && <Loading/>}
 
       <div className="col-md-12 job-available-table-div">
         <div className="scrollbar">
