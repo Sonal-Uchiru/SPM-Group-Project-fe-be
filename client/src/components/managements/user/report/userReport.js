@@ -81,7 +81,7 @@ function UserReport(props) {
             <PdfGenerator childComponent={<UserReportTemplate
                 companyDetails={company} summaryCards={summaryCards}
                 tableHeaders={tableHeaders}
-                tableMetaData={items}/>} refs={ref} fileName={"apple.pdf"}/>
+                tableMetaData={items}/>} refs={ref} fileName={`${moment(new Date()).format('MMMM-YYYY')}-monthly-users-report.pdf`}/>
         </>
     );
 }

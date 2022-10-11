@@ -61,7 +61,6 @@ export default function UserList() {
   return (
       <div className="userList">
           <h2 className="pageTitle">
-              <BsArrowLeft className="Back"/>
               User List
           </h2>
           <div className="row d-flex justify-content-center">
@@ -92,7 +91,6 @@ export default function UserList() {
                 <th>Mobile</th>
                 <th>Email</th>
                 <th>Last Updated Date</th>
-                <th>Action</th>
               </tr>
               </thead>
               <tbody>
@@ -110,14 +108,6 @@ export default function UserList() {
                         <td>{users.mobile}</td>
                         <td>{users.email}</td>
                         <td>{users.updatedDate ? moment(users.updatedDate).format('YYYY-MM-DD HH:mm:ss') : 'Not Updated!'}</td>
-                        <td>
-                          <img
-                              src="./../images/eye.png"
-                              className="tableEdit"
-                              alt=""
-
-                          />
-                        </td>
                       </tr>
                     </>
                 )

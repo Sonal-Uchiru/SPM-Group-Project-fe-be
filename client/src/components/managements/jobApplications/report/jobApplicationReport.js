@@ -6,13 +6,16 @@ import "../css/report.css";
 import {getAppliedJobApplicationsByJobId} from "../../../../api/managements/jobApplicationApi";
 import {getCompanyById} from "../../../../api/managements/companyAPI";
 import moment from "moment";
+import {useParams} from "react-router";
 
 function JobApplicationReport(props) {
     const [items, setItems] = useState([])
     const [gen, setGen] = useState(false)
     const [company, setCompany] = useState([])
     const ref = useRef(null)
-    const jobId = "63139786d20b38ecbd1721fe";
+    const id = useParams();
+    const jobId = id.id;
+
     const generatePDF = () => {
         ref.current.exportPDF()
     }
@@ -74,7 +77,7 @@ function JobApplicationReport(props) {
             <PdfGenerator childComponent={<JobApplicationReportTemplate
                 companyDetails={company} summaryCards={summaryCards}
                 tableHeaders={tableHeaders}
-                tableMetaData={items}/>} refs={ref} fileName={"apple.pdf"}/>
+                tableMetaData={items}/>} refs={ref} fileName={`${moment(new Date()).format('MMMM-YYYY')}-${company.name}-monthly-job-application-report.pdf`}/>
         </>
     );
 }

@@ -9,6 +9,7 @@ import {ErrorAlert} from "../../../../sweet_alerts/error";
 import moment from "moment";
 import {getJobById} from "../../../../api/managements/jobApi";
 import {BsArrowLeft} from "react-icons/all";
+import {useParams} from "react-router";
 
 export default function AllJobApplicationsList() {
     const [jobApplications, setJobApplications] = useState([])
@@ -16,8 +17,8 @@ export default function AllJobApplicationsList() {
     const [selectedJobApplications, setSelectedJobApplications] = useState(0)
     const [rejectedJobApplications, setRejectedJobApplications] = useState(0)
     const [pendingJobApplications, setPendingJobApplications] = useState(0)
-
-    const jobId = "62f9e781d06c6643a5f74e69";
+    const id = useParams()
+    const jobId = id.id;
     const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
 
     useEffect(() => {
@@ -55,7 +56,6 @@ export default function AllJobApplicationsList() {
     return (
         <div className="allJobApplications">
             <h2 className="pageTitle">
-                <BsArrowLeft className="Back"/>
                 Job Applications ({`${job.position} (${job.developmentArea})`})
             </h2>
             <div className="row d-flex justify-content-center">

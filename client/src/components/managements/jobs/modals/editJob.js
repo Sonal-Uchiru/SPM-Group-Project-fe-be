@@ -6,6 +6,7 @@ import { SuccessAlert } from "../../../../sweet_alerts/success";
 import { ErrorAlert } from "../../../../sweet_alerts/error";
 import Loading from "../../../external_components/spinners/loading";
 import "./editJob.css";
+import { SaveChangesAlert } from "../../../../sweet_alerts/saveChanges";
 
 export default function EditJob(props) {
   const jobContent = props.content;
@@ -38,7 +39,6 @@ export default function EditJob(props) {
 
   async function editJob(e) {
     e.preventDefault();
-    setLoadingStatus(true);
 
     const jobData = {
       position: position,
@@ -51,15 +51,19 @@ export default function EditJob(props) {
       status: status,
     };
     try {
-      const response = await protectedApi(
+      if (!(await SaveChangesAlert())) return;
+      setLoadingStatus(true);
+
+      const content = await protectedApi(
         "PUT",
         `jobs/${jobContent._id}`,
         jobData
       );
-      setLoadingStatus(false);
-
-      SuccessAlert("Job updated successfully");
-      props.editFunction();
+      if (content) {
+        setLoadingStatus(false);
+        SuccessAlert("Job updated successfully");
+        props.editFunction();
+      } 
     } catch (e) {
       ErrorAlert(e);
     }
