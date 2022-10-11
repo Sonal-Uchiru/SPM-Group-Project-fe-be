@@ -8,6 +8,8 @@ import {
   getCompanyDataForJob,
 } from "../../../../api/managements/jobApi";
 import Loading from "../../../external_components/spinners/loading";
+import { DeleteConfirm } from "../../../../sweet_alerts/deleteConfirm";
+import { SaveChangesAlert } from "../../../../sweet_alerts/saveChanges";
 
 export default function AddNewJob(props) {
   const [position, setPosition] = useState("");
@@ -26,7 +28,6 @@ export default function AddNewJob(props) {
 
   async function createJob(e) {
     e.preventDefault();
-    setLoadingStatus(true);
     const jobData = {
       position: position,
       developmentArea: developmentArea,
@@ -38,10 +39,18 @@ export default function AddNewJob(props) {
       //   companyId: "62f9e742d06c6643a5f74e65",
     };
     try {
-      const response = await addNewJobs(jobData);
-      setLoadingStatus(false);
-      SuccessAlert("Job added successfully");
-      props.addedFunction();
+      
+      if (!(await SaveChangesAlert())) return;
+      setLoadingStatus(true);
+
+      const content = await addNewJobs(jobData);
+      if (content) {
+        setLoadingStatus(false);
+        SuccessAlert("Job added successfully");
+        props.addedFunction();
+      }else{
+        setLoadingStatus(true);
+      }
     } catch (e) {
       ErrorAlert(e);
     }
@@ -216,6 +225,7 @@ export default function AddNewJob(props) {
                     onChange={(e) => {
                       setOtherRequirements(e.target.value);
                     }}
+                    required
                   />
                 </div>
                 {loadingStatus && <Loading />}
