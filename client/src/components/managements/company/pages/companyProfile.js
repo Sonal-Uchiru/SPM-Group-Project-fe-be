@@ -21,8 +21,8 @@ export default function CompanyProfile() {
   useEffect(() => {
     const getCompanyDetails = async () => {
       const companyData = await getCompany();
-      const jobs = await getJobPostingsOfCompany();
-      const applicants = await getApplicantsOfCompany();
+      const jobs = await getJobPostingsOfCompany(companyData.data._id);
+      const applicants = await getApplicantsOfCompany(companyData.data._id);
       setCompany(companyData.data);
       setJobPostings(jobs.data.noOfJobPosted);
       setJobApplications(applicants.data.noOfJobApplications);
