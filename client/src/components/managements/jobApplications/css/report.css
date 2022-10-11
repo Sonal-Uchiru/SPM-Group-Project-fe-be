@@ -1,5 +1,6 @@
 .page {
     overflow-x: hidden;
+    min-height: 720px;
 }
 
 .Image {

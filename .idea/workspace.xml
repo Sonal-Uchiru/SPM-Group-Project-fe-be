@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="admin and report generation connectivity completed">
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="Minor Css Issues Corrected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/external_components/navigation/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/company/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobs/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/report.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +41,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -468,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665068128115</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Minor Css Issues Corrected">
+      <created>1665508406700</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1665508406700</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +495,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="job applications change status implemented" />
     <MESSAGE value="try catch removed" />
     <MESSAGE value="before merge" />
     <MESSAGE value="sprint 1 app connected" />
@@ -512,7 +519,8 @@
     <MESSAGE value="Report Template UI Design Patially Corrected" />
     <MESSAGE value="job application generate report implemented" />
     <MESSAGE value="report generation implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="report generation implemented" />
+    <MESSAGE value="Minor Css Issues Corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Css Issues Corrected" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

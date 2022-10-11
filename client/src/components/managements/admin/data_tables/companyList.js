@@ -49,7 +49,6 @@ export default function CompanyList() {
   return (
     <div className="companyLists">
       <h2 className="pageTitle">
-          <i className="fa fa-arrow-left"/>
           Company List
       </h2>
         <div className="row d-flex justify-content-center">

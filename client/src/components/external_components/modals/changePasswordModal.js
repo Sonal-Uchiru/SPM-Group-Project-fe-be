@@ -134,27 +134,27 @@ export default function ChangePasswordModal(props) {
                 />
                 <span className="p-viewer">
                   <i
-                    id="eyeIcon"
-                    className={`fa ${
-                      passwordShown2 ? "fa-eye" : "fa-eye-slash"
-                    } password-icon`}
-                    onClick={togglePasswordVisibility2}
+                      id="eyeIcon"
+                      className={`fa ${
+                          passwordShown2 ? "fa-eye" : "fa-eye-slash"
+                      } password-icon`}
+                      onClick={togglePasswordVisibility2}
                   >
                     {" "}
                   </i>
                 </span>
               </div>
-              <div className="meter container">
-                <PasswordStrengthMeter password={password.newPassword} />
-              </div>
-              <div className="mb-3 input">
-                <label htmlFor="exampleInputPassword1" className="form-label">
-                  Confirm Password
-                </label>
-                <input
-                  type={passwordShown3 ? "text" : "password"}
-                  className="form-control"
-                  id="password"
+                <div className="meter1 container">
+                    <PasswordStrengthMeter password={password.newPassword}/>
+                </div>
+                <div className="mb-3 input">
+                    <label htmlFor="exampleInputPassword1" className="form-label">
+                        Confirm Password
+                    </label>
+                    <input
+                        type={passwordShown3 ? "text" : "password"}
+                        className="form-control"
+                        id="password"
                   placeholder="Password"
                   name="confirmPassword"
                   onChange={handleChangePasswordFormOnChange}

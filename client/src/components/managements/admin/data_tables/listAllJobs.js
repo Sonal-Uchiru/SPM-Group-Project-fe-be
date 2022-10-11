@@ -54,21 +54,20 @@ export default function AllJobsAvailable() {
     setDeactive(deactiveJobs);
   }
 
-  return (
-    <div className="allJobsAvailable">
-      <h2 className="pageTitle">
-        <i className="fa fa-arrow-left" />
-        Calcey Technologies Job List
-      </h2>
-      <div className="row d-flex justify-content-center">
-        <div className="col-md-4">
-          <SummaryCard topic="Actively Recruiting" count={active} />
-        </div>
-        <div className="col-md-4">
-          <SummaryCard topic="Closed" count={deactive} />
-        </div>
-      </div>
-      {loadingStatus && <Loading />}
+    return (
+        <div className="allJobsAvailable">
+            <h2 className="pageTitle">
+                Calcey Technologies Job List
+            </h2>
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-4">
+                    <SummaryCard topic="Actively Recruiting" count={active}/>
+                </div>
+                <div className="col-md-4">
+                    <SummaryCard topic="Closed" count={deactive}/>
+                </div>
+            </div>
+            {loadingStatus && <Loading/>
 
       <div className="col-md-12 job-available-table-div">
         <div className="scrollbar">

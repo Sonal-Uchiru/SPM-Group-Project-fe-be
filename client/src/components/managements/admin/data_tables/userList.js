@@ -61,7 +61,6 @@ export default function UserList() {
   return (
       <div className="userList">
           <h2 className="pageTitle">
-              <BsArrowLeft className="Back"/>
               User List
           </h2>
           <div className="row d-flex justify-content-center">
