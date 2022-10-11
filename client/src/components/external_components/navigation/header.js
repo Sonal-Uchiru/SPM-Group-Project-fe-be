@@ -31,6 +31,11 @@ export default function Header() {
     }
 
     useEffect(() => {
+        if (App_Routes.ROOT === location.pathname) {
+            setName('')
+            setImage(imagePlaceholder)
+        }
+
         if (auth && isRestricted()) return setAuthenticated(true)
         setAuthenticated(false)
     }, [location]);
