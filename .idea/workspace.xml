@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="job_application_improvements_bug_fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,7 +124,14 @@
       <workItem from="1665160239362" duration="4320000" />
       <workItem from="1665212371219" duration="2717000" />
       <workItem from="1665290323456" duration="1605000" />
-      <workItem from="1665508013724" duration="1229000" />
+      <workItem from="1665426788410" duration="1549000" />
+
+    <task id="LOCAL-00022" summary="after reset (merge issue)">
+      <created>1660742466520</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1660742466520</updated>
     </task>
     <task id="LOCAL-00023" summary="after reset (merge issue) fixed">
       <created>1660742568416</created>

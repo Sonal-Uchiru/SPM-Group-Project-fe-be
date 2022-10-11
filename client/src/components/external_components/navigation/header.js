@@ -31,6 +31,11 @@ export default function Header() {
     }
 
     useEffect(() => {
+        if (App_Routes.ROOT === location.pathname) {
+            setName('')
+            setImage(imagePlaceholder)
+        }
+
         if (auth && isRestricted()) return setAuthenticated(true)
         setAuthenticated(false)
     }, [location]);
@@ -97,8 +102,8 @@ export default function Header() {
                                                               onClick={() => navigateProfile()}>{name}</p>
                                         <img src={image} className="companyLogo"
                                              alt="company_logo" onClick={() => navigateProfile()}/></>}
-                                    {role === 'admin' &&
-                                        <InitialsAvatar name={name}/>}
+                                    {role === 'admin' && <> <p className="companyName">{name}</p>
+                                        <InitialsAvatar name={name}/></>}
                                     <img src="./images/logout.png" className="logout" alt="logout"
                                          onClick={() => logout()}/>
                                 </div>
