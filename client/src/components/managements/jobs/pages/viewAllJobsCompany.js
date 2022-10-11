@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Modal } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {Modal} from "react-bootstrap";
 import "../css/viewAllJobsCompany.css";
 import AllJobsCardCompany from "../cards/allJobsCardCompany";
 import AddNewJob from "../modals/addNewJob";
 import Loading from "../../../external_components/spinners/loading";
-import { getAllJobsByToken } from "../../../../api/managements/jobApi";
+import {getAllJobsByToken} from "../../../../api/managements/jobApi";
+import {useNavigate} from "react-router";
+import {App_Routes} from "../../../../constant/appRoutes";
+import {getTokenFromLocalStorage} from "../../../authentication/tokenHandling";
 
 export default function ViewAllJobsCompany() {
   const [openModal, setOpenModal] = useState(false);
@@ -12,6 +15,7 @@ export default function ViewAllJobsCompany() {
   const [jobsArray, setJobsArray] = useState([]);
   const [duplicateJobsArray, setDuplicateJobsArray] = useState([]);
   const [errorText, setErrorText] = useState("");
+  const navigate = useNavigate();
 
   useEffect(async () => {
     await getAllJobs();
@@ -90,11 +94,12 @@ export default function ViewAllJobsCompany() {
         </div>
         <div className="btn-group me-2 btns">
           <button
-            type="button"
-            className="btn btn-primary downloadReportButton"
+              type="button"
+              className="btn btn-primary downloadReportButton"
+              onClick={() => navigate(App_Routes.JOB_LIST_REPORT)}
           >
-            <i className="fa fa-download" />
-            Download Report
+            <i className="fa fa-download"/>
+            View Report
           </button>
         </div>
         <br />

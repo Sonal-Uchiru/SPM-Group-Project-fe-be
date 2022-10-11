@@ -61,6 +61,7 @@
     margin-top: 15px;
     cursor: pointer;
     margin-right: 5px;
+    margin-left: 10px;
 }
 
 .companyHeader .logout:hover {

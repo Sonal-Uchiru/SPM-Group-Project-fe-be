@@ -9,12 +9,14 @@ import {getAllUsers, getUserDetails} from "../../../../api/managements/userApi";
 import {ErrorAlert} from "../../../../sweet_alerts/error";
 import moment from "moment";
 import UserDetails from "../../user/cards/userDetails";
+import {useNavigate} from "react-router";
+import {App_Routes} from "../../../../constant/appRoutes";
 
-export default function UserList(props) {
+export default function UserList() {
 
     const [users, setUsers] = useState([]);
     const userProfilePlaceHolder = "https://firebasestorage.googleapis.com/v0/b/moon-cinema-rest-api.appspot.com/o/Additional%2Fuser%20(8).png?alt=media&token=9cef4e9b-1e8c-43ca-95b7-19c6e9ec8781"
-
+    const navigate = useNavigate();
     const [statistics, setStatistics] = useState({
         statType1: 0,
         statType2: 0,
@@ -69,9 +71,10 @@ export default function UserList(props) {
               {/*<SummaryCard topic="Female" count={statistics.statType4}/>*/}
           </div>
           <div className="report mt-4 mb-4">
-              <button type="button" className="btn btn-primary downloadReportButton">
+              <button type="button" className="btn btn-primary downloadReportButton"
+                      onClick={() => navigate(App_Routes.USER_LIST_REPORT)}>
                   <i className="fa fa-download"/>
-                  Download Report
+                  View Report
               </button>
           </div>
         <br/><br/>

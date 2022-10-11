@@ -21,7 +21,7 @@ import UserSignUP from "./components/managements/user/pages/signup";
 import NotFoundPage from "./components/external_components/404/notFound";
 import JobApplications from "./components/managements/jobApplications/jobApplications";
 import ChangePasswordModal from "./components/external_components/modals/changePasswordModal";
-import {type} from "jquery";
+import { type } from "jquery";
 
 import JobApplicationReport from "./components/managements/jobApplications/report/jobApplicationReport";
 import CompanyList from "./components/managements/admin/data_tables/companyList";
@@ -36,53 +36,80 @@ import CompanyReport from "./components/managements/company/report/companyReport
 import UserReport from "./components/managements/user/report/userReport";
 
 function App() {
-    return (
-        <Router>
-            {/*<UserReport/>*/}
-            {/*<JobApplicationReport/>*/}
-            {/*<JobReport/>*/}
-            <Suspense fallback={<Loading/>}>
-                <Header/>
-                <Routes>
-
-                    <Route path={App_Routes.ROOT} element={<Login/>}/>
-                    <Route path={App_Routes.USER_SIGN_UP} element={<UserSignUP/>}/>
-                    <Route
-                        path={App_Routes.COMPANY_SIGN_UP}
-                        element={<CompanyRegistration/>}
-                    />
-
-                    <Route
-                        path={App_Routes.USER_PROFILE}
-                        element={<Private Role={"user"} Component={UserProfile}/>}
-                    />
-                    <Route
-                        path={App_Routes.COMPANY_PROFILE}
-                        element={<Private Role={"company"} Component={CompanyProfile}/>}
-                    />
-                    <Route
-                        path={App_Routes.VIEW_ALL_JOBS}
-                        element={<Private Role={"user"} Component={ViewAllJobs}/>}
-                    />
-                    <Route
-                        path={App_Routes.VIEW_ALL_COMPANY_OWN_JOBS}
-                        element={
-                            <Private Role={"company"} Component={ViewAllJobsCompany}/>
-                        }
-                    />
-                    <Route
-                        path={App_Routes.VIEW_USER_APPLIED_JOBS}
-                        element={<Private Role={"user"} Component={ViewAppliedJobs}/>}
-                    />
-                    <Route
-                        path={App_Routes.VIEW_JOB_OWN_JOB_APPLICATIONS + ID}
-                        element={<Private Role={"company"} Component={JobApplications}/>}
-                    />
-                    <Route path={App_Routes.ERROR} element={<NotFoundPage/>}/>
-                </Routes>
-                <Footer/>
-            </Suspense>
-        </Router>
+  return (
+    <Router>
+      <Suspense fallback={<Loading />}>
+        <Header />
+        <Routes>
+          <Route path={App_Routes.ROOT} element={<Login />} />
+          <Route path={App_Routes.USER_SIGN_UP} element={<UserSignUP />} />
+          <Route
+            path={App_Routes.COMPANY_SIGN_UP}
+            element={<CompanyRegistration />}
+          />
+          <Route
+            path={App_Routes.USER_PROFILE}
+            element={<Private Role={"user"} Component={UserProfile} />}
+          />
+          <Route
+            path={App_Routes.COMPANY_PROFILE}
+            element={<Private Role={"company"} Component={CompanyProfile} />}
+          />
+          <Route
+            path={App_Routes.VIEW_ALL_JOBS}
+            element={<Private Role={"user"} Component={ViewAllJobs} />}
+          />
+          <Route
+            path={App_Routes.VIEW_ALL_COMPANY_OWN_JOBS}
+            element={
+              <Private Role={"company"} Component={ViewAllJobsCompany} />
+            }
+          />
+            <Route
+                path={App_Routes.VIEW_USER_APPLIED_JOBS}
+                element={<Private Role={"user"} Component={ViewAppliedJobs}/>}
+            />
+            <Route
+                path={App_Routes.VIEW_JOB_OWN_JOB_APPLICATIONS + ID}
+                element={<Private Role={"company"} Component={JobApplications}/>}
+            />
+            <Route
+                path={App_Routes.USER_LIST}
+                element={<Private Role={"admin"} Component={UserList}/>}
+            />
+            <Route
+                path={App_Routes.USER_LIST_REPORT}
+                element={<Private Role={"admin"} Component={UserReport}/>}
+            />
+            <Route
+                path={App_Routes.COMPANY_LIST}
+                element={<Private Role={"admin"} Component={CompanyList}/>}
+            />
+            <Route
+                path={App_Routes.COMPANY_LIST_REPORT}
+                element={<Private Role={"admin"} Component={CompanyReport}/>}
+            />
+            <Route
+                path={App_Routes.JOB_LIST + ID}
+                element={<Private Role={"admin"} Component={AllJobsAvailable}/>}
+            />
+            <Route
+                path={App_Routes.JOB_LIST_REPORT}
+                element={<Private Role={"company"} Component={JobReport}/>}
+            />
+            <Route
+                path={App_Routes.JOB_APPLICATION_LIST + ID}
+                element={<Private Role={"admin"} Component={AllJobApplicationsList}/>}
+            />
+            <Route
+                path={App_Routes.JOB_APPLICATION_LIST_REPORT + ID}
+                element={<Private Role={"company"} Component={JobApplicationReport}/>}
+            />
+            <Route path={App_Routes.ERROR} element={<NotFoundPage/>}/>
+        </Routes>
+          <Footer/>
+        </Suspense>
+    </Router>
   );
 }
 
