@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/admin/data_tables/jobApplicationsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/validations/jobApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validations/jobApplication.js" afterDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="job_application_improvements_bug_fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,7 +124,7 @@
       <workItem from="1665212371219" duration="2717000" />
       <workItem from="1665290323456" duration="1605000" />
       <workItem from="1665426788410" duration="1549000" />
-    </task>
+
     <task id="LOCAL-00022" summary="after reset (merge issue)">
       <created>1660742466520</created>
       <option name="number" value="00022" />
