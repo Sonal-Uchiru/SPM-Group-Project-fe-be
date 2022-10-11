@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="job application generate report implemented">
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/company/report/companyReportTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/jobs/report/jobReportTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/css/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/managements/user/report/userReportTemplate.js" afterDir="false" />
+    <list default="true" id="e48bdb5c-a597-41c4-bab9-e82d83a70890" name="Changes" comment="xml file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/jobApplications/report/jobApplicationReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/managements/user/pages/companyProfile.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +40,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/managements/user/modals/editUserProfile.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

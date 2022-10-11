@@ -87,6 +87,7 @@ export default function EditUserProfile(props) {
             if (content) {
                 await SuccessAlert("Successfully Updated Your Account!")
                 // window.location.reload();
+
             }
 
             setLoading(false)
