@@ -75,7 +75,7 @@ export default function ChangePasswordModal(props) {
         <Modal.Header>
           <div>
             <h4 className="ms-4 modal-title">
-              <b>Edit Company </b>
+              <b>Change Password</b>
             </h4>
           </div>
           <button
@@ -94,7 +94,7 @@ export default function ChangePasswordModal(props) {
         </Modal.Header>
         <Modal.Body>
           <div className="container change-modal">
-            <h3>Change Password</h3>
+            {/*<h3>Change Password</h3>*/}
             <form>
               <div className="mt-3 mb-3 input">
                 <label htmlFor="exampleInputPassword1" className="form-label">

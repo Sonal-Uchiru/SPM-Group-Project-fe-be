@@ -186,7 +186,7 @@ export default function EditCompanyProfile(props) {
                         <label htmlFor="file-input">
                           <img
                             src="./images/gallery.png"
-                            className="Img2"
+                            className="image-upload-btn2"
                             // id="image-upload-btn2"
                             alt="upload_image"
                             onClick={() => {
@@ -234,7 +234,7 @@ export default function EditCompanyProfile(props) {
                             <label htmlFor="file-input">
                               <img
                                 src="./images/gallery.png"
-                                className="Img2"
+                                className="image-upload-btn"
                                 // id="image-upload-btn"
                                 alt="upload_image"
                                 onClick={() => {
