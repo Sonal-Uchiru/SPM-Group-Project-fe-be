@@ -277,6 +277,7 @@ export default function EditJob(props) {
                     <button
                       type="button"
                       className="btn btn-primary cancelButton"
+                      onClick={() => props.onClose()}
                     >
                       Cancel
                     </button>

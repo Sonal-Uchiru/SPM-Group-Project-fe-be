@@ -142,7 +142,7 @@ export default function ViewAllJobsCompany() {
             </span>
           </button>
         </Modal.Header>
-        <AddNewJob addedFunction={onCrud} />
+        <AddNewJob addedFunction={onCrud}/>
       </Modal>
     </div>
   );

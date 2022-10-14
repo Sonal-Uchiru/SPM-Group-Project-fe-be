@@ -154,7 +154,7 @@ export default function ListAllAppliedJobApplicationsCompany() {
                         >
                             <thead>
                             <tr>
-                                <th/>
+                                {/*<th/>*/}
                                 <th>Name</th>
                                 <th>Gender</th>
                                 <th>Mobile</th>
@@ -168,11 +168,11 @@ export default function ListAllAppliedJobApplicationsCompany() {
                                 return (
                                     <>
                                         <tr key={index}>
-                                            <td>
-                                                <img
-                                                    src={!jobApplication.userDetails[0].profilePicture ? userProfilePlaceHolder : jobApplication.userDetails[0].profilePicture}
-                                                    className="tableImg" alt=""/>
-                                            </td>
+                                            {/*<td>*/}
+                                            {/*    <img*/}
+                                            {/*        src={!jobApplication.userDetails[0].profilePicture ? userProfilePlaceHolder : jobApplication.userDetails[0].profilePicture}*/}
+                                            {/*        className="tableImg" alt=""/>*/}
+                                            {/*</td>*/}
                                             <td>{`${jobApplication.userDetails[0].firstName} ${jobApplication.userDetails[0].lastName}`}</td>
                                             <td>{!jobApplication.userDetails[0].gender ? jobApplication.applicantOtherDetails.gender : jobApplication.userDetails[0].gender}</td>
                                             <td>{`0${jobApplication.userDetails[0].mobile}`}</td>

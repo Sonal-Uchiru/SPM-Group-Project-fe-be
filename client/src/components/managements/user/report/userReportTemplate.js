@@ -39,10 +39,10 @@ export default function UserReportTemplate({
                                     tableMetaData.map(data => {
                                         return (
                                             <tr>
-                                                <td>
-                                                    <img
-                                                        src={!data.profilePicture ? userProfilePlaceHolder : data.profilePicture}
-                                                        className="tableImg" alt="user profile"/></td>
+                                                {/*<td>*/}
+                                                {/*    <img*/}
+                                                {/*        src={!data.profilePicture ? userProfilePlaceHolder : data.profilePicture}*/}
+                                                {/*        className="tableImg" alt="user profile"/></td>*/}
                                                 <td>{`${data.firstName} ${data.lastName}`}</td>
                                                 <td>{data.role}</td>
                                                 <td>{data.mobile}</td>

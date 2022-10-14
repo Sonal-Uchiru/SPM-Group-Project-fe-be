@@ -57,7 +57,7 @@ function CompanyReport(props) {
         }
     }
 
-    const tableHeaders = ["", "Name", "Field Type", "Mobile", "Site URL", "Last Updated Date"]
+    const tableHeaders = ["Name", "Field Type", "Mobile", "Site URL", "Last Updated Date"]
 
     return (
         <>

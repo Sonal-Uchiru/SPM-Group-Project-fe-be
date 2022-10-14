@@ -38,10 +38,10 @@ export default function JobApplicationReportTemplate({
                                     tableMetaData.map(data => {
                                         return (
                                             <tr>
-                                                <td>
-                                                    <img
-                                                        src={!data.userDetails[0].profilePicture ? userProfilePlaceHolder : data.userDetails[0].profilePicture}
-                                                        className="tableImg" alt="user profile"/></td>
+                                                {/*<td>*/}
+                                                {/*    <img*/}
+                                                {/*        src={!data.userDetails[0].profilePicture ? userProfilePlaceHolder : data.userDetails[0].profilePicture}*/}
+                                                {/*        className="tableImg" alt="user profile"/></td>*/}
                                                 <td>{`${data.userDetails[0].firstName} ${data.userDetails[0].lastName}`}</td>
                                                 <td>{data.userDetails[0].gender ? data.userDetails[0].gender : data.applicantOtherDetails.gender}</td>
                                                 <td>{`0${data.userDetails[0].mobile}`}</td>

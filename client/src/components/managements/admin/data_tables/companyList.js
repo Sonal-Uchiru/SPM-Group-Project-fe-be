@@ -75,7 +75,6 @@ export default function CompanyList() {
                 >
                     <thead>
                     <tr>
-                        <th/>
                         <th>Name</th>
                 <th>Field type</th>
                 <th>Mobile</th>
@@ -88,9 +87,9 @@ export default function CompanyList() {
               {companies.map((company, index) => {
                 return (
                   <tr key={index}>
-                    <td>
-                      <img src={company.logo} className="tableImg" alt="" />
-                    </td>
+                    {/*<td>*/}
+                    {/*  <img src={company.logo} className="tableImg" alt="" />*/}
+                    {/*</td>*/}
                     <td>{company.name}</td>
                     <td>{company.field}</td>
                     <td>{company.mobile}</td>

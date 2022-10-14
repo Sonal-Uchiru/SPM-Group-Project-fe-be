@@ -37,11 +37,11 @@ export default function CompanyReportTemplate({
                                     tableMetaData.map(data => {
                                         return (
                                             <tr>
-                                                <td>
-                                                    <img
-                                                        src={!data.logo ? "./../images/logo-placeholder-image-modified.png" : data.logo}
-                                                        className="tableImg" alt="user profile"/>
-                                                </td>
+                                                {/*<td>*/}
+                                                {/*    <img*/}
+                                                {/*        src={!data.logo ? "./../images/logo-placeholder-image-modified.png" : data.logo}*/}
+                                                {/*        className="tableImg" alt="user profile"/>*/}
+                                                {/*</td>*/}
                                                 <td>{data.name}</td>
                                                 <td>{data.field}</td>
                                                 <td>{data.mobile}</td>

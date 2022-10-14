@@ -68,7 +68,7 @@ function UserReport(props) {
         }
     }
 
-    const tableHeaders = ["", "Full Name", "Role", "Mobile", "Email", "Last Updated Date"]
+    const tableHeaders = ["Full Name", "Role", "Mobile", "Email", "Last Updated Date"]
 
     return (
         <>

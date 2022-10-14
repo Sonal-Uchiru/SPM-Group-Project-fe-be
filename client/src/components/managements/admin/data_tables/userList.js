@@ -85,7 +85,6 @@ export default function UserList() {
             >
               <thead>
               <tr>
-                <th/>
                 <th>Full Name</th>
                 <th>Role</th>
                 <th>Mobile</th>
@@ -99,10 +98,10 @@ export default function UserList() {
                 return (
                     <>
                       <tr key={index}>
-                        <td>
-                          <img src={!users.profilePicture ? userProfilePlaceHolder : users.profilePicture}
-                               className="tableImg" alt="profile picture"/>
-                        </td>
+                        {/*<td>*/}
+                        {/*  <img src={!users.profilePicture ? userProfilePlaceHolder : users.profilePicture}*/}
+                        {/*       className="tableImg" alt="profile picture"/>*/}
+                        {/*</td>*/}
                         <td>{users.firstName} {users.lastName}</td>
                         <td>{users.role}</td>
                         <td>{users.mobile}</td>

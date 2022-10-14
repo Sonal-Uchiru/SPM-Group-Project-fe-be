@@ -215,7 +215,7 @@ export default function AllJobsCardCompany(props) {
             </span>
           </button>
         </Modal.Header>
-        <EditJob editFunction={editedFunction} content={jobContent} />
+        <EditJob editFunction={editedFunction} content={jobContent} onClose={() => setOpenModal(false)}/>
       </Modal>
     </div>
   );

@@ -64,7 +64,7 @@ function JobApplicationReport(props) {
         }
     }
 
-    const tableHeaders = ["", "Name", "Gender", "Mobile", "Applied Date", "Last Updated Date"]
+    const tableHeaders = ["Name", "Gender", "Mobile", "Applied Date", "Last Updated Date"]
 
     return (
         <>
